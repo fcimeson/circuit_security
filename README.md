@@ -4,7 +4,8 @@ This is a repository of the code used for the paper, “Securing Computer Hardwa
 
 Install instructions:
  - make
- 
+
+
 Runtime instructions:
   --circuit arg                         input circuit
   --tech_lib arg                        tech library
