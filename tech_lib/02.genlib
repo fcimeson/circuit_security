@@ -1,0 +1,9 @@
+GATE 	"puuf000"	8	O=CONST1;
+GATE 	"pudf000"	8	O=CONST0;
+
+GATE	"invf101"	16	O=!A1; 
+PIN	* INV 1 999 1 .2 1 .2
+
+GATE	"nanf201"	24	O=!(A1*B1);
+PIN	* INV 1 999 1 .2 1 .2
+

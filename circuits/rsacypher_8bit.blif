@@ -1,0 +1,6018 @@
+.model rsa_basic
+.inputs clk reset ds inExp[7] inExp[6] inExp[5] inExp[4] inExp[3] inExp[2] inExp[1] inMod[0] indata[0] inExp[0] indata[1] inMod[1] indata[2] inMod[2] indata[3] inMod[3] indata[4] inMod[4] indata[5] inMod[5] indata[6] inMod[6] indata[7] inMod[7]
+.outputs cypher[0] cypher[1] cypher[2] cypher[3] cypher[4] cypher[5] cypher[6] cypher[7] ready
+
+# g735 = done
+.names g735 ready
+0 1
+
+#g137 = cypher[0]~synth
+#cypher[0] = cypher[0]~reg0
+.names g137 g461 cypher[0] g894
+0-1 1
+11- 1
+
+#cypher[0] = cypher[0]~reg0
+.latch g894 cypher[0] re clk 2
+
+#g137 = cypher[0]~synth
+#cypher[1] = cypher[1]~reg0
+.names g137 g467 cypher[1] g895
+0-1 1
+11- 1
+
+#cypher[1] = cypher[1]~reg0
+.latch g895 cypher[1] re clk 2
+
+#g137 = cypher[0]~synth
+#cypher[2] = cypher[2]~reg0
+.names g137 g473 cypher[2] g896
+0-1 1
+11- 1
+
+#cypher[2] = cypher[2]~reg0
+.latch g896 cypher[2] re clk 2
+
+#g137 = cypher[0]~synth
+#cypher[3] = cypher[3]~reg0
+.names g137 g479 cypher[3] g897
+0-1 1
+11- 1
+
+#cypher[3] = cypher[3]~reg0
+.latch g897 cypher[3] re clk 2
+
+#g137 = cypher[0]~synth
+#cypher[4] = cypher[4]~reg0
+.names g137 g485 cypher[4] g898
+0-1 1
+11- 1
+
+#cypher[4] = cypher[4]~reg0
+.latch g898 cypher[4] re clk 2
+
+#g137 = cypher[0]~synth
+#cypher[5] = cypher[5]~reg0
+.names g137 g491 cypher[5] g899
+0-1 1
+11- 1
+
+#cypher[5] = cypher[5]~reg0
+.latch g899 cypher[5] re clk 2
+
+#g137 = cypher[0]~synth
+#cypher[6] = cypher[6]~reg0
+.names g137 g497 cypher[6] g900
+0-1 1
+11- 1
+
+#cypher[6] = cypher[6]~reg0
+.latch g900 cypher[6] re clk 2
+
+#g137 = cypher[0]~synth
+#cypher[7] = cypher[7]~reg0
+.names g137 g503 cypher[7] g901
+0-1 1
+11- 1
+
+#cypher[7] = cypher[7]~reg0
+.latch g901 cypher[7] re clk 2
+
+#g156 = modmult:modmultiply|modreg1[0]~synth
+#g9 = modmult:modmultiply|modreg1[0]
+.names g156 g155 g9 g902
+0-1 1
+11- 1
+
+#g9 = modmult:modmultiply|modreg1[0]
+.latch g902 g9 re clk 2
+
+#g165 = modmult:modmultiply|prodreg[0]~synth
+#g10 = modmult:modmultiply|mcreg[0]
+.names g165 g167 g10 g903
+1-1 1
+01- 1
+
+#g10 = modmult:modmultiply|mcreg[0]
+.latch g903 g10 re clk 2
+
+#g10 = modmult:modmultiply|mcreg[0]
+#g739 = modmult:modmultiply|prodreg[0]
+#g11 = modmult:modmultiply|Add0~synth
+.names g10 g739 g11
+10 1
+01 1
+
+#g165 = modmult:modmultiply|prodreg[0]~synth
+#g12 = modmult:modmultiply|mpreg[0]
+.names g165 g509 g12 g904
+1-1 1
+01- 1
+
+#g12 = modmult:modmultiply|mpreg[0]
+.latch g904 g12 re clk 2
+
+#g9 = modmult:modmultiply|modreg1[0]
+#g431 = modmult:modmultiply|prodreg1[0]~synth
+#g13 = modmult:modmultiply|Add1~synth
+.names g9 g431 g13
+10 1
+01 1
+
+#g9 = modmult:modmultiply|modreg1[0]
+#g431 = modmult:modmultiply|prodreg1[0]~synth
+#g14 = modmult:modmultiply|Add1~synth
+.names g9 g431 g14
+10 0
+
+#g10 = modmult:modmultiply|mcreg[0]
+#g739 = modmult:modmultiply|prodreg[0]
+#g15 = modmult:modmultiply|Add0~synth
+.names g10 g739 g15
+11 1
+
+#g15 = modmult:modmultiply|Add0~synth
+#g741 = modmult:modmultiply|prodreg[1]
+#g743 = modmult:modmultiply|mcreg[1]
+#g16 = modmult:modmultiply|Add0~synth
+.names g15 g741 g743 g16
+100 1
+010 1
+001 1
+111 1
+
+#g14 = modmult:modmultiply|Add1~synth
+#g434 = modmult:modmultiply|prodreg1[1]~synth
+#g17 = modmult:modmultiply|Add1~synth
+.names g14 g434 g17
+11 1
+
+#g156 = modmult:modmultiply|modreg1[0]~synth
+#g18 = modmult:modmultiply|modreg1[1]
+.names g156 g200 g18 g905
+0-1 1
+11- 1
+
+#g18 = modmult:modmultiply|modreg1[1]
+.latch g905 g18 re clk 2
+
+#g14 = modmult:modmultiply|Add1~synth
+#g18 = modmult:modmultiply|modreg1[1]
+#g19 = modmult:modmultiply|Add1~synth
+.names g14 g18 g19
+10 1
+
+#g18 = modmult:modmultiply|modreg1[1]
+#g434 = modmult:modmultiply|prodreg1[1]~synth
+#g20 = modmult:modmultiply|Add1~synth
+.names g18 g434 g20
+01 1
+
+#g17 = modmult:modmultiply|Add1~synth
+#g19 = modmult:modmultiply|Add1~synth
+#g20 = modmult:modmultiply|Add1~synth
+#g21 = modmult:modmultiply|Add1~synth
+.names g17 g19 g20 g21
+000 0
+
+#g15 = modmult:modmultiply|Add0~synth
+#g741 = modmult:modmultiply|prodreg[1]
+#g22 = modmult:modmultiply|Add0~synth
+.names g15 g741 g22
+11 1
+
+#g15 = modmult:modmultiply|Add0~synth
+#g743 = modmult:modmultiply|mcreg[1]
+#g23 = modmult:modmultiply|Add0~synth
+.names g15 g743 g23
+11 1
+
+#g741 = modmult:modmultiply|prodreg[1]
+#g743 = modmult:modmultiply|mcreg[1]
+#g24 = modmult:modmultiply|Add0~synth
+.names g741 g743 g24
+11 1
+
+#g22 = modmult:modmultiply|Add0~synth
+#g23 = modmult:modmultiply|Add0~synth
+#g24 = modmult:modmultiply|Add0~synth
+#g25 = modmult:modmultiply|Add0~synth
+.names g22 g23 g24 g25
+000 0
+
+#g25 = modmult:modmultiply|Add0~synth
+#g747 = modmult:modmultiply|prodreg[2]
+#g749 = modmult:modmultiply|mcreg[2]
+#g26 = modmult:modmultiply|Add0~synth
+.names g25 g747 g749 g26
+100 1
+010 1
+001 1
+111 1
+
+#g21 = modmult:modmultiply|Add1~synth
+#g437 = modmult:modmultiply|prodreg1[2]~synth
+#g27 = modmult:modmultiply|Add1~synth
+.names g21 g437 g27
+11 1
+
+#g156 = modmult:modmultiply|modreg1[0]~synth
+#g28 = modmult:modmultiply|modreg1[2]
+.names g156 g203 g28 g906
+0-1 1
+11- 1
+
+#g28 = modmult:modmultiply|modreg1[2]
+.latch g906 g28 re clk 2
+
+#g21 = modmult:modmultiply|Add1~synth
+#g28 = modmult:modmultiply|modreg1[2]
+#g29 = modmult:modmultiply|Add1~synth
+.names g21 g28 g29
+10 1
+
+#g28 = modmult:modmultiply|modreg1[2]
+#g437 = modmult:modmultiply|prodreg1[2]~synth
+#g30 = modmult:modmultiply|Add1~synth
+.names g28 g437 g30
+01 1
+
+#g27 = modmult:modmultiply|Add1~synth
+#g29 = modmult:modmultiply|Add1~synth
+#g30 = modmult:modmultiply|Add1~synth
+#g31 = modmult:modmultiply|Add1~synth
+.names g27 g29 g30 g31
+000 0
+
+#g25 = modmult:modmultiply|Add0~synth
+#g747 = modmult:modmultiply|prodreg[2]
+#g32 = modmult:modmultiply|Add0~synth
+.names g25 g747 g32
+11 1
+
+#g25 = modmult:modmultiply|Add0~synth
+#g749 = modmult:modmultiply|mcreg[2]
+#g33 = modmult:modmultiply|Add0~synth
+.names g25 g749 g33
+11 1
+
+#g747 = modmult:modmultiply|prodreg[2]
+#g749 = modmult:modmultiply|mcreg[2]
+#g34 = modmult:modmultiply|Add0~synth
+.names g747 g749 g34
+11 1
+
+#g32 = modmult:modmultiply|Add0~synth
+#g33 = modmult:modmultiply|Add0~synth
+#g34 = modmult:modmultiply|Add0~synth
+#g35 = modmult:modmultiply|Add0~synth
+.names g32 g33 g34 g35
+000 0
+
+#g35 = modmult:modmultiply|Add0~synth
+#g753 = modmult:modmultiply|prodreg[3]
+#g755 = modmult:modmultiply|mcreg[3]
+#g36 = modmult:modmultiply|Add0~synth
+.names g35 g753 g755 g36
+100 1
+010 1
+001 1
+111 1
+
+#g31 = modmult:modmultiply|Add1~synth
+#g440 = modmult:modmultiply|prodreg1[3]~synth
+#g37 = modmult:modmultiply|Add1~synth
+.names g31 g440 g37
+11 1
+
+#g156 = modmult:modmultiply|modreg1[0]~synth
+#g38 = modmult:modmultiply|modreg1[3]
+.names g156 g206 g38 g907
+0-1 1
+11- 1
+
+#g38 = modmult:modmultiply|modreg1[3]
+.latch g907 g38 re clk 2
+
+#g31 = modmult:modmultiply|Add1~synth
+#g38 = modmult:modmultiply|modreg1[3]
+#g39 = modmult:modmultiply|Add1~synth
+.names g31 g38 g39
+10 1
+
+#g38 = modmult:modmultiply|modreg1[3]
+#g440 = modmult:modmultiply|prodreg1[3]~synth
+#g40 = modmult:modmultiply|Add1~synth
+.names g38 g440 g40
+01 1
+
+#g37 = modmult:modmultiply|Add1~synth
+#g39 = modmult:modmultiply|Add1~synth
+#g40 = modmult:modmultiply|Add1~synth
+#g41 = modmult:modmultiply|Add1~synth
+.names g37 g39 g40 g41
+000 0
+
+#g35 = modmult:modmultiply|Add0~synth
+#g753 = modmult:modmultiply|prodreg[3]
+#g42 = modmult:modmultiply|Add0~synth
+.names g35 g753 g42
+11 1
+
+#g35 = modmult:modmultiply|Add0~synth
+#g755 = modmult:modmultiply|mcreg[3]
+#g43 = modmult:modmultiply|Add0~synth
+.names g35 g755 g43
+11 1
+
+#g753 = modmult:modmultiply|prodreg[3]
+#g755 = modmult:modmultiply|mcreg[3]
+#g44 = modmult:modmultiply|Add0~synth
+.names g753 g755 g44
+11 1
+
+#g42 = modmult:modmultiply|Add0~synth
+#g43 = modmult:modmultiply|Add0~synth
+#g44 = modmult:modmultiply|Add0~synth
+#g45 = modmult:modmultiply|Add0~synth
+.names g42 g43 g44 g45
+000 0
+
+#g45 = modmult:modmultiply|Add0~synth
+#g759 = modmult:modmultiply|prodreg[4]
+#g761 = modmult:modmultiply|mcreg[4]
+#g46 = modmult:modmultiply|Add0~synth
+.names g45 g759 g761 g46
+100 1
+010 1
+001 1
+111 1
+
+#g41 = modmult:modmultiply|Add1~synth
+#g443 = modmult:modmultiply|prodreg1[4]~synth
+#g47 = modmult:modmultiply|Add1~synth
+.names g41 g443 g47
+11 1
+
+#g156 = modmult:modmultiply|modreg1[0]~synth
+#g48 = modmult:modmultiply|modreg1[4]
+.names g156 g209 g48 g908
+0-1 1
+11- 1
+
+#g48 = modmult:modmultiply|modreg1[4]
+.latch g908 g48 re clk 2
+
+#g41 = modmult:modmultiply|Add1~synth
+#g48 = modmult:modmultiply|modreg1[4]
+#g49 = modmult:modmultiply|Add1~synth
+.names g41 g48 g49
+10 1
+
+#g48 = modmult:modmultiply|modreg1[4]
+#g443 = modmult:modmultiply|prodreg1[4]~synth
+#g50 = modmult:modmultiply|Add1~synth
+.names g48 g443 g50
+01 1
+
+#g47 = modmult:modmultiply|Add1~synth
+#g49 = modmult:modmultiply|Add1~synth
+#g50 = modmult:modmultiply|Add1~synth
+#g51 = modmult:modmultiply|Add1~synth
+.names g47 g49 g50 g51
+000 0
+
+#g45 = modmult:modmultiply|Add0~synth
+#g759 = modmult:modmultiply|prodreg[4]
+#g52 = modmult:modmultiply|Add0~synth
+.names g45 g759 g52
+11 1
+
+#g45 = modmult:modmultiply|Add0~synth
+#g761 = modmult:modmultiply|mcreg[4]
+#g53 = modmult:modmultiply|Add0~synth
+.names g45 g761 g53
+11 1
+
+#g759 = modmult:modmultiply|prodreg[4]
+#g761 = modmult:modmultiply|mcreg[4]
+#g54 = modmult:modmultiply|Add0~synth
+.names g759 g761 g54
+11 1
+
+#g52 = modmult:modmultiply|Add0~synth
+#g53 = modmult:modmultiply|Add0~synth
+#g54 = modmult:modmultiply|Add0~synth
+#g55 = modmult:modmultiply|Add0~synth
+.names g52 g53 g54 g55
+000 0
+
+#g55 = modmult:modmultiply|Add0~synth
+#g765 = modmult:modmultiply|prodreg[5]
+#g767 = modmult:modmultiply|mcreg[5]
+#g56 = modmult:modmultiply|Add0~synth
+.names g55 g765 g767 g56
+100 1
+010 1
+001 1
+111 1
+
+#g51 = modmult:modmultiply|Add1~synth
+#g446 = modmult:modmultiply|prodreg1[5]~synth
+#g57 = modmult:modmultiply|Add1~synth
+.names g51 g446 g57
+11 1
+
+#g156 = modmult:modmultiply|modreg1[0]~synth
+#g58 = modmult:modmultiply|modreg1[5]
+.names g156 g212 g58 g909
+0-1 1
+11- 1
+
+#g58 = modmult:modmultiply|modreg1[5]
+.latch g909 g58 re clk 2
+
+#g51 = modmult:modmultiply|Add1~synth
+#g58 = modmult:modmultiply|modreg1[5]
+#g59 = modmult:modmultiply|Add1~synth
+.names g51 g58 g59
+10 1
+
+#g58 = modmult:modmultiply|modreg1[5]
+#g446 = modmult:modmultiply|prodreg1[5]~synth
+#g60 = modmult:modmultiply|Add1~synth
+.names g58 g446 g60
+01 1
+
+#g57 = modmult:modmultiply|Add1~synth
+#g59 = modmult:modmultiply|Add1~synth
+#g60 = modmult:modmultiply|Add1~synth
+#g61 = modmult:modmultiply|Add1~synth
+.names g57 g59 g60 g61
+000 0
+
+#g55 = modmult:modmultiply|Add0~synth
+#g765 = modmult:modmultiply|prodreg[5]
+#g62 = modmult:modmultiply|Add0~synth
+.names g55 g765 g62
+11 1
+
+#g55 = modmult:modmultiply|Add0~synth
+#g767 = modmult:modmultiply|mcreg[5]
+#g63 = modmult:modmultiply|Add0~synth
+.names g55 g767 g63
+11 1
+
+#g765 = modmult:modmultiply|prodreg[5]
+#g767 = modmult:modmultiply|mcreg[5]
+#g64 = modmult:modmultiply|Add0~synth
+.names g765 g767 g64
+11 1
+
+#g62 = modmult:modmultiply|Add0~synth
+#g63 = modmult:modmultiply|Add0~synth
+#g64 = modmult:modmultiply|Add0~synth
+#g65 = modmult:modmultiply|Add0~synth
+.names g62 g63 g64 g65
+000 0
+
+#g65 = modmult:modmultiply|Add0~synth
+#g771 = modmult:modmultiply|prodreg[6]
+#g773 = modmult:modmultiply|mcreg[6]
+#g66 = modmult:modmultiply|Add0~synth
+.names g65 g771 g773 g66
+100 1
+010 1
+001 1
+111 1
+
+#g61 = modmult:modmultiply|Add1~synth
+#g449 = modmult:modmultiply|prodreg1[6]~synth
+#g67 = modmult:modmultiply|Add1~synth
+.names g61 g449 g67
+11 1
+
+#g156 = modmult:modmultiply|modreg1[0]~synth
+#g68 = modmult:modmultiply|modreg1[6]
+.names g156 g215 g68 g910
+0-1 1
+11- 1
+
+#g68 = modmult:modmultiply|modreg1[6]
+.latch g910 g68 re clk 2
+
+#g61 = modmult:modmultiply|Add1~synth
+#g68 = modmult:modmultiply|modreg1[6]
+#g69 = modmult:modmultiply|Add1~synth
+.names g61 g68 g69
+10 1
+
+#g68 = modmult:modmultiply|modreg1[6]
+#g449 = modmult:modmultiply|prodreg1[6]~synth
+#g70 = modmult:modmultiply|Add1~synth
+.names g68 g449 g70
+01 1
+
+#g67 = modmult:modmultiply|Add1~synth
+#g69 = modmult:modmultiply|Add1~synth
+#g70 = modmult:modmultiply|Add1~synth
+#g71 = modmult:modmultiply|Add1~synth
+.names g67 g69 g70 g71
+000 0
+
+#g65 = modmult:modmultiply|Add0~synth
+#g771 = modmult:modmultiply|prodreg[6]
+#g72 = modmult:modmultiply|Add0~synth
+.names g65 g771 g72
+11 1
+
+#g65 = modmult:modmultiply|Add0~synth
+#g773 = modmult:modmultiply|mcreg[6]
+#g73 = modmult:modmultiply|Add0~synth
+.names g65 g773 g73
+11 1
+
+#g771 = modmult:modmultiply|prodreg[6]
+#g773 = modmult:modmultiply|mcreg[6]
+#g74 = modmult:modmultiply|Add0~synth
+.names g771 g773 g74
+11 1
+
+#g72 = modmult:modmultiply|Add0~synth
+#g73 = modmult:modmultiply|Add0~synth
+#g74 = modmult:modmultiply|Add0~synth
+#g75 = modmult:modmultiply|Add0~synth
+.names g72 g73 g74 g75
+000 0
+
+#g75 = modmult:modmultiply|Add0~synth
+#g777 = modmult:modmultiply|prodreg[7]
+#g779 = modmult:modmultiply|mcreg[7]
+#g76 = modmult:modmultiply|Add0~synth
+.names g75 g777 g779 g76
+100 1
+010 1
+001 1
+111 1
+
+#g71 = modmult:modmultiply|Add1~synth
+#g452 = modmult:modmultiply|prodreg1[7]~synth
+#g77 = modmult:modmultiply|Add1~synth
+.names g71 g452 g77
+11 1
+
+#g156 = modmult:modmultiply|modreg1[0]~synth
+#g78 = modmult:modmultiply|modreg1[7]
+.names g156 g218 g78 g911
+0-1 1
+11- 1
+
+#g78 = modmult:modmultiply|modreg1[7]
+.latch g911 g78 re clk 2
+
+#g71 = modmult:modmultiply|Add1~synth
+#g78 = modmult:modmultiply|modreg1[7]
+#g79 = modmult:modmultiply|Add1~synth
+.names g71 g78 g79
+10 1
+
+#g78 = modmult:modmultiply|modreg1[7]
+#g452 = modmult:modmultiply|prodreg1[7]~synth
+#g80 = modmult:modmultiply|Add1~synth
+.names g78 g452 g80
+01 1
+
+#g77 = modmult:modmultiply|Add1~synth
+#g79 = modmult:modmultiply|Add1~synth
+#g80 = modmult:modmultiply|Add1~synth
+#g81 = modmult:modmultiply|Add1~synth
+.names g77 g79 g80 g81
+000 0
+
+#g75 = modmult:modmultiply|Add0~synth
+#g777 = modmult:modmultiply|prodreg[7]
+#g82 = modmult:modmultiply|Add0~synth
+.names g75 g777 g82
+11 1
+
+#g75 = modmult:modmultiply|Add0~synth
+#g779 = modmult:modmultiply|mcreg[7]
+#g83 = modmult:modmultiply|Add0~synth
+.names g75 g779 g83
+11 1
+
+#g777 = modmult:modmultiply|prodreg[7]
+#g779 = modmult:modmultiply|mcreg[7]
+#g84 = modmult:modmultiply|Add0~synth
+.names g777 g779 g84
+11 1
+
+#g82 = modmult:modmultiply|Add0~synth
+#g83 = modmult:modmultiply|Add0~synth
+#g84 = modmult:modmultiply|Add0~synth
+#g85 = modmult:modmultiply|Add0~synth
+.names g82 g83 g84 g85
+000 0
+
+#g85 = modmult:modmultiply|Add0~synth
+#g783 = modmult:modmultiply|prodreg[8]
+#g785 = modmult:modmultiply|mcreg[8]
+#g86 = modmult:modmultiply|Add0~synth
+.names g85 g783 g785 g86
+100 1
+010 1
+001 1
+111 1
+
+#g81 = modmult:modmultiply|Add1~synth
+#g455 = modmult:modmultiply|prodreg1[8]~synth
+#g87 = modmult:modmultiply|Add1~synth
+.names g81 g455 g87
+00 0
+
+#g85 = modmult:modmultiply|Add0~synth
+#g783 = modmult:modmultiply|prodreg[8]
+#g88 = modmult:modmultiply|Add0~synth
+.names g85 g783 g88
+11 1
+
+#g85 = modmult:modmultiply|Add0~synth
+#g785 = modmult:modmultiply|mcreg[8]
+#g89 = modmult:modmultiply|Add0~synth
+.names g85 g785 g89
+11 1
+
+#g783 = modmult:modmultiply|prodreg[8]
+#g785 = modmult:modmultiply|mcreg[8]
+#g90 = modmult:modmultiply|Add0~synth
+.names g783 g785 g90
+11 1
+
+#g88 = modmult:modmultiply|Add0~synth
+#g89 = modmult:modmultiply|Add0~synth
+#g90 = modmult:modmultiply|Add0~synth
+#g91 = modmult:modmultiply|Add0~synth
+.names g88 g89 g90 g91
+000 0
+
+#g91 = modmult:modmultiply|Add0~synth
+#g787 = modmult:modmultiply|prodreg[9]
+#g789 = modmult:modmultiply|mcreg[9]
+#g92 = modmult:modmultiply|Add0~synth
+.names g91 g787 g789 g92
+100 1
+010 1
+001 1
+111 1
+
+#g87 = modmult:modmultiply|Add1~synth
+#g458 = modmult:modmultiply|prodreg1[9]~synth
+#g93 = modmult:modmultiply|Add1~synth
+.names g87 g458 g93
+10 1
+01 1
+
+#g9 = modmult:modmultiply|modreg1[0]
+#g434 = modmult:modmultiply|prodreg1[1]~synth
+#g94 = modmult:modmultiply|Add2~synth
+.names g9 g434 g94
+10 0
+
+#g94 = modmult:modmultiply|Add2~synth
+#g437 = modmult:modmultiply|prodreg1[2]~synth
+#g95 = modmult:modmultiply|Add2~synth
+.names g94 g437 g95
+11 1
+
+#g18 = modmult:modmultiply|modreg1[1]
+#g94 = modmult:modmultiply|Add2~synth
+#g96 = modmult:modmultiply|Add2~synth
+.names g18 g94 g96
+01 1
+
+#g18 = modmult:modmultiply|modreg1[1]
+#g437 = modmult:modmultiply|prodreg1[2]~synth
+#g97 = modmult:modmultiply|Add2~synth
+.names g18 g437 g97
+01 1
+
+#g95 = modmult:modmultiply|Add2~synth
+#g96 = modmult:modmultiply|Add2~synth
+#g97 = modmult:modmultiply|Add2~synth
+#g98 = modmult:modmultiply|Add2~synth
+.names g95 g96 g97 g98
+000 0
+
+#g98 = modmult:modmultiply|Add2~synth
+#g440 = modmult:modmultiply|prodreg1[3]~synth
+#g99 = modmult:modmultiply|Add2~synth
+.names g98 g440 g99
+11 1
+
+#g28 = modmult:modmultiply|modreg1[2]
+#g98 = modmult:modmultiply|Add2~synth
+#g100 = modmult:modmultiply|Add2~synth
+.names g28 g98 g100
+01 1
+
+#g28 = modmult:modmultiply|modreg1[2]
+#g440 = modmult:modmultiply|prodreg1[3]~synth
+#g101 = modmult:modmultiply|Add2~synth
+.names g28 g440 g101
+01 1
+
+#g99 = modmult:modmultiply|Add2~synth
+#g100 = modmult:modmultiply|Add2~synth
+#g101 = modmult:modmultiply|Add2~synth
+#g102 = modmult:modmultiply|Add2~synth
+.names g99 g100 g101 g102
+000 0
+
+#g102 = modmult:modmultiply|Add2~synth
+#g443 = modmult:modmultiply|prodreg1[4]~synth
+#g103 = modmult:modmultiply|Add2~synth
+.names g102 g443 g103
+11 1
+
+#g38 = modmult:modmultiply|modreg1[3]
+#g102 = modmult:modmultiply|Add2~synth
+#g104 = modmult:modmultiply|Add2~synth
+.names g38 g102 g104
+01 1
+
+#g38 = modmult:modmultiply|modreg1[3]
+#g443 = modmult:modmultiply|prodreg1[4]~synth
+#g105 = modmult:modmultiply|Add2~synth
+.names g38 g443 g105
+01 1
+
+#g103 = modmult:modmultiply|Add2~synth
+#g104 = modmult:modmultiply|Add2~synth
+#g105 = modmult:modmultiply|Add2~synth
+#g106 = modmult:modmultiply|Add2~synth
+.names g103 g104 g105 g106
+000 0
+
+#g106 = modmult:modmultiply|Add2~synth
+#g446 = modmult:modmultiply|prodreg1[5]~synth
+#g107 = modmult:modmultiply|Add2~synth
+.names g106 g446 g107
+11 1
+
+#g48 = modmult:modmultiply|modreg1[4]
+#g106 = modmult:modmultiply|Add2~synth
+#g108 = modmult:modmultiply|Add2~synth
+.names g48 g106 g108
+01 1
+
+#g48 = modmult:modmultiply|modreg1[4]
+#g446 = modmult:modmultiply|prodreg1[5]~synth
+#g109 = modmult:modmultiply|Add2~synth
+.names g48 g446 g109
+01 1
+
+#g107 = modmult:modmultiply|Add2~synth
+#g108 = modmult:modmultiply|Add2~synth
+#g109 = modmult:modmultiply|Add2~synth
+#g110 = modmult:modmultiply|Add2~synth
+.names g107 g108 g109 g110
+000 0
+
+#g110 = modmult:modmultiply|Add2~synth
+#g449 = modmult:modmultiply|prodreg1[6]~synth
+#g111 = modmult:modmultiply|Add2~synth
+.names g110 g449 g111
+11 1
+
+#g58 = modmult:modmultiply|modreg1[5]
+#g110 = modmult:modmultiply|Add2~synth
+#g112 = modmult:modmultiply|Add2~synth
+.names g58 g110 g112
+01 1
+
+#g58 = modmult:modmultiply|modreg1[5]
+#g449 = modmult:modmultiply|prodreg1[6]~synth
+#g113 = modmult:modmultiply|Add2~synth
+.names g58 g449 g113
+01 1
+
+#g111 = modmult:modmultiply|Add2~synth
+#g112 = modmult:modmultiply|Add2~synth
+#g113 = modmult:modmultiply|Add2~synth
+#g114 = modmult:modmultiply|Add2~synth
+.names g111 g112 g113 g114
+000 0
+
+#g114 = modmult:modmultiply|Add2~synth
+#g452 = modmult:modmultiply|prodreg1[7]~synth
+#g115 = modmult:modmultiply|Add2~synth
+.names g114 g452 g115
+11 1
+
+#g68 = modmult:modmultiply|modreg1[6]
+#g114 = modmult:modmultiply|Add2~synth
+#g116 = modmult:modmultiply|Add2~synth
+.names g68 g114 g116
+01 1
+
+#g68 = modmult:modmultiply|modreg1[6]
+#g452 = modmult:modmultiply|prodreg1[7]~synth
+#g117 = modmult:modmultiply|Add2~synth
+.names g68 g452 g117
+01 1
+
+#g115 = modmult:modmultiply|Add2~synth
+#g116 = modmult:modmultiply|Add2~synth
+#g117 = modmult:modmultiply|Add2~synth
+#g118 = modmult:modmultiply|Add2~synth
+.names g115 g116 g117 g118
+000 0
+
+#g118 = modmult:modmultiply|Add2~synth
+#g455 = modmult:modmultiply|prodreg1[8]~synth
+#g119 = modmult:modmultiply|Add2~synth
+.names g118 g455 g119
+11 1
+
+#g78 = modmult:modmultiply|modreg1[7]
+#g118 = modmult:modmultiply|Add2~synth
+#g120 = modmult:modmultiply|Add2~synth
+.names g78 g118 g120
+01 1
+
+#g78 = modmult:modmultiply|modreg1[7]
+#g455 = modmult:modmultiply|prodreg1[8]~synth
+#g121 = modmult:modmultiply|Add2~synth
+.names g78 g455 g121
+01 1
+
+#g119 = modmult:modmultiply|Add2~synth
+#g120 = modmult:modmultiply|Add2~synth
+#g121 = modmult:modmultiply|Add2~synth
+#g122 = modmult:modmultiply|Add2~synth
+.names g119 g120 g121 g122
+000 0
+
+#g122 = modmult:modmultiply|Add2~synth
+#g458 = modmult:modmultiply|prodreg1[9]~synth
+#g123 = modmult:modmultiply|Add2~synth
+.names g122 g458 g123
+10 1
+01 1
+
+#g93 = modmult:modmultiply|Add1~synth
+#g123 = modmult:modmultiply|Add2~synth
+#g124 = modmult:modmultiply|Mux9~synth
+.names g93 g123 g124
+10 0
+
+#g125 = modmult:modmultiply|first
+.latch g506 g125 re clk 2
+
+#g126 = modmult:modsqr|first
+.latch g542 g126 re clk 2
+
+#g125 = modmult:modmultiply|first
+#g126 = modmult:modsqr|first
+#g127 = bothrdy
+.names g125 g126 g127
+00 0
+
+#g127 = bothrdy
+#g791 = multgo
+#g128 = mngcount~synth
+.names g127 g791 g128
+00 0
+
+#g548 = count[3]~synth
+#g129 = count[6]
+.names g548 g236 g129 g912
+1-1 1
+01- 1
+
+#g129 = count[6]
+.latch g912 g129 re clk 2
+
+#g548 = count[3]~synth
+#g130 = count[5]
+.names g548 g551 g130 g913
+1-1 1
+01- 1
+
+#g130 = count[5]
+.latch g913 g130 re clk 2
+
+#g548 = count[3]~synth
+#g131 = count[4]
+.names g548 g554 g131 g914
+1-1 1
+01- 1
+
+#g131 = count[4]
+.latch g914 g131 re clk 2
+
+#g548 = count[3]~synth
+#g132 = count[3]
+.names g548 g557 g132 g915
+1-1 1
+01- 1
+
+#g132 = count[3]
+.latch g915 g132 re clk 2
+
+#g548 = count[3]~synth
+#g133 = count[2]
+.names g548 g560 g133 g916
+1-1 1
+01- 1
+
+#g133 = count[2]
+.latch g916 g133 re clk 2
+
+#g548 = count[3]~synth
+#g134 = count[1]
+.names g548 g563 g134 g917
+1-1 1
+01- 1
+
+#g134 = count[1]
+.latch g917 g134 re clk 2
+
+#g548 = count[3]~synth
+#g135 = count[0]
+.names g548 g566 g135 g918
+1-1 1
+01- 1
+
+#g135 = count[0]
+.latch g918 g135 re clk 2
+
+#g129 = count[6]
+#g130 = count[5]
+#g131 = count[4]
+#g132 = count[3]
+#g133 = count[2]
+#g134 = count[1]
+#g135 = count[0]
+#g136 = Equal0~synth
+.names g129 g130 g131 g132 g133 g134 g135 g136
+0000000 1
+
+#g128 = mngcount~synth
+#g136 = Equal0~synth
+#g735 = done
+#g137 = cypher[0]~synth
+.names g128 reset g136 g735 g137
+0011 1
+
+#g9 = modmult:modmultiply|modreg1[0]
+#g434 = modmult:modmultiply|prodreg1[1]~synth
+#g138 = modmult:modmultiply|Add2~synth
+.names g9 g434 g138
+10 1
+01 1
+
+#g14 = modmult:modmultiply|Add1~synth
+#g18 = modmult:modmultiply|modreg1[1]
+#g434 = modmult:modmultiply|prodreg1[1]~synth
+#g139 = modmult:modmultiply|Add1~synth
+.names g14 g18 g434 g139
+100 1
+010 1
+001 1
+111 1
+
+#g87 = modmult:modmultiply|Add1~synth
+#g458 = modmult:modmultiply|prodreg1[9]~synth
+#g140 = modmult:modmultiply|Add1~synth
+.names g87 g458 g140
+10 1
+01 1
+
+#g122 = modmult:modmultiply|Add2~synth
+#g458 = modmult:modmultiply|prodreg1[9]~synth
+#g141 = modmult:modmultiply|Add2~synth
+.names g122 g458 g141
+10 1
+01 1
+
+#g18 = modmult:modmultiply|modreg1[1]
+#g94 = modmult:modmultiply|Add2~synth
+#g437 = modmult:modmultiply|prodreg1[2]~synth
+#g142 = modmult:modmultiply|Add2~synth
+.names g18 g94 g437 g142
+100 1
+010 1
+001 1
+111 1
+
+#g21 = modmult:modmultiply|Add1~synth
+#g28 = modmult:modmultiply|modreg1[2]
+#g437 = modmult:modmultiply|prodreg1[2]~synth
+#g143 = modmult:modmultiply|Add1~synth
+.names g21 g28 g437 g143
+100 1
+010 1
+001 1
+111 1
+
+#g28 = modmult:modmultiply|modreg1[2]
+#g98 = modmult:modmultiply|Add2~synth
+#g440 = modmult:modmultiply|prodreg1[3]~synth
+#g144 = modmult:modmultiply|Add2~synth
+.names g28 g98 g440 g144
+100 1
+010 1
+001 1
+111 1
+
+#g31 = modmult:modmultiply|Add1~synth
+#g38 = modmult:modmultiply|modreg1[3]
+#g440 = modmult:modmultiply|prodreg1[3]~synth
+#g145 = modmult:modmultiply|Add1~synth
+.names g31 g38 g440 g145
+100 1
+010 1
+001 1
+111 1
+
+#g38 = modmult:modmultiply|modreg1[3]
+#g102 = modmult:modmultiply|Add2~synth
+#g443 = modmult:modmultiply|prodreg1[4]~synth
+#g146 = modmult:modmultiply|Add2~synth
+.names g38 g102 g443 g146
+100 1
+010 1
+001 1
+111 1
+
+#g41 = modmult:modmultiply|Add1~synth
+#g48 = modmult:modmultiply|modreg1[4]
+#g443 = modmult:modmultiply|prodreg1[4]~synth
+#g147 = modmult:modmultiply|Add1~synth
+.names g41 g48 g443 g147
+100 1
+010 1
+001 1
+111 1
+
+#g48 = modmult:modmultiply|modreg1[4]
+#g106 = modmult:modmultiply|Add2~synth
+#g446 = modmult:modmultiply|prodreg1[5]~synth
+#g148 = modmult:modmultiply|Add2~synth
+.names g48 g106 g446 g148
+100 1
+010 1
+001 1
+111 1
+
+#g51 = modmult:modmultiply|Add1~synth
+#g58 = modmult:modmultiply|modreg1[5]
+#g446 = modmult:modmultiply|prodreg1[5]~synth
+#g149 = modmult:modmultiply|Add1~synth
+.names g51 g58 g446 g149
+100 1
+010 1
+001 1
+111 1
+
+#g58 = modmult:modmultiply|modreg1[5]
+#g110 = modmult:modmultiply|Add2~synth
+#g449 = modmult:modmultiply|prodreg1[6]~synth
+#g150 = modmult:modmultiply|Add2~synth
+.names g58 g110 g449 g150
+100 1
+010 1
+001 1
+111 1
+
+#g61 = modmult:modmultiply|Add1~synth
+#g68 = modmult:modmultiply|modreg1[6]
+#g449 = modmult:modmultiply|prodreg1[6]~synth
+#g151 = modmult:modmultiply|Add1~synth
+.names g61 g68 g449 g151
+100 1
+010 1
+001 1
+111 1
+
+#g68 = modmult:modmultiply|modreg1[6]
+#g114 = modmult:modmultiply|Add2~synth
+#g452 = modmult:modmultiply|prodreg1[7]~synth
+#g152 = modmult:modmultiply|Add2~synth
+.names g68 g114 g452 g152
+100 1
+010 1
+001 1
+111 1
+
+#g71 = modmult:modmultiply|Add1~synth
+#g78 = modmult:modmultiply|modreg1[7]
+#g452 = modmult:modmultiply|prodreg1[7]~synth
+#g153 = modmult:modmultiply|Add1~synth
+.names g71 g78 g452 g153
+100 1
+010 1
+001 1
+111 1
+
+#g128 = mngcount~synth
+#g136 = Equal0~synth
+#g154 = done~synth
+.names g128 g136 g154
+01 1
+
+#g238 = modreg[0]~synth
+#g155 = modreg[0]
+.names g238 inMod[0] g155 g919
+0-1 1
+11- 1
+
+#g155 = modreg[0]
+.latch g919 g155 re clk 2
+
+#g125 = modmult:modmultiply|first
+#g791 = multgo
+#g156 = modmult:modmultiply|modreg1[0]~synth
+.names g125 reset g791 g156
+001 1
+
+#g165 = modmult:modmultiply|prodreg[0]~synth
+#g157 = modmult:modmultiply|mpreg[7]
+.names g165 g239 g157 g920
+1-1 1
+01- 1
+
+#g157 = modmult:modmultiply|mpreg[7]
+.latch g920 g157 re clk 2
+
+#g165 = modmult:modmultiply|prodreg[0]~synth
+#g158 = modmult:modmultiply|mpreg[6]
+.names g165 g569 g158 g921
+1-1 1
+01- 1
+
+#g158 = modmult:modmultiply|mpreg[6]
+.latch g921 g158 re clk 2
+
+#g165 = modmult:modmultiply|prodreg[0]~synth
+#g159 = modmult:modmultiply|mpreg[5]
+.names g165 g572 g159 g922
+1-1 1
+01- 1
+
+#g159 = modmult:modmultiply|mpreg[5]
+.latch g922 g159 re clk 2
+
+#g165 = modmult:modmultiply|prodreg[0]~synth
+#g160 = modmult:modmultiply|mpreg[4]
+.names g165 g575 g160 g923
+1-1 1
+01- 1
+
+#g160 = modmult:modmultiply|mpreg[4]
+.latch g923 g160 re clk 2
+
+#g165 = modmult:modmultiply|prodreg[0]~synth
+#g161 = modmult:modmultiply|mpreg[3]
+.names g165 g578 g161 g924
+1-1 1
+01- 1
+
+#g161 = modmult:modmultiply|mpreg[3]
+.latch g924 g161 re clk 2
+
+#g165 = modmult:modmultiply|prodreg[0]~synth
+#g162 = modmult:modmultiply|mpreg[2]
+.names g165 g581 g162 g925
+1-1 1
+01- 1
+
+#g162 = modmult:modmultiply|mpreg[2]
+.latch g925 g162 re clk 2
+
+#g165 = modmult:modmultiply|prodreg[0]~synth
+#g163 = modmult:modmultiply|mpreg[1]
+.names g165 g584 g163 g926
+1-1 1
+01- 1
+
+#g163 = modmult:modmultiply|mpreg[1]
+.latch g926 g163 re clk 2
+
+#g12 = modmult:modmultiply|mpreg[0]
+#g157 = modmult:modmultiply|mpreg[7]
+#g158 = modmult:modmultiply|mpreg[6]
+#g159 = modmult:modmultiply|mpreg[5]
+#g160 = modmult:modmultiply|mpreg[4]
+#g161 = modmult:modmultiply|mpreg[3]
+#g162 = modmult:modmultiply|mpreg[2]
+#g163 = modmult:modmultiply|mpreg[1]
+#g164 = modmult:modmultiply|Equal0~synth
+.names g12 g157 g158 g159 g160 g161 g162 g163 g164
+00000000 0
+
+#g506 = modmult:modmultiply|prodreg[0]~synth
+#g165 = modmult:modmultiply|prodreg[0]~synth
+.names reset g506 g165
+01 0
+
+#g242 = tempin[4]~synth
+#g166 = tempin[0]
+.names g242 g241 g166 g927
+0-1 1
+11- 1
+
+#g166 = tempin[0]
+.latch g927 g166 re clk 2
+
+#g125 = modmult:modmultiply|first
+#g166 = tempin[0]
+#g167 = modmult:modmultiply|mcreg~synth
+.names g125 g166 g167
+01 1
+
+#g9 = modmult:modmultiply|modreg1[0]
+#g10 = modmult:modmultiply|mcreg[0]
+#g168 = modmult:modmultiply|Add3~synth
+.names g9 g10 g168
+10 1
+01 1
+
+#g9 = modmult:modmultiply|modreg1[0]
+#g10 = modmult:modmultiply|mcreg[0]
+#g169 = modmult:modmultiply|Add3~synth
+.names g9 g10 g169
+10 0
+
+#g169 = modmult:modmultiply|Add3~synth
+#g743 = modmult:modmultiply|mcreg[1]
+#g170 = modmult:modmultiply|Add3~synth
+.names g169 g743 g170
+11 1
+
+#g18 = modmult:modmultiply|modreg1[1]
+#g169 = modmult:modmultiply|Add3~synth
+#g171 = modmult:modmultiply|Add3~synth
+.names g18 g169 g171
+01 1
+
+#g18 = modmult:modmultiply|modreg1[1]
+#g743 = modmult:modmultiply|mcreg[1]
+#g172 = modmult:modmultiply|Add3~synth
+.names g18 g743 g172
+01 1
+
+#g170 = modmult:modmultiply|Add3~synth
+#g171 = modmult:modmultiply|Add3~synth
+#g172 = modmult:modmultiply|Add3~synth
+#g173 = modmult:modmultiply|Add3~synth
+.names g170 g171 g172 g173
+000 0
+
+#g173 = modmult:modmultiply|Add3~synth
+#g749 = modmult:modmultiply|mcreg[2]
+#g174 = modmult:modmultiply|Add3~synth
+.names g173 g749 g174
+11 1
+
+#g28 = modmult:modmultiply|modreg1[2]
+#g173 = modmult:modmultiply|Add3~synth
+#g175 = modmult:modmultiply|Add3~synth
+.names g28 g173 g175
+01 1
+
+#g28 = modmult:modmultiply|modreg1[2]
+#g749 = modmult:modmultiply|mcreg[2]
+#g176 = modmult:modmultiply|Add3~synth
+.names g28 g749 g176
+01 1
+
+#g174 = modmult:modmultiply|Add3~synth
+#g175 = modmult:modmultiply|Add3~synth
+#g176 = modmult:modmultiply|Add3~synth
+#g177 = modmult:modmultiply|Add3~synth
+.names g174 g175 g176 g177
+000 0
+
+#g177 = modmult:modmultiply|Add3~synth
+#g755 = modmult:modmultiply|mcreg[3]
+#g178 = modmult:modmultiply|Add3~synth
+.names g177 g755 g178
+11 1
+
+#g38 = modmult:modmultiply|modreg1[3]
+#g177 = modmult:modmultiply|Add3~synth
+#g179 = modmult:modmultiply|Add3~synth
+.names g38 g177 g179
+01 1
+
+#g38 = modmult:modmultiply|modreg1[3]
+#g755 = modmult:modmultiply|mcreg[3]
+#g180 = modmult:modmultiply|Add3~synth
+.names g38 g755 g180
+01 1
+
+#g178 = modmult:modmultiply|Add3~synth
+#g179 = modmult:modmultiply|Add3~synth
+#g180 = modmult:modmultiply|Add3~synth
+#g181 = modmult:modmultiply|Add3~synth
+.names g178 g179 g180 g181
+000 0
+
+#g181 = modmult:modmultiply|Add3~synth
+#g761 = modmult:modmultiply|mcreg[4]
+#g182 = modmult:modmultiply|Add3~synth
+.names g181 g761 g182
+11 1
+
+#g48 = modmult:modmultiply|modreg1[4]
+#g181 = modmult:modmultiply|Add3~synth
+#g183 = modmult:modmultiply|Add3~synth
+.names g48 g181 g183
+01 1
+
+#g48 = modmult:modmultiply|modreg1[4]
+#g761 = modmult:modmultiply|mcreg[4]
+#g184 = modmult:modmultiply|Add3~synth
+.names g48 g761 g184
+01 1
+
+#g182 = modmult:modmultiply|Add3~synth
+#g183 = modmult:modmultiply|Add3~synth
+#g184 = modmult:modmultiply|Add3~synth
+#g185 = modmult:modmultiply|Add3~synth
+.names g182 g183 g184 g185
+000 0
+
+#g185 = modmult:modmultiply|Add3~synth
+#g767 = modmult:modmultiply|mcreg[5]
+#g186 = modmult:modmultiply|Add3~synth
+.names g185 g767 g186
+11 1
+
+#g58 = modmult:modmultiply|modreg1[5]
+#g185 = modmult:modmultiply|Add3~synth
+#g187 = modmult:modmultiply|Add3~synth
+.names g58 g185 g187
+01 1
+
+#g58 = modmult:modmultiply|modreg1[5]
+#g767 = modmult:modmultiply|mcreg[5]
+#g188 = modmult:modmultiply|Add3~synth
+.names g58 g767 g188
+01 1
+
+#g186 = modmult:modmultiply|Add3~synth
+#g187 = modmult:modmultiply|Add3~synth
+#g188 = modmult:modmultiply|Add3~synth
+#g189 = modmult:modmultiply|Add3~synth
+.names g186 g187 g188 g189
+000 0
+
+#g189 = modmult:modmultiply|Add3~synth
+#g773 = modmult:modmultiply|mcreg[6]
+#g190 = modmult:modmultiply|Add3~synth
+.names g189 g773 g190
+11 1
+
+#g68 = modmult:modmultiply|modreg1[6]
+#g189 = modmult:modmultiply|Add3~synth
+#g191 = modmult:modmultiply|Add3~synth
+.names g68 g189 g191
+01 1
+
+#g68 = modmult:modmultiply|modreg1[6]
+#g773 = modmult:modmultiply|mcreg[6]
+#g192 = modmult:modmultiply|Add3~synth
+.names g68 g773 g192
+01 1
+
+#g190 = modmult:modmultiply|Add3~synth
+#g191 = modmult:modmultiply|Add3~synth
+#g192 = modmult:modmultiply|Add3~synth
+#g193 = modmult:modmultiply|Add3~synth
+.names g190 g191 g192 g193
+000 0
+
+#g193 = modmult:modmultiply|Add3~synth
+#g779 = modmult:modmultiply|mcreg[7]
+#g194 = modmult:modmultiply|Add3~synth
+.names g193 g779 g194
+11 1
+
+#g78 = modmult:modmultiply|modreg1[7]
+#g193 = modmult:modmultiply|Add3~synth
+#g195 = modmult:modmultiply|Add3~synth
+.names g78 g193 g195
+01 1
+
+#g78 = modmult:modmultiply|modreg1[7]
+#g779 = modmult:modmultiply|mcreg[7]
+#g196 = modmult:modmultiply|Add3~synth
+.names g78 g779 g196
+01 1
+
+#g194 = modmult:modmultiply|Add3~synth
+#g195 = modmult:modmultiply|Add3~synth
+#g196 = modmult:modmultiply|Add3~synth
+#g197 = modmult:modmultiply|Add3~synth
+.names g194 g195 g196 g197
+000 0
+
+#g197 = modmult:modmultiply|Add3~synth
+#g785 = modmult:modmultiply|mcreg[8]
+#g198 = modmult:modmultiply|Add3~synth
+.names g197 g785 g198
+10 1
+01 1
+
+#g242 = tempin[4]~synth
+#g199 = tempin[1]
+.names g242 g359 g199 g928
+0-1 1
+11- 1
+
+#g199 = tempin[1]
+.latch g928 g199 re clk 2
+
+#g238 = modreg[0]~synth
+#g200 = modreg[1]
+.names g238 inMod[1] g200 g929
+0-1 1
+11- 1
+
+#g200 = modreg[1]
+.latch g929 g200 re clk 2
+
+#g18 = modmult:modmultiply|modreg1[1]
+#g169 = modmult:modmultiply|Add3~synth
+#g743 = modmult:modmultiply|mcreg[1]
+#g201 = modmult:modmultiply|Add3~synth
+.names g18 g169 g743 g201
+100 1
+010 1
+001 1
+111 1
+
+#g242 = tempin[4]~synth
+#g202 = tempin[2]
+.names g242 g360 g202 g930
+0-1 1
+11- 1
+
+#g202 = tempin[2]
+.latch g930 g202 re clk 2
+
+#g238 = modreg[0]~synth
+#g203 = modreg[2]
+.names g238 inMod[2] g203 g931
+0-1 1
+11- 1
+
+#g203 = modreg[2]
+.latch g931 g203 re clk 2
+
+#g28 = modmult:modmultiply|modreg1[2]
+#g173 = modmult:modmultiply|Add3~synth
+#g749 = modmult:modmultiply|mcreg[2]
+#g204 = modmult:modmultiply|Add3~synth
+.names g28 g173 g749 g204
+100 1
+010 1
+001 1
+111 1
+
+#g242 = tempin[4]~synth
+#g205 = tempin[3]
+.names g242 g361 g205 g932
+0-1 1
+11- 1
+
+#g205 = tempin[3]
+.latch g932 g205 re clk 2
+
+#g238 = modreg[0]~synth
+#g206 = modreg[3]
+.names g238 inMod[3] g206 g933
+0-1 1
+11- 1
+
+#g206 = modreg[3]
+.latch g933 g206 re clk 2
+
+#g38 = modmult:modmultiply|modreg1[3]
+#g177 = modmult:modmultiply|Add3~synth
+#g755 = modmult:modmultiply|mcreg[3]
+#g207 = modmult:modmultiply|Add3~synth
+.names g38 g177 g755 g207
+100 1
+010 1
+001 1
+111 1
+
+#g242 = tempin[4]~synth
+#g208 = tempin[4]
+.names g242 g362 g208 g934
+0-1 1
+11- 1
+
+#g208 = tempin[4]
+.latch g934 g208 re clk 2
+
+#g238 = modreg[0]~synth
+#g209 = modreg[4]
+.names g238 inMod[4] g209 g935
+0-1 1
+11- 1
+
+#g209 = modreg[4]
+.latch g935 g209 re clk 2
+
+#g48 = modmult:modmultiply|modreg1[4]
+#g181 = modmult:modmultiply|Add3~synth
+#g761 = modmult:modmultiply|mcreg[4]
+#g210 = modmult:modmultiply|Add3~synth
+.names g48 g181 g761 g210
+100 1
+010 1
+001 1
+111 1
+
+#g242 = tempin[4]~synth
+#g211 = tempin[5]
+.names g242 g363 g211 g936
+0-1 1
+11- 1
+
+#g211 = tempin[5]
+.latch g936 g211 re clk 2
+
+#g238 = modreg[0]~synth
+#g212 = modreg[5]
+.names g238 inMod[5] g212 g937
+0-1 1
+11- 1
+
+#g212 = modreg[5]
+.latch g937 g212 re clk 2
+
+#g58 = modmult:modmultiply|modreg1[5]
+#g185 = modmult:modmultiply|Add3~synth
+#g767 = modmult:modmultiply|mcreg[5]
+#g213 = modmult:modmultiply|Add3~synth
+.names g58 g185 g767 g213
+100 1
+010 1
+001 1
+111 1
+
+#g242 = tempin[4]~synth
+#g214 = tempin[6]
+.names g242 g364 g214 g938
+0-1 1
+11- 1
+
+#g214 = tempin[6]
+.latch g938 g214 re clk 2
+
+#g238 = modreg[0]~synth
+#g215 = modreg[6]
+.names g238 inMod[6] g215 g939
+0-1 1
+11- 1
+
+#g215 = modreg[6]
+.latch g939 g215 re clk 2
+
+#g68 = modmult:modmultiply|modreg1[6]
+#g189 = modmult:modmultiply|Add3~synth
+#g773 = modmult:modmultiply|mcreg[6]
+#g216 = modmult:modmultiply|Add3~synth
+.names g68 g189 g773 g216
+100 1
+010 1
+001 1
+111 1
+
+#g242 = tempin[4]~synth
+#g217 = tempin[7]
+.names g242 g365 g217 g940
+0-1 1
+11- 1
+
+#g217 = tempin[7]
+.latch g940 g217 re clk 2
+
+#g238 = modreg[0]~synth
+#g218 = modreg[7]
+.names g238 inMod[7] g218 g941
+0-1 1
+11- 1
+
+#g218 = modreg[7]
+.latch g941 g218 re clk 2
+
+#g78 = modmult:modmultiply|modreg1[7]
+#g118 = modmult:modmultiply|Add2~synth
+#g455 = modmult:modmultiply|prodreg1[8]~synth
+#g219 = modmult:modmultiply|Add2~synth
+.names g78 g118 g455 g219
+100 1
+010 1
+001 1
+111 1
+
+#g81 = modmult:modmultiply|Add1~synth
+#g455 = modmult:modmultiply|prodreg1[8]~synth
+#g220 = modmult:modmultiply|Add1~synth
+.names g81 g455 g220
+10 1
+01 1
+
+#g506 = modmult:modmultiply|prodreg[0]~synth
+#g221 = modmult:modmultiply|mcreg[9]~synth
+.names reset g506 g221
+01 1
+
+#g78 = modmult:modmultiply|modreg1[7]
+#g193 = modmult:modmultiply|Add3~synth
+#g779 = modmult:modmultiply|mcreg[7]
+#g222 = modmult:modmultiply|Add3~synth
+.names g78 g193 g779 g222
+100 1
+010 1
+001 1
+111 1
+
+#g87 = modmult:modmultiply|Add1~synth
+#g122 = modmult:modmultiply|Add2~synth
+#g458 = modmult:modmultiply|prodreg1[9]~synth
+#g223 = modmult:modmultiply|Mux0~synth
+.names g87 g122 g458 g223
+111 1
+
+#g198 = modmult:modmultiply|Add3~synth
+#g785 = modmult:modmultiply|mcreg[8]
+#g224 = modmult:modmultiply|mcreg2[8]~synth
+.names g198 g785 g224
+01 1
+
+#g367 = modmult:modsqr|mpreg[7]~synth
+#g225 = modmult:modsqr|mpreg[7]
+.names g367 g366 g225 g942
+1-1 1
+01- 1
+
+#g225 = modmult:modsqr|mpreg[7]
+.latch g942 g225 re clk 2
+
+#g367 = modmult:modsqr|mpreg[7]~synth
+#g226 = modmult:modsqr|mpreg[6]
+.names g367 g644 g226 g943
+1-1 1
+01- 1
+
+#g226 = modmult:modsqr|mpreg[6]
+.latch g943 g226 re clk 2
+
+#g367 = modmult:modsqr|mpreg[7]~synth
+#g227 = modmult:modsqr|mpreg[5]
+.names g367 g647 g227 g944
+1-1 1
+01- 1
+
+#g227 = modmult:modsqr|mpreg[5]
+.latch g944 g227 re clk 2
+
+#g367 = modmult:modsqr|mpreg[7]~synth
+#g228 = modmult:modsqr|mpreg[4]
+.names g367 g650 g228 g945
+1-1 1
+01- 1
+
+#g228 = modmult:modsqr|mpreg[4]
+.latch g945 g228 re clk 2
+
+#g367 = modmult:modsqr|mpreg[7]~synth
+#g229 = modmult:modsqr|mpreg[3]
+.names g367 g653 g229 g946
+1-1 1
+01- 1
+
+#g229 = modmult:modsqr|mpreg[3]
+.latch g946 g229 re clk 2
+
+#g367 = modmult:modsqr|mpreg[7]~synth
+#g230 = modmult:modsqr|mpreg[2]
+.names g367 g656 g230 g947
+1-1 1
+01- 1
+
+#g230 = modmult:modsqr|mpreg[2]
+.latch g947 g230 re clk 2
+
+#g367 = modmult:modsqr|mpreg[7]~synth
+#g231 = modmult:modsqr|mpreg[1]
+.names g367 g659 g231 g948
+1-1 1
+01- 1
+
+#g231 = modmult:modsqr|mpreg[1]
+.latch g948 g231 re clk 2
+
+#g367 = modmult:modsqr|mpreg[7]~synth
+#g232 = modmult:modsqr|mpreg[0]
+.names g367 g662 g232 g949
+1-1 1
+01- 1
+
+#g232 = modmult:modsqr|mpreg[0]
+.latch g949 g232 re clk 2
+
+#g225 = modmult:modsqr|mpreg[7]
+#g226 = modmult:modsqr|mpreg[6]
+#g227 = modmult:modsqr|mpreg[5]
+#g228 = modmult:modsqr|mpreg[4]
+#g229 = modmult:modsqr|mpreg[3]
+#g230 = modmult:modsqr|mpreg[2]
+#g231 = modmult:modsqr|mpreg[1]
+#g232 = modmult:modsqr|mpreg[0]
+#g233 = modmult:modsqr|Equal0~synth
+.names g225 g226 g227 g228 g229 g230 g231 g232 g233
+00000000 0
+
+#g127 = bothrdy
+#g136 = Equal0~synth
+#g234 = multgo~synth
+.names g127 g136 g234
+00 0
+
+#g545 = multgo~synth
+#g791 = multgo
+#g235 = multgo~synth
+.names g545 g791 g235
+10 0
+
+#g735 = done
+#g236 = count~synth
+.names inExp[7] g735 g236
+10 1
+
+#g234 = multgo~synth
+#g791 = multgo
+#g237 = count[3]~synth
+.names g234 g791 g237
+00 0
+
+#g735 = done
+#g238 = modreg[0]~synth
+.names ds g735 g238
+10 1
+
+#g125 = modmult:modmultiply|first
+#g796 = sqrin[7]
+#g239 = modmult:modmultiply|mpreg~synth
+.names g125 g796 g239
+01 1
+
+#g735 = done
+#g240 = tempin[4]~synth
+.names inExp[0] g735 g240
+00 0
+
+#g240 = tempin[4]~synth
+#g587 = tempin~synth
+#g241 = tempin~synth
+.names g240 g587 g241
+10 0
+
+#g735 = done
+#g242 = tempin[4]~synth
+.names ds g735 g242
+00 0
+
+#g384 = modmult:modsqr|modreg1[0]~synth
+#g243 = modmult:modsqr|modreg1[0]
+.names g384 g155 g243 g950
+0-1 1
+11- 1
+
+#g243 = modmult:modsqr|modreg1[0]
+.latch g950 g243 re clk 2
+
+#g367 = modmult:modsqr|mpreg[7]~synth
+#g244 = modmult:modsqr|mcreg[0]
+.names g367 g385 g244 g951
+1-1 1
+01- 1
+
+#g244 = modmult:modsqr|mcreg[0]
+.latch g951 g244 re clk 2
+
+#g244 = modmult:modsqr|mcreg[0]
+#g810 = modmult:modsqr|prodreg[0]
+#g245 = modmult:modsqr|Add0~synth
+.names g244 g810 g245
+10 1
+01 1
+
+#g243 = modmult:modsqr|modreg1[0]
+#g590 = modmult:modsqr|prodreg1[0]~synth
+#g246 = modmult:modsqr|Add1~synth
+.names g243 g590 g246
+10 1
+01 1
+
+#g243 = modmult:modsqr|modreg1[0]
+#g590 = modmult:modsqr|prodreg1[0]~synth
+#g247 = modmult:modsqr|Add1~synth
+.names g243 g590 g247
+10 0
+
+#g244 = modmult:modsqr|mcreg[0]
+#g810 = modmult:modsqr|prodreg[0]
+#g248 = modmult:modsqr|Add0~synth
+.names g244 g810 g248
+11 1
+
+#g248 = modmult:modsqr|Add0~synth
+#g812 = modmult:modsqr|prodreg[1]
+#g814 = modmult:modsqr|mcreg[1]
+#g249 = modmult:modsqr|Add0~synth
+.names g248 g812 g814 g249
+100 1
+010 1
+001 1
+111 1
+
+#g247 = modmult:modsqr|Add1~synth
+#g593 = modmult:modsqr|prodreg1[1]~synth
+#g250 = modmult:modsqr|Add1~synth
+.names g247 g593 g250
+11 1
+
+#g384 = modmult:modsqr|modreg1[0]~synth
+#g251 = modmult:modsqr|modreg1[1]
+.names g384 g200 g251 g952
+0-1 1
+11- 1
+
+#g251 = modmult:modsqr|modreg1[1]
+.latch g952 g251 re clk 2
+
+#g247 = modmult:modsqr|Add1~synth
+#g251 = modmult:modsqr|modreg1[1]
+#g252 = modmult:modsqr|Add1~synth
+.names g247 g251 g252
+10 1
+
+#g251 = modmult:modsqr|modreg1[1]
+#g593 = modmult:modsqr|prodreg1[1]~synth
+#g253 = modmult:modsqr|Add1~synth
+.names g251 g593 g253
+01 1
+
+#g250 = modmult:modsqr|Add1~synth
+#g252 = modmult:modsqr|Add1~synth
+#g253 = modmult:modsqr|Add1~synth
+#g254 = modmult:modsqr|Add1~synth
+.names g250 g252 g253 g254
+000 0
+
+#g248 = modmult:modsqr|Add0~synth
+#g812 = modmult:modsqr|prodreg[1]
+#g255 = modmult:modsqr|Add0~synth
+.names g248 g812 g255
+11 1
+
+#g248 = modmult:modsqr|Add0~synth
+#g814 = modmult:modsqr|mcreg[1]
+#g256 = modmult:modsqr|Add0~synth
+.names g248 g814 g256
+11 1
+
+#g812 = modmult:modsqr|prodreg[1]
+#g814 = modmult:modsqr|mcreg[1]
+#g257 = modmult:modsqr|Add0~synth
+.names g812 g814 g257
+11 1
+
+#g255 = modmult:modsqr|Add0~synth
+#g256 = modmult:modsqr|Add0~synth
+#g257 = modmult:modsqr|Add0~synth
+#g258 = modmult:modsqr|Add0~synth
+.names g255 g256 g257 g258
+000 0
+
+#g258 = modmult:modsqr|Add0~synth
+#g818 = modmult:modsqr|prodreg[2]
+#g820 = modmult:modsqr|mcreg[2]
+#g259 = modmult:modsqr|Add0~synth
+.names g258 g818 g820 g259
+100 1
+010 1
+001 1
+111 1
+
+#g254 = modmult:modsqr|Add1~synth
+#g596 = modmult:modsqr|prodreg1[2]~synth
+#g260 = modmult:modsqr|Add1~synth
+.names g254 g596 g260
+11 1
+
+#g384 = modmult:modsqr|modreg1[0]~synth
+#g261 = modmult:modsqr|modreg1[2]
+.names g384 g203 g261 g953
+0-1 1
+11- 1
+
+#g261 = modmult:modsqr|modreg1[2]
+.latch g953 g261 re clk 2
+
+#g254 = modmult:modsqr|Add1~synth
+#g261 = modmult:modsqr|modreg1[2]
+#g262 = modmult:modsqr|Add1~synth
+.names g254 g261 g262
+10 1
+
+#g261 = modmult:modsqr|modreg1[2]
+#g596 = modmult:modsqr|prodreg1[2]~synth
+#g263 = modmult:modsqr|Add1~synth
+.names g261 g596 g263
+01 1
+
+#g260 = modmult:modsqr|Add1~synth
+#g262 = modmult:modsqr|Add1~synth
+#g263 = modmult:modsqr|Add1~synth
+#g264 = modmult:modsqr|Add1~synth
+.names g260 g262 g263 g264
+000 0
+
+#g258 = modmult:modsqr|Add0~synth
+#g818 = modmult:modsqr|prodreg[2]
+#g265 = modmult:modsqr|Add0~synth
+.names g258 g818 g265
+11 1
+
+#g258 = modmult:modsqr|Add0~synth
+#g820 = modmult:modsqr|mcreg[2]
+#g266 = modmult:modsqr|Add0~synth
+.names g258 g820 g266
+11 1
+
+#g818 = modmult:modsqr|prodreg[2]
+#g820 = modmult:modsqr|mcreg[2]
+#g267 = modmult:modsqr|Add0~synth
+.names g818 g820 g267
+11 1
+
+#g265 = modmult:modsqr|Add0~synth
+#g266 = modmult:modsqr|Add0~synth
+#g267 = modmult:modsqr|Add0~synth
+#g268 = modmult:modsqr|Add0~synth
+.names g265 g266 g267 g268
+000 0
+
+#g268 = modmult:modsqr|Add0~synth
+#g824 = modmult:modsqr|prodreg[3]
+#g826 = modmult:modsqr|mcreg[3]
+#g269 = modmult:modsqr|Add0~synth
+.names g268 g824 g826 g269
+100 1
+010 1
+001 1
+111 1
+
+#g264 = modmult:modsqr|Add1~synth
+#g599 = modmult:modsqr|prodreg1[3]~synth
+#g270 = modmult:modsqr|Add1~synth
+.names g264 g599 g270
+11 1
+
+#g384 = modmult:modsqr|modreg1[0]~synth
+#g271 = modmult:modsqr|modreg1[3]
+.names g384 g206 g271 g954
+0-1 1
+11- 1
+
+#g271 = modmult:modsqr|modreg1[3]
+.latch g954 g271 re clk 2
+
+#g264 = modmult:modsqr|Add1~synth
+#g271 = modmult:modsqr|modreg1[3]
+#g272 = modmult:modsqr|Add1~synth
+.names g264 g271 g272
+10 1
+
+#g271 = modmult:modsqr|modreg1[3]
+#g599 = modmult:modsqr|prodreg1[3]~synth
+#g273 = modmult:modsqr|Add1~synth
+.names g271 g599 g273
+01 1
+
+#g270 = modmult:modsqr|Add1~synth
+#g272 = modmult:modsqr|Add1~synth
+#g273 = modmult:modsqr|Add1~synth
+#g274 = modmult:modsqr|Add1~synth
+.names g270 g272 g273 g274
+000 0
+
+#g268 = modmult:modsqr|Add0~synth
+#g824 = modmult:modsqr|prodreg[3]
+#g275 = modmult:modsqr|Add0~synth
+.names g268 g824 g275
+11 1
+
+#g268 = modmult:modsqr|Add0~synth
+#g826 = modmult:modsqr|mcreg[3]
+#g276 = modmult:modsqr|Add0~synth
+.names g268 g826 g276
+11 1
+
+#g824 = modmult:modsqr|prodreg[3]
+#g826 = modmult:modsqr|mcreg[3]
+#g277 = modmult:modsqr|Add0~synth
+.names g824 g826 g277
+11 1
+
+#g275 = modmult:modsqr|Add0~synth
+#g276 = modmult:modsqr|Add0~synth
+#g277 = modmult:modsqr|Add0~synth
+#g278 = modmult:modsqr|Add0~synth
+.names g275 g276 g277 g278
+000 0
+
+#g278 = modmult:modsqr|Add0~synth
+#g830 = modmult:modsqr|prodreg[4]
+#g832 = modmult:modsqr|mcreg[4]
+#g279 = modmult:modsqr|Add0~synth
+.names g278 g830 g832 g279
+100 1
+010 1
+001 1
+111 1
+
+#g274 = modmult:modsqr|Add1~synth
+#g602 = modmult:modsqr|prodreg1[4]~synth
+#g280 = modmult:modsqr|Add1~synth
+.names g274 g602 g280
+11 1
+
+#g384 = modmult:modsqr|modreg1[0]~synth
+#g281 = modmult:modsqr|modreg1[4]
+.names g384 g209 g281 g955
+0-1 1
+11- 1
+
+#g281 = modmult:modsqr|modreg1[4]
+.latch g955 g281 re clk 2
+
+#g274 = modmult:modsqr|Add1~synth
+#g281 = modmult:modsqr|modreg1[4]
+#g282 = modmult:modsqr|Add1~synth
+.names g274 g281 g282
+10 1
+
+#g281 = modmult:modsqr|modreg1[4]
+#g602 = modmult:modsqr|prodreg1[4]~synth
+#g283 = modmult:modsqr|Add1~synth
+.names g281 g602 g283
+01 1
+
+#g280 = modmult:modsqr|Add1~synth
+#g282 = modmult:modsqr|Add1~synth
+#g283 = modmult:modsqr|Add1~synth
+#g284 = modmult:modsqr|Add1~synth
+.names g280 g282 g283 g284
+000 0
+
+#g278 = modmult:modsqr|Add0~synth
+#g830 = modmult:modsqr|prodreg[4]
+#g285 = modmult:modsqr|Add0~synth
+.names g278 g830 g285
+11 1
+
+#g278 = modmult:modsqr|Add0~synth
+#g832 = modmult:modsqr|mcreg[4]
+#g286 = modmult:modsqr|Add0~synth
+.names g278 g832 g286
+11 1
+
+#g830 = modmult:modsqr|prodreg[4]
+#g832 = modmult:modsqr|mcreg[4]
+#g287 = modmult:modsqr|Add0~synth
+.names g830 g832 g287
+11 1
+
+#g285 = modmult:modsqr|Add0~synth
+#g286 = modmult:modsqr|Add0~synth
+#g287 = modmult:modsqr|Add0~synth
+#g288 = modmult:modsqr|Add0~synth
+.names g285 g286 g287 g288
+000 0
+
+#g288 = modmult:modsqr|Add0~synth
+#g836 = modmult:modsqr|prodreg[5]
+#g838 = modmult:modsqr|mcreg[5]
+#g289 = modmult:modsqr|Add0~synth
+.names g288 g836 g838 g289
+100 1
+010 1
+001 1
+111 1
+
+#g284 = modmult:modsqr|Add1~synth
+#g605 = modmult:modsqr|prodreg1[5]~synth
+#g290 = modmult:modsqr|Add1~synth
+.names g284 g605 g290
+11 1
+
+#g384 = modmult:modsqr|modreg1[0]~synth
+#g291 = modmult:modsqr|modreg1[5]
+.names g384 g212 g291 g956
+0-1 1
+11- 1
+
+#g291 = modmult:modsqr|modreg1[5]
+.latch g956 g291 re clk 2
+
+#g284 = modmult:modsqr|Add1~synth
+#g291 = modmult:modsqr|modreg1[5]
+#g292 = modmult:modsqr|Add1~synth
+.names g284 g291 g292
+10 1
+
+#g291 = modmult:modsqr|modreg1[5]
+#g605 = modmult:modsqr|prodreg1[5]~synth
+#g293 = modmult:modsqr|Add1~synth
+.names g291 g605 g293
+01 1
+
+#g290 = modmult:modsqr|Add1~synth
+#g292 = modmult:modsqr|Add1~synth
+#g293 = modmult:modsqr|Add1~synth
+#g294 = modmult:modsqr|Add1~synth
+.names g290 g292 g293 g294
+000 0
+
+#g288 = modmult:modsqr|Add0~synth
+#g836 = modmult:modsqr|prodreg[5]
+#g295 = modmult:modsqr|Add0~synth
+.names g288 g836 g295
+11 1
+
+#g288 = modmult:modsqr|Add0~synth
+#g838 = modmult:modsqr|mcreg[5]
+#g296 = modmult:modsqr|Add0~synth
+.names g288 g838 g296
+11 1
+
+#g836 = modmult:modsqr|prodreg[5]
+#g838 = modmult:modsqr|mcreg[5]
+#g297 = modmult:modsqr|Add0~synth
+.names g836 g838 g297
+11 1
+
+#g295 = modmult:modsqr|Add0~synth
+#g296 = modmult:modsqr|Add0~synth
+#g297 = modmult:modsqr|Add0~synth
+#g298 = modmult:modsqr|Add0~synth
+.names g295 g296 g297 g298
+000 0
+
+#g298 = modmult:modsqr|Add0~synth
+#g842 = modmult:modsqr|prodreg[6]
+#g844 = modmult:modsqr|mcreg[6]
+#g299 = modmult:modsqr|Add0~synth
+.names g298 g842 g844 g299
+100 1
+010 1
+001 1
+111 1
+
+#g294 = modmult:modsqr|Add1~synth
+#g608 = modmult:modsqr|prodreg1[6]~synth
+#g300 = modmult:modsqr|Add1~synth
+.names g294 g608 g300
+11 1
+
+#g384 = modmult:modsqr|modreg1[0]~synth
+#g301 = modmult:modsqr|modreg1[6]
+.names g384 g215 g301 g957
+0-1 1
+11- 1
+
+#g301 = modmult:modsqr|modreg1[6]
+.latch g957 g301 re clk 2
+
+#g294 = modmult:modsqr|Add1~synth
+#g301 = modmult:modsqr|modreg1[6]
+#g302 = modmult:modsqr|Add1~synth
+.names g294 g301 g302
+10 1
+
+#g301 = modmult:modsqr|modreg1[6]
+#g608 = modmult:modsqr|prodreg1[6]~synth
+#g303 = modmult:modsqr|Add1~synth
+.names g301 g608 g303
+01 1
+
+#g300 = modmult:modsqr|Add1~synth
+#g302 = modmult:modsqr|Add1~synth
+#g303 = modmult:modsqr|Add1~synth
+#g304 = modmult:modsqr|Add1~synth
+.names g300 g302 g303 g304
+000 0
+
+#g298 = modmult:modsqr|Add0~synth
+#g842 = modmult:modsqr|prodreg[6]
+#g305 = modmult:modsqr|Add0~synth
+.names g298 g842 g305
+11 1
+
+#g298 = modmult:modsqr|Add0~synth
+#g844 = modmult:modsqr|mcreg[6]
+#g306 = modmult:modsqr|Add0~synth
+.names g298 g844 g306
+11 1
+
+#g842 = modmult:modsqr|prodreg[6]
+#g844 = modmult:modsqr|mcreg[6]
+#g307 = modmult:modsqr|Add0~synth
+.names g842 g844 g307
+11 1
+
+#g305 = modmult:modsqr|Add0~synth
+#g306 = modmult:modsqr|Add0~synth
+#g307 = modmult:modsqr|Add0~synth
+#g308 = modmult:modsqr|Add0~synth
+.names g305 g306 g307 g308
+000 0
+
+#g308 = modmult:modsqr|Add0~synth
+#g848 = modmult:modsqr|prodreg[7]
+#g850 = modmult:modsqr|mcreg[7]
+#g309 = modmult:modsqr|Add0~synth
+.names g308 g848 g850 g309
+100 1
+010 1
+001 1
+111 1
+
+#g304 = modmult:modsqr|Add1~synth
+#g611 = modmult:modsqr|prodreg1[7]~synth
+#g310 = modmult:modsqr|Add1~synth
+.names g304 g611 g310
+11 1
+
+#g384 = modmult:modsqr|modreg1[0]~synth
+#g311 = modmult:modsqr|modreg1[7]
+.names g384 g218 g311 g958
+0-1 1
+11- 1
+
+#g311 = modmult:modsqr|modreg1[7]
+.latch g958 g311 re clk 2
+
+#g304 = modmult:modsqr|Add1~synth
+#g311 = modmult:modsqr|modreg1[7]
+#g312 = modmult:modsqr|Add1~synth
+.names g304 g311 g312
+10 1
+
+#g311 = modmult:modsqr|modreg1[7]
+#g611 = modmult:modsqr|prodreg1[7]~synth
+#g313 = modmult:modsqr|Add1~synth
+.names g311 g611 g313
+01 1
+
+#g310 = modmult:modsqr|Add1~synth
+#g312 = modmult:modsqr|Add1~synth
+#g313 = modmult:modsqr|Add1~synth
+#g314 = modmult:modsqr|Add1~synth
+.names g310 g312 g313 g314
+000 0
+
+#g308 = modmult:modsqr|Add0~synth
+#g848 = modmult:modsqr|prodreg[7]
+#g315 = modmult:modsqr|Add0~synth
+.names g308 g848 g315
+11 1
+
+#g308 = modmult:modsqr|Add0~synth
+#g850 = modmult:modsqr|mcreg[7]
+#g316 = modmult:modsqr|Add0~synth
+.names g308 g850 g316
+11 1
+
+#g848 = modmult:modsqr|prodreg[7]
+#g850 = modmult:modsqr|mcreg[7]
+#g317 = modmult:modsqr|Add0~synth
+.names g848 g850 g317
+11 1
+
+#g315 = modmult:modsqr|Add0~synth
+#g316 = modmult:modsqr|Add0~synth
+#g317 = modmult:modsqr|Add0~synth
+#g318 = modmult:modsqr|Add0~synth
+.names g315 g316 g317 g318
+000 0
+
+#g318 = modmult:modsqr|Add0~synth
+#g854 = modmult:modsqr|prodreg[8]
+#g856 = modmult:modsqr|mcreg[8]
+#g319 = modmult:modsqr|Add0~synth
+.names g318 g854 g856 g319
+100 1
+010 1
+001 1
+111 1
+
+#g314 = modmult:modsqr|Add1~synth
+#g614 = modmult:modsqr|prodreg1[8]~synth
+#g320 = modmult:modsqr|Add1~synth
+.names g314 g614 g320
+00 0
+
+#g318 = modmult:modsqr|Add0~synth
+#g854 = modmult:modsqr|prodreg[8]
+#g321 = modmult:modsqr|Add0~synth
+.names g318 g854 g321
+11 1
+
+#g318 = modmult:modsqr|Add0~synth
+#g856 = modmult:modsqr|mcreg[8]
+#g322 = modmult:modsqr|Add0~synth
+.names g318 g856 g322
+11 1
+
+#g854 = modmult:modsqr|prodreg[8]
+#g856 = modmult:modsqr|mcreg[8]
+#g323 = modmult:modsqr|Add0~synth
+.names g854 g856 g323
+11 1
+
+#g321 = modmult:modsqr|Add0~synth
+#g322 = modmult:modsqr|Add0~synth
+#g323 = modmult:modsqr|Add0~synth
+#g324 = modmult:modsqr|Add0~synth
+.names g321 g322 g323 g324
+000 0
+
+#g324 = modmult:modsqr|Add0~synth
+#g858 = modmult:modsqr|prodreg[9]
+#g860 = modmult:modsqr|mcreg[9]
+#g325 = modmult:modsqr|Add0~synth
+.names g324 g858 g860 g325
+100 1
+010 1
+001 1
+111 1
+
+#g320 = modmult:modsqr|Add1~synth
+#g617 = modmult:modsqr|prodreg1[9]~synth
+#g326 = modmult:modsqr|Add1~synth
+.names g320 g617 g326
+10 1
+01 1
+
+#g243 = modmult:modsqr|modreg1[0]
+#g593 = modmult:modsqr|prodreg1[1]~synth
+#g327 = modmult:modsqr|Add2~synth
+.names g243 g593 g327
+10 0
+
+#g327 = modmult:modsqr|Add2~synth
+#g596 = modmult:modsqr|prodreg1[2]~synth
+#g328 = modmult:modsqr|Add2~synth
+.names g327 g596 g328
+11 1
+
+#g251 = modmult:modsqr|modreg1[1]
+#g327 = modmult:modsqr|Add2~synth
+#g329 = modmult:modsqr|Add2~synth
+.names g251 g327 g329
+01 1
+
+#g251 = modmult:modsqr|modreg1[1]
+#g596 = modmult:modsqr|prodreg1[2]~synth
+#g330 = modmult:modsqr|Add2~synth
+.names g251 g596 g330
+01 1
+
+#g328 = modmult:modsqr|Add2~synth
+#g329 = modmult:modsqr|Add2~synth
+#g330 = modmult:modsqr|Add2~synth
+#g331 = modmult:modsqr|Add2~synth
+.names g328 g329 g330 g331
+000 0
+
+#g331 = modmult:modsqr|Add2~synth
+#g599 = modmult:modsqr|prodreg1[3]~synth
+#g332 = modmult:modsqr|Add2~synth
+.names g331 g599 g332
+11 1
+
+#g261 = modmult:modsqr|modreg1[2]
+#g331 = modmult:modsqr|Add2~synth
+#g333 = modmult:modsqr|Add2~synth
+.names g261 g331 g333
+01 1
+
+#g261 = modmult:modsqr|modreg1[2]
+#g599 = modmult:modsqr|prodreg1[3]~synth
+#g334 = modmult:modsqr|Add2~synth
+.names g261 g599 g334
+01 1
+
+#g332 = modmult:modsqr|Add2~synth
+#g333 = modmult:modsqr|Add2~synth
+#g334 = modmult:modsqr|Add2~synth
+#g335 = modmult:modsqr|Add2~synth
+.names g332 g333 g334 g335
+000 0
+
+#g335 = modmult:modsqr|Add2~synth
+#g602 = modmult:modsqr|prodreg1[4]~synth
+#g336 = modmult:modsqr|Add2~synth
+.names g335 g602 g336
+11 1
+
+#g271 = modmult:modsqr|modreg1[3]
+#g335 = modmult:modsqr|Add2~synth
+#g337 = modmult:modsqr|Add2~synth
+.names g271 g335 g337
+01 1
+
+#g271 = modmult:modsqr|modreg1[3]
+#g602 = modmult:modsqr|prodreg1[4]~synth
+#g338 = modmult:modsqr|Add2~synth
+.names g271 g602 g338
+01 1
+
+#g336 = modmult:modsqr|Add2~synth
+#g337 = modmult:modsqr|Add2~synth
+#g338 = modmult:modsqr|Add2~synth
+#g339 = modmult:modsqr|Add2~synth
+.names g336 g337 g338 g339
+000 0
+
+#g339 = modmult:modsqr|Add2~synth
+#g605 = modmult:modsqr|prodreg1[5]~synth
+#g340 = modmult:modsqr|Add2~synth
+.names g339 g605 g340
+11 1
+
+#g281 = modmult:modsqr|modreg1[4]
+#g339 = modmult:modsqr|Add2~synth
+#g341 = modmult:modsqr|Add2~synth
+.names g281 g339 g341
+01 1
+
+#g281 = modmult:modsqr|modreg1[4]
+#g605 = modmult:modsqr|prodreg1[5]~synth
+#g342 = modmult:modsqr|Add2~synth
+.names g281 g605 g342
+01 1
+
+#g340 = modmult:modsqr|Add2~synth
+#g341 = modmult:modsqr|Add2~synth
+#g342 = modmult:modsqr|Add2~synth
+#g343 = modmult:modsqr|Add2~synth
+.names g340 g341 g342 g343
+000 0
+
+#g343 = modmult:modsqr|Add2~synth
+#g608 = modmult:modsqr|prodreg1[6]~synth
+#g344 = modmult:modsqr|Add2~synth
+.names g343 g608 g344
+11 1
+
+#g291 = modmult:modsqr|modreg1[5]
+#g343 = modmult:modsqr|Add2~synth
+#g345 = modmult:modsqr|Add2~synth
+.names g291 g343 g345
+01 1
+
+#g291 = modmult:modsqr|modreg1[5]
+#g608 = modmult:modsqr|prodreg1[6]~synth
+#g346 = modmult:modsqr|Add2~synth
+.names g291 g608 g346
+01 1
+
+#g344 = modmult:modsqr|Add2~synth
+#g345 = modmult:modsqr|Add2~synth
+#g346 = modmult:modsqr|Add2~synth
+#g347 = modmult:modsqr|Add2~synth
+.names g344 g345 g346 g347
+000 0
+
+#g347 = modmult:modsqr|Add2~synth
+#g611 = modmult:modsqr|prodreg1[7]~synth
+#g348 = modmult:modsqr|Add2~synth
+.names g347 g611 g348
+11 1
+
+#g301 = modmult:modsqr|modreg1[6]
+#g347 = modmult:modsqr|Add2~synth
+#g349 = modmult:modsqr|Add2~synth
+.names g301 g347 g349
+01 1
+
+#g301 = modmult:modsqr|modreg1[6]
+#g611 = modmult:modsqr|prodreg1[7]~synth
+#g350 = modmult:modsqr|Add2~synth
+.names g301 g611 g350
+01 1
+
+#g348 = modmult:modsqr|Add2~synth
+#g349 = modmult:modsqr|Add2~synth
+#g350 = modmult:modsqr|Add2~synth
+#g351 = modmult:modsqr|Add2~synth
+.names g348 g349 g350 g351
+000 0
+
+#g351 = modmult:modsqr|Add2~synth
+#g614 = modmult:modsqr|prodreg1[8]~synth
+#g352 = modmult:modsqr|Add2~synth
+.names g351 g614 g352
+11 1
+
+#g311 = modmult:modsqr|modreg1[7]
+#g351 = modmult:modsqr|Add2~synth
+#g353 = modmult:modsqr|Add2~synth
+.names g311 g351 g353
+01 1
+
+#g311 = modmult:modsqr|modreg1[7]
+#g614 = modmult:modsqr|prodreg1[8]~synth
+#g354 = modmult:modsqr|Add2~synth
+.names g311 g614 g354
+01 1
+
+#g352 = modmult:modsqr|Add2~synth
+#g353 = modmult:modsqr|Add2~synth
+#g354 = modmult:modsqr|Add2~synth
+#g355 = modmult:modsqr|Add2~synth
+.names g352 g353 g354 g355
+000 0
+
+#g355 = modmult:modsqr|Add2~synth
+#g617 = modmult:modsqr|prodreg1[9]~synth
+#g356 = modmult:modsqr|Add2~synth
+.names g355 g617 g356
+10 1
+01 1
+
+#g326 = modmult:modsqr|Add1~synth
+#g356 = modmult:modsqr|Add2~synth
+#g357 = modmult:modsqr|Mux9~synth
+.names g326 g356 g357
+10 0
+
+#g135 = count[0]
+#g735 = done
+#g358 = sqrin[0]~synth
+.names g135 g735 g358
+11 0
+
+#g240 = tempin[4]~synth
+#g623 = tempin~synth
+#g359 = tempin~synth
+.names g240 g623 g359
+11 1
+
+#g240 = tempin[4]~synth
+#g626 = tempin~synth
+#g360 = tempin~synth
+.names g240 g626 g360
+11 1
+
+#g240 = tempin[4]~synth
+#g629 = tempin~synth
+#g361 = tempin~synth
+.names g240 g629 g361
+11 1
+
+#g240 = tempin[4]~synth
+#g632 = tempin~synth
+#g362 = tempin~synth
+.names g240 g632 g362
+11 1
+
+#g240 = tempin[4]~synth
+#g635 = tempin~synth
+#g363 = tempin~synth
+.names g240 g635 g363
+11 1
+
+#g240 = tempin[4]~synth
+#g638 = tempin~synth
+#g364 = tempin~synth
+.names g240 g638 g364
+11 1
+
+#g240 = tempin[4]~synth
+#g641 = tempin~synth
+#g365 = tempin~synth
+.names g240 g641 g365
+11 1
+
+#g126 = modmult:modsqr|first
+#g862 = root[7]
+#g366 = modmult:modsqr|mpreg~synth
+.names g126 g862 g366
+01 1
+
+#g542 = modmult:modsqr|first~synth
+#g367 = modmult:modsqr|mpreg[7]~synth
+.names reset g542 g367
+01 0
+
+#g301 = modmult:modsqr|modreg1[6]
+#g347 = modmult:modsqr|Add2~synth
+#g611 = modmult:modsqr|prodreg1[7]~synth
+#g368 = modmult:modsqr|Add2~synth
+.names g301 g347 g611 g368
+100 1
+010 1
+001 1
+111 1
+
+#g304 = modmult:modsqr|Add1~synth
+#g311 = modmult:modsqr|modreg1[7]
+#g611 = modmult:modsqr|prodreg1[7]~synth
+#g369 = modmult:modsqr|Add1~synth
+.names g304 g311 g611 g369
+100 1
+010 1
+001 1
+111 1
+
+#g320 = modmult:modsqr|Add1~synth
+#g617 = modmult:modsqr|prodreg1[9]~synth
+#g370 = modmult:modsqr|Add1~synth
+.names g320 g617 g370
+10 1
+01 1
+
+#g355 = modmult:modsqr|Add2~synth
+#g617 = modmult:modsqr|prodreg1[9]~synth
+#g371 = modmult:modsqr|Add2~synth
+.names g355 g617 g371
+10 1
+01 1
+
+#g291 = modmult:modsqr|modreg1[5]
+#g343 = modmult:modsqr|Add2~synth
+#g608 = modmult:modsqr|prodreg1[6]~synth
+#g372 = modmult:modsqr|Add2~synth
+.names g291 g343 g608 g372
+100 1
+010 1
+001 1
+111 1
+
+#g294 = modmult:modsqr|Add1~synth
+#g301 = modmult:modsqr|modreg1[6]
+#g608 = modmult:modsqr|prodreg1[6]~synth
+#g373 = modmult:modsqr|Add1~synth
+.names g294 g301 g608 g373
+100 1
+010 1
+001 1
+111 1
+
+#g281 = modmult:modsqr|modreg1[4]
+#g339 = modmult:modsqr|Add2~synth
+#g605 = modmult:modsqr|prodreg1[5]~synth
+#g374 = modmult:modsqr|Add2~synth
+.names g281 g339 g605 g374
+100 1
+010 1
+001 1
+111 1
+
+#g284 = modmult:modsqr|Add1~synth
+#g291 = modmult:modsqr|modreg1[5]
+#g605 = modmult:modsqr|prodreg1[5]~synth
+#g375 = modmult:modsqr|Add1~synth
+.names g284 g291 g605 g375
+100 1
+010 1
+001 1
+111 1
+
+#g271 = modmult:modsqr|modreg1[3]
+#g335 = modmult:modsqr|Add2~synth
+#g602 = modmult:modsqr|prodreg1[4]~synth
+#g376 = modmult:modsqr|Add2~synth
+.names g271 g335 g602 g376
+100 1
+010 1
+001 1
+111 1
+
+#g274 = modmult:modsqr|Add1~synth
+#g281 = modmult:modsqr|modreg1[4]
+#g602 = modmult:modsqr|prodreg1[4]~synth
+#g377 = modmult:modsqr|Add1~synth
+.names g274 g281 g602 g377
+100 1
+010 1
+001 1
+111 1
+
+#g261 = modmult:modsqr|modreg1[2]
+#g331 = modmult:modsqr|Add2~synth
+#g599 = modmult:modsqr|prodreg1[3]~synth
+#g378 = modmult:modsqr|Add2~synth
+.names g261 g331 g599 g378
+100 1
+010 1
+001 1
+111 1
+
+#g264 = modmult:modsqr|Add1~synth
+#g271 = modmult:modsqr|modreg1[3]
+#g599 = modmult:modsqr|prodreg1[3]~synth
+#g379 = modmult:modsqr|Add1~synth
+.names g264 g271 g599 g379
+100 1
+010 1
+001 1
+111 1
+
+#g251 = modmult:modsqr|modreg1[1]
+#g327 = modmult:modsqr|Add2~synth
+#g596 = modmult:modsqr|prodreg1[2]~synth
+#g380 = modmult:modsqr|Add2~synth
+.names g251 g327 g596 g380
+100 1
+010 1
+001 1
+111 1
+
+#g254 = modmult:modsqr|Add1~synth
+#g261 = modmult:modsqr|modreg1[2]
+#g596 = modmult:modsqr|prodreg1[2]~synth
+#g381 = modmult:modsqr|Add1~synth
+.names g254 g261 g596 g381
+100 1
+010 1
+001 1
+111 1
+
+#g243 = modmult:modsqr|modreg1[0]
+#g593 = modmult:modsqr|prodreg1[1]~synth
+#g382 = modmult:modsqr|Add2~synth
+.names g243 g593 g382
+10 1
+01 1
+
+#g247 = modmult:modsqr|Add1~synth
+#g251 = modmult:modsqr|modreg1[1]
+#g593 = modmult:modsqr|prodreg1[1]~synth
+#g383 = modmult:modsqr|Add1~synth
+.names g247 g251 g593 g383
+100 1
+010 1
+001 1
+111 1
+
+#g126 = modmult:modsqr|first
+#g791 = multgo
+#g384 = modmult:modsqr|modreg1[0]~synth
+.names g126 reset g791 g384
+001 1
+
+#g126 = modmult:modsqr|first
+#g890 = root[0]
+#g385 = modmult:modsqr|mcreg~synth
+.names g126 g890 g385
+01 1
+
+#g243 = modmult:modsqr|modreg1[0]
+#g244 = modmult:modsqr|mcreg[0]
+#g386 = modmult:modsqr|Add3~synth
+.names g243 g244 g386
+10 1
+01 1
+
+#g243 = modmult:modsqr|modreg1[0]
+#g244 = modmult:modsqr|mcreg[0]
+#g387 = modmult:modsqr|Add3~synth
+.names g243 g244 g387
+10 0
+
+#g387 = modmult:modsqr|Add3~synth
+#g814 = modmult:modsqr|mcreg[1]
+#g388 = modmult:modsqr|Add3~synth
+.names g387 g814 g388
+11 1
+
+#g251 = modmult:modsqr|modreg1[1]
+#g387 = modmult:modsqr|Add3~synth
+#g389 = modmult:modsqr|Add3~synth
+.names g251 g387 g389
+01 1
+
+#g251 = modmult:modsqr|modreg1[1]
+#g814 = modmult:modsqr|mcreg[1]
+#g390 = modmult:modsqr|Add3~synth
+.names g251 g814 g390
+01 1
+
+#g388 = modmult:modsqr|Add3~synth
+#g389 = modmult:modsqr|Add3~synth
+#g390 = modmult:modsqr|Add3~synth
+#g391 = modmult:modsqr|Add3~synth
+.names g388 g389 g390 g391
+000 0
+
+#g391 = modmult:modsqr|Add3~synth
+#g820 = modmult:modsqr|mcreg[2]
+#g392 = modmult:modsqr|Add3~synth
+.names g391 g820 g392
+11 1
+
+#g261 = modmult:modsqr|modreg1[2]
+#g391 = modmult:modsqr|Add3~synth
+#g393 = modmult:modsqr|Add3~synth
+.names g261 g391 g393
+01 1
+
+#g261 = modmult:modsqr|modreg1[2]
+#g820 = modmult:modsqr|mcreg[2]
+#g394 = modmult:modsqr|Add3~synth
+.names g261 g820 g394
+01 1
+
+#g392 = modmult:modsqr|Add3~synth
+#g393 = modmult:modsqr|Add3~synth
+#g394 = modmult:modsqr|Add3~synth
+#g395 = modmult:modsqr|Add3~synth
+.names g392 g393 g394 g395
+000 0
+
+#g395 = modmult:modsqr|Add3~synth
+#g826 = modmult:modsqr|mcreg[3]
+#g396 = modmult:modsqr|Add3~synth
+.names g395 g826 g396
+11 1
+
+#g271 = modmult:modsqr|modreg1[3]
+#g395 = modmult:modsqr|Add3~synth
+#g397 = modmult:modsqr|Add3~synth
+.names g271 g395 g397
+01 1
+
+#g271 = modmult:modsqr|modreg1[3]
+#g826 = modmult:modsqr|mcreg[3]
+#g398 = modmult:modsqr|Add3~synth
+.names g271 g826 g398
+01 1
+
+#g396 = modmult:modsqr|Add3~synth
+#g397 = modmult:modsqr|Add3~synth
+#g398 = modmult:modsqr|Add3~synth
+#g399 = modmult:modsqr|Add3~synth
+.names g396 g397 g398 g399
+000 0
+
+#g399 = modmult:modsqr|Add3~synth
+#g832 = modmult:modsqr|mcreg[4]
+#g400 = modmult:modsqr|Add3~synth
+.names g399 g832 g400
+11 1
+
+#g281 = modmult:modsqr|modreg1[4]
+#g399 = modmult:modsqr|Add3~synth
+#g401 = modmult:modsqr|Add3~synth
+.names g281 g399 g401
+01 1
+
+#g281 = modmult:modsqr|modreg1[4]
+#g832 = modmult:modsqr|mcreg[4]
+#g402 = modmult:modsqr|Add3~synth
+.names g281 g832 g402
+01 1
+
+#g400 = modmult:modsqr|Add3~synth
+#g401 = modmult:modsqr|Add3~synth
+#g402 = modmult:modsqr|Add3~synth
+#g403 = modmult:modsqr|Add3~synth
+.names g400 g401 g402 g403
+000 0
+
+#g403 = modmult:modsqr|Add3~synth
+#g838 = modmult:modsqr|mcreg[5]
+#g404 = modmult:modsqr|Add3~synth
+.names g403 g838 g404
+11 1
+
+#g291 = modmult:modsqr|modreg1[5]
+#g403 = modmult:modsqr|Add3~synth
+#g405 = modmult:modsqr|Add3~synth
+.names g291 g403 g405
+01 1
+
+#g291 = modmult:modsqr|modreg1[5]
+#g838 = modmult:modsqr|mcreg[5]
+#g406 = modmult:modsqr|Add3~synth
+.names g291 g838 g406
+01 1
+
+#g404 = modmult:modsqr|Add3~synth
+#g405 = modmult:modsqr|Add3~synth
+#g406 = modmult:modsqr|Add3~synth
+#g407 = modmult:modsqr|Add3~synth
+.names g404 g405 g406 g407
+000 0
+
+#g407 = modmult:modsqr|Add3~synth
+#g844 = modmult:modsqr|mcreg[6]
+#g408 = modmult:modsqr|Add3~synth
+.names g407 g844 g408
+11 1
+
+#g301 = modmult:modsqr|modreg1[6]
+#g407 = modmult:modsqr|Add3~synth
+#g409 = modmult:modsqr|Add3~synth
+.names g301 g407 g409
+01 1
+
+#g301 = modmult:modsqr|modreg1[6]
+#g844 = modmult:modsqr|mcreg[6]
+#g410 = modmult:modsqr|Add3~synth
+.names g301 g844 g410
+01 1
+
+#g408 = modmult:modsqr|Add3~synth
+#g409 = modmult:modsqr|Add3~synth
+#g410 = modmult:modsqr|Add3~synth
+#g411 = modmult:modsqr|Add3~synth
+.names g408 g409 g410 g411
+000 0
+
+#g411 = modmult:modsqr|Add3~synth
+#g850 = modmult:modsqr|mcreg[7]
+#g412 = modmult:modsqr|Add3~synth
+.names g411 g850 g412
+11 1
+
+#g311 = modmult:modsqr|modreg1[7]
+#g411 = modmult:modsqr|Add3~synth
+#g413 = modmult:modsqr|Add3~synth
+.names g311 g411 g413
+01 1
+
+#g311 = modmult:modsqr|modreg1[7]
+#g850 = modmult:modsqr|mcreg[7]
+#g414 = modmult:modsqr|Add3~synth
+.names g311 g850 g414
+01 1
+
+#g412 = modmult:modsqr|Add3~synth
+#g413 = modmult:modsqr|Add3~synth
+#g414 = modmult:modsqr|Add3~synth
+#g415 = modmult:modsqr|Add3~synth
+.names g412 g413 g414 g415
+000 0
+
+#g415 = modmult:modsqr|Add3~synth
+#g856 = modmult:modsqr|mcreg[8]
+#g416 = modmult:modsqr|Add3~synth
+.names g415 g856 g416
+10 1
+01 1
+
+#g251 = modmult:modsqr|modreg1[1]
+#g387 = modmult:modsqr|Add3~synth
+#g814 = modmult:modsqr|mcreg[1]
+#g417 = modmult:modsqr|Add3~synth
+.names g251 g387 g814 g417
+100 1
+010 1
+001 1
+111 1
+
+#g261 = modmult:modsqr|modreg1[2]
+#g391 = modmult:modsqr|Add3~synth
+#g820 = modmult:modsqr|mcreg[2]
+#g418 = modmult:modsqr|Add3~synth
+.names g261 g391 g820 g418
+100 1
+010 1
+001 1
+111 1
+
+#g271 = modmult:modsqr|modreg1[3]
+#g395 = modmult:modsqr|Add3~synth
+#g826 = modmult:modsqr|mcreg[3]
+#g419 = modmult:modsqr|Add3~synth
+.names g271 g395 g826 g419
+100 1
+010 1
+001 1
+111 1
+
+#g281 = modmult:modsqr|modreg1[4]
+#g399 = modmult:modsqr|Add3~synth
+#g832 = modmult:modsqr|mcreg[4]
+#g420 = modmult:modsqr|Add3~synth
+.names g281 g399 g832 g420
+100 1
+010 1
+001 1
+111 1
+
+#g291 = modmult:modsqr|modreg1[5]
+#g403 = modmult:modsqr|Add3~synth
+#g838 = modmult:modsqr|mcreg[5]
+#g421 = modmult:modsqr|Add3~synth
+.names g291 g403 g838 g421
+100 1
+010 1
+001 1
+111 1
+
+#g301 = modmult:modsqr|modreg1[6]
+#g407 = modmult:modsqr|Add3~synth
+#g844 = modmult:modsqr|mcreg[6]
+#g422 = modmult:modsqr|Add3~synth
+.names g301 g407 g844 g422
+100 1
+010 1
+001 1
+111 1
+
+#g311 = modmult:modsqr|modreg1[7]
+#g351 = modmult:modsqr|Add2~synth
+#g614 = modmult:modsqr|prodreg1[8]~synth
+#g423 = modmult:modsqr|Add2~synth
+.names g311 g351 g614 g423
+100 1
+010 1
+001 1
+111 1
+
+#g314 = modmult:modsqr|Add1~synth
+#g614 = modmult:modsqr|prodreg1[8]~synth
+#g424 = modmult:modsqr|Add1~synth
+.names g314 g614 g424
+10 1
+01 1
+
+#g542 = modmult:modsqr|first~synth
+#g425 = modmult:modsqr|mcreg[9]~synth
+.names reset g542 g425
+01 1
+
+#g311 = modmult:modsqr|modreg1[7]
+#g411 = modmult:modsqr|Add3~synth
+#g850 = modmult:modsqr|mcreg[7]
+#g426 = modmult:modsqr|Add3~synth
+.names g311 g411 g850 g426
+100 1
+010 1
+001 1
+111 1
+
+#g320 = modmult:modsqr|Add1~synth
+#g355 = modmult:modsqr|Add2~synth
+#g617 = modmult:modsqr|prodreg1[9]~synth
+#g427 = modmult:modsqr|Mux0~synth
+.names g320 g355 g617 g427
+111 1
+
+#g416 = modmult:modsqr|Add3~synth
+#g856 = modmult:modsqr|mcreg[8]
+#g428 = modmult:modsqr|mcreg2[8]~synth
+.names g416 g856 g428
+01 1
+
+#g11 = modmult:modmultiply|Add0~synth
+#g12 = modmult:modmultiply|mpreg[0]
+#g429 = modmult:modmultiply|prodreg1[0]~synth
+.names g11 g12 g429
+11 1
+
+#g12 = modmult:modmultiply|mpreg[0]
+#g739 = modmult:modmultiply|prodreg[0]
+#g430 = modmult:modmultiply|prodreg1[0]~synth
+.names g12 g739 g430
+01 1
+
+#g429 = modmult:modmultiply|prodreg1[0]~synth
+#g430 = modmult:modmultiply|prodreg1[0]~synth
+#g431 = modmult:modmultiply|prodreg1[0]~synth
+.names g429 g430 g431
+00 0
+
+#g12 = modmult:modmultiply|mpreg[0]
+#g16 = modmult:modmultiply|Add0~synth
+#g432 = modmult:modmultiply|prodreg1[1]~synth
+.names g12 g16 g432
+11 1
+
+#g12 = modmult:modmultiply|mpreg[0]
+#g741 = modmult:modmultiply|prodreg[1]
+#g433 = modmult:modmultiply|prodreg1[1]~synth
+.names g12 g741 g433
+01 1
+
+#g432 = modmult:modmultiply|prodreg1[1]~synth
+#g433 = modmult:modmultiply|prodreg1[1]~synth
+#g434 = modmult:modmultiply|prodreg1[1]~synth
+.names g432 g433 g434
+00 0
+
+#g12 = modmult:modmultiply|mpreg[0]
+#g26 = modmult:modmultiply|Add0~synth
+#g435 = modmult:modmultiply|prodreg1[2]~synth
+.names g12 g26 g435
+11 1
+
+#g12 = modmult:modmultiply|mpreg[0]
+#g747 = modmult:modmultiply|prodreg[2]
+#g436 = modmult:modmultiply|prodreg1[2]~synth
+.names g12 g747 g436
+01 1
+
+#g435 = modmult:modmultiply|prodreg1[2]~synth
+#g436 = modmult:modmultiply|prodreg1[2]~synth
+#g437 = modmult:modmultiply|prodreg1[2]~synth
+.names g435 g436 g437
+00 0
+
+#g12 = modmult:modmultiply|mpreg[0]
+#g36 = modmult:modmultiply|Add0~synth
+#g438 = modmult:modmultiply|prodreg1[3]~synth
+.names g12 g36 g438
+11 1
+
+#g12 = modmult:modmultiply|mpreg[0]
+#g753 = modmult:modmultiply|prodreg[3]
+#g439 = modmult:modmultiply|prodreg1[3]~synth
+.names g12 g753 g439
+01 1
+
+#g438 = modmult:modmultiply|prodreg1[3]~synth
+#g439 = modmult:modmultiply|prodreg1[3]~synth
+#g440 = modmult:modmultiply|prodreg1[3]~synth
+.names g438 g439 g440
+00 0
+
+#g12 = modmult:modmultiply|mpreg[0]
+#g46 = modmult:modmultiply|Add0~synth
+#g441 = modmult:modmultiply|prodreg1[4]~synth
+.names g12 g46 g441
+11 1
+
+#g12 = modmult:modmultiply|mpreg[0]
+#g759 = modmult:modmultiply|prodreg[4]
+#g442 = modmult:modmultiply|prodreg1[4]~synth
+.names g12 g759 g442
+01 1
+
+#g441 = modmult:modmultiply|prodreg1[4]~synth
+#g442 = modmult:modmultiply|prodreg1[4]~synth
+#g443 = modmult:modmultiply|prodreg1[4]~synth
+.names g441 g442 g443
+00 0
+
+#g12 = modmult:modmultiply|mpreg[0]
+#g56 = modmult:modmultiply|Add0~synth
+#g444 = modmult:modmultiply|prodreg1[5]~synth
+.names g12 g56 g444
+11 1
+
+#g12 = modmult:modmultiply|mpreg[0]
+#g765 = modmult:modmultiply|prodreg[5]
+#g445 = modmult:modmultiply|prodreg1[5]~synth
+.names g12 g765 g445
+01 1
+
+#g444 = modmult:modmultiply|prodreg1[5]~synth
+#g445 = modmult:modmultiply|prodreg1[5]~synth
+#g446 = modmult:modmultiply|prodreg1[5]~synth
+.names g444 g445 g446
+00 0
+
+#g12 = modmult:modmultiply|mpreg[0]
+#g66 = modmult:modmultiply|Add0~synth
+#g447 = modmult:modmultiply|prodreg1[6]~synth
+.names g12 g66 g447
+11 1
+
+#g12 = modmult:modmultiply|mpreg[0]
+#g771 = modmult:modmultiply|prodreg[6]
+#g448 = modmult:modmultiply|prodreg1[6]~synth
+.names g12 g771 g448
+01 1
+
+#g447 = modmult:modmultiply|prodreg1[6]~synth
+#g448 = modmult:modmultiply|prodreg1[6]~synth
+#g449 = modmult:modmultiply|prodreg1[6]~synth
+.names g447 g448 g449
+00 0
+
+#g12 = modmult:modmultiply|mpreg[0]
+#g76 = modmult:modmultiply|Add0~synth
+#g450 = modmult:modmultiply|prodreg1[7]~synth
+.names g12 g76 g450
+11 1
+
+#g12 = modmult:modmultiply|mpreg[0]
+#g777 = modmult:modmultiply|prodreg[7]
+#g451 = modmult:modmultiply|prodreg1[7]~synth
+.names g12 g777 g451
+01 1
+
+#g450 = modmult:modmultiply|prodreg1[7]~synth
+#g451 = modmult:modmultiply|prodreg1[7]~synth
+#g452 = modmult:modmultiply|prodreg1[7]~synth
+.names g450 g451 g452
+00 0
+
+#g12 = modmult:modmultiply|mpreg[0]
+#g86 = modmult:modmultiply|Add0~synth
+#g453 = modmult:modmultiply|prodreg1[8]~synth
+.names g12 g86 g453
+11 1
+
+#g12 = modmult:modmultiply|mpreg[0]
+#g783 = modmult:modmultiply|prodreg[8]
+#g454 = modmult:modmultiply|prodreg1[8]~synth
+.names g12 g783 g454
+01 1
+
+#g453 = modmult:modmultiply|prodreg1[8]~synth
+#g454 = modmult:modmultiply|prodreg1[8]~synth
+#g455 = modmult:modmultiply|prodreg1[8]~synth
+.names g453 g454 g455
+00 0
+
+#g12 = modmult:modmultiply|mpreg[0]
+#g92 = modmult:modmultiply|Add0~synth
+#g456 = modmult:modmultiply|prodreg1[9]~synth
+.names g12 g92 g456
+11 1
+
+#g12 = modmult:modmultiply|mpreg[0]
+#g787 = modmult:modmultiply|prodreg[9]
+#g457 = modmult:modmultiply|prodreg1[9]~synth
+.names g12 g787 g457
+01 1
+
+#g456 = modmult:modmultiply|prodreg1[9]~synth
+#g457 = modmult:modmultiply|prodreg1[9]~synth
+#g458 = modmult:modmultiply|prodreg1[9]~synth
+.names g456 g457 g458
+00 0
+
+#g124 = modmult:modmultiply|Mux9~synth
+#g431 = modmult:modmultiply|prodreg1[0]~synth
+#g459 = modmult:modmultiply|Mux9~synth
+.names g124 g431 g459
+11 1
+
+#g13 = modmult:modmultiply|Add1~synth
+#g124 = modmult:modmultiply|Mux9~synth
+#g460 = modmult:modmultiply|Mux9~synth
+.names g13 g124 g460
+10 1
+
+#g459 = modmult:modmultiply|Mux9~synth
+#g460 = modmult:modmultiply|Mux9~synth
+#g461 = modmult:modmultiply|Mux9~synth
+.names g459 g460 g461
+00 0
+
+#g140 = modmult:modmultiply|Add1~synth
+#g434 = modmult:modmultiply|prodreg1[1]~synth
+#g462 = modmult:modmultiply|Mux8~synth
+.names g140 g434 g462
+01 1
+
+#g139 = modmult:modmultiply|Add1~synth
+#g140 = modmult:modmultiply|Add1~synth
+#g463 = modmult:modmultiply|Mux8~synth
+.names g139 g140 g463
+01 1
+
+#g462 = modmult:modmultiply|Mux8~synth
+#g463 = modmult:modmultiply|Mux8~synth
+#g464 = modmult:modmultiply|Mux8~synth
+.names g462 g463 g464
+00 0
+
+#g141 = modmult:modmultiply|Add2~synth
+#g464 = modmult:modmultiply|Mux8~synth
+#g465 = modmult:modmultiply|Mux8~synth
+.names g141 g464 g465
+01 1
+
+#g138 = modmult:modmultiply|Add2~synth
+#g141 = modmult:modmultiply|Add2~synth
+#g466 = modmult:modmultiply|Mux8~synth
+.names g138 g141 g466
+11 1
+
+#g465 = modmult:modmultiply|Mux8~synth
+#g466 = modmult:modmultiply|Mux8~synth
+#g467 = modmult:modmultiply|Mux8~synth
+.names g465 g466 g467
+00 0
+
+#g140 = modmult:modmultiply|Add1~synth
+#g437 = modmult:modmultiply|prodreg1[2]~synth
+#g468 = modmult:modmultiply|Mux7~synth
+.names g140 g437 g468
+01 1
+
+#g140 = modmult:modmultiply|Add1~synth
+#g143 = modmult:modmultiply|Add1~synth
+#g469 = modmult:modmultiply|Mux7~synth
+.names g140 g143 g469
+10 1
+
+#g468 = modmult:modmultiply|Mux7~synth
+#g469 = modmult:modmultiply|Mux7~synth
+#g470 = modmult:modmultiply|Mux7~synth
+.names g468 g469 g470
+00 0
+
+#g141 = modmult:modmultiply|Add2~synth
+#g470 = modmult:modmultiply|Mux7~synth
+#g471 = modmult:modmultiply|Mux7~synth
+.names g141 g470 g471
+01 1
+
+#g141 = modmult:modmultiply|Add2~synth
+#g142 = modmult:modmultiply|Add2~synth
+#g472 = modmult:modmultiply|Mux7~synth
+.names g141 g142 g472
+10 1
+
+#g471 = modmult:modmultiply|Mux7~synth
+#g472 = modmult:modmultiply|Mux7~synth
+#g473 = modmult:modmultiply|Mux7~synth
+.names g471 g472 g473
+00 0
+
+#g140 = modmult:modmultiply|Add1~synth
+#g440 = modmult:modmultiply|prodreg1[3]~synth
+#g474 = modmult:modmultiply|Mux6~synth
+.names g140 g440 g474
+01 1
+
+#g140 = modmult:modmultiply|Add1~synth
+#g145 = modmult:modmultiply|Add1~synth
+#g475 = modmult:modmultiply|Mux6~synth
+.names g140 g145 g475
+10 1
+
+#g474 = modmult:modmultiply|Mux6~synth
+#g475 = modmult:modmultiply|Mux6~synth
+#g476 = modmult:modmultiply|Mux6~synth
+.names g474 g475 g476
+00 0
+
+#g141 = modmult:modmultiply|Add2~synth
+#g476 = modmult:modmultiply|Mux6~synth
+#g477 = modmult:modmultiply|Mux6~synth
+.names g141 g476 g477
+01 1
+
+#g141 = modmult:modmultiply|Add2~synth
+#g144 = modmult:modmultiply|Add2~synth
+#g478 = modmult:modmultiply|Mux6~synth
+.names g141 g144 g478
+10 1
+
+#g477 = modmult:modmultiply|Mux6~synth
+#g478 = modmult:modmultiply|Mux6~synth
+#g479 = modmult:modmultiply|Mux6~synth
+.names g477 g478 g479
+00 0
+
+#g140 = modmult:modmultiply|Add1~synth
+#g443 = modmult:modmultiply|prodreg1[4]~synth
+#g480 = modmult:modmultiply|Mux5~synth
+.names g140 g443 g480
+01 1
+
+#g140 = modmult:modmultiply|Add1~synth
+#g147 = modmult:modmultiply|Add1~synth
+#g481 = modmult:modmultiply|Mux5~synth
+.names g140 g147 g481
+10 1
+
+#g480 = modmult:modmultiply|Mux5~synth
+#g481 = modmult:modmultiply|Mux5~synth
+#g482 = modmult:modmultiply|Mux5~synth
+.names g480 g481 g482
+00 0
+
+#g141 = modmult:modmultiply|Add2~synth
+#g482 = modmult:modmultiply|Mux5~synth
+#g483 = modmult:modmultiply|Mux5~synth
+.names g141 g482 g483
+01 1
+
+#g141 = modmult:modmultiply|Add2~synth
+#g146 = modmult:modmultiply|Add2~synth
+#g484 = modmult:modmultiply|Mux5~synth
+.names g141 g146 g484
+10 1
+
+#g483 = modmult:modmultiply|Mux5~synth
+#g484 = modmult:modmultiply|Mux5~synth
+#g485 = modmult:modmultiply|Mux5~synth
+.names g483 g484 g485
+00 0
+
+#g140 = modmult:modmultiply|Add1~synth
+#g446 = modmult:modmultiply|prodreg1[5]~synth
+#g486 = modmult:modmultiply|Mux4~synth
+.names g140 g446 g486
+01 1
+
+#g140 = modmult:modmultiply|Add1~synth
+#g149 = modmult:modmultiply|Add1~synth
+#g487 = modmult:modmultiply|Mux4~synth
+.names g140 g149 g487
+10 1
+
+#g486 = modmult:modmultiply|Mux4~synth
+#g487 = modmult:modmultiply|Mux4~synth
+#g488 = modmult:modmultiply|Mux4~synth
+.names g486 g487 g488
+00 0
+
+#g141 = modmult:modmultiply|Add2~synth
+#g488 = modmult:modmultiply|Mux4~synth
+#g489 = modmult:modmultiply|Mux4~synth
+.names g141 g488 g489
+01 1
+
+#g141 = modmult:modmultiply|Add2~synth
+#g148 = modmult:modmultiply|Add2~synth
+#g490 = modmult:modmultiply|Mux4~synth
+.names g141 g148 g490
+10 1
+
+#g489 = modmult:modmultiply|Mux4~synth
+#g490 = modmult:modmultiply|Mux4~synth
+#g491 = modmult:modmultiply|Mux4~synth
+.names g489 g490 g491
+00 0
+
+#g140 = modmult:modmultiply|Add1~synth
+#g449 = modmult:modmultiply|prodreg1[6]~synth
+#g492 = modmult:modmultiply|Mux3~synth
+.names g140 g449 g492
+01 1
+
+#g140 = modmult:modmultiply|Add1~synth
+#g151 = modmult:modmultiply|Add1~synth
+#g493 = modmult:modmultiply|Mux3~synth
+.names g140 g151 g493
+10 1
+
+#g492 = modmult:modmultiply|Mux3~synth
+#g493 = modmult:modmultiply|Mux3~synth
+#g494 = modmult:modmultiply|Mux3~synth
+.names g492 g493 g494
+00 0
+
+#g141 = modmult:modmultiply|Add2~synth
+#g494 = modmult:modmultiply|Mux3~synth
+#g495 = modmult:modmultiply|Mux3~synth
+.names g141 g494 g495
+01 1
+
+#g141 = modmult:modmultiply|Add2~synth
+#g150 = modmult:modmultiply|Add2~synth
+#g496 = modmult:modmultiply|Mux3~synth
+.names g141 g150 g496
+10 1
+
+#g495 = modmult:modmultiply|Mux3~synth
+#g496 = modmult:modmultiply|Mux3~synth
+#g497 = modmult:modmultiply|Mux3~synth
+.names g495 g496 g497
+00 0
+
+#g140 = modmult:modmultiply|Add1~synth
+#g452 = modmult:modmultiply|prodreg1[7]~synth
+#g498 = modmult:modmultiply|Mux2~synth
+.names g140 g452 g498
+01 1
+
+#g140 = modmult:modmultiply|Add1~synth
+#g153 = modmult:modmultiply|Add1~synth
+#g499 = modmult:modmultiply|Mux2~synth
+.names g140 g153 g499
+10 1
+
+#g498 = modmult:modmultiply|Mux2~synth
+#g499 = modmult:modmultiply|Mux2~synth
+#g500 = modmult:modmultiply|Mux2~synth
+.names g498 g499 g500
+00 0
+
+#g141 = modmult:modmultiply|Add2~synth
+#g500 = modmult:modmultiply|Mux2~synth
+#g501 = modmult:modmultiply|Mux2~synth
+.names g141 g500 g501
+01 1
+
+#g141 = modmult:modmultiply|Add2~synth
+#g152 = modmult:modmultiply|Add2~synth
+#g502 = modmult:modmultiply|Mux2~synth
+.names g141 g152 g502
+10 1
+
+#g501 = modmult:modmultiply|Mux2~synth
+#g502 = modmult:modmultiply|Mux2~synth
+#g503 = modmult:modmultiply|Mux2~synth
+.names g501 g502 g503
+00 0
+
+#g125 = modmult:modmultiply|first
+#g164 = modmult:modmultiply|Equal0~synth
+#g504 = modmult:modmultiply|prodreg[0]~synth
+.names g125 g164 g504
+11 1
+
+#g125 = modmult:modmultiply|first
+#g791 = multgo
+#g505 = modmult:modmultiply|prodreg[0]~synth
+.names g125 g791 g505
+01 1
+
+#g504 = modmult:modmultiply|prodreg[0]~synth
+#g505 = modmult:modmultiply|prodreg[0]~synth
+#g506 = modmult:modmultiply|prodreg[0]~synth
+.names g504 g505 g506
+00 0
+
+#g125 = modmult:modmultiply|first
+#g163 = modmult:modmultiply|mpreg[1]
+#g507 = modmult:modmultiply|mpreg~synth
+.names g125 g163 g507
+11 1
+
+#g125 = modmult:modmultiply|first
+#g793 = sqrin[0]
+#g508 = modmult:modmultiply|mpreg~synth
+.names g125 g793 g508
+01 1
+
+#g507 = modmult:modmultiply|mpreg~synth
+#g508 = modmult:modmultiply|mpreg~synth
+#g509 = modmult:modmultiply|mpreg~synth
+.names g507 g508 g509
+00 0
+
+#g168 = modmult:modmultiply|Add3~synth
+#g198 = modmult:modmultiply|Add3~synth
+#g510 = modmult:modmultiply|mcreg~synth
+.names g168 g198 g510
+11 1
+
+#g10 = modmult:modmultiply|mcreg[0]
+#g198 = modmult:modmultiply|Add3~synth
+#g511 = modmult:modmultiply|mcreg~synth
+.names g10 g198 g511
+10 1
+
+#g510 = modmult:modmultiply|mcreg~synth
+#g511 = modmult:modmultiply|mcreg~synth
+#g512 = modmult:modmultiply|mcreg~synth
+.names g510 g511 g512
+00 0
+
+#g198 = modmult:modmultiply|Add3~synth
+#g201 = modmult:modmultiply|Add3~synth
+#g513 = modmult:modmultiply|mcreg~synth
+.names g198 g201 g513
+10 1
+
+#g198 = modmult:modmultiply|Add3~synth
+#g743 = modmult:modmultiply|mcreg[1]
+#g514 = modmult:modmultiply|mcreg~synth
+.names g198 g743 g514
+01 1
+
+#g513 = modmult:modmultiply|mcreg~synth
+#g514 = modmult:modmultiply|mcreg~synth
+#g515 = modmult:modmultiply|mcreg~synth
+.names g513 g514 g515
+00 0
+
+#g198 = modmult:modmultiply|Add3~synth
+#g204 = modmult:modmultiply|Add3~synth
+#g516 = modmult:modmultiply|mcreg~synth
+.names g198 g204 g516
+10 1
+
+#g198 = modmult:modmultiply|Add3~synth
+#g749 = modmult:modmultiply|mcreg[2]
+#g517 = modmult:modmultiply|mcreg~synth
+.names g198 g749 g517
+01 1
+
+#g516 = modmult:modmultiply|mcreg~synth
+#g517 = modmult:modmultiply|mcreg~synth
+#g518 = modmult:modmultiply|mcreg~synth
+.names g516 g517 g518
+00 0
+
+#g198 = modmult:modmultiply|Add3~synth
+#g207 = modmult:modmultiply|Add3~synth
+#g519 = modmult:modmultiply|mcreg~synth
+.names g198 g207 g519
+10 1
+
+#g198 = modmult:modmultiply|Add3~synth
+#g755 = modmult:modmultiply|mcreg[3]
+#g520 = modmult:modmultiply|mcreg~synth
+.names g198 g755 g520
+01 1
+
+#g519 = modmult:modmultiply|mcreg~synth
+#g520 = modmult:modmultiply|mcreg~synth
+#g521 = modmult:modmultiply|mcreg~synth
+.names g519 g520 g521
+00 0
+
+#g198 = modmult:modmultiply|Add3~synth
+#g210 = modmult:modmultiply|Add3~synth
+#g522 = modmult:modmultiply|mcreg~synth
+.names g198 g210 g522
+10 1
+
+#g198 = modmult:modmultiply|Add3~synth
+#g761 = modmult:modmultiply|mcreg[4]
+#g523 = modmult:modmultiply|mcreg~synth
+.names g198 g761 g523
+01 1
+
+#g522 = modmult:modmultiply|mcreg~synth
+#g523 = modmult:modmultiply|mcreg~synth
+#g524 = modmult:modmultiply|mcreg~synth
+.names g522 g523 g524
+00 0
+
+#g198 = modmult:modmultiply|Add3~synth
+#g213 = modmult:modmultiply|Add3~synth
+#g525 = modmult:modmultiply|mcreg~synth
+.names g198 g213 g525
+10 1
+
+#g198 = modmult:modmultiply|Add3~synth
+#g767 = modmult:modmultiply|mcreg[5]
+#g526 = modmult:modmultiply|mcreg~synth
+.names g198 g767 g526
+01 1
+
+#g525 = modmult:modmultiply|mcreg~synth
+#g526 = modmult:modmultiply|mcreg~synth
+#g527 = modmult:modmultiply|mcreg~synth
+.names g525 g526 g527
+00 0
+
+#g198 = modmult:modmultiply|Add3~synth
+#g216 = modmult:modmultiply|Add3~synth
+#g528 = modmult:modmultiply|mcreg~synth
+.names g198 g216 g528
+10 1
+
+#g198 = modmult:modmultiply|Add3~synth
+#g773 = modmult:modmultiply|mcreg[6]
+#g529 = modmult:modmultiply|mcreg~synth
+.names g198 g773 g529
+01 1
+
+#g528 = modmult:modmultiply|mcreg~synth
+#g529 = modmult:modmultiply|mcreg~synth
+#g530 = modmult:modmultiply|mcreg~synth
+.names g528 g529 g530
+00 0
+
+#g140 = modmult:modmultiply|Add1~synth
+#g455 = modmult:modmultiply|prodreg1[8]~synth
+#g531 = modmult:modmultiply|Mux1~synth
+.names g140 g455 g531
+01 1
+
+#g140 = modmult:modmultiply|Add1~synth
+#g220 = modmult:modmultiply|Add1~synth
+#g532 = modmult:modmultiply|Mux1~synth
+.names g140 g220 g532
+10 1
+
+#g531 = modmult:modmultiply|Mux1~synth
+#g532 = modmult:modmultiply|Mux1~synth
+#g533 = modmult:modmultiply|Mux1~synth
+.names g531 g532 g533
+00 0
+
+#g141 = modmult:modmultiply|Add2~synth
+#g533 = modmult:modmultiply|Mux1~synth
+#g534 = modmult:modmultiply|Mux1~synth
+.names g141 g533 g534
+01 1
+
+#g141 = modmult:modmultiply|Add2~synth
+#g219 = modmult:modmultiply|Add2~synth
+#g535 = modmult:modmultiply|Mux1~synth
+.names g141 g219 g535
+10 1
+
+#g534 = modmult:modmultiply|Mux1~synth
+#g535 = modmult:modmultiply|Mux1~synth
+#g536 = modmult:modmultiply|Mux1~synth
+.names g534 g535 g536
+00 0
+
+#g198 = modmult:modmultiply|Add3~synth
+#g222 = modmult:modmultiply|Add3~synth
+#g537 = modmult:modmultiply|mcreg2[7]~synth
+.names g198 g222 g537
+10 1
+
+#g198 = modmult:modmultiply|Add3~synth
+#g779 = modmult:modmultiply|mcreg[7]
+#g538 = modmult:modmultiply|mcreg2[7]~synth
+.names g198 g779 g538
+01 1
+
+#g537 = modmult:modmultiply|mcreg2[7]~synth
+#g538 = modmult:modmultiply|mcreg2[7]~synth
+#g539 = modmult:modmultiply|mcreg2[7]~synth
+.names g537 g538 g539
+00 0
+
+#g126 = modmult:modsqr|first
+#g233 = modmult:modsqr|Equal0~synth
+#g540 = modmult:modsqr|first~synth
+.names g126 g233 g540
+11 1
+
+#g126 = modmult:modsqr|first
+#g791 = multgo
+#g541 = modmult:modsqr|first~synth
+.names g126 g791 g541
+01 1
+
+#g540 = modmult:modsqr|first~synth
+#g541 = modmult:modsqr|first~synth
+#g542 = modmult:modsqr|first~synth
+.names g540 g541 g542
+00 0
+
+#g234 = multgo~synth
+#g735 = done
+#g543 = multgo~synth
+.names g234 g735 g543
+11 1
+
+#g735 = done
+#g544 = multgo~synth
+.names ds g735 g544
+00 1
+
+#g543 = multgo~synth
+#g544 = multgo~synth
+#g545 = multgo~synth
+.names g543 g544 g545
+00 0
+
+#g237 = count[3]~synth
+#g735 = done
+#g546 = count[3]~synth
+.names g237 g735 g546
+11 1
+
+#g735 = done
+#g547 = count[3]~synth
+.names ds g735 g547
+00 1
+
+#g546 = count[3]~synth
+#g547 = count[3]~synth
+#g548 = count[3]~synth
+.names g546 g547 g548
+00 0
+
+#g129 = count[6]
+#g735 = done
+#g549 = count~synth
+.names g129 g735 g549
+11 1
+
+#g735 = done
+#g550 = count~synth
+.names inExp[6] g735 g550
+10 1
+
+#g549 = count~synth
+#g550 = count~synth
+#g551 = count~synth
+.names g549 g550 g551
+00 0
+
+#g130 = count[5]
+#g735 = done
+#g552 = count~synth
+.names g130 g735 g552
+11 1
+
+#g735 = done
+#g553 = count~synth
+.names inExp[5] g735 g553
+10 1
+
+#g552 = count~synth
+#g553 = count~synth
+#g554 = count~synth
+.names g552 g553 g554
+00 0
+
+#g131 = count[4]
+#g735 = done
+#g555 = count~synth
+.names g131 g735 g555
+11 1
+
+#g735 = done
+#g556 = count~synth
+.names inExp[4] g735 g556
+10 1
+
+#g555 = count~synth
+#g556 = count~synth
+#g557 = count~synth
+.names g555 g556 g557
+00 0
+
+#g132 = count[3]
+#g735 = done
+#g558 = count~synth
+.names g132 g735 g558
+11 1
+
+#g735 = done
+#g559 = count~synth
+.names inExp[3] g735 g559
+10 1
+
+#g558 = count~synth
+#g559 = count~synth
+#g560 = count~synth
+.names g558 g559 g560
+00 0
+
+#g133 = count[2]
+#g735 = done
+#g561 = count~synth
+.names g133 g735 g561
+11 1
+
+#g735 = done
+#g562 = count~synth
+.names inExp[2] g735 g562
+10 1
+
+#g561 = count~synth
+#g562 = count~synth
+#g563 = count~synth
+.names g561 g562 g563
+00 0
+
+#g134 = count[1]
+#g735 = done
+#g564 = count~synth
+.names g134 g735 g564
+11 1
+
+#g735 = done
+#g565 = count~synth
+.names inExp[1] g735 g565
+10 1
+
+#g564 = count~synth
+#g565 = count~synth
+#g566 = count~synth
+.names g564 g565 g566
+00 0
+
+#g125 = modmult:modmultiply|first
+#g157 = modmult:modmultiply|mpreg[7]
+#g567 = modmult:modmultiply|mpreg~synth
+.names g125 g157 g567
+11 1
+
+#g125 = modmult:modmultiply|first
+#g798 = sqrin[6]
+#g568 = modmult:modmultiply|mpreg~synth
+.names g125 g798 g568
+01 1
+
+#g567 = modmult:modmultiply|mpreg~synth
+#g568 = modmult:modmultiply|mpreg~synth
+#g569 = modmult:modmultiply|mpreg~synth
+.names g567 g568 g569
+00 0
+
+#g125 = modmult:modmultiply|first
+#g158 = modmult:modmultiply|mpreg[6]
+#g570 = modmult:modmultiply|mpreg~synth
+.names g125 g158 g570
+11 1
+
+#g125 = modmult:modmultiply|first
+#g800 = sqrin[5]
+#g571 = modmult:modmultiply|mpreg~synth
+.names g125 g800 g571
+01 1
+
+#g570 = modmult:modmultiply|mpreg~synth
+#g571 = modmult:modmultiply|mpreg~synth
+#g572 = modmult:modmultiply|mpreg~synth
+.names g570 g571 g572
+00 0
+
+#g125 = modmult:modmultiply|first
+#g159 = modmult:modmultiply|mpreg[5]
+#g573 = modmult:modmultiply|mpreg~synth
+.names g125 g159 g573
+11 1
+
+#g125 = modmult:modmultiply|first
+#g802 = sqrin[4]
+#g574 = modmult:modmultiply|mpreg~synth
+.names g125 g802 g574
+01 1
+
+#g573 = modmult:modmultiply|mpreg~synth
+#g574 = modmult:modmultiply|mpreg~synth
+#g575 = modmult:modmultiply|mpreg~synth
+.names g573 g574 g575
+00 0
+
+#g125 = modmult:modmultiply|first
+#g160 = modmult:modmultiply|mpreg[4]
+#g576 = modmult:modmultiply|mpreg~synth
+.names g125 g160 g576
+11 1
+
+#g125 = modmult:modmultiply|first
+#g804 = sqrin[3]
+#g577 = modmult:modmultiply|mpreg~synth
+.names g125 g804 g577
+01 1
+
+#g576 = modmult:modmultiply|mpreg~synth
+#g577 = modmult:modmultiply|mpreg~synth
+#g578 = modmult:modmultiply|mpreg~synth
+.names g576 g577 g578
+00 0
+
+#g125 = modmult:modmultiply|first
+#g161 = modmult:modmultiply|mpreg[3]
+#g579 = modmult:modmultiply|mpreg~synth
+.names g125 g161 g579
+11 1
+
+#g125 = modmult:modmultiply|first
+#g806 = sqrin[2]
+#g580 = modmult:modmultiply|mpreg~synth
+.names g125 g806 g580
+01 1
+
+#g579 = modmult:modmultiply|mpreg~synth
+#g580 = modmult:modmultiply|mpreg~synth
+#g581 = modmult:modmultiply|mpreg~synth
+.names g579 g580 g581
+00 0
+
+#g125 = modmult:modmultiply|first
+#g162 = modmult:modmultiply|mpreg[2]
+#g582 = modmult:modmultiply|mpreg~synth
+.names g125 g162 g582
+11 1
+
+#g125 = modmult:modmultiply|first
+#g808 = sqrin[1]
+#g583 = modmult:modmultiply|mpreg~synth
+.names g125 g808 g583
+01 1
+
+#g582 = modmult:modmultiply|mpreg~synth
+#g583 = modmult:modmultiply|mpreg~synth
+#g584 = modmult:modmultiply|mpreg~synth
+.names g582 g583 g584
+00 0
+
+#g461 = modmult:modmultiply|Mux9~synth
+#g735 = done
+#g585 = tempin~synth
+.names g461 g735 g585
+11 1
+
+#g735 = done
+#g586 = tempin~synth
+.names indata[0] g735 g586
+10 1
+
+#g585 = tempin~synth
+#g586 = tempin~synth
+#g587 = tempin~synth
+.names g585 g586 g587
+00 0
+
+#g232 = modmult:modsqr|mpreg[0]
+#g245 = modmult:modsqr|Add0~synth
+#g588 = modmult:modsqr|prodreg1[0]~synth
+.names g232 g245 g588
+11 1
+
+#g232 = modmult:modsqr|mpreg[0]
+#g810 = modmult:modsqr|prodreg[0]
+#g589 = modmult:modsqr|prodreg1[0]~synth
+.names g232 g810 g589
+01 1
+
+#g588 = modmult:modsqr|prodreg1[0]~synth
+#g589 = modmult:modsqr|prodreg1[0]~synth
+#g590 = modmult:modsqr|prodreg1[0]~synth
+.names g588 g589 g590
+00 0
+
+#g232 = modmult:modsqr|mpreg[0]
+#g249 = modmult:modsqr|Add0~synth
+#g591 = modmult:modsqr|prodreg1[1]~synth
+.names g232 g249 g591
+11 1
+
+#g232 = modmult:modsqr|mpreg[0]
+#g812 = modmult:modsqr|prodreg[1]
+#g592 = modmult:modsqr|prodreg1[1]~synth
+.names g232 g812 g592
+01 1
+
+#g591 = modmult:modsqr|prodreg1[1]~synth
+#g592 = modmult:modsqr|prodreg1[1]~synth
+#g593 = modmult:modsqr|prodreg1[1]~synth
+.names g591 g592 g593
+00 0
+
+#g232 = modmult:modsqr|mpreg[0]
+#g259 = modmult:modsqr|Add0~synth
+#g594 = modmult:modsqr|prodreg1[2]~synth
+.names g232 g259 g594
+11 1
+
+#g232 = modmult:modsqr|mpreg[0]
+#g818 = modmult:modsqr|prodreg[2]
+#g595 = modmult:modsqr|prodreg1[2]~synth
+.names g232 g818 g595
+01 1
+
+#g594 = modmult:modsqr|prodreg1[2]~synth
+#g595 = modmult:modsqr|prodreg1[2]~synth
+#g596 = modmult:modsqr|prodreg1[2]~synth
+.names g594 g595 g596
+00 0
+
+#g232 = modmult:modsqr|mpreg[0]
+#g269 = modmult:modsqr|Add0~synth
+#g597 = modmult:modsqr|prodreg1[3]~synth
+.names g232 g269 g597
+11 1
+
+#g232 = modmult:modsqr|mpreg[0]
+#g824 = modmult:modsqr|prodreg[3]
+#g598 = modmult:modsqr|prodreg1[3]~synth
+.names g232 g824 g598
+01 1
+
+#g597 = modmult:modsqr|prodreg1[3]~synth
+#g598 = modmult:modsqr|prodreg1[3]~synth
+#g599 = modmult:modsqr|prodreg1[3]~synth
+.names g597 g598 g599
+00 0
+
+#g232 = modmult:modsqr|mpreg[0]
+#g279 = modmult:modsqr|Add0~synth
+#g600 = modmult:modsqr|prodreg1[4]~synth
+.names g232 g279 g600
+11 1
+
+#g232 = modmult:modsqr|mpreg[0]
+#g830 = modmult:modsqr|prodreg[4]
+#g601 = modmult:modsqr|prodreg1[4]~synth
+.names g232 g830 g601
+01 1
+
+#g600 = modmult:modsqr|prodreg1[4]~synth
+#g601 = modmult:modsqr|prodreg1[4]~synth
+#g602 = modmult:modsqr|prodreg1[4]~synth
+.names g600 g601 g602
+00 0
+
+#g232 = modmult:modsqr|mpreg[0]
+#g289 = modmult:modsqr|Add0~synth
+#g603 = modmult:modsqr|prodreg1[5]~synth
+.names g232 g289 g603
+11 1
+
+#g232 = modmult:modsqr|mpreg[0]
+#g836 = modmult:modsqr|prodreg[5]
+#g604 = modmult:modsqr|prodreg1[5]~synth
+.names g232 g836 g604
+01 1
+
+#g603 = modmult:modsqr|prodreg1[5]~synth
+#g604 = modmult:modsqr|prodreg1[5]~synth
+#g605 = modmult:modsqr|prodreg1[5]~synth
+.names g603 g604 g605
+00 0
+
+#g232 = modmult:modsqr|mpreg[0]
+#g299 = modmult:modsqr|Add0~synth
+#g606 = modmult:modsqr|prodreg1[6]~synth
+.names g232 g299 g606
+11 1
+
+#g232 = modmult:modsqr|mpreg[0]
+#g842 = modmult:modsqr|prodreg[6]
+#g607 = modmult:modsqr|prodreg1[6]~synth
+.names g232 g842 g607
+01 1
+
+#g606 = modmult:modsqr|prodreg1[6]~synth
+#g607 = modmult:modsqr|prodreg1[6]~synth
+#g608 = modmult:modsqr|prodreg1[6]~synth
+.names g606 g607 g608
+00 0
+
+#g232 = modmult:modsqr|mpreg[0]
+#g309 = modmult:modsqr|Add0~synth
+#g609 = modmult:modsqr|prodreg1[7]~synth
+.names g232 g309 g609
+11 1
+
+#g232 = modmult:modsqr|mpreg[0]
+#g848 = modmult:modsqr|prodreg[7]
+#g610 = modmult:modsqr|prodreg1[7]~synth
+.names g232 g848 g610
+01 1
+
+#g609 = modmult:modsqr|prodreg1[7]~synth
+#g610 = modmult:modsqr|prodreg1[7]~synth
+#g611 = modmult:modsqr|prodreg1[7]~synth
+.names g609 g610 g611
+00 0
+
+#g232 = modmult:modsqr|mpreg[0]
+#g319 = modmult:modsqr|Add0~synth
+#g612 = modmult:modsqr|prodreg1[8]~synth
+.names g232 g319 g612
+11 1
+
+#g232 = modmult:modsqr|mpreg[0]
+#g854 = modmult:modsqr|prodreg[8]
+#g613 = modmult:modsqr|prodreg1[8]~synth
+.names g232 g854 g613
+01 1
+
+#g612 = modmult:modsqr|prodreg1[8]~synth
+#g613 = modmult:modsqr|prodreg1[8]~synth
+#g614 = modmult:modsqr|prodreg1[8]~synth
+.names g612 g613 g614
+00 0
+
+#g232 = modmult:modsqr|mpreg[0]
+#g325 = modmult:modsqr|Add0~synth
+#g615 = modmult:modsqr|prodreg1[9]~synth
+.names g232 g325 g615
+11 1
+
+#g232 = modmult:modsqr|mpreg[0]
+#g858 = modmult:modsqr|prodreg[9]
+#g616 = modmult:modsqr|prodreg1[9]~synth
+.names g232 g858 g616
+01 1
+
+#g615 = modmult:modsqr|prodreg1[9]~synth
+#g616 = modmult:modsqr|prodreg1[9]~synth
+#g617 = modmult:modsqr|prodreg1[9]~synth
+.names g615 g616 g617
+00 0
+
+#g357 = modmult:modsqr|Mux9~synth
+#g590 = modmult:modsqr|prodreg1[0]~synth
+#g618 = modmult:modsqr|Mux9~synth
+.names g357 g590 g618
+11 1
+
+#g246 = modmult:modsqr|Add1~synth
+#g357 = modmult:modsqr|Mux9~synth
+#g619 = modmult:modsqr|Mux9~synth
+.names g246 g357 g619
+10 1
+
+#g618 = modmult:modsqr|Mux9~synth
+#g619 = modmult:modsqr|Mux9~synth
+#g620 = modmult:modsqr|Mux9~synth
+.names g618 g619 g620
+00 0
+
+#g467 = modmult:modmultiply|Mux8~synth
+#g735 = done
+#g621 = tempin~synth
+.names g467 g735 g621
+11 1
+
+#g735 = done
+#g622 = tempin~synth
+.names indata[1] g735 g622
+10 1
+
+#g621 = tempin~synth
+#g622 = tempin~synth
+#g623 = tempin~synth
+.names g621 g622 g623
+00 0
+
+#g473 = modmult:modmultiply|Mux7~synth
+#g735 = done
+#g624 = tempin~synth
+.names g473 g735 g624
+11 1
+
+#g735 = done
+#g625 = tempin~synth
+.names indata[2] g735 g625
+10 1
+
+#g624 = tempin~synth
+#g625 = tempin~synth
+#g626 = tempin~synth
+.names g624 g625 g626
+00 0
+
+#g479 = modmult:modmultiply|Mux6~synth
+#g735 = done
+#g627 = tempin~synth
+.names g479 g735 g627
+11 1
+
+#g735 = done
+#g628 = tempin~synth
+.names indata[3] g735 g628
+10 1
+
+#g627 = tempin~synth
+#g628 = tempin~synth
+#g629 = tempin~synth
+.names g627 g628 g629
+00 0
+
+#g485 = modmult:modmultiply|Mux5~synth
+#g735 = done
+#g630 = tempin~synth
+.names g485 g735 g630
+11 1
+
+#g735 = done
+#g631 = tempin~synth
+.names indata[4] g735 g631
+10 1
+
+#g630 = tempin~synth
+#g631 = tempin~synth
+#g632 = tempin~synth
+.names g630 g631 g632
+00 0
+
+#g491 = modmult:modmultiply|Mux4~synth
+#g735 = done
+#g633 = tempin~synth
+.names g491 g735 g633
+11 1
+
+#g735 = done
+#g634 = tempin~synth
+.names indata[5] g735 g634
+10 1
+
+#g633 = tempin~synth
+#g634 = tempin~synth
+#g635 = tempin~synth
+.names g633 g634 g635
+00 0
+
+#g497 = modmult:modmultiply|Mux3~synth
+#g735 = done
+#g636 = tempin~synth
+.names g497 g735 g636
+11 1
+
+#g735 = done
+#g637 = tempin~synth
+.names indata[6] g735 g637
+10 1
+
+#g636 = tempin~synth
+#g637 = tempin~synth
+#g638 = tempin~synth
+.names g636 g637 g638
+00 0
+
+#g503 = modmult:modmultiply|Mux2~synth
+#g735 = done
+#g639 = tempin~synth
+.names g503 g735 g639
+11 1
+
+#g735 = done
+#g640 = tempin~synth
+.names indata[7] g735 g640
+10 1
+
+#g639 = tempin~synth
+#g640 = tempin~synth
+#g641 = tempin~synth
+.names g639 g640 g641
+00 0
+
+#g126 = modmult:modsqr|first
+#g225 = modmult:modsqr|mpreg[7]
+#g642 = modmult:modsqr|mpreg~synth
+.names g126 g225 g642
+11 1
+
+#g126 = modmult:modsqr|first
+#g866 = root[6]
+#g643 = modmult:modsqr|mpreg~synth
+.names g126 g866 g643
+01 1
+
+#g642 = modmult:modsqr|mpreg~synth
+#g643 = modmult:modsqr|mpreg~synth
+#g644 = modmult:modsqr|mpreg~synth
+.names g642 g643 g644
+00 0
+
+#g126 = modmult:modsqr|first
+#g226 = modmult:modsqr|mpreg[6]
+#g645 = modmult:modsqr|mpreg~synth
+.names g126 g226 g645
+11 1
+
+#g126 = modmult:modsqr|first
+#g870 = root[5]
+#g646 = modmult:modsqr|mpreg~synth
+.names g126 g870 g646
+01 1
+
+#g645 = modmult:modsqr|mpreg~synth
+#g646 = modmult:modsqr|mpreg~synth
+#g647 = modmult:modsqr|mpreg~synth
+.names g645 g646 g647
+00 0
+
+#g126 = modmult:modsqr|first
+#g227 = modmult:modsqr|mpreg[5]
+#g648 = modmult:modsqr|mpreg~synth
+.names g126 g227 g648
+11 1
+
+#g126 = modmult:modsqr|first
+#g874 = root[4]
+#g649 = modmult:modsqr|mpreg~synth
+.names g126 g874 g649
+01 1
+
+#g648 = modmult:modsqr|mpreg~synth
+#g649 = modmult:modsqr|mpreg~synth
+#g650 = modmult:modsqr|mpreg~synth
+.names g648 g649 g650
+00 0
+
+#g126 = modmult:modsqr|first
+#g228 = modmult:modsqr|mpreg[4]
+#g651 = modmult:modsqr|mpreg~synth
+.names g126 g228 g651
+11 1
+
+#g126 = modmult:modsqr|first
+#g878 = root[3]
+#g652 = modmult:modsqr|mpreg~synth
+.names g126 g878 g652
+01 1
+
+#g651 = modmult:modsqr|mpreg~synth
+#g652 = modmult:modsqr|mpreg~synth
+#g653 = modmult:modsqr|mpreg~synth
+.names g651 g652 g653
+00 0
+
+#g126 = modmult:modsqr|first
+#g229 = modmult:modsqr|mpreg[3]
+#g654 = modmult:modsqr|mpreg~synth
+.names g126 g229 g654
+11 1
+
+#g126 = modmult:modsqr|first
+#g882 = root[2]
+#g655 = modmult:modsqr|mpreg~synth
+.names g126 g882 g655
+01 1
+
+#g654 = modmult:modsqr|mpreg~synth
+#g655 = modmult:modsqr|mpreg~synth
+#g656 = modmult:modsqr|mpreg~synth
+.names g654 g655 g656
+00 0
+
+#g126 = modmult:modsqr|first
+#g230 = modmult:modsqr|mpreg[2]
+#g657 = modmult:modsqr|mpreg~synth
+.names g126 g230 g657
+11 1
+
+#g126 = modmult:modsqr|first
+#g886 = root[1]
+#g658 = modmult:modsqr|mpreg~synth
+.names g126 g886 g658
+01 1
+
+#g657 = modmult:modsqr|mpreg~synth
+#g658 = modmult:modsqr|mpreg~synth
+#g659 = modmult:modsqr|mpreg~synth
+.names g657 g658 g659
+00 0
+
+#g126 = modmult:modsqr|first
+#g231 = modmult:modsqr|mpreg[1]
+#g660 = modmult:modsqr|mpreg~synth
+.names g126 g231 g660
+11 1
+
+#g126 = modmult:modsqr|first
+#g890 = root[0]
+#g661 = modmult:modsqr|mpreg~synth
+.names g126 g890 g661
+01 1
+
+#g660 = modmult:modsqr|mpreg~synth
+#g661 = modmult:modsqr|mpreg~synth
+#g662 = modmult:modsqr|mpreg~synth
+.names g660 g661 g662
+00 0
+
+#g370 = modmult:modsqr|Add1~synth
+#g611 = modmult:modsqr|prodreg1[7]~synth
+#g663 = modmult:modsqr|Mux2~synth
+.names g370 g611 g663
+01 1
+
+#g369 = modmult:modsqr|Add1~synth
+#g370 = modmult:modsqr|Add1~synth
+#g664 = modmult:modsqr|Mux2~synth
+.names g369 g370 g664
+01 1
+
+#g663 = modmult:modsqr|Mux2~synth
+#g664 = modmult:modsqr|Mux2~synth
+#g665 = modmult:modsqr|Mux2~synth
+.names g663 g664 g665
+00 0
+
+#g371 = modmult:modsqr|Add2~synth
+#g665 = modmult:modsqr|Mux2~synth
+#g666 = modmult:modsqr|Mux2~synth
+.names g371 g665 g666
+01 1
+
+#g368 = modmult:modsqr|Add2~synth
+#g371 = modmult:modsqr|Add2~synth
+#g667 = modmult:modsqr|Mux2~synth
+.names g368 g371 g667
+01 1
+
+#g666 = modmult:modsqr|Mux2~synth
+#g667 = modmult:modsqr|Mux2~synth
+#g668 = modmult:modsqr|Mux2~synth
+.names g666 g667 g668
+00 0
+
+#g370 = modmult:modsqr|Add1~synth
+#g608 = modmult:modsqr|prodreg1[6]~synth
+#g669 = modmult:modsqr|Mux3~synth
+.names g370 g608 g669
+01 1
+
+#g370 = modmult:modsqr|Add1~synth
+#g373 = modmult:modsqr|Add1~synth
+#g670 = modmult:modsqr|Mux3~synth
+.names g370 g373 g670
+10 1
+
+#g669 = modmult:modsqr|Mux3~synth
+#g670 = modmult:modsqr|Mux3~synth
+#g671 = modmult:modsqr|Mux3~synth
+.names g669 g670 g671
+00 0
+
+#g371 = modmult:modsqr|Add2~synth
+#g671 = modmult:modsqr|Mux3~synth
+#g672 = modmult:modsqr|Mux3~synth
+.names g371 g671 g672
+01 1
+
+#g371 = modmult:modsqr|Add2~synth
+#g372 = modmult:modsqr|Add2~synth
+#g673 = modmult:modsqr|Mux3~synth
+.names g371 g372 g673
+10 1
+
+#g672 = modmult:modsqr|Mux3~synth
+#g673 = modmult:modsqr|Mux3~synth
+#g674 = modmult:modsqr|Mux3~synth
+.names g672 g673 g674
+00 0
+
+#g370 = modmult:modsqr|Add1~synth
+#g605 = modmult:modsqr|prodreg1[5]~synth
+#g675 = modmult:modsqr|Mux4~synth
+.names g370 g605 g675
+01 1
+
+#g370 = modmult:modsqr|Add1~synth
+#g375 = modmult:modsqr|Add1~synth
+#g676 = modmult:modsqr|Mux4~synth
+.names g370 g375 g676
+10 1
+
+#g675 = modmult:modsqr|Mux4~synth
+#g676 = modmult:modsqr|Mux4~synth
+#g677 = modmult:modsqr|Mux4~synth
+.names g675 g676 g677
+00 0
+
+#g371 = modmult:modsqr|Add2~synth
+#g677 = modmult:modsqr|Mux4~synth
+#g678 = modmult:modsqr|Mux4~synth
+.names g371 g677 g678
+01 1
+
+#g371 = modmult:modsqr|Add2~synth
+#g374 = modmult:modsqr|Add2~synth
+#g679 = modmult:modsqr|Mux4~synth
+.names g371 g374 g679
+10 1
+
+#g678 = modmult:modsqr|Mux4~synth
+#g679 = modmult:modsqr|Mux4~synth
+#g680 = modmult:modsqr|Mux4~synth
+.names g678 g679 g680
+00 0
+
+#g370 = modmult:modsqr|Add1~synth
+#g602 = modmult:modsqr|prodreg1[4]~synth
+#g681 = modmult:modsqr|Mux5~synth
+.names g370 g602 g681
+01 1
+
+#g370 = modmult:modsqr|Add1~synth
+#g377 = modmult:modsqr|Add1~synth
+#g682 = modmult:modsqr|Mux5~synth
+.names g370 g377 g682
+10 1
+
+#g681 = modmult:modsqr|Mux5~synth
+#g682 = modmult:modsqr|Mux5~synth
+#g683 = modmult:modsqr|Mux5~synth
+.names g681 g682 g683
+00 0
+
+#g371 = modmult:modsqr|Add2~synth
+#g683 = modmult:modsqr|Mux5~synth
+#g684 = modmult:modsqr|Mux5~synth
+.names g371 g683 g684
+01 1
+
+#g371 = modmult:modsqr|Add2~synth
+#g376 = modmult:modsqr|Add2~synth
+#g685 = modmult:modsqr|Mux5~synth
+.names g371 g376 g685
+10 1
+
+#g684 = modmult:modsqr|Mux5~synth
+#g685 = modmult:modsqr|Mux5~synth
+#g686 = modmult:modsqr|Mux5~synth
+.names g684 g685 g686
+00 0
+
+#g370 = modmult:modsqr|Add1~synth
+#g599 = modmult:modsqr|prodreg1[3]~synth
+#g687 = modmult:modsqr|Mux6~synth
+.names g370 g599 g687
+01 1
+
+#g370 = modmult:modsqr|Add1~synth
+#g379 = modmult:modsqr|Add1~synth
+#g688 = modmult:modsqr|Mux6~synth
+.names g370 g379 g688
+10 1
+
+#g687 = modmult:modsqr|Mux6~synth
+#g688 = modmult:modsqr|Mux6~synth
+#g689 = modmult:modsqr|Mux6~synth
+.names g687 g688 g689
+00 0
+
+#g371 = modmult:modsqr|Add2~synth
+#g689 = modmult:modsqr|Mux6~synth
+#g690 = modmult:modsqr|Mux6~synth
+.names g371 g689 g690
+01 1
+
+#g371 = modmult:modsqr|Add2~synth
+#g378 = modmult:modsqr|Add2~synth
+#g691 = modmult:modsqr|Mux6~synth
+.names g371 g378 g691
+10 1
+
+#g690 = modmult:modsqr|Mux6~synth
+#g691 = modmult:modsqr|Mux6~synth
+#g692 = modmult:modsqr|Mux6~synth
+.names g690 g691 g692
+00 0
+
+#g370 = modmult:modsqr|Add1~synth
+#g596 = modmult:modsqr|prodreg1[2]~synth
+#g693 = modmult:modsqr|Mux7~synth
+.names g370 g596 g693
+01 1
+
+#g370 = modmult:modsqr|Add1~synth
+#g381 = modmult:modsqr|Add1~synth
+#g694 = modmult:modsqr|Mux7~synth
+.names g370 g381 g694
+10 1
+
+#g693 = modmult:modsqr|Mux7~synth
+#g694 = modmult:modsqr|Mux7~synth
+#g695 = modmult:modsqr|Mux7~synth
+.names g693 g694 g695
+00 0
+
+#g371 = modmult:modsqr|Add2~synth
+#g695 = modmult:modsqr|Mux7~synth
+#g696 = modmult:modsqr|Mux7~synth
+.names g371 g695 g696
+01 1
+
+#g371 = modmult:modsqr|Add2~synth
+#g380 = modmult:modsqr|Add2~synth
+#g697 = modmult:modsqr|Mux7~synth
+.names g371 g380 g697
+10 1
+
+#g696 = modmult:modsqr|Mux7~synth
+#g697 = modmult:modsqr|Mux7~synth
+#g698 = modmult:modsqr|Mux7~synth
+.names g696 g697 g698
+00 0
+
+#g370 = modmult:modsqr|Add1~synth
+#g593 = modmult:modsqr|prodreg1[1]~synth
+#g699 = modmult:modsqr|Mux8~synth
+.names g370 g593 g699
+01 1
+
+#g370 = modmult:modsqr|Add1~synth
+#g383 = modmult:modsqr|Add1~synth
+#g700 = modmult:modsqr|Mux8~synth
+.names g370 g383 g700
+10 1
+
+#g699 = modmult:modsqr|Mux8~synth
+#g700 = modmult:modsqr|Mux8~synth
+#g701 = modmult:modsqr|Mux8~synth
+.names g699 g700 g701
+00 0
+
+#g371 = modmult:modsqr|Add2~synth
+#g701 = modmult:modsqr|Mux8~synth
+#g702 = modmult:modsqr|Mux8~synth
+.names g371 g701 g702
+01 1
+
+#g371 = modmult:modsqr|Add2~synth
+#g382 = modmult:modsqr|Add2~synth
+#g703 = modmult:modsqr|Mux8~synth
+.names g371 g382 g703
+11 1
+
+#g702 = modmult:modsqr|Mux8~synth
+#g703 = modmult:modsqr|Mux8~synth
+#g704 = modmult:modsqr|Mux8~synth
+.names g702 g703 g704
+00 0
+
+#g386 = modmult:modsqr|Add3~synth
+#g416 = modmult:modsqr|Add3~synth
+#g705 = modmult:modsqr|mcreg~synth
+.names g386 g416 g705
+11 1
+
+#g244 = modmult:modsqr|mcreg[0]
+#g416 = modmult:modsqr|Add3~synth
+#g706 = modmult:modsqr|mcreg~synth
+.names g244 g416 g706
+10 1
+
+#g705 = modmult:modsqr|mcreg~synth
+#g706 = modmult:modsqr|mcreg~synth
+#g707 = modmult:modsqr|mcreg~synth
+.names g705 g706 g707
+00 0
+
+#g416 = modmult:modsqr|Add3~synth
+#g417 = modmult:modsqr|Add3~synth
+#g708 = modmult:modsqr|mcreg~synth
+.names g416 g417 g708
+10 1
+
+#g416 = modmult:modsqr|Add3~synth
+#g814 = modmult:modsqr|mcreg[1]
+#g709 = modmult:modsqr|mcreg~synth
+.names g416 g814 g709
+01 1
+
+#g708 = modmult:modsqr|mcreg~synth
+#g709 = modmult:modsqr|mcreg~synth
+#g710 = modmult:modsqr|mcreg~synth
+.names g708 g709 g710
+00 0
+
+#g416 = modmult:modsqr|Add3~synth
+#g418 = modmult:modsqr|Add3~synth
+#g711 = modmult:modsqr|mcreg~synth
+.names g416 g418 g711
+10 1
+
+#g416 = modmult:modsqr|Add3~synth
+#g820 = modmult:modsqr|mcreg[2]
+#g712 = modmult:modsqr|mcreg~synth
+.names g416 g820 g712
+01 1
+
+#g711 = modmult:modsqr|mcreg~synth
+#g712 = modmult:modsqr|mcreg~synth
+#g713 = modmult:modsqr|mcreg~synth
+.names g711 g712 g713
+00 0
+
+#g416 = modmult:modsqr|Add3~synth
+#g419 = modmult:modsqr|Add3~synth
+#g714 = modmult:modsqr|mcreg~synth
+.names g416 g419 g714
+10 1
+
+#g416 = modmult:modsqr|Add3~synth
+#g826 = modmult:modsqr|mcreg[3]
+#g715 = modmult:modsqr|mcreg~synth
+.names g416 g826 g715
+01 1
+
+#g714 = modmult:modsqr|mcreg~synth
+#g715 = modmult:modsqr|mcreg~synth
+#g716 = modmult:modsqr|mcreg~synth
+.names g714 g715 g716
+00 0
+
+#g416 = modmult:modsqr|Add3~synth
+#g420 = modmult:modsqr|Add3~synth
+#g717 = modmult:modsqr|mcreg~synth
+.names g416 g420 g717
+10 1
+
+#g416 = modmult:modsqr|Add3~synth
+#g832 = modmult:modsqr|mcreg[4]
+#g718 = modmult:modsqr|mcreg~synth
+.names g416 g832 g718
+01 1
+
+#g717 = modmult:modsqr|mcreg~synth
+#g718 = modmult:modsqr|mcreg~synth
+#g719 = modmult:modsqr|mcreg~synth
+.names g717 g718 g719
+00 0
+
+#g416 = modmult:modsqr|Add3~synth
+#g421 = modmult:modsqr|Add3~synth
+#g720 = modmult:modsqr|mcreg~synth
+.names g416 g421 g720
+10 1
+
+#g416 = modmult:modsqr|Add3~synth
+#g838 = modmult:modsqr|mcreg[5]
+#g721 = modmult:modsqr|mcreg~synth
+.names g416 g838 g721
+01 1
+
+#g720 = modmult:modsqr|mcreg~synth
+#g721 = modmult:modsqr|mcreg~synth
+#g722 = modmult:modsqr|mcreg~synth
+.names g720 g721 g722
+00 0
+
+#g416 = modmult:modsqr|Add3~synth
+#g422 = modmult:modsqr|Add3~synth
+#g723 = modmult:modsqr|mcreg~synth
+.names g416 g422 g723
+10 1
+
+#g416 = modmult:modsqr|Add3~synth
+#g844 = modmult:modsqr|mcreg[6]
+#g724 = modmult:modsqr|mcreg~synth
+.names g416 g844 g724
+01 1
+
+#g723 = modmult:modsqr|mcreg~synth
+#g724 = modmult:modsqr|mcreg~synth
+#g725 = modmult:modsqr|mcreg~synth
+.names g723 g724 g725
+00 0
+
+#g370 = modmult:modsqr|Add1~synth
+#g614 = modmult:modsqr|prodreg1[8]~synth
+#g726 = modmult:modsqr|Mux1~synth
+.names g370 g614 g726
+01 1
+
+#g370 = modmult:modsqr|Add1~synth
+#g424 = modmult:modsqr|Add1~synth
+#g727 = modmult:modsqr|Mux1~synth
+.names g370 g424 g727
+10 1
+
+#g726 = modmult:modsqr|Mux1~synth
+#g727 = modmult:modsqr|Mux1~synth
+#g728 = modmult:modsqr|Mux1~synth
+.names g726 g727 g728
+00 0
+
+#g371 = modmult:modsqr|Add2~synth
+#g728 = modmult:modsqr|Mux1~synth
+#g729 = modmult:modsqr|Mux1~synth
+.names g371 g728 g729
+01 1
+
+#g371 = modmult:modsqr|Add2~synth
+#g423 = modmult:modsqr|Add2~synth
+#g730 = modmult:modsqr|Mux1~synth
+.names g371 g423 g730
+10 1
+
+#g729 = modmult:modsqr|Mux1~synth
+#g730 = modmult:modsqr|Mux1~synth
+#g731 = modmult:modsqr|Mux1~synth
+.names g729 g730 g731
+00 0
+
+#g416 = modmult:modsqr|Add3~synth
+#g426 = modmult:modsqr|Add3~synth
+#g732 = modmult:modsqr|mcreg2[7]~synth
+.names g416 g426 g732
+10 1
+
+#g416 = modmult:modsqr|Add3~synth
+#g850 = modmult:modsqr|mcreg[7]
+#g733 = modmult:modsqr|mcreg2[7]~synth
+.names g416 g850 g733
+01 1
+
+#g732 = modmult:modsqr|mcreg2[7]~synth
+#g733 = modmult:modsqr|mcreg2[7]~synth
+#g734 = modmult:modsqr|mcreg2[7]~synth
+.names g732 g733 g734
+00 0
+
+#g735 = done
+.latch g736 g735 re clk 2
+
+#g737 = done~synth
+#g738 = done~synth
+#g736 = done~synth
+.names g737 g738 g736
+00 0
+
+#g154 = done~synth
+#g735 = done
+#g737 = done~synth
+.names g154 g735 g737
+01 1
+
+#g735 = done
+#g738 = done~synth
+.names ds g735 g738
+10 1
+
+#g165 = modmult:modmultiply|prodreg[0]~synth
+#g739 = modmult:modmultiply|prodreg[0]
+.names g165 g740 g739 g959
+1-1 1
+01- 1
+
+#g739 = modmult:modmultiply|prodreg[0]
+.latch g959 g739 re clk 2
+
+#g125 = modmult:modmultiply|first
+#g461 = modmult:modmultiply|Mux9~synth
+#g740 = modmult:modmultiply|prodreg[0]~1
+.names g125 g461 g740
+11 1
+
+#g165 = modmult:modmultiply|prodreg[0]~synth
+#g741 = modmult:modmultiply|prodreg[1]
+.names g165 g742 g741 g960
+1-1 1
+01- 1
+
+#g741 = modmult:modmultiply|prodreg[1]
+.latch g960 g741 re clk 2
+
+#g125 = modmult:modmultiply|first
+#g467 = modmult:modmultiply|Mux8~synth
+#g742 = modmult:modmultiply|prodreg[1]~3
+.names g125 g467 g742
+11 1
+
+#g165 = modmult:modmultiply|prodreg[0]~synth
+#g743 = modmult:modmultiply|mcreg[1]
+.names g165 g744 g743 g961
+1-1 1
+01- 1
+
+#g743 = modmult:modmultiply|mcreg[1]
+.latch g961 g743 re clk 2
+
+#g745 = modmult:modmultiply|mcreg[1]~synth
+#g746 = modmult:modmultiply|mcreg[1]~synth
+#g744 = modmult:modmultiply|mcreg[1]~synth
+.names g745 g746 g744
+00 0
+
+#g125 = modmult:modmultiply|first
+#g512 = modmult:modmultiply|mcreg~synth
+#g745 = modmult:modmultiply|mcreg[1]~synth
+.names g125 g512 g745
+11 1
+
+#g125 = modmult:modmultiply|first
+#g199 = tempin[1]
+#g746 = modmult:modmultiply|mcreg[1]~synth
+.names g125 g199 g746
+01 1
+
+#g165 = modmult:modmultiply|prodreg[0]~synth
+#g747 = modmult:modmultiply|prodreg[2]
+.names g165 g748 g747 g962
+1-1 1
+01- 1
+
+#g747 = modmult:modmultiply|prodreg[2]
+.latch g962 g747 re clk 2
+
+#g125 = modmult:modmultiply|first
+#g473 = modmult:modmultiply|Mux7~synth
+#g748 = modmult:modmultiply|prodreg[2]~5
+.names g125 g473 g748
+11 1
+
+#g165 = modmult:modmultiply|prodreg[0]~synth
+#g749 = modmult:modmultiply|mcreg[2]
+.names g165 g750 g749 g963
+1-1 1
+01- 1
+
+#g749 = modmult:modmultiply|mcreg[2]
+.latch g963 g749 re clk 2
+
+#g751 = modmult:modmultiply|mcreg[2]~synth
+#g752 = modmult:modmultiply|mcreg[2]~synth
+#g750 = modmult:modmultiply|mcreg[2]~synth
+.names g751 g752 g750
+00 0
+
+#g125 = modmult:modmultiply|first
+#g515 = modmult:modmultiply|mcreg~synth
+#g751 = modmult:modmultiply|mcreg[2]~synth
+.names g125 g515 g751
+11 1
+
+#g125 = modmult:modmultiply|first
+#g202 = tempin[2]
+#g752 = modmult:modmultiply|mcreg[2]~synth
+.names g125 g202 g752
+01 1
+
+#g165 = modmult:modmultiply|prodreg[0]~synth
+#g753 = modmult:modmultiply|prodreg[3]
+.names g165 g754 g753 g964
+1-1 1
+01- 1
+
+#g753 = modmult:modmultiply|prodreg[3]
+.latch g964 g753 re clk 2
+
+#g125 = modmult:modmultiply|first
+#g479 = modmult:modmultiply|Mux6~synth
+#g754 = modmult:modmultiply|prodreg[3]~7
+.names g125 g479 g754
+11 1
+
+#g165 = modmult:modmultiply|prodreg[0]~synth
+#g755 = modmult:modmultiply|mcreg[3]
+.names g165 g756 g755 g965
+1-1 1
+01- 1
+
+#g755 = modmult:modmultiply|mcreg[3]
+.latch g965 g755 re clk 2
+
+#g757 = modmult:modmultiply|mcreg[3]~synth
+#g758 = modmult:modmultiply|mcreg[3]~synth
+#g756 = modmult:modmultiply|mcreg[3]~synth
+.names g757 g758 g756
+00 0
+
+#g125 = modmult:modmultiply|first
+#g518 = modmult:modmultiply|mcreg~synth
+#g757 = modmult:modmultiply|mcreg[3]~synth
+.names g125 g518 g757
+11 1
+
+#g125 = modmult:modmultiply|first
+#g205 = tempin[3]
+#g758 = modmult:modmultiply|mcreg[3]~synth
+.names g125 g205 g758
+01 1
+
+#g165 = modmult:modmultiply|prodreg[0]~synth
+#g759 = modmult:modmultiply|prodreg[4]
+.names g165 g760 g759 g966
+1-1 1
+01- 1
+
+#g759 = modmult:modmultiply|prodreg[4]
+.latch g966 g759 re clk 2
+
+#g125 = modmult:modmultiply|first
+#g485 = modmult:modmultiply|Mux5~synth
+#g760 = modmult:modmultiply|prodreg[4]~9
+.names g125 g485 g760
+11 1
+
+#g165 = modmult:modmultiply|prodreg[0]~synth
+#g761 = modmult:modmultiply|mcreg[4]
+.names g165 g762 g761 g967
+1-1 1
+01- 1
+
+#g761 = modmult:modmultiply|mcreg[4]
+.latch g967 g761 re clk 2
+
+#g763 = modmult:modmultiply|mcreg[4]~synth
+#g764 = modmult:modmultiply|mcreg[4]~synth
+#g762 = modmult:modmultiply|mcreg[4]~synth
+.names g763 g764 g762
+00 0
+
+#g125 = modmult:modmultiply|first
+#g521 = modmult:modmultiply|mcreg~synth
+#g763 = modmult:modmultiply|mcreg[4]~synth
+.names g125 g521 g763
+11 1
+
+#g125 = modmult:modmultiply|first
+#g208 = tempin[4]
+#g764 = modmult:modmultiply|mcreg[4]~synth
+.names g125 g208 g764
+01 1
+
+#g165 = modmult:modmultiply|prodreg[0]~synth
+#g765 = modmult:modmultiply|prodreg[5]
+.names g165 g766 g765 g968
+1-1 1
+01- 1
+
+#g765 = modmult:modmultiply|prodreg[5]
+.latch g968 g765 re clk 2
+
+#g125 = modmult:modmultiply|first
+#g491 = modmult:modmultiply|Mux4~synth
+#g766 = modmult:modmultiply|prodreg[5]~11
+.names g125 g491 g766
+11 1
+
+#g165 = modmult:modmultiply|prodreg[0]~synth
+#g767 = modmult:modmultiply|mcreg[5]
+.names g165 g768 g767 g969
+1-1 1
+01- 1
+
+#g767 = modmult:modmultiply|mcreg[5]
+.latch g969 g767 re clk 2
+
+#g769 = modmult:modmultiply|mcreg[5]~synth
+#g770 = modmult:modmultiply|mcreg[5]~synth
+#g768 = modmult:modmultiply|mcreg[5]~synth
+.names g769 g770 g768
+00 0
+
+#g125 = modmult:modmultiply|first
+#g524 = modmult:modmultiply|mcreg~synth
+#g769 = modmult:modmultiply|mcreg[5]~synth
+.names g125 g524 g769
+11 1
+
+#g125 = modmult:modmultiply|first
+#g211 = tempin[5]
+#g770 = modmult:modmultiply|mcreg[5]~synth
+.names g125 g211 g770
+01 1
+
+#g165 = modmult:modmultiply|prodreg[0]~synth
+#g771 = modmult:modmultiply|prodreg[6]
+.names g165 g772 g771 g970
+1-1 1
+01- 1
+
+#g771 = modmult:modmultiply|prodreg[6]
+.latch g970 g771 re clk 2
+
+#g125 = modmult:modmultiply|first
+#g497 = modmult:modmultiply|Mux3~synth
+#g772 = modmult:modmultiply|prodreg[6]~13
+.names g125 g497 g772
+11 1
+
+#g165 = modmult:modmultiply|prodreg[0]~synth
+#g773 = modmult:modmultiply|mcreg[6]
+.names g165 g774 g773 g971
+1-1 1
+01- 1
+
+#g773 = modmult:modmultiply|mcreg[6]
+.latch g971 g773 re clk 2
+
+#g775 = modmult:modmultiply|mcreg[6]~synth
+#g776 = modmult:modmultiply|mcreg[6]~synth
+#g774 = modmult:modmultiply|mcreg[6]~synth
+.names g775 g776 g774
+00 0
+
+#g125 = modmult:modmultiply|first
+#g527 = modmult:modmultiply|mcreg~synth
+#g775 = modmult:modmultiply|mcreg[6]~synth
+.names g125 g527 g775
+11 1
+
+#g125 = modmult:modmultiply|first
+#g214 = tempin[6]
+#g776 = modmult:modmultiply|mcreg[6]~synth
+.names g125 g214 g776
+01 1
+
+#g165 = modmult:modmultiply|prodreg[0]~synth
+#g777 = modmult:modmultiply|prodreg[7]
+.names g165 g778 g777 g972
+1-1 1
+01- 1
+
+#g777 = modmult:modmultiply|prodreg[7]
+.latch g972 g777 re clk 2
+
+#g125 = modmult:modmultiply|first
+#g503 = modmult:modmultiply|Mux2~synth
+#g778 = modmult:modmultiply|prodreg[7]~15
+.names g125 g503 g778
+11 1
+
+#g165 = modmult:modmultiply|prodreg[0]~synth
+#g779 = modmult:modmultiply|mcreg[7]
+.names g165 g780 g779 g973
+1-1 1
+01- 1
+
+#g779 = modmult:modmultiply|mcreg[7]
+.latch g973 g779 re clk 2
+
+#g781 = modmult:modmultiply|mcreg[7]~synth
+#g782 = modmult:modmultiply|mcreg[7]~synth
+#g780 = modmult:modmultiply|mcreg[7]~synth
+.names g781 g782 g780
+00 0
+
+#g125 = modmult:modmultiply|first
+#g530 = modmult:modmultiply|mcreg~synth
+#g781 = modmult:modmultiply|mcreg[7]~synth
+.names g125 g530 g781
+11 1
+
+#g125 = modmult:modmultiply|first
+#g217 = tempin[7]
+#g782 = modmult:modmultiply|mcreg[7]~synth
+.names g125 g217 g782
+01 1
+
+#g221 = modmult:modmultiply|mcreg[9]~synth
+#g783 = modmult:modmultiply|prodreg[8]
+.names g221 g784 g783 g974
+0-1 1
+11- 1
+
+#g783 = modmult:modmultiply|prodreg[8]
+.latch g974 g783 re clk 2
+
+#g125 = modmult:modmultiply|first
+#g536 = modmult:modmultiply|Mux1~synth
+#g784 = modmult:modmultiply|prodreg[8]~17
+.names g125 g536 g784
+11 1
+
+#g221 = modmult:modmultiply|mcreg[9]~synth
+#g785 = modmult:modmultiply|mcreg[8]
+.names g221 g786 g785 g975
+0-1 1
+11- 1
+
+#g785 = modmult:modmultiply|mcreg[8]
+.latch g975 g785 re clk 2
+
+#g125 = modmult:modmultiply|first
+#g539 = modmult:modmultiply|mcreg2[7]~synth
+#g786 = modmult:modmultiply|mcreg[8]~22
+.names g125 g539 g786
+11 1
+
+#g221 = modmult:modmultiply|mcreg[9]~synth
+#g787 = modmult:modmultiply|prodreg[9]
+.names g221 g788 g787 g976
+0-1 1
+11- 1
+
+#g787 = modmult:modmultiply|prodreg[9]
+.latch g976 g787 re clk 2
+
+#g125 = modmult:modmultiply|first
+#g223 = modmult:modmultiply|Mux0~synth
+#g788 = modmult:modmultiply|prodreg[9]~19
+.names g125 g223 g788
+11 1
+
+#g221 = modmult:modmultiply|mcreg[9]~synth
+#g789 = modmult:modmultiply|mcreg[9]
+.names g221 g790 g789 g977
+0-1 1
+11- 1
+
+#g789 = modmult:modmultiply|mcreg[9]
+.latch g977 g789 re clk 2
+
+#g125 = modmult:modmultiply|first
+#g224 = modmult:modmultiply|mcreg2[8]~synth
+#g790 = modmult:modmultiply|mcreg[9]~24
+.names g125 g224 g790
+11 1
+
+#g791 = multgo
+.latch g792 g791 re clk 2
+
+#g235 = multgo~synth
+#g791 = multgo
+#g792 = multgo~1
+.names g235 g791 g792
+10 1
+
+#g242 = tempin[4]~synth
+#g793 = sqrin[0]
+.names g242 g794 g793 g978
+0-1 1
+11- 1
+
+#g793 = sqrin[0]
+.latch g978 g793 re clk 2
+
+#g358 = sqrin[0]~synth
+#g795 = sqrin[0]~synth
+#g794 = sqrin[0]~synth
+.names g358 g795 g794
+00 0
+
+#g358 = sqrin[0]~synth
+#g620 = modmult:modsqr|Mux9~synth
+#g795 = sqrin[0]~synth
+.names g358 g620 g795
+01 1
+
+#g242 = tempin[4]~synth
+#g796 = sqrin[7]
+.names g242 g797 g796 g979
+0-1 1
+11- 1
+
+#g796 = sqrin[7]
+.latch g979 g796 re clk 2
+
+#g358 = sqrin[0]~synth
+#g668 = modmult:modsqr|Mux2~synth
+#g797 = sqrin[7]~synth
+.names g358 g668 g797
+01 1
+
+#g242 = tempin[4]~synth
+#g798 = sqrin[6]
+.names g242 g799 g798 g980
+0-1 1
+11- 1
+
+#g798 = sqrin[6]
+.latch g980 g798 re clk 2
+
+#g358 = sqrin[0]~synth
+#g674 = modmult:modsqr|Mux3~synth
+#g799 = sqrin[6]~synth
+.names g358 g674 g799
+01 1
+
+#g242 = tempin[4]~synth
+#g800 = sqrin[5]
+.names g242 g801 g800 g981
+0-1 1
+11- 1
+
+#g800 = sqrin[5]
+.latch g981 g800 re clk 2
+
+#g358 = sqrin[0]~synth
+#g680 = modmult:modsqr|Mux4~synth
+#g801 = sqrin[5]~synth
+.names g358 g680 g801
+01 1
+
+#g242 = tempin[4]~synth
+#g802 = sqrin[4]
+.names g242 g803 g802 g982
+0-1 1
+11- 1
+
+#g802 = sqrin[4]
+.latch g982 g802 re clk 2
+
+#g358 = sqrin[0]~synth
+#g686 = modmult:modsqr|Mux5~synth
+#g803 = sqrin[4]~synth
+.names g358 g686 g803
+01 1
+
+#g242 = tempin[4]~synth
+#g804 = sqrin[3]
+.names g242 g805 g804 g983
+0-1 1
+11- 1
+
+#g804 = sqrin[3]
+.latch g983 g804 re clk 2
+
+#g358 = sqrin[0]~synth
+#g692 = modmult:modsqr|Mux6~synth
+#g805 = sqrin[3]~synth
+.names g358 g692 g805
+01 1
+
+#g242 = tempin[4]~synth
+#g806 = sqrin[2]
+.names g242 g807 g806 g984
+0-1 1
+11- 1
+
+#g806 = sqrin[2]
+.latch g984 g806 re clk 2
+
+#g358 = sqrin[0]~synth
+#g698 = modmult:modsqr|Mux7~synth
+#g807 = sqrin[2]~synth
+.names g358 g698 g807
+01 1
+
+#g242 = tempin[4]~synth
+#g808 = sqrin[1]
+.names g242 g809 g808 g985
+0-1 1
+11- 1
+
+#g808 = sqrin[1]
+.latch g985 g808 re clk 2
+
+#g358 = sqrin[0]~synth
+#g704 = modmult:modsqr|Mux8~synth
+#g809 = sqrin[1]~synth
+.names g358 g704 g809
+01 1
+
+#g367 = modmult:modsqr|mpreg[7]~synth
+#g810 = modmult:modsqr|prodreg[0]
+.names g367 g811 g810 g986
+1-1 1
+01- 1
+
+#g810 = modmult:modsqr|prodreg[0]
+.latch g986 g810 re clk 2
+
+#g126 = modmult:modsqr|first
+#g620 = modmult:modsqr|Mux9~synth
+#g811 = modmult:modsqr|prodreg[0]~1
+.names g126 g620 g811
+11 1
+
+#g367 = modmult:modsqr|mpreg[7]~synth
+#g812 = modmult:modsqr|prodreg[1]
+.names g367 g813 g812 g987
+1-1 1
+01- 1
+
+#g812 = modmult:modsqr|prodreg[1]
+.latch g987 g812 re clk 2
+
+#g126 = modmult:modsqr|first
+#g704 = modmult:modsqr|Mux8~synth
+#g813 = modmult:modsqr|prodreg[1]~3
+.names g126 g704 g813
+11 1
+
+#g367 = modmult:modsqr|mpreg[7]~synth
+#g814 = modmult:modsqr|mcreg[1]
+.names g367 g815 g814 g988
+1-1 1
+01- 1
+
+#g814 = modmult:modsqr|mcreg[1]
+.latch g988 g814 re clk 2
+
+#g816 = modmult:modsqr|mcreg[1]~synth
+#g817 = modmult:modsqr|mcreg[1]~synth
+#g815 = modmult:modsqr|mcreg[1]~synth
+.names g816 g817 g815
+00 0
+
+#g126 = modmult:modsqr|first
+#g707 = modmult:modsqr|mcreg~synth
+#g816 = modmult:modsqr|mcreg[1]~synth
+.names g126 g707 g816
+11 1
+
+#g126 = modmult:modsqr|first
+#g886 = root[1]
+#g817 = modmult:modsqr|mcreg[1]~synth
+.names g126 g886 g817
+01 1
+
+#g367 = modmult:modsqr|mpreg[7]~synth
+#g818 = modmult:modsqr|prodreg[2]
+.names g367 g819 g818 g989
+1-1 1
+01- 1
+
+#g818 = modmult:modsqr|prodreg[2]
+.latch g989 g818 re clk 2
+
+#g126 = modmult:modsqr|first
+#g698 = modmult:modsqr|Mux7~synth
+#g819 = modmult:modsqr|prodreg[2]~5
+.names g126 g698 g819
+11 1
+
+#g367 = modmult:modsqr|mpreg[7]~synth
+#g820 = modmult:modsqr|mcreg[2]
+.names g367 g821 g820 g990
+1-1 1
+01- 1
+
+#g820 = modmult:modsqr|mcreg[2]
+.latch g990 g820 re clk 2
+
+#g822 = modmult:modsqr|mcreg[2]~synth
+#g823 = modmult:modsqr|mcreg[2]~synth
+#g821 = modmult:modsqr|mcreg[2]~synth
+.names g822 g823 g821
+00 0
+
+#g126 = modmult:modsqr|first
+#g710 = modmult:modsqr|mcreg~synth
+#g822 = modmult:modsqr|mcreg[2]~synth
+.names g126 g710 g822
+11 1
+
+#g126 = modmult:modsqr|first
+#g882 = root[2]
+#g823 = modmult:modsqr|mcreg[2]~synth
+.names g126 g882 g823
+01 1
+
+#g367 = modmult:modsqr|mpreg[7]~synth
+#g824 = modmult:modsqr|prodreg[3]
+.names g367 g825 g824 g991
+1-1 1
+01- 1
+
+#g824 = modmult:modsqr|prodreg[3]
+.latch g991 g824 re clk 2
+
+#g126 = modmult:modsqr|first
+#g692 = modmult:modsqr|Mux6~synth
+#g825 = modmult:modsqr|prodreg[3]~7
+.names g126 g692 g825
+11 1
+
+#g367 = modmult:modsqr|mpreg[7]~synth
+#g826 = modmult:modsqr|mcreg[3]
+.names g367 g827 g826 g992
+1-1 1
+01- 1
+
+#g826 = modmult:modsqr|mcreg[3]
+.latch g992 g826 re clk 2
+
+#g828 = modmult:modsqr|mcreg[3]~synth
+#g829 = modmult:modsqr|mcreg[3]~synth
+#g827 = modmult:modsqr|mcreg[3]~synth
+.names g828 g829 g827
+00 0
+
+#g126 = modmult:modsqr|first
+#g713 = modmult:modsqr|mcreg~synth
+#g828 = modmult:modsqr|mcreg[3]~synth
+.names g126 g713 g828
+11 1
+
+#g126 = modmult:modsqr|first
+#g878 = root[3]
+#g829 = modmult:modsqr|mcreg[3]~synth
+.names g126 g878 g829
+01 1
+
+#g367 = modmult:modsqr|mpreg[7]~synth
+#g830 = modmult:modsqr|prodreg[4]
+.names g367 g831 g830 g993
+1-1 1
+01- 1
+
+#g830 = modmult:modsqr|prodreg[4]
+.latch g993 g830 re clk 2
+
+#g126 = modmult:modsqr|first
+#g686 = modmult:modsqr|Mux5~synth
+#g831 = modmult:modsqr|prodreg[4]~9
+.names g126 g686 g831
+11 1
+
+#g367 = modmult:modsqr|mpreg[7]~synth
+#g832 = modmult:modsqr|mcreg[4]
+.names g367 g833 g832 g994
+1-1 1
+01- 1
+
+#g832 = modmult:modsqr|mcreg[4]
+.latch g994 g832 re clk 2
+
+#g834 = modmult:modsqr|mcreg[4]~synth
+#g835 = modmult:modsqr|mcreg[4]~synth
+#g833 = modmult:modsqr|mcreg[4]~synth
+.names g834 g835 g833
+00 0
+
+#g126 = modmult:modsqr|first
+#g716 = modmult:modsqr|mcreg~synth
+#g834 = modmult:modsqr|mcreg[4]~synth
+.names g126 g716 g834
+11 1
+
+#g126 = modmult:modsqr|first
+#g874 = root[4]
+#g835 = modmult:modsqr|mcreg[4]~synth
+.names g126 g874 g835
+01 1
+
+#g367 = modmult:modsqr|mpreg[7]~synth
+#g836 = modmult:modsqr|prodreg[5]
+.names g367 g837 g836 g995
+1-1 1
+01- 1
+
+#g836 = modmult:modsqr|prodreg[5]
+.latch g995 g836 re clk 2
+
+#g126 = modmult:modsqr|first
+#g680 = modmult:modsqr|Mux4~synth
+#g837 = modmult:modsqr|prodreg[5]~11
+.names g126 g680 g837
+11 1
+
+#g367 = modmult:modsqr|mpreg[7]~synth
+#g838 = modmult:modsqr|mcreg[5]
+.names g367 g839 g838 g996
+1-1 1
+01- 1
+
+#g838 = modmult:modsqr|mcreg[5]
+.latch g996 g838 re clk 2
+
+#g840 = modmult:modsqr|mcreg[5]~synth
+#g841 = modmult:modsqr|mcreg[5]~synth
+#g839 = modmult:modsqr|mcreg[5]~synth
+.names g840 g841 g839
+00 0
+
+#g126 = modmult:modsqr|first
+#g719 = modmult:modsqr|mcreg~synth
+#g840 = modmult:modsqr|mcreg[5]~synth
+.names g126 g719 g840
+11 1
+
+#g126 = modmult:modsqr|first
+#g870 = root[5]
+#g841 = modmult:modsqr|mcreg[5]~synth
+.names g126 g870 g841
+01 1
+
+#g367 = modmult:modsqr|mpreg[7]~synth
+#g842 = modmult:modsqr|prodreg[6]
+.names g367 g843 g842 g997
+1-1 1
+01- 1
+
+#g842 = modmult:modsqr|prodreg[6]
+.latch g997 g842 re clk 2
+
+#g126 = modmult:modsqr|first
+#g674 = modmult:modsqr|Mux3~synth
+#g843 = modmult:modsqr|prodreg[6]~13
+.names g126 g674 g843
+11 1
+
+#g367 = modmult:modsqr|mpreg[7]~synth
+#g844 = modmult:modsqr|mcreg[6]
+.names g367 g845 g844 g998
+1-1 1
+01- 1
+
+#g844 = modmult:modsqr|mcreg[6]
+.latch g998 g844 re clk 2
+
+#g846 = modmult:modsqr|mcreg[6]~synth
+#g847 = modmult:modsqr|mcreg[6]~synth
+#g845 = modmult:modsqr|mcreg[6]~synth
+.names g846 g847 g845
+00 0
+
+#g126 = modmult:modsqr|first
+#g722 = modmult:modsqr|mcreg~synth
+#g846 = modmult:modsqr|mcreg[6]~synth
+.names g126 g722 g846
+11 1
+
+#g126 = modmult:modsqr|first
+#g866 = root[6]
+#g847 = modmult:modsqr|mcreg[6]~synth
+.names g126 g866 g847
+01 1
+
+#g367 = modmult:modsqr|mpreg[7]~synth
+#g848 = modmult:modsqr|prodreg[7]
+.names g367 g849 g848 g999
+1-1 1
+01- 1
+
+#g848 = modmult:modsqr|prodreg[7]
+.latch g999 g848 re clk 2
+
+#g126 = modmult:modsqr|first
+#g668 = modmult:modsqr|Mux2~synth
+#g849 = modmult:modsqr|prodreg[7]~15
+.names g126 g668 g849
+11 1
+
+#g367 = modmult:modsqr|mpreg[7]~synth
+#g850 = modmult:modsqr|mcreg[7]
+.names g367 g851 g850 g1000
+1-1 1
+01- 1
+
+#g850 = modmult:modsqr|mcreg[7]
+.latch g1000 g850 re clk 2
+
+#g852 = modmult:modsqr|mcreg[7]~synth
+#g853 = modmult:modsqr|mcreg[7]~synth
+#g851 = modmult:modsqr|mcreg[7]~synth
+.names g852 g853 g851
+00 0
+
+#g126 = modmult:modsqr|first
+#g725 = modmult:modsqr|mcreg~synth
+#g852 = modmult:modsqr|mcreg[7]~synth
+.names g126 g725 g852
+11 1
+
+#g126 = modmult:modsqr|first
+#g862 = root[7]
+#g853 = modmult:modsqr|mcreg[7]~synth
+.names g126 g862 g853
+01 1
+
+#g425 = modmult:modsqr|mcreg[9]~synth
+#g854 = modmult:modsqr|prodreg[8]
+.names g425 g855 g854 g1001
+0-1 1
+11- 1
+
+#g854 = modmult:modsqr|prodreg[8]
+.latch g1001 g854 re clk 2
+
+#g126 = modmult:modsqr|first
+#g731 = modmult:modsqr|Mux1~synth
+#g855 = modmult:modsqr|prodreg[8]~17
+.names g126 g731 g855
+11 1
+
+#g425 = modmult:modsqr|mcreg[9]~synth
+#g856 = modmult:modsqr|mcreg[8]
+.names g425 g857 g856 g1002
+0-1 1
+11- 1
+
+#g856 = modmult:modsqr|mcreg[8]
+.latch g1002 g856 re clk 2
+
+#g126 = modmult:modsqr|first
+#g734 = modmult:modsqr|mcreg2[7]~synth
+#g857 = modmult:modsqr|mcreg[8]~22
+.names g126 g734 g857
+11 1
+
+#g425 = modmult:modsqr|mcreg[9]~synth
+#g858 = modmult:modsqr|prodreg[9]
+.names g425 g859 g858 g1003
+0-1 1
+11- 1
+
+#g858 = modmult:modsqr|prodreg[9]
+.latch g1003 g858 re clk 2
+
+#g126 = modmult:modsqr|first
+#g427 = modmult:modsqr|Mux0~synth
+#g859 = modmult:modsqr|prodreg[9]~19
+.names g126 g427 g859
+11 1
+
+#g425 = modmult:modsqr|mcreg[9]~synth
+#g860 = modmult:modsqr|mcreg[9]
+.names g425 g861 g860 g1004
+0-1 1
+11- 1
+
+#g860 = modmult:modsqr|mcreg[9]
+.latch g1004 g860 re clk 2
+
+#g126 = modmult:modsqr|first
+#g428 = modmult:modsqr|mcreg2[8]~synth
+#g861 = modmult:modsqr|mcreg[9]~24
+.names g126 g428 g861
+11 1
+
+#g242 = tempin[4]~synth
+#g862 = root[7]
+.names g242 g863 g862 g1005
+0-1 1
+11- 1
+
+#g862 = root[7]
+.latch g1005 g862 re clk 2
+
+#g864 = root[7]~synth
+#g865 = root[7]~synth
+#g863 = root[7]~synth
+.names g864 g865 g863
+00 0
+
+#g735 = done
+#g864 = root[7]~synth
+.names indata[7] g735 g864
+10 1
+
+#g668 = modmult:modsqr|Mux2~synth
+#g735 = done
+#g865 = root[7]~synth
+.names g668 g735 g865
+11 1
+
+#g242 = tempin[4]~synth
+#g866 = root[6]
+.names g242 g867 g866 g1006
+0-1 1
+11- 1
+
+#g866 = root[6]
+.latch g1006 g866 re clk 2
+
+#g868 = root[6]~synth
+#g869 = root[6]~synth
+#g867 = root[6]~synth
+.names g868 g869 g867
+00 0
+
+#g735 = done
+#g868 = root[6]~synth
+.names indata[6] g735 g868
+10 1
+
+#g674 = modmult:modsqr|Mux3~synth
+#g735 = done
+#g869 = root[6]~synth
+.names g674 g735 g869
+11 1
+
+#g242 = tempin[4]~synth
+#g870 = root[5]
+.names g242 g871 g870 g1007
+0-1 1
+11- 1
+
+#g870 = root[5]
+.latch g1007 g870 re clk 2
+
+#g872 = root[5]~synth
+#g873 = root[5]~synth
+#g871 = root[5]~synth
+.names g872 g873 g871
+00 0
+
+#g735 = done
+#g872 = root[5]~synth
+.names indata[5] g735 g872
+10 1
+
+#g680 = modmult:modsqr|Mux4~synth
+#g735 = done
+#g873 = root[5]~synth
+.names g680 g735 g873
+11 1
+
+#g242 = tempin[4]~synth
+#g874 = root[4]
+.names g242 g875 g874 g1008
+0-1 1
+11- 1
+
+#g874 = root[4]
+.latch g1008 g874 re clk 2
+
+#g876 = root[4]~synth
+#g877 = root[4]~synth
+#g875 = root[4]~synth
+.names g876 g877 g875
+00 0
+
+#g735 = done
+#g876 = root[4]~synth
+.names indata[4] g735 g876
+10 1
+
+#g686 = modmult:modsqr|Mux5~synth
+#g735 = done
+#g877 = root[4]~synth
+.names g686 g735 g877
+11 1
+
+#g242 = tempin[4]~synth
+#g878 = root[3]
+.names g242 g879 g878 g1009
+0-1 1
+11- 1
+
+#g878 = root[3]
+.latch g1009 g878 re clk 2
+
+#g880 = root[3]~synth
+#g881 = root[3]~synth
+#g879 = root[3]~synth
+.names g880 g881 g879
+00 0
+
+#g735 = done
+#g880 = root[3]~synth
+.names indata[3] g735 g880
+10 1
+
+#g692 = modmult:modsqr|Mux6~synth
+#g735 = done
+#g881 = root[3]~synth
+.names g692 g735 g881
+11 1
+
+#g242 = tempin[4]~synth
+#g882 = root[2]
+.names g242 g883 g882 g1010
+0-1 1
+11- 1
+
+#g882 = root[2]
+.latch g1010 g882 re clk 2
+
+#g884 = root[2]~synth
+#g885 = root[2]~synth
+#g883 = root[2]~synth
+.names g884 g885 g883
+00 0
+
+#g735 = done
+#g884 = root[2]~synth
+.names indata[2] g735 g884
+10 1
+
+#g698 = modmult:modsqr|Mux7~synth
+#g735 = done
+#g885 = root[2]~synth
+.names g698 g735 g885
+11 1
+
+#g242 = tempin[4]~synth
+#g886 = root[1]
+.names g242 g887 g886 g1011
+0-1 1
+11- 1
+
+#g886 = root[1]
+.latch g1011 g886 re clk 2
+
+#g888 = root[1]~synth
+#g889 = root[1]~synth
+#g887 = root[1]~synth
+.names g888 g889 g887
+00 0
+
+#g735 = done
+#g888 = root[1]~synth
+.names indata[1] g735 g888
+10 1
+
+#g704 = modmult:modsqr|Mux8~synth
+#g735 = done
+#g889 = root[1]~synth
+.names g704 g735 g889
+11 1
+
+#g242 = tempin[4]~synth
+#g890 = root[0]
+.names g242 g891 g890 g1012
+0-1 1
+11- 1
+
+#g890 = root[0]
+.latch g1012 g890 re clk 2
+
+#g892 = root[0]~synth
+#g893 = root[0]~synth
+#g891 = root[0]~synth
+.names g892 g893 g891
+00 0
+
+#g735 = done
+#g892 = root[0]~synth
+.names indata[0] g735 g892
+10 1
+
+#g620 = modmult:modsqr|Mux9~synth
+#g735 = done
+#g893 = root[0]~synth
+.names g620 g735 g893
+11 1
+
+.end
+

@@ -1,0 +1,4863 @@
+.model rsa_basic
+.inputs modulus[0] clk ds reset mpand[0] mplier[0] mpand[1] modulus[1] mpand[2] modulus[2] mpand[3] modulus[3] mpand[4] modulus[4] mpand[5] modulus[5] mpand[6] modulus[6] mpand[7] modulus[7] mpand[8] modulus[8] mpand[9] modulus[9] mpand[10] modulus[10] mpand[11] modulus[11] mpand[12] modulus[12] mpand[13] modulus[13] mpand[14] modulus[14] mpand[15] modulus[15] mplier[15] mplier[7] mplier[9] mplier[8] mplier[14] mplier[13] mplier[10] mplier[12] mplier[11] mplier[6] mplier[5] mplier[4] mplier[3] mplier[2] mplier[1]
+.outputs product[0] product[1] product[2] product[3] product[4] product[5] product[6] product[7] product[8] product[9] product[10] product[11] product[12] product[13] product[14] product[15] ready
+
+# g408 = Mux17~synth
+.names g408 product[0]
+1 1
+
+# g414 = Mux16~synth
+.names g414 product[1]
+1 1
+
+# g420 = Mux15~synth
+.names g420 product[2]
+1 1
+
+# g426 = Mux14~synth
+.names g426 product[3]
+1 1
+
+# g432 = Mux13~synth
+.names g432 product[4]
+1 1
+
+# g438 = Mux12~synth
+.names g438 product[5]
+1 1
+
+# g444 = Mux11~synth
+.names g444 product[6]
+1 1
+
+# g450 = Mux10~synth
+.names g450 product[7]
+1 1
+
+# g456 = Mux9~synth
+.names g456 product[8]
+1 1
+
+# g462 = Mux8~synth
+.names g462 product[9]
+1 1
+
+# g468 = Mux7~synth
+.names g468 product[10]
+1 1
+
+# g474 = Mux6~synth
+.names g474 product[11]
+1 1
+
+# g480 = Mux5~synth
+.names g480 product[12]
+1 1
+
+# g486 = Mux4~synth
+.names g486 product[13]
+1 1
+
+# g492 = Mux3~synth
+.names g492 product[14]
+1 1
+
+# g498 = Mux2~synth
+.names g498 product[15]
+1 1
+
+# g261 = first
+.names g261 ready
+0 1
+
+#g262 = modreg1[0]~synth
+#g1 = modreg1[0]
+.names g262 modulus[0] g1 g717
+0-1 1
+11- 1
+
+#g1 = modreg1[0]
+.latch g717 g1 re clk 2
+
+#g265 = prodreg[0]~synth
+#g2 = mcreg[0]
+.names g265 g266 g2 g718
+1-1 1
+01- 1
+
+#g2 = mcreg[0]
+.latch g718 g2 re clk 2
+
+#g2 = mcreg[0]
+#g559 = prodreg[0]
+#g3 = Add0~synth
+.names g2 g559 g3
+10 1
+01 1
+
+#g1 = modreg1[0]
+#g354 = prodreg1[0]~synth
+#g4 = Add1~synth
+.names g1 g354 g4
+10 1
+01 1
+
+#g1 = modreg1[0]
+#g354 = prodreg1[0]~synth
+#g5 = Add1~synth
+.names g1 g354 g5
+10 0
+
+#g2 = mcreg[0]
+#g559 = prodreg[0]
+#g6 = Add0~synth
+.names g2 g559 g6
+11 1
+
+#g6 = Add0~synth
+#g565 = prodreg[1]
+#g567 = mcreg[1]
+#g7 = Add0~synth
+.names g6 g565 g567 g7
+100 1
+010 1
+001 1
+111 1
+
+#g5 = Add1~synth
+#g357 = prodreg1[1]~synth
+#g8 = Add1~synth
+.names g5 g357 g8
+11 1
+
+#g262 = modreg1[0]~synth
+#g9 = modreg1[1]
+.names g262 modulus[1] g9 g719
+0-1 1
+11- 1
+
+#g9 = modreg1[1]
+.latch g719 g9 re clk 2
+
+#g5 = Add1~synth
+#g9 = modreg1[1]
+#g10 = Add1~synth
+.names g5 g9 g10
+10 1
+
+#g9 = modreg1[1]
+#g357 = prodreg1[1]~synth
+#g11 = Add1~synth
+.names g9 g357 g11
+01 1
+
+#g8 = Add1~synth
+#g10 = Add1~synth
+#g11 = Add1~synth
+#g12 = Add1~synth
+.names g8 g10 g11 g12
+000 0
+
+#g6 = Add0~synth
+#g565 = prodreg[1]
+#g13 = Add0~synth
+.names g6 g565 g13
+11 1
+
+#g6 = Add0~synth
+#g567 = mcreg[1]
+#g14 = Add0~synth
+.names g6 g567 g14
+11 1
+
+#g565 = prodreg[1]
+#g567 = mcreg[1]
+#g15 = Add0~synth
+.names g565 g567 g15
+11 1
+
+#g13 = Add0~synth
+#g14 = Add0~synth
+#g15 = Add0~synth
+#g16 = Add0~synth
+.names g13 g14 g15 g16
+000 0
+
+#g16 = Add0~synth
+#g571 = prodreg[2]
+#g573 = mcreg[2]
+#g17 = Add0~synth
+.names g16 g571 g573 g17
+100 1
+010 1
+001 1
+111 1
+
+#g12 = Add1~synth
+#g360 = prodreg1[2]~synth
+#g18 = Add1~synth
+.names g12 g360 g18
+11 1
+
+#g262 = modreg1[0]~synth
+#g19 = modreg1[2]
+.names g262 modulus[2] g19 g720
+0-1 1
+11- 1
+
+#g19 = modreg1[2]
+.latch g720 g19 re clk 2
+
+#g12 = Add1~synth
+#g19 = modreg1[2]
+#g20 = Add1~synth
+.names g12 g19 g20
+10 1
+
+#g19 = modreg1[2]
+#g360 = prodreg1[2]~synth
+#g21 = Add1~synth
+.names g19 g360 g21
+01 1
+
+#g18 = Add1~synth
+#g20 = Add1~synth
+#g21 = Add1~synth
+#g22 = Add1~synth
+.names g18 g20 g21 g22
+000 0
+
+#g16 = Add0~synth
+#g571 = prodreg[2]
+#g23 = Add0~synth
+.names g16 g571 g23
+11 1
+
+#g16 = Add0~synth
+#g573 = mcreg[2]
+#g24 = Add0~synth
+.names g16 g573 g24
+11 1
+
+#g571 = prodreg[2]
+#g573 = mcreg[2]
+#g25 = Add0~synth
+.names g571 g573 g25
+11 1
+
+#g23 = Add0~synth
+#g24 = Add0~synth
+#g25 = Add0~synth
+#g26 = Add0~synth
+.names g23 g24 g25 g26
+000 0
+
+#g26 = Add0~synth
+#g577 = prodreg[3]
+#g579 = mcreg[3]
+#g27 = Add0~synth
+.names g26 g577 g579 g27
+100 1
+010 1
+001 1
+111 1
+
+#g22 = Add1~synth
+#g363 = prodreg1[3]~synth
+#g28 = Add1~synth
+.names g22 g363 g28
+11 1
+
+#g262 = modreg1[0]~synth
+#g29 = modreg1[3]
+.names g262 modulus[3] g29 g721
+0-1 1
+11- 1
+
+#g29 = modreg1[3]
+.latch g721 g29 re clk 2
+
+#g22 = Add1~synth
+#g29 = modreg1[3]
+#g30 = Add1~synth
+.names g22 g29 g30
+10 1
+
+#g29 = modreg1[3]
+#g363 = prodreg1[3]~synth
+#g31 = Add1~synth
+.names g29 g363 g31
+01 1
+
+#g28 = Add1~synth
+#g30 = Add1~synth
+#g31 = Add1~synth
+#g32 = Add1~synth
+.names g28 g30 g31 g32
+000 0
+
+#g26 = Add0~synth
+#g577 = prodreg[3]
+#g33 = Add0~synth
+.names g26 g577 g33
+11 1
+
+#g26 = Add0~synth
+#g579 = mcreg[3]
+#g34 = Add0~synth
+.names g26 g579 g34
+11 1
+
+#g577 = prodreg[3]
+#g579 = mcreg[3]
+#g35 = Add0~synth
+.names g577 g579 g35
+11 1
+
+#g33 = Add0~synth
+#g34 = Add0~synth
+#g35 = Add0~synth
+#g36 = Add0~synth
+.names g33 g34 g35 g36
+000 0
+
+#g36 = Add0~synth
+#g583 = prodreg[4]
+#g585 = mcreg[4]
+#g37 = Add0~synth
+.names g36 g583 g585 g37
+100 1
+010 1
+001 1
+111 1
+
+#g32 = Add1~synth
+#g366 = prodreg1[4]~synth
+#g38 = Add1~synth
+.names g32 g366 g38
+11 1
+
+#g262 = modreg1[0]~synth
+#g39 = modreg1[4]
+.names g262 modulus[4] g39 g722
+0-1 1
+11- 1
+
+#g39 = modreg1[4]
+.latch g722 g39 re clk 2
+
+#g32 = Add1~synth
+#g39 = modreg1[4]
+#g40 = Add1~synth
+.names g32 g39 g40
+10 1
+
+#g39 = modreg1[4]
+#g366 = prodreg1[4]~synth
+#g41 = Add1~synth
+.names g39 g366 g41
+01 1
+
+#g38 = Add1~synth
+#g40 = Add1~synth
+#g41 = Add1~synth
+#g42 = Add1~synth
+.names g38 g40 g41 g42
+000 0
+
+#g36 = Add0~synth
+#g583 = prodreg[4]
+#g43 = Add0~synth
+.names g36 g583 g43
+11 1
+
+#g36 = Add0~synth
+#g585 = mcreg[4]
+#g44 = Add0~synth
+.names g36 g585 g44
+11 1
+
+#g583 = prodreg[4]
+#g585 = mcreg[4]
+#g45 = Add0~synth
+.names g583 g585 g45
+11 1
+
+#g43 = Add0~synth
+#g44 = Add0~synth
+#g45 = Add0~synth
+#g46 = Add0~synth
+.names g43 g44 g45 g46
+000 0
+
+#g46 = Add0~synth
+#g589 = prodreg[5]
+#g591 = mcreg[5]
+#g47 = Add0~synth
+.names g46 g589 g591 g47
+100 1
+010 1
+001 1
+111 1
+
+#g42 = Add1~synth
+#g369 = prodreg1[5]~synth
+#g48 = Add1~synth
+.names g42 g369 g48
+11 1
+
+#g262 = modreg1[0]~synth
+#g49 = modreg1[5]
+.names g262 modulus[5] g49 g723
+0-1 1
+11- 1
+
+#g49 = modreg1[5]
+.latch g723 g49 re clk 2
+
+#g42 = Add1~synth
+#g49 = modreg1[5]
+#g50 = Add1~synth
+.names g42 g49 g50
+10 1
+
+#g49 = modreg1[5]
+#g369 = prodreg1[5]~synth
+#g51 = Add1~synth
+.names g49 g369 g51
+01 1
+
+#g48 = Add1~synth
+#g50 = Add1~synth
+#g51 = Add1~synth
+#g52 = Add1~synth
+.names g48 g50 g51 g52
+000 0
+
+#g46 = Add0~synth
+#g589 = prodreg[5]
+#g53 = Add0~synth
+.names g46 g589 g53
+11 1
+
+#g46 = Add0~synth
+#g591 = mcreg[5]
+#g54 = Add0~synth
+.names g46 g591 g54
+11 1
+
+#g589 = prodreg[5]
+#g591 = mcreg[5]
+#g55 = Add0~synth
+.names g589 g591 g55
+11 1
+
+#g53 = Add0~synth
+#g54 = Add0~synth
+#g55 = Add0~synth
+#g56 = Add0~synth
+.names g53 g54 g55 g56
+000 0
+
+#g56 = Add0~synth
+#g595 = prodreg[6]
+#g597 = mcreg[6]
+#g57 = Add0~synth
+.names g56 g595 g597 g57
+100 1
+010 1
+001 1
+111 1
+
+#g52 = Add1~synth
+#g372 = prodreg1[6]~synth
+#g58 = Add1~synth
+.names g52 g372 g58
+11 1
+
+#g262 = modreg1[0]~synth
+#g59 = modreg1[6]
+.names g262 modulus[6] g59 g724
+0-1 1
+11- 1
+
+#g59 = modreg1[6]
+.latch g724 g59 re clk 2
+
+#g52 = Add1~synth
+#g59 = modreg1[6]
+#g60 = Add1~synth
+.names g52 g59 g60
+10 1
+
+#g59 = modreg1[6]
+#g372 = prodreg1[6]~synth
+#g61 = Add1~synth
+.names g59 g372 g61
+01 1
+
+#g58 = Add1~synth
+#g60 = Add1~synth
+#g61 = Add1~synth
+#g62 = Add1~synth
+.names g58 g60 g61 g62
+000 0
+
+#g56 = Add0~synth
+#g595 = prodreg[6]
+#g63 = Add0~synth
+.names g56 g595 g63
+11 1
+
+#g56 = Add0~synth
+#g597 = mcreg[6]
+#g64 = Add0~synth
+.names g56 g597 g64
+11 1
+
+#g595 = prodreg[6]
+#g597 = mcreg[6]
+#g65 = Add0~synth
+.names g595 g597 g65
+11 1
+
+#g63 = Add0~synth
+#g64 = Add0~synth
+#g65 = Add0~synth
+#g66 = Add0~synth
+.names g63 g64 g65 g66
+000 0
+
+#g66 = Add0~synth
+#g601 = prodreg[7]
+#g603 = mcreg[7]
+#g67 = Add0~synth
+.names g66 g601 g603 g67
+100 1
+010 1
+001 1
+111 1
+
+#g62 = Add1~synth
+#g375 = prodreg1[7]~synth
+#g68 = Add1~synth
+.names g62 g375 g68
+11 1
+
+#g262 = modreg1[0]~synth
+#g69 = modreg1[7]
+.names g262 modulus[7] g69 g725
+0-1 1
+11- 1
+
+#g69 = modreg1[7]
+.latch g725 g69 re clk 2
+
+#g62 = Add1~synth
+#g69 = modreg1[7]
+#g70 = Add1~synth
+.names g62 g69 g70
+10 1
+
+#g69 = modreg1[7]
+#g375 = prodreg1[7]~synth
+#g71 = Add1~synth
+.names g69 g375 g71
+01 1
+
+#g68 = Add1~synth
+#g70 = Add1~synth
+#g71 = Add1~synth
+#g72 = Add1~synth
+.names g68 g70 g71 g72
+000 0
+
+#g66 = Add0~synth
+#g601 = prodreg[7]
+#g73 = Add0~synth
+.names g66 g601 g73
+11 1
+
+#g66 = Add0~synth
+#g603 = mcreg[7]
+#g74 = Add0~synth
+.names g66 g603 g74
+11 1
+
+#g601 = prodreg[7]
+#g603 = mcreg[7]
+#g75 = Add0~synth
+.names g601 g603 g75
+11 1
+
+#g73 = Add0~synth
+#g74 = Add0~synth
+#g75 = Add0~synth
+#g76 = Add0~synth
+.names g73 g74 g75 g76
+000 0
+
+#g76 = Add0~synth
+#g607 = prodreg[8]
+#g609 = mcreg[8]
+#g77 = Add0~synth
+.names g76 g607 g609 g77
+100 1
+010 1
+001 1
+111 1
+
+#g72 = Add1~synth
+#g378 = prodreg1[8]~synth
+#g78 = Add1~synth
+.names g72 g378 g78
+11 1
+
+#g262 = modreg1[0]~synth
+#g79 = modreg1[8]
+.names g262 modulus[8] g79 g726
+0-1 1
+11- 1
+
+#g79 = modreg1[8]
+.latch g726 g79 re clk 2
+
+#g72 = Add1~synth
+#g79 = modreg1[8]
+#g80 = Add1~synth
+.names g72 g79 g80
+10 1
+
+#g79 = modreg1[8]
+#g378 = prodreg1[8]~synth
+#g81 = Add1~synth
+.names g79 g378 g81
+01 1
+
+#g78 = Add1~synth
+#g80 = Add1~synth
+#g81 = Add1~synth
+#g82 = Add1~synth
+.names g78 g80 g81 g82
+000 0
+
+#g76 = Add0~synth
+#g607 = prodreg[8]
+#g83 = Add0~synth
+.names g76 g607 g83
+11 1
+
+#g76 = Add0~synth
+#g609 = mcreg[8]
+#g84 = Add0~synth
+.names g76 g609 g84
+11 1
+
+#g607 = prodreg[8]
+#g609 = mcreg[8]
+#g85 = Add0~synth
+.names g607 g609 g85
+11 1
+
+#g83 = Add0~synth
+#g84 = Add0~synth
+#g85 = Add0~synth
+#g86 = Add0~synth
+.names g83 g84 g85 g86
+000 0
+
+#g86 = Add0~synth
+#g613 = prodreg[9]
+#g615 = mcreg[9]
+#g87 = Add0~synth
+.names g86 g613 g615 g87
+100 1
+010 1
+001 1
+111 1
+
+#g82 = Add1~synth
+#g381 = prodreg1[9]~synth
+#g88 = Add1~synth
+.names g82 g381 g88
+11 1
+
+#g262 = modreg1[0]~synth
+#g89 = modreg1[9]
+.names g262 modulus[9] g89 g727
+0-1 1
+11- 1
+
+#g89 = modreg1[9]
+.latch g727 g89 re clk 2
+
+#g82 = Add1~synth
+#g89 = modreg1[9]
+#g90 = Add1~synth
+.names g82 g89 g90
+10 1
+
+#g89 = modreg1[9]
+#g381 = prodreg1[9]~synth
+#g91 = Add1~synth
+.names g89 g381 g91
+01 1
+
+#g88 = Add1~synth
+#g90 = Add1~synth
+#g91 = Add1~synth
+#g92 = Add1~synth
+.names g88 g90 g91 g92
+000 0
+
+#g86 = Add0~synth
+#g613 = prodreg[9]
+#g93 = Add0~synth
+.names g86 g613 g93
+11 1
+
+#g86 = Add0~synth
+#g615 = mcreg[9]
+#g94 = Add0~synth
+.names g86 g615 g94
+11 1
+
+#g613 = prodreg[9]
+#g615 = mcreg[9]
+#g95 = Add0~synth
+.names g613 g615 g95
+11 1
+
+#g93 = Add0~synth
+#g94 = Add0~synth
+#g95 = Add0~synth
+#g96 = Add0~synth
+.names g93 g94 g95 g96
+000 0
+
+#g96 = Add0~synth
+#g619 = prodreg[10]
+#g621 = mcreg[10]
+#g97 = Add0~synth
+.names g96 g619 g621 g97
+100 1
+010 1
+001 1
+111 1
+
+#g92 = Add1~synth
+#g384 = prodreg1[10]~synth
+#g98 = Add1~synth
+.names g92 g384 g98
+11 1
+
+#g262 = modreg1[0]~synth
+#g99 = modreg1[10]
+.names g262 modulus[10] g99 g728
+0-1 1
+11- 1
+
+#g99 = modreg1[10]
+.latch g728 g99 re clk 2
+
+#g92 = Add1~synth
+#g99 = modreg1[10]
+#g100 = Add1~synth
+.names g92 g99 g100
+10 1
+
+#g99 = modreg1[10]
+#g384 = prodreg1[10]~synth
+#g101 = Add1~synth
+.names g99 g384 g101
+01 1
+
+#g98 = Add1~synth
+#g100 = Add1~synth
+#g101 = Add1~synth
+#g102 = Add1~synth
+.names g98 g100 g101 g102
+000 0
+
+#g96 = Add0~synth
+#g619 = prodreg[10]
+#g103 = Add0~synth
+.names g96 g619 g103
+11 1
+
+#g96 = Add0~synth
+#g621 = mcreg[10]
+#g104 = Add0~synth
+.names g96 g621 g104
+11 1
+
+#g619 = prodreg[10]
+#g621 = mcreg[10]
+#g105 = Add0~synth
+.names g619 g621 g105
+11 1
+
+#g103 = Add0~synth
+#g104 = Add0~synth
+#g105 = Add0~synth
+#g106 = Add0~synth
+.names g103 g104 g105 g106
+000 0
+
+#g106 = Add0~synth
+#g625 = prodreg[11]
+#g627 = mcreg[11]
+#g107 = Add0~synth
+.names g106 g625 g627 g107
+100 1
+010 1
+001 1
+111 1
+
+#g102 = Add1~synth
+#g387 = prodreg1[11]~synth
+#g108 = Add1~synth
+.names g102 g387 g108
+11 1
+
+#g262 = modreg1[0]~synth
+#g109 = modreg1[11]
+.names g262 modulus[11] g109 g729
+0-1 1
+11- 1
+
+#g109 = modreg1[11]
+.latch g729 g109 re clk 2
+
+#g102 = Add1~synth
+#g109 = modreg1[11]
+#g110 = Add1~synth
+.names g102 g109 g110
+10 1
+
+#g109 = modreg1[11]
+#g387 = prodreg1[11]~synth
+#g111 = Add1~synth
+.names g109 g387 g111
+01 1
+
+#g108 = Add1~synth
+#g110 = Add1~synth
+#g111 = Add1~synth
+#g112 = Add1~synth
+.names g108 g110 g111 g112
+000 0
+
+#g106 = Add0~synth
+#g625 = prodreg[11]
+#g113 = Add0~synth
+.names g106 g625 g113
+11 1
+
+#g106 = Add0~synth
+#g627 = mcreg[11]
+#g114 = Add0~synth
+.names g106 g627 g114
+11 1
+
+#g625 = prodreg[11]
+#g627 = mcreg[11]
+#g115 = Add0~synth
+.names g625 g627 g115
+11 1
+
+#g113 = Add0~synth
+#g114 = Add0~synth
+#g115 = Add0~synth
+#g116 = Add0~synth
+.names g113 g114 g115 g116
+000 0
+
+#g116 = Add0~synth
+#g631 = prodreg[12]
+#g633 = mcreg[12]
+#g117 = Add0~synth
+.names g116 g631 g633 g117
+100 1
+010 1
+001 1
+111 1
+
+#g112 = Add1~synth
+#g390 = prodreg1[12]~synth
+#g118 = Add1~synth
+.names g112 g390 g118
+11 1
+
+#g262 = modreg1[0]~synth
+#g119 = modreg1[12]
+.names g262 modulus[12] g119 g730
+0-1 1
+11- 1
+
+#g119 = modreg1[12]
+.latch g730 g119 re clk 2
+
+#g112 = Add1~synth
+#g119 = modreg1[12]
+#g120 = Add1~synth
+.names g112 g119 g120
+10 1
+
+#g119 = modreg1[12]
+#g390 = prodreg1[12]~synth
+#g121 = Add1~synth
+.names g119 g390 g121
+01 1
+
+#g118 = Add1~synth
+#g120 = Add1~synth
+#g121 = Add1~synth
+#g122 = Add1~synth
+.names g118 g120 g121 g122
+000 0
+
+#g116 = Add0~synth
+#g631 = prodreg[12]
+#g123 = Add0~synth
+.names g116 g631 g123
+11 1
+
+#g116 = Add0~synth
+#g633 = mcreg[12]
+#g124 = Add0~synth
+.names g116 g633 g124
+11 1
+
+#g631 = prodreg[12]
+#g633 = mcreg[12]
+#g125 = Add0~synth
+.names g631 g633 g125
+11 1
+
+#g123 = Add0~synth
+#g124 = Add0~synth
+#g125 = Add0~synth
+#g126 = Add0~synth
+.names g123 g124 g125 g126
+000 0
+
+#g126 = Add0~synth
+#g637 = prodreg[13]
+#g639 = mcreg[13]
+#g127 = Add0~synth
+.names g126 g637 g639 g127
+100 1
+010 1
+001 1
+111 1
+
+#g122 = Add1~synth
+#g393 = prodreg1[13]~synth
+#g128 = Add1~synth
+.names g122 g393 g128
+11 1
+
+#g262 = modreg1[0]~synth
+#g129 = modreg1[13]
+.names g262 modulus[13] g129 g731
+0-1 1
+11- 1
+
+#g129 = modreg1[13]
+.latch g731 g129 re clk 2
+
+#g122 = Add1~synth
+#g129 = modreg1[13]
+#g130 = Add1~synth
+.names g122 g129 g130
+10 1
+
+#g129 = modreg1[13]
+#g393 = prodreg1[13]~synth
+#g131 = Add1~synth
+.names g129 g393 g131
+01 1
+
+#g128 = Add1~synth
+#g130 = Add1~synth
+#g131 = Add1~synth
+#g132 = Add1~synth
+.names g128 g130 g131 g132
+000 0
+
+#g126 = Add0~synth
+#g637 = prodreg[13]
+#g133 = Add0~synth
+.names g126 g637 g133
+11 1
+
+#g126 = Add0~synth
+#g639 = mcreg[13]
+#g134 = Add0~synth
+.names g126 g639 g134
+11 1
+
+#g637 = prodreg[13]
+#g639 = mcreg[13]
+#g135 = Add0~synth
+.names g637 g639 g135
+11 1
+
+#g133 = Add0~synth
+#g134 = Add0~synth
+#g135 = Add0~synth
+#g136 = Add0~synth
+.names g133 g134 g135 g136
+000 0
+
+#g136 = Add0~synth
+#g643 = prodreg[14]
+#g645 = mcreg[14]
+#g137 = Add0~synth
+.names g136 g643 g645 g137
+100 1
+010 1
+001 1
+111 1
+
+#g132 = Add1~synth
+#g396 = prodreg1[14]~synth
+#g138 = Add1~synth
+.names g132 g396 g138
+11 1
+
+#g262 = modreg1[0]~synth
+#g139 = modreg1[14]
+.names g262 modulus[14] g139 g732
+0-1 1
+11- 1
+
+#g139 = modreg1[14]
+.latch g732 g139 re clk 2
+
+#g132 = Add1~synth
+#g139 = modreg1[14]
+#g140 = Add1~synth
+.names g132 g139 g140
+10 1
+
+#g139 = modreg1[14]
+#g396 = prodreg1[14]~synth
+#g141 = Add1~synth
+.names g139 g396 g141
+01 1
+
+#g138 = Add1~synth
+#g140 = Add1~synth
+#g141 = Add1~synth
+#g142 = Add1~synth
+.names g138 g140 g141 g142
+000 0
+
+#g136 = Add0~synth
+#g643 = prodreg[14]
+#g143 = Add0~synth
+.names g136 g643 g143
+11 1
+
+#g136 = Add0~synth
+#g645 = mcreg[14]
+#g144 = Add0~synth
+.names g136 g645 g144
+11 1
+
+#g643 = prodreg[14]
+#g645 = mcreg[14]
+#g145 = Add0~synth
+.names g643 g645 g145
+11 1
+
+#g143 = Add0~synth
+#g144 = Add0~synth
+#g145 = Add0~synth
+#g146 = Add0~synth
+.names g143 g144 g145 g146
+000 0
+
+#g146 = Add0~synth
+#g649 = prodreg[15]
+#g651 = mcreg[15]
+#g147 = Add0~synth
+.names g146 g649 g651 g147
+100 1
+010 1
+001 1
+111 1
+
+#g142 = Add1~synth
+#g399 = prodreg1[15]~synth
+#g148 = Add1~synth
+.names g142 g399 g148
+11 1
+
+#g262 = modreg1[0]~synth
+#g149 = modreg1[15]
+.names g262 modulus[15] g149 g733
+0-1 1
+11- 1
+
+#g149 = modreg1[15]
+.latch g733 g149 re clk 2
+
+#g142 = Add1~synth
+#g149 = modreg1[15]
+#g150 = Add1~synth
+.names g142 g149 g150
+10 1
+
+#g149 = modreg1[15]
+#g399 = prodreg1[15]~synth
+#g151 = Add1~synth
+.names g149 g399 g151
+01 1
+
+#g148 = Add1~synth
+#g150 = Add1~synth
+#g151 = Add1~synth
+#g152 = Add1~synth
+.names g148 g150 g151 g152
+000 0
+
+#g153 = mcreg[16]
+.latch g558 g153 re clk 2
+
+#g146 = Add0~synth
+#g649 = prodreg[15]
+#g154 = Add0~synth
+.names g146 g649 g154
+11 1
+
+#g146 = Add0~synth
+#g651 = mcreg[15]
+#g155 = Add0~synth
+.names g146 g651 g155
+11 1
+
+#g649 = prodreg[15]
+#g651 = mcreg[15]
+#g156 = Add0~synth
+.names g649 g651 g156
+11 1
+
+#g154 = Add0~synth
+#g155 = Add0~synth
+#g156 = Add0~synth
+#g157 = Add0~synth
+.names g154 g155 g156 g157
+000 0
+
+#g153 = mcreg[16]
+#g157 = Add0~synth
+#g655 = prodreg[16]
+#g158 = Add0~synth
+.names g153 g157 g655 g158
+100 1
+010 1
+001 1
+111 1
+
+#g152 = Add1~synth
+#g402 = prodreg1[16]~synth
+#g159 = Add1~synth
+.names g152 g402 g159
+00 0
+
+#g157 = Add0~synth
+#g655 = prodreg[16]
+#g160 = Add0~synth
+.names g157 g655 g160
+11 1
+
+#g153 = mcreg[16]
+#g157 = Add0~synth
+#g161 = Add0~synth
+.names g153 g157 g161
+11 1
+
+#g153 = mcreg[16]
+#g655 = prodreg[16]
+#g162 = Add0~synth
+.names g153 g655 g162
+11 1
+
+#g160 = Add0~synth
+#g161 = Add0~synth
+#g162 = Add0~synth
+#g163 = Add0~synth
+.names g160 g161 g162 g163
+000 0
+
+#g163 = Add0~synth
+#g657 = prodreg[17]
+#g659 = mcreg[17]
+#g164 = Add0~synth
+.names g163 g657 g659 g164
+100 1
+010 1
+001 1
+111 1
+
+#g159 = Add1~synth
+#g405 = prodreg1[17]~synth
+#g165 = Add1~synth
+.names g159 g405 g165
+10 1
+01 1
+
+#g1 = modreg1[0]
+#g357 = prodreg1[1]~synth
+#g166 = Add2~synth
+.names g1 g357 g166
+10 0
+
+#g166 = Add2~synth
+#g360 = prodreg1[2]~synth
+#g167 = Add2~synth
+.names g166 g360 g167
+11 1
+
+#g9 = modreg1[1]
+#g166 = Add2~synth
+#g168 = Add2~synth
+.names g9 g166 g168
+01 1
+
+#g9 = modreg1[1]
+#g360 = prodreg1[2]~synth
+#g169 = Add2~synth
+.names g9 g360 g169
+01 1
+
+#g167 = Add2~synth
+#g168 = Add2~synth
+#g169 = Add2~synth
+#g170 = Add2~synth
+.names g167 g168 g169 g170
+000 0
+
+#g170 = Add2~synth
+#g363 = prodreg1[3]~synth
+#g171 = Add2~synth
+.names g170 g363 g171
+11 1
+
+#g19 = modreg1[2]
+#g170 = Add2~synth
+#g172 = Add2~synth
+.names g19 g170 g172
+01 1
+
+#g19 = modreg1[2]
+#g363 = prodreg1[3]~synth
+#g173 = Add2~synth
+.names g19 g363 g173
+01 1
+
+#g171 = Add2~synth
+#g172 = Add2~synth
+#g173 = Add2~synth
+#g174 = Add2~synth
+.names g171 g172 g173 g174
+000 0
+
+#g174 = Add2~synth
+#g366 = prodreg1[4]~synth
+#g175 = Add2~synth
+.names g174 g366 g175
+11 1
+
+#g29 = modreg1[3]
+#g174 = Add2~synth
+#g176 = Add2~synth
+.names g29 g174 g176
+01 1
+
+#g29 = modreg1[3]
+#g366 = prodreg1[4]~synth
+#g177 = Add2~synth
+.names g29 g366 g177
+01 1
+
+#g175 = Add2~synth
+#g176 = Add2~synth
+#g177 = Add2~synth
+#g178 = Add2~synth
+.names g175 g176 g177 g178
+000 0
+
+#g178 = Add2~synth
+#g369 = prodreg1[5]~synth
+#g179 = Add2~synth
+.names g178 g369 g179
+11 1
+
+#g39 = modreg1[4]
+#g178 = Add2~synth
+#g180 = Add2~synth
+.names g39 g178 g180
+01 1
+
+#g39 = modreg1[4]
+#g369 = prodreg1[5]~synth
+#g181 = Add2~synth
+.names g39 g369 g181
+01 1
+
+#g179 = Add2~synth
+#g180 = Add2~synth
+#g181 = Add2~synth
+#g182 = Add2~synth
+.names g179 g180 g181 g182
+000 0
+
+#g182 = Add2~synth
+#g372 = prodreg1[6]~synth
+#g183 = Add2~synth
+.names g182 g372 g183
+11 1
+
+#g49 = modreg1[5]
+#g182 = Add2~synth
+#g184 = Add2~synth
+.names g49 g182 g184
+01 1
+
+#g49 = modreg1[5]
+#g372 = prodreg1[6]~synth
+#g185 = Add2~synth
+.names g49 g372 g185
+01 1
+
+#g183 = Add2~synth
+#g184 = Add2~synth
+#g185 = Add2~synth
+#g186 = Add2~synth
+.names g183 g184 g185 g186
+000 0
+
+#g186 = Add2~synth
+#g375 = prodreg1[7]~synth
+#g187 = Add2~synth
+.names g186 g375 g187
+11 1
+
+#g59 = modreg1[6]
+#g186 = Add2~synth
+#g188 = Add2~synth
+.names g59 g186 g188
+01 1
+
+#g59 = modreg1[6]
+#g375 = prodreg1[7]~synth
+#g189 = Add2~synth
+.names g59 g375 g189
+01 1
+
+#g187 = Add2~synth
+#g188 = Add2~synth
+#g189 = Add2~synth
+#g190 = Add2~synth
+.names g187 g188 g189 g190
+000 0
+
+#g190 = Add2~synth
+#g378 = prodreg1[8]~synth
+#g191 = Add2~synth
+.names g190 g378 g191
+11 1
+
+#g69 = modreg1[7]
+#g190 = Add2~synth
+#g192 = Add2~synth
+.names g69 g190 g192
+01 1
+
+#g69 = modreg1[7]
+#g378 = prodreg1[8]~synth
+#g193 = Add2~synth
+.names g69 g378 g193
+01 1
+
+#g191 = Add2~synth
+#g192 = Add2~synth
+#g193 = Add2~synth
+#g194 = Add2~synth
+.names g191 g192 g193 g194
+000 0
+
+#g194 = Add2~synth
+#g381 = prodreg1[9]~synth
+#g195 = Add2~synth
+.names g194 g381 g195
+11 1
+
+#g79 = modreg1[8]
+#g194 = Add2~synth
+#g196 = Add2~synth
+.names g79 g194 g196
+01 1
+
+#g79 = modreg1[8]
+#g381 = prodreg1[9]~synth
+#g197 = Add2~synth
+.names g79 g381 g197
+01 1
+
+#g195 = Add2~synth
+#g196 = Add2~synth
+#g197 = Add2~synth
+#g198 = Add2~synth
+.names g195 g196 g197 g198
+000 0
+
+#g198 = Add2~synth
+#g384 = prodreg1[10]~synth
+#g199 = Add2~synth
+.names g198 g384 g199
+11 1
+
+#g89 = modreg1[9]
+#g198 = Add2~synth
+#g200 = Add2~synth
+.names g89 g198 g200
+01 1
+
+#g89 = modreg1[9]
+#g384 = prodreg1[10]~synth
+#g201 = Add2~synth
+.names g89 g384 g201
+01 1
+
+#g199 = Add2~synth
+#g200 = Add2~synth
+#g201 = Add2~synth
+#g202 = Add2~synth
+.names g199 g200 g201 g202
+000 0
+
+#g202 = Add2~synth
+#g387 = prodreg1[11]~synth
+#g203 = Add2~synth
+.names g202 g387 g203
+11 1
+
+#g99 = modreg1[10]
+#g202 = Add2~synth
+#g204 = Add2~synth
+.names g99 g202 g204
+01 1
+
+#g99 = modreg1[10]
+#g387 = prodreg1[11]~synth
+#g205 = Add2~synth
+.names g99 g387 g205
+01 1
+
+#g203 = Add2~synth
+#g204 = Add2~synth
+#g205 = Add2~synth
+#g206 = Add2~synth
+.names g203 g204 g205 g206
+000 0
+
+#g206 = Add2~synth
+#g390 = prodreg1[12]~synth
+#g207 = Add2~synth
+.names g206 g390 g207
+11 1
+
+#g109 = modreg1[11]
+#g206 = Add2~synth
+#g208 = Add2~synth
+.names g109 g206 g208
+01 1
+
+#g109 = modreg1[11]
+#g390 = prodreg1[12]~synth
+#g209 = Add2~synth
+.names g109 g390 g209
+01 1
+
+#g207 = Add2~synth
+#g208 = Add2~synth
+#g209 = Add2~synth
+#g210 = Add2~synth
+.names g207 g208 g209 g210
+000 0
+
+#g210 = Add2~synth
+#g393 = prodreg1[13]~synth
+#g211 = Add2~synth
+.names g210 g393 g211
+11 1
+
+#g119 = modreg1[12]
+#g210 = Add2~synth
+#g212 = Add2~synth
+.names g119 g210 g212
+01 1
+
+#g119 = modreg1[12]
+#g393 = prodreg1[13]~synth
+#g213 = Add2~synth
+.names g119 g393 g213
+01 1
+
+#g211 = Add2~synth
+#g212 = Add2~synth
+#g213 = Add2~synth
+#g214 = Add2~synth
+.names g211 g212 g213 g214
+000 0
+
+#g214 = Add2~synth
+#g396 = prodreg1[14]~synth
+#g215 = Add2~synth
+.names g214 g396 g215
+11 1
+
+#g129 = modreg1[13]
+#g214 = Add2~synth
+#g216 = Add2~synth
+.names g129 g214 g216
+01 1
+
+#g129 = modreg1[13]
+#g396 = prodreg1[14]~synth
+#g217 = Add2~synth
+.names g129 g396 g217
+01 1
+
+#g215 = Add2~synth
+#g216 = Add2~synth
+#g217 = Add2~synth
+#g218 = Add2~synth
+.names g215 g216 g217 g218
+000 0
+
+#g218 = Add2~synth
+#g399 = prodreg1[15]~synth
+#g219 = Add2~synth
+.names g218 g399 g219
+11 1
+
+#g139 = modreg1[14]
+#g218 = Add2~synth
+#g220 = Add2~synth
+.names g139 g218 g220
+01 1
+
+#g139 = modreg1[14]
+#g399 = prodreg1[15]~synth
+#g221 = Add2~synth
+.names g139 g399 g221
+01 1
+
+#g219 = Add2~synth
+#g220 = Add2~synth
+#g221 = Add2~synth
+#g222 = Add2~synth
+.names g219 g220 g221 g222
+000 0
+
+#g222 = Add2~synth
+#g402 = prodreg1[16]~synth
+#g223 = Add2~synth
+.names g222 g402 g223
+11 1
+
+#g149 = modreg1[15]
+#g222 = Add2~synth
+#g224 = Add2~synth
+.names g149 g222 g224
+01 1
+
+#g149 = modreg1[15]
+#g402 = prodreg1[16]~synth
+#g225 = Add2~synth
+.names g149 g402 g225
+01 1
+
+#g223 = Add2~synth
+#g224 = Add2~synth
+#g225 = Add2~synth
+#g226 = Add2~synth
+.names g223 g224 g225 g226
+000 0
+
+#g226 = Add2~synth
+#g405 = prodreg1[17]~synth
+#g227 = Add2~synth
+.names g226 g405 g227
+10 1
+01 1
+
+#g165 = Add1~synth
+#g227 = Add2~synth
+#g228 = Mux17~synth
+.names g165 g227 g228
+10 0
+
+#g1 = modreg1[0]
+#g357 = prodreg1[1]~synth
+#g229 = Add2~synth
+.names g1 g357 g229
+10 1
+01 1
+
+#g5 = Add1~synth
+#g9 = modreg1[1]
+#g357 = prodreg1[1]~synth
+#g230 = Add1~synth
+.names g5 g9 g357 g230
+100 1
+010 1
+001 1
+111 1
+
+#g159 = Add1~synth
+#g405 = prodreg1[17]~synth
+#g231 = Add1~synth
+.names g159 g405 g231
+10 1
+01 1
+
+#g226 = Add2~synth
+#g405 = prodreg1[17]~synth
+#g232 = Add2~synth
+.names g226 g405 g232
+10 1
+01 1
+
+#g9 = modreg1[1]
+#g166 = Add2~synth
+#g360 = prodreg1[2]~synth
+#g233 = Add2~synth
+.names g9 g166 g360 g233
+100 1
+010 1
+001 1
+111 1
+
+#g12 = Add1~synth
+#g19 = modreg1[2]
+#g360 = prodreg1[2]~synth
+#g234 = Add1~synth
+.names g12 g19 g360 g234
+100 1
+010 1
+001 1
+111 1
+
+#g19 = modreg1[2]
+#g170 = Add2~synth
+#g363 = prodreg1[3]~synth
+#g235 = Add2~synth
+.names g19 g170 g363 g235
+100 1
+010 1
+001 1
+111 1
+
+#g22 = Add1~synth
+#g29 = modreg1[3]
+#g363 = prodreg1[3]~synth
+#g236 = Add1~synth
+.names g22 g29 g363 g236
+100 1
+010 1
+001 1
+111 1
+
+#g29 = modreg1[3]
+#g174 = Add2~synth
+#g366 = prodreg1[4]~synth
+#g237 = Add2~synth
+.names g29 g174 g366 g237
+100 1
+010 1
+001 1
+111 1
+
+#g32 = Add1~synth
+#g39 = modreg1[4]
+#g366 = prodreg1[4]~synth
+#g238 = Add1~synth
+.names g32 g39 g366 g238
+100 1
+010 1
+001 1
+111 1
+
+#g39 = modreg1[4]
+#g178 = Add2~synth
+#g369 = prodreg1[5]~synth
+#g239 = Add2~synth
+.names g39 g178 g369 g239
+100 1
+010 1
+001 1
+111 1
+
+#g42 = Add1~synth
+#g49 = modreg1[5]
+#g369 = prodreg1[5]~synth
+#g240 = Add1~synth
+.names g42 g49 g369 g240
+100 1
+010 1
+001 1
+111 1
+
+#g49 = modreg1[5]
+#g182 = Add2~synth
+#g372 = prodreg1[6]~synth
+#g241 = Add2~synth
+.names g49 g182 g372 g241
+100 1
+010 1
+001 1
+111 1
+
+#g52 = Add1~synth
+#g59 = modreg1[6]
+#g372 = prodreg1[6]~synth
+#g242 = Add1~synth
+.names g52 g59 g372 g242
+100 1
+010 1
+001 1
+111 1
+
+#g59 = modreg1[6]
+#g186 = Add2~synth
+#g375 = prodreg1[7]~synth
+#g243 = Add2~synth
+.names g59 g186 g375 g243
+100 1
+010 1
+001 1
+111 1
+
+#g62 = Add1~synth
+#g69 = modreg1[7]
+#g375 = prodreg1[7]~synth
+#g244 = Add1~synth
+.names g62 g69 g375 g244
+100 1
+010 1
+001 1
+111 1
+
+#g69 = modreg1[7]
+#g190 = Add2~synth
+#g378 = prodreg1[8]~synth
+#g245 = Add2~synth
+.names g69 g190 g378 g245
+100 1
+010 1
+001 1
+111 1
+
+#g72 = Add1~synth
+#g79 = modreg1[8]
+#g378 = prodreg1[8]~synth
+#g246 = Add1~synth
+.names g72 g79 g378 g246
+100 1
+010 1
+001 1
+111 1
+
+#g79 = modreg1[8]
+#g194 = Add2~synth
+#g381 = prodreg1[9]~synth
+#g247 = Add2~synth
+.names g79 g194 g381 g247
+100 1
+010 1
+001 1
+111 1
+
+#g82 = Add1~synth
+#g89 = modreg1[9]
+#g381 = prodreg1[9]~synth
+#g248 = Add1~synth
+.names g82 g89 g381 g248
+100 1
+010 1
+001 1
+111 1
+
+#g89 = modreg1[9]
+#g198 = Add2~synth
+#g384 = prodreg1[10]~synth
+#g249 = Add2~synth
+.names g89 g198 g384 g249
+100 1
+010 1
+001 1
+111 1
+
+#g92 = Add1~synth
+#g99 = modreg1[10]
+#g384 = prodreg1[10]~synth
+#g250 = Add1~synth
+.names g92 g99 g384 g250
+100 1
+010 1
+001 1
+111 1
+
+#g99 = modreg1[10]
+#g202 = Add2~synth
+#g387 = prodreg1[11]~synth
+#g251 = Add2~synth
+.names g99 g202 g387 g251
+100 1
+010 1
+001 1
+111 1
+
+#g102 = Add1~synth
+#g109 = modreg1[11]
+#g387 = prodreg1[11]~synth
+#g252 = Add1~synth
+.names g102 g109 g387 g252
+100 1
+010 1
+001 1
+111 1
+
+#g109 = modreg1[11]
+#g206 = Add2~synth
+#g390 = prodreg1[12]~synth
+#g253 = Add2~synth
+.names g109 g206 g390 g253
+100 1
+010 1
+001 1
+111 1
+
+#g112 = Add1~synth
+#g119 = modreg1[12]
+#g390 = prodreg1[12]~synth
+#g254 = Add1~synth
+.names g112 g119 g390 g254
+100 1
+010 1
+001 1
+111 1
+
+#g119 = modreg1[12]
+#g210 = Add2~synth
+#g393 = prodreg1[13]~synth
+#g255 = Add2~synth
+.names g119 g210 g393 g255
+100 1
+010 1
+001 1
+111 1
+
+#g122 = Add1~synth
+#g129 = modreg1[13]
+#g393 = prodreg1[13]~synth
+#g256 = Add1~synth
+.names g122 g129 g393 g256
+100 1
+010 1
+001 1
+111 1
+
+#g129 = modreg1[13]
+#g214 = Add2~synth
+#g396 = prodreg1[14]~synth
+#g257 = Add2~synth
+.names g129 g214 g396 g257
+100 1
+010 1
+001 1
+111 1
+
+#g132 = Add1~synth
+#g139 = modreg1[14]
+#g396 = prodreg1[14]~synth
+#g258 = Add1~synth
+.names g132 g139 g396 g258
+100 1
+010 1
+001 1
+111 1
+
+#g139 = modreg1[14]
+#g218 = Add2~synth
+#g399 = prodreg1[15]~synth
+#g259 = Add2~synth
+.names g139 g218 g399 g259
+100 1
+010 1
+001 1
+111 1
+
+#g142 = Add1~synth
+#g149 = modreg1[15]
+#g399 = prodreg1[15]~synth
+#g260 = Add1~synth
+.names g142 g149 g399 g260
+100 1
+010 1
+001 1
+111 1
+
+#g261 = first
+.latch g501 g261 re clk 2
+
+#g261 = first
+#g262 = modreg1[0]~synth
+.names g261 ds reset g262
+010 1
+
+#g265 = prodreg[0]~synth
+#g263 = mpreg[15]
+.names g265 g351 g263 g734
+1-1 1
+01- 1
+
+#g263 = mpreg[15]
+.latch g734 g263 re clk 2
+
+#g263 = mpreg[15]
+#g561 = mpreg[0]
+#g661 = mpreg[7]
+#g665 = mpreg[9]
+#g669 = mpreg[8]
+#g673 = mpreg[14]
+#g677 = mpreg[13]
+#g681 = mpreg[10]
+#g685 = mpreg[12]
+#g689 = mpreg[11]
+#g693 = mpreg[6]
+#g697 = mpreg[5]
+#g701 = mpreg[4]
+#g705 = mpreg[3]
+#g709 = mpreg[2]
+#g713 = mpreg[1]
+#g264 = Equal0~synth
+.names g263 g561 g661 g665 g669 g673 g677 g681 g685 g689 g693 g697 g701 g705 g709 g713 g264
+0000000000000000 0
+
+#g501 = prodreg[0]~synth
+#g265 = prodreg[0]~synth
+.names reset g501 g265
+01 0
+
+#g261 = first
+#g266 = mcreg~synth
+.names g261 mpand[0] g266
+01 1
+
+#g1 = modreg1[0]
+#g2 = mcreg[0]
+#g267 = Add3~synth
+.names g1 g2 g267
+10 1
+01 1
+
+#g1 = modreg1[0]
+#g2 = mcreg[0]
+#g268 = Add3~synth
+.names g1 g2 g268
+10 0
+
+#g268 = Add3~synth
+#g567 = mcreg[1]
+#g269 = Add3~synth
+.names g268 g567 g269
+11 1
+
+#g9 = modreg1[1]
+#g268 = Add3~synth
+#g270 = Add3~synth
+.names g9 g268 g270
+01 1
+
+#g9 = modreg1[1]
+#g567 = mcreg[1]
+#g271 = Add3~synth
+.names g9 g567 g271
+01 1
+
+#g269 = Add3~synth
+#g270 = Add3~synth
+#g271 = Add3~synth
+#g272 = Add3~synth
+.names g269 g270 g271 g272
+000 0
+
+#g272 = Add3~synth
+#g573 = mcreg[2]
+#g273 = Add3~synth
+.names g272 g573 g273
+11 1
+
+#g19 = modreg1[2]
+#g272 = Add3~synth
+#g274 = Add3~synth
+.names g19 g272 g274
+01 1
+
+#g19 = modreg1[2]
+#g573 = mcreg[2]
+#g275 = Add3~synth
+.names g19 g573 g275
+01 1
+
+#g273 = Add3~synth
+#g274 = Add3~synth
+#g275 = Add3~synth
+#g276 = Add3~synth
+.names g273 g274 g275 g276
+000 0
+
+#g276 = Add3~synth
+#g579 = mcreg[3]
+#g277 = Add3~synth
+.names g276 g579 g277
+11 1
+
+#g29 = modreg1[3]
+#g276 = Add3~synth
+#g278 = Add3~synth
+.names g29 g276 g278
+01 1
+
+#g29 = modreg1[3]
+#g579 = mcreg[3]
+#g279 = Add3~synth
+.names g29 g579 g279
+01 1
+
+#g277 = Add3~synth
+#g278 = Add3~synth
+#g279 = Add3~synth
+#g280 = Add3~synth
+.names g277 g278 g279 g280
+000 0
+
+#g280 = Add3~synth
+#g585 = mcreg[4]
+#g281 = Add3~synth
+.names g280 g585 g281
+11 1
+
+#g39 = modreg1[4]
+#g280 = Add3~synth
+#g282 = Add3~synth
+.names g39 g280 g282
+01 1
+
+#g39 = modreg1[4]
+#g585 = mcreg[4]
+#g283 = Add3~synth
+.names g39 g585 g283
+01 1
+
+#g281 = Add3~synth
+#g282 = Add3~synth
+#g283 = Add3~synth
+#g284 = Add3~synth
+.names g281 g282 g283 g284
+000 0
+
+#g284 = Add3~synth
+#g591 = mcreg[5]
+#g285 = Add3~synth
+.names g284 g591 g285
+11 1
+
+#g49 = modreg1[5]
+#g284 = Add3~synth
+#g286 = Add3~synth
+.names g49 g284 g286
+01 1
+
+#g49 = modreg1[5]
+#g591 = mcreg[5]
+#g287 = Add3~synth
+.names g49 g591 g287
+01 1
+
+#g285 = Add3~synth
+#g286 = Add3~synth
+#g287 = Add3~synth
+#g288 = Add3~synth
+.names g285 g286 g287 g288
+000 0
+
+#g288 = Add3~synth
+#g597 = mcreg[6]
+#g289 = Add3~synth
+.names g288 g597 g289
+11 1
+
+#g59 = modreg1[6]
+#g288 = Add3~synth
+#g290 = Add3~synth
+.names g59 g288 g290
+01 1
+
+#g59 = modreg1[6]
+#g597 = mcreg[6]
+#g291 = Add3~synth
+.names g59 g597 g291
+01 1
+
+#g289 = Add3~synth
+#g290 = Add3~synth
+#g291 = Add3~synth
+#g292 = Add3~synth
+.names g289 g290 g291 g292
+000 0
+
+#g292 = Add3~synth
+#g603 = mcreg[7]
+#g293 = Add3~synth
+.names g292 g603 g293
+11 1
+
+#g69 = modreg1[7]
+#g292 = Add3~synth
+#g294 = Add3~synth
+.names g69 g292 g294
+01 1
+
+#g69 = modreg1[7]
+#g603 = mcreg[7]
+#g295 = Add3~synth
+.names g69 g603 g295
+01 1
+
+#g293 = Add3~synth
+#g294 = Add3~synth
+#g295 = Add3~synth
+#g296 = Add3~synth
+.names g293 g294 g295 g296
+000 0
+
+#g296 = Add3~synth
+#g609 = mcreg[8]
+#g297 = Add3~synth
+.names g296 g609 g297
+11 1
+
+#g79 = modreg1[8]
+#g296 = Add3~synth
+#g298 = Add3~synth
+.names g79 g296 g298
+01 1
+
+#g79 = modreg1[8]
+#g609 = mcreg[8]
+#g299 = Add3~synth
+.names g79 g609 g299
+01 1
+
+#g297 = Add3~synth
+#g298 = Add3~synth
+#g299 = Add3~synth
+#g300 = Add3~synth
+.names g297 g298 g299 g300
+000 0
+
+#g300 = Add3~synth
+#g615 = mcreg[9]
+#g301 = Add3~synth
+.names g300 g615 g301
+11 1
+
+#g89 = modreg1[9]
+#g300 = Add3~synth
+#g302 = Add3~synth
+.names g89 g300 g302
+01 1
+
+#g89 = modreg1[9]
+#g615 = mcreg[9]
+#g303 = Add3~synth
+.names g89 g615 g303
+01 1
+
+#g301 = Add3~synth
+#g302 = Add3~synth
+#g303 = Add3~synth
+#g304 = Add3~synth
+.names g301 g302 g303 g304
+000 0
+
+#g304 = Add3~synth
+#g621 = mcreg[10]
+#g305 = Add3~synth
+.names g304 g621 g305
+11 1
+
+#g99 = modreg1[10]
+#g304 = Add3~synth
+#g306 = Add3~synth
+.names g99 g304 g306
+01 1
+
+#g99 = modreg1[10]
+#g621 = mcreg[10]
+#g307 = Add3~synth
+.names g99 g621 g307
+01 1
+
+#g305 = Add3~synth
+#g306 = Add3~synth
+#g307 = Add3~synth
+#g308 = Add3~synth
+.names g305 g306 g307 g308
+000 0
+
+#g308 = Add3~synth
+#g627 = mcreg[11]
+#g309 = Add3~synth
+.names g308 g627 g309
+11 1
+
+#g109 = modreg1[11]
+#g308 = Add3~synth
+#g310 = Add3~synth
+.names g109 g308 g310
+01 1
+
+#g109 = modreg1[11]
+#g627 = mcreg[11]
+#g311 = Add3~synth
+.names g109 g627 g311
+01 1
+
+#g309 = Add3~synth
+#g310 = Add3~synth
+#g311 = Add3~synth
+#g312 = Add3~synth
+.names g309 g310 g311 g312
+000 0
+
+#g312 = Add3~synth
+#g633 = mcreg[12]
+#g313 = Add3~synth
+.names g312 g633 g313
+11 1
+
+#g119 = modreg1[12]
+#g312 = Add3~synth
+#g314 = Add3~synth
+.names g119 g312 g314
+01 1
+
+#g119 = modreg1[12]
+#g633 = mcreg[12]
+#g315 = Add3~synth
+.names g119 g633 g315
+01 1
+
+#g313 = Add3~synth
+#g314 = Add3~synth
+#g315 = Add3~synth
+#g316 = Add3~synth
+.names g313 g314 g315 g316
+000 0
+
+#g316 = Add3~synth
+#g639 = mcreg[13]
+#g317 = Add3~synth
+.names g316 g639 g317
+11 1
+
+#g129 = modreg1[13]
+#g316 = Add3~synth
+#g318 = Add3~synth
+.names g129 g316 g318
+01 1
+
+#g129 = modreg1[13]
+#g639 = mcreg[13]
+#g319 = Add3~synth
+.names g129 g639 g319
+01 1
+
+#g317 = Add3~synth
+#g318 = Add3~synth
+#g319 = Add3~synth
+#g320 = Add3~synth
+.names g317 g318 g319 g320
+000 0
+
+#g320 = Add3~synth
+#g645 = mcreg[14]
+#g321 = Add3~synth
+.names g320 g645 g321
+11 1
+
+#g139 = modreg1[14]
+#g320 = Add3~synth
+#g322 = Add3~synth
+.names g139 g320 g322
+01 1
+
+#g139 = modreg1[14]
+#g645 = mcreg[14]
+#g323 = Add3~synth
+.names g139 g645 g323
+01 1
+
+#g321 = Add3~synth
+#g322 = Add3~synth
+#g323 = Add3~synth
+#g324 = Add3~synth
+.names g321 g322 g323 g324
+000 0
+
+#g324 = Add3~synth
+#g651 = mcreg[15]
+#g325 = Add3~synth
+.names g324 g651 g325
+11 1
+
+#g149 = modreg1[15]
+#g324 = Add3~synth
+#g326 = Add3~synth
+.names g149 g324 g326
+01 1
+
+#g149 = modreg1[15]
+#g651 = mcreg[15]
+#g327 = Add3~synth
+.names g149 g651 g327
+01 1
+
+#g325 = Add3~synth
+#g326 = Add3~synth
+#g327 = Add3~synth
+#g328 = Add3~synth
+.names g325 g326 g327 g328
+000 0
+
+#g153 = mcreg[16]
+#g328 = Add3~synth
+#g329 = Add3~synth
+.names g153 g328 g329
+10 1
+01 1
+
+#g9 = modreg1[1]
+#g268 = Add3~synth
+#g567 = mcreg[1]
+#g330 = Add3~synth
+.names g9 g268 g567 g330
+100 1
+010 1
+001 1
+111 1
+
+#g19 = modreg1[2]
+#g272 = Add3~synth
+#g573 = mcreg[2]
+#g331 = Add3~synth
+.names g19 g272 g573 g331
+100 1
+010 1
+001 1
+111 1
+
+#g29 = modreg1[3]
+#g276 = Add3~synth
+#g579 = mcreg[3]
+#g332 = Add3~synth
+.names g29 g276 g579 g332
+100 1
+010 1
+001 1
+111 1
+
+#g39 = modreg1[4]
+#g280 = Add3~synth
+#g585 = mcreg[4]
+#g333 = Add3~synth
+.names g39 g280 g585 g333
+100 1
+010 1
+001 1
+111 1
+
+#g49 = modreg1[5]
+#g284 = Add3~synth
+#g591 = mcreg[5]
+#g334 = Add3~synth
+.names g49 g284 g591 g334
+100 1
+010 1
+001 1
+111 1
+
+#g59 = modreg1[6]
+#g288 = Add3~synth
+#g597 = mcreg[6]
+#g335 = Add3~synth
+.names g59 g288 g597 g335
+100 1
+010 1
+001 1
+111 1
+
+#g69 = modreg1[7]
+#g292 = Add3~synth
+#g603 = mcreg[7]
+#g336 = Add3~synth
+.names g69 g292 g603 g336
+100 1
+010 1
+001 1
+111 1
+
+#g79 = modreg1[8]
+#g296 = Add3~synth
+#g609 = mcreg[8]
+#g337 = Add3~synth
+.names g79 g296 g609 g337
+100 1
+010 1
+001 1
+111 1
+
+#g89 = modreg1[9]
+#g300 = Add3~synth
+#g615 = mcreg[9]
+#g338 = Add3~synth
+.names g89 g300 g615 g338
+100 1
+010 1
+001 1
+111 1
+
+#g99 = modreg1[10]
+#g304 = Add3~synth
+#g621 = mcreg[10]
+#g339 = Add3~synth
+.names g99 g304 g621 g339
+100 1
+010 1
+001 1
+111 1
+
+#g109 = modreg1[11]
+#g308 = Add3~synth
+#g627 = mcreg[11]
+#g340 = Add3~synth
+.names g109 g308 g627 g340
+100 1
+010 1
+001 1
+111 1
+
+#g119 = modreg1[12]
+#g312 = Add3~synth
+#g633 = mcreg[12]
+#g341 = Add3~synth
+.names g119 g312 g633 g341
+100 1
+010 1
+001 1
+111 1
+
+#g129 = modreg1[13]
+#g316 = Add3~synth
+#g639 = mcreg[13]
+#g342 = Add3~synth
+.names g129 g316 g639 g342
+100 1
+010 1
+001 1
+111 1
+
+#g139 = modreg1[14]
+#g320 = Add3~synth
+#g645 = mcreg[14]
+#g343 = Add3~synth
+.names g139 g320 g645 g343
+100 1
+010 1
+001 1
+111 1
+
+#g149 = modreg1[15]
+#g222 = Add2~synth
+#g402 = prodreg1[16]~synth
+#g344 = Add2~synth
+.names g149 g222 g402 g344
+100 1
+010 1
+001 1
+111 1
+
+#g152 = Add1~synth
+#g402 = prodreg1[16]~synth
+#g345 = Add1~synth
+.names g152 g402 g345
+10 1
+01 1
+
+#g501 = prodreg[0]~synth
+#g346 = mcreg[17]~synth
+.names reset g501 g346
+01 1
+
+#g149 = modreg1[15]
+#g324 = Add3~synth
+#g651 = mcreg[15]
+#g347 = Add3~synth
+.names g149 g324 g651 g347
+100 1
+010 1
+001 1
+111 1
+
+#g261 = first
+#g555 = mcreg2[15]~synth
+#g348 = mcreg[16]~synth
+.names g261 g555 g348
+11 1
+
+#g159 = Add1~synth
+#g226 = Add2~synth
+#g405 = prodreg1[17]~synth
+#g349 = Mux0~synth
+.names g159 g226 g405 g349
+111 1
+
+#g153 = mcreg[16]
+#g329 = Add3~synth
+#g350 = mcreg2[16]~synth
+.names g153 g329 g350
+10 1
+
+#g261 = first
+#g351 = mpreg~synth
+.names g261 mplier[15] g351
+01 1
+
+#g3 = Add0~synth
+#g561 = mpreg[0]
+#g352 = prodreg1[0]~synth
+.names g3 g561 g352
+11 1
+
+#g559 = prodreg[0]
+#g561 = mpreg[0]
+#g353 = prodreg1[0]~synth
+.names g559 g561 g353
+10 1
+
+#g352 = prodreg1[0]~synth
+#g353 = prodreg1[0]~synth
+#g354 = prodreg1[0]~synth
+.names g352 g353 g354
+00 0
+
+#g7 = Add0~synth
+#g561 = mpreg[0]
+#g355 = prodreg1[1]~synth
+.names g7 g561 g355
+11 1
+
+#g561 = mpreg[0]
+#g565 = prodreg[1]
+#g356 = prodreg1[1]~synth
+.names g561 g565 g356
+01 1
+
+#g355 = prodreg1[1]~synth
+#g356 = prodreg1[1]~synth
+#g357 = prodreg1[1]~synth
+.names g355 g356 g357
+00 0
+
+#g17 = Add0~synth
+#g561 = mpreg[0]
+#g358 = prodreg1[2]~synth
+.names g17 g561 g358
+11 1
+
+#g561 = mpreg[0]
+#g571 = prodreg[2]
+#g359 = prodreg1[2]~synth
+.names g561 g571 g359
+01 1
+
+#g358 = prodreg1[2]~synth
+#g359 = prodreg1[2]~synth
+#g360 = prodreg1[2]~synth
+.names g358 g359 g360
+00 0
+
+#g27 = Add0~synth
+#g561 = mpreg[0]
+#g361 = prodreg1[3]~synth
+.names g27 g561 g361
+11 1
+
+#g561 = mpreg[0]
+#g577 = prodreg[3]
+#g362 = prodreg1[3]~synth
+.names g561 g577 g362
+01 1
+
+#g361 = prodreg1[3]~synth
+#g362 = prodreg1[3]~synth
+#g363 = prodreg1[3]~synth
+.names g361 g362 g363
+00 0
+
+#g37 = Add0~synth
+#g561 = mpreg[0]
+#g364 = prodreg1[4]~synth
+.names g37 g561 g364
+11 1
+
+#g561 = mpreg[0]
+#g583 = prodreg[4]
+#g365 = prodreg1[4]~synth
+.names g561 g583 g365
+01 1
+
+#g364 = prodreg1[4]~synth
+#g365 = prodreg1[4]~synth
+#g366 = prodreg1[4]~synth
+.names g364 g365 g366
+00 0
+
+#g47 = Add0~synth
+#g561 = mpreg[0]
+#g367 = prodreg1[5]~synth
+.names g47 g561 g367
+11 1
+
+#g561 = mpreg[0]
+#g589 = prodreg[5]
+#g368 = prodreg1[5]~synth
+.names g561 g589 g368
+01 1
+
+#g367 = prodreg1[5]~synth
+#g368 = prodreg1[5]~synth
+#g369 = prodreg1[5]~synth
+.names g367 g368 g369
+00 0
+
+#g57 = Add0~synth
+#g561 = mpreg[0]
+#g370 = prodreg1[6]~synth
+.names g57 g561 g370
+11 1
+
+#g561 = mpreg[0]
+#g595 = prodreg[6]
+#g371 = prodreg1[6]~synth
+.names g561 g595 g371
+01 1
+
+#g370 = prodreg1[6]~synth
+#g371 = prodreg1[6]~synth
+#g372 = prodreg1[6]~synth
+.names g370 g371 g372
+00 0
+
+#g67 = Add0~synth
+#g561 = mpreg[0]
+#g373 = prodreg1[7]~synth
+.names g67 g561 g373
+11 1
+
+#g561 = mpreg[0]
+#g601 = prodreg[7]
+#g374 = prodreg1[7]~synth
+.names g561 g601 g374
+01 1
+
+#g373 = prodreg1[7]~synth
+#g374 = prodreg1[7]~synth
+#g375 = prodreg1[7]~synth
+.names g373 g374 g375
+00 0
+
+#g77 = Add0~synth
+#g561 = mpreg[0]
+#g376 = prodreg1[8]~synth
+.names g77 g561 g376
+11 1
+
+#g561 = mpreg[0]
+#g607 = prodreg[8]
+#g377 = prodreg1[8]~synth
+.names g561 g607 g377
+01 1
+
+#g376 = prodreg1[8]~synth
+#g377 = prodreg1[8]~synth
+#g378 = prodreg1[8]~synth
+.names g376 g377 g378
+00 0
+
+#g87 = Add0~synth
+#g561 = mpreg[0]
+#g379 = prodreg1[9]~synth
+.names g87 g561 g379
+11 1
+
+#g561 = mpreg[0]
+#g613 = prodreg[9]
+#g380 = prodreg1[9]~synth
+.names g561 g613 g380
+01 1
+
+#g379 = prodreg1[9]~synth
+#g380 = prodreg1[9]~synth
+#g381 = prodreg1[9]~synth
+.names g379 g380 g381
+00 0
+
+#g97 = Add0~synth
+#g561 = mpreg[0]
+#g382 = prodreg1[10]~synth
+.names g97 g561 g382
+11 1
+
+#g561 = mpreg[0]
+#g619 = prodreg[10]
+#g383 = prodreg1[10]~synth
+.names g561 g619 g383
+01 1
+
+#g382 = prodreg1[10]~synth
+#g383 = prodreg1[10]~synth
+#g384 = prodreg1[10]~synth
+.names g382 g383 g384
+00 0
+
+#g107 = Add0~synth
+#g561 = mpreg[0]
+#g385 = prodreg1[11]~synth
+.names g107 g561 g385
+11 1
+
+#g561 = mpreg[0]
+#g625 = prodreg[11]
+#g386 = prodreg1[11]~synth
+.names g561 g625 g386
+01 1
+
+#g385 = prodreg1[11]~synth
+#g386 = prodreg1[11]~synth
+#g387 = prodreg1[11]~synth
+.names g385 g386 g387
+00 0
+
+#g117 = Add0~synth
+#g561 = mpreg[0]
+#g388 = prodreg1[12]~synth
+.names g117 g561 g388
+11 1
+
+#g561 = mpreg[0]
+#g631 = prodreg[12]
+#g389 = prodreg1[12]~synth
+.names g561 g631 g389
+01 1
+
+#g388 = prodreg1[12]~synth
+#g389 = prodreg1[12]~synth
+#g390 = prodreg1[12]~synth
+.names g388 g389 g390
+00 0
+
+#g127 = Add0~synth
+#g561 = mpreg[0]
+#g391 = prodreg1[13]~synth
+.names g127 g561 g391
+11 1
+
+#g561 = mpreg[0]
+#g637 = prodreg[13]
+#g392 = prodreg1[13]~synth
+.names g561 g637 g392
+01 1
+
+#g391 = prodreg1[13]~synth
+#g392 = prodreg1[13]~synth
+#g393 = prodreg1[13]~synth
+.names g391 g392 g393
+00 0
+
+#g137 = Add0~synth
+#g561 = mpreg[0]
+#g394 = prodreg1[14]~synth
+.names g137 g561 g394
+11 1
+
+#g561 = mpreg[0]
+#g643 = prodreg[14]
+#g395 = prodreg1[14]~synth
+.names g561 g643 g395
+01 1
+
+#g394 = prodreg1[14]~synth
+#g395 = prodreg1[14]~synth
+#g396 = prodreg1[14]~synth
+.names g394 g395 g396
+00 0
+
+#g147 = Add0~synth
+#g561 = mpreg[0]
+#g397 = prodreg1[15]~synth
+.names g147 g561 g397
+11 1
+
+#g561 = mpreg[0]
+#g649 = prodreg[15]
+#g398 = prodreg1[15]~synth
+.names g561 g649 g398
+01 1
+
+#g397 = prodreg1[15]~synth
+#g398 = prodreg1[15]~synth
+#g399 = prodreg1[15]~synth
+.names g397 g398 g399
+00 0
+
+#g158 = Add0~synth
+#g561 = mpreg[0]
+#g400 = prodreg1[16]~synth
+.names g158 g561 g400
+11 1
+
+#g561 = mpreg[0]
+#g655 = prodreg[16]
+#g401 = prodreg1[16]~synth
+.names g561 g655 g401
+01 1
+
+#g400 = prodreg1[16]~synth
+#g401 = prodreg1[16]~synth
+#g402 = prodreg1[16]~synth
+.names g400 g401 g402
+00 0
+
+#g164 = Add0~synth
+#g561 = mpreg[0]
+#g403 = prodreg1[17]~synth
+.names g164 g561 g403
+11 1
+
+#g561 = mpreg[0]
+#g657 = prodreg[17]
+#g404 = prodreg1[17]~synth
+.names g561 g657 g404
+01 1
+
+#g403 = prodreg1[17]~synth
+#g404 = prodreg1[17]~synth
+#g405 = prodreg1[17]~synth
+.names g403 g404 g405
+00 0
+
+#g228 = Mux17~synth
+#g354 = prodreg1[0]~synth
+#g406 = Mux17~synth
+.names g228 g354 g406
+11 1
+
+#g4 = Add1~synth
+#g228 = Mux17~synth
+#g407 = Mux17~synth
+.names g4 g228 g407
+10 1
+
+#g406 = Mux17~synth
+#g407 = Mux17~synth
+#g408 = Mux17~synth
+.names g406 g407 g408
+00 0
+
+#g231 = Add1~synth
+#g357 = prodreg1[1]~synth
+#g409 = Mux16~synth
+.names g231 g357 g409
+01 1
+
+#g230 = Add1~synth
+#g231 = Add1~synth
+#g410 = Mux16~synth
+.names g230 g231 g410
+01 1
+
+#g409 = Mux16~synth
+#g410 = Mux16~synth
+#g411 = Mux16~synth
+.names g409 g410 g411
+00 0
+
+#g232 = Add2~synth
+#g411 = Mux16~synth
+#g412 = Mux16~synth
+.names g232 g411 g412
+01 1
+
+#g229 = Add2~synth
+#g232 = Add2~synth
+#g413 = Mux16~synth
+.names g229 g232 g413
+11 1
+
+#g412 = Mux16~synth
+#g413 = Mux16~synth
+#g414 = Mux16~synth
+.names g412 g413 g414
+00 0
+
+#g231 = Add1~synth
+#g360 = prodreg1[2]~synth
+#g415 = Mux15~synth
+.names g231 g360 g415
+01 1
+
+#g231 = Add1~synth
+#g234 = Add1~synth
+#g416 = Mux15~synth
+.names g231 g234 g416
+10 1
+
+#g415 = Mux15~synth
+#g416 = Mux15~synth
+#g417 = Mux15~synth
+.names g415 g416 g417
+00 0
+
+#g232 = Add2~synth
+#g417 = Mux15~synth
+#g418 = Mux15~synth
+.names g232 g417 g418
+01 1
+
+#g232 = Add2~synth
+#g233 = Add2~synth
+#g419 = Mux15~synth
+.names g232 g233 g419
+10 1
+
+#g418 = Mux15~synth
+#g419 = Mux15~synth
+#g420 = Mux15~synth
+.names g418 g419 g420
+00 0
+
+#g231 = Add1~synth
+#g363 = prodreg1[3]~synth
+#g421 = Mux14~synth
+.names g231 g363 g421
+01 1
+
+#g231 = Add1~synth
+#g236 = Add1~synth
+#g422 = Mux14~synth
+.names g231 g236 g422
+10 1
+
+#g421 = Mux14~synth
+#g422 = Mux14~synth
+#g423 = Mux14~synth
+.names g421 g422 g423
+00 0
+
+#g232 = Add2~synth
+#g423 = Mux14~synth
+#g424 = Mux14~synth
+.names g232 g423 g424
+01 1
+
+#g232 = Add2~synth
+#g235 = Add2~synth
+#g425 = Mux14~synth
+.names g232 g235 g425
+10 1
+
+#g424 = Mux14~synth
+#g425 = Mux14~synth
+#g426 = Mux14~synth
+.names g424 g425 g426
+00 0
+
+#g231 = Add1~synth
+#g366 = prodreg1[4]~synth
+#g427 = Mux13~synth
+.names g231 g366 g427
+01 1
+
+#g231 = Add1~synth
+#g238 = Add1~synth
+#g428 = Mux13~synth
+.names g231 g238 g428
+10 1
+
+#g427 = Mux13~synth
+#g428 = Mux13~synth
+#g429 = Mux13~synth
+.names g427 g428 g429
+00 0
+
+#g232 = Add2~synth
+#g429 = Mux13~synth
+#g430 = Mux13~synth
+.names g232 g429 g430
+01 1
+
+#g232 = Add2~synth
+#g237 = Add2~synth
+#g431 = Mux13~synth
+.names g232 g237 g431
+10 1
+
+#g430 = Mux13~synth
+#g431 = Mux13~synth
+#g432 = Mux13~synth
+.names g430 g431 g432
+00 0
+
+#g231 = Add1~synth
+#g369 = prodreg1[5]~synth
+#g433 = Mux12~synth
+.names g231 g369 g433
+01 1
+
+#g231 = Add1~synth
+#g240 = Add1~synth
+#g434 = Mux12~synth
+.names g231 g240 g434
+10 1
+
+#g433 = Mux12~synth
+#g434 = Mux12~synth
+#g435 = Mux12~synth
+.names g433 g434 g435
+00 0
+
+#g232 = Add2~synth
+#g435 = Mux12~synth
+#g436 = Mux12~synth
+.names g232 g435 g436
+01 1
+
+#g232 = Add2~synth
+#g239 = Add2~synth
+#g437 = Mux12~synth
+.names g232 g239 g437
+10 1
+
+#g436 = Mux12~synth
+#g437 = Mux12~synth
+#g438 = Mux12~synth
+.names g436 g437 g438
+00 0
+
+#g231 = Add1~synth
+#g372 = prodreg1[6]~synth
+#g439 = Mux11~synth
+.names g231 g372 g439
+01 1
+
+#g231 = Add1~synth
+#g242 = Add1~synth
+#g440 = Mux11~synth
+.names g231 g242 g440
+10 1
+
+#g439 = Mux11~synth
+#g440 = Mux11~synth
+#g441 = Mux11~synth
+.names g439 g440 g441
+00 0
+
+#g232 = Add2~synth
+#g441 = Mux11~synth
+#g442 = Mux11~synth
+.names g232 g441 g442
+01 1
+
+#g232 = Add2~synth
+#g241 = Add2~synth
+#g443 = Mux11~synth
+.names g232 g241 g443
+10 1
+
+#g442 = Mux11~synth
+#g443 = Mux11~synth
+#g444 = Mux11~synth
+.names g442 g443 g444
+00 0
+
+#g231 = Add1~synth
+#g375 = prodreg1[7]~synth
+#g445 = Mux10~synth
+.names g231 g375 g445
+01 1
+
+#g231 = Add1~synth
+#g244 = Add1~synth
+#g446 = Mux10~synth
+.names g231 g244 g446
+10 1
+
+#g445 = Mux10~synth
+#g446 = Mux10~synth
+#g447 = Mux10~synth
+.names g445 g446 g447
+00 0
+
+#g232 = Add2~synth
+#g447 = Mux10~synth
+#g448 = Mux10~synth
+.names g232 g447 g448
+01 1
+
+#g232 = Add2~synth
+#g243 = Add2~synth
+#g449 = Mux10~synth
+.names g232 g243 g449
+10 1
+
+#g448 = Mux10~synth
+#g449 = Mux10~synth
+#g450 = Mux10~synth
+.names g448 g449 g450
+00 0
+
+#g231 = Add1~synth
+#g378 = prodreg1[8]~synth
+#g451 = Mux9~synth
+.names g231 g378 g451
+01 1
+
+#g231 = Add1~synth
+#g246 = Add1~synth
+#g452 = Mux9~synth
+.names g231 g246 g452
+10 1
+
+#g451 = Mux9~synth
+#g452 = Mux9~synth
+#g453 = Mux9~synth
+.names g451 g452 g453
+00 0
+
+#g232 = Add2~synth
+#g453 = Mux9~synth
+#g454 = Mux9~synth
+.names g232 g453 g454
+01 1
+
+#g232 = Add2~synth
+#g245 = Add2~synth
+#g455 = Mux9~synth
+.names g232 g245 g455
+10 1
+
+#g454 = Mux9~synth
+#g455 = Mux9~synth
+#g456 = Mux9~synth
+.names g454 g455 g456
+00 0
+
+#g231 = Add1~synth
+#g381 = prodreg1[9]~synth
+#g457 = Mux8~synth
+.names g231 g381 g457
+01 1
+
+#g231 = Add1~synth
+#g248 = Add1~synth
+#g458 = Mux8~synth
+.names g231 g248 g458
+10 1
+
+#g457 = Mux8~synth
+#g458 = Mux8~synth
+#g459 = Mux8~synth
+.names g457 g458 g459
+00 0
+
+#g232 = Add2~synth
+#g459 = Mux8~synth
+#g460 = Mux8~synth
+.names g232 g459 g460
+01 1
+
+#g232 = Add2~synth
+#g247 = Add2~synth
+#g461 = Mux8~synth
+.names g232 g247 g461
+10 1
+
+#g460 = Mux8~synth
+#g461 = Mux8~synth
+#g462 = Mux8~synth
+.names g460 g461 g462
+00 0
+
+#g231 = Add1~synth
+#g384 = prodreg1[10]~synth
+#g463 = Mux7~synth
+.names g231 g384 g463
+01 1
+
+#g231 = Add1~synth
+#g250 = Add1~synth
+#g464 = Mux7~synth
+.names g231 g250 g464
+10 1
+
+#g463 = Mux7~synth
+#g464 = Mux7~synth
+#g465 = Mux7~synth
+.names g463 g464 g465
+00 0
+
+#g232 = Add2~synth
+#g465 = Mux7~synth
+#g466 = Mux7~synth
+.names g232 g465 g466
+01 1
+
+#g232 = Add2~synth
+#g249 = Add2~synth
+#g467 = Mux7~synth
+.names g232 g249 g467
+10 1
+
+#g466 = Mux7~synth
+#g467 = Mux7~synth
+#g468 = Mux7~synth
+.names g466 g467 g468
+00 0
+
+#g231 = Add1~synth
+#g387 = prodreg1[11]~synth
+#g469 = Mux6~synth
+.names g231 g387 g469
+01 1
+
+#g231 = Add1~synth
+#g252 = Add1~synth
+#g470 = Mux6~synth
+.names g231 g252 g470
+10 1
+
+#g469 = Mux6~synth
+#g470 = Mux6~synth
+#g471 = Mux6~synth
+.names g469 g470 g471
+00 0
+
+#g232 = Add2~synth
+#g471 = Mux6~synth
+#g472 = Mux6~synth
+.names g232 g471 g472
+01 1
+
+#g232 = Add2~synth
+#g251 = Add2~synth
+#g473 = Mux6~synth
+.names g232 g251 g473
+10 1
+
+#g472 = Mux6~synth
+#g473 = Mux6~synth
+#g474 = Mux6~synth
+.names g472 g473 g474
+00 0
+
+#g231 = Add1~synth
+#g390 = prodreg1[12]~synth
+#g475 = Mux5~synth
+.names g231 g390 g475
+01 1
+
+#g231 = Add1~synth
+#g254 = Add1~synth
+#g476 = Mux5~synth
+.names g231 g254 g476
+10 1
+
+#g475 = Mux5~synth
+#g476 = Mux5~synth
+#g477 = Mux5~synth
+.names g475 g476 g477
+00 0
+
+#g232 = Add2~synth
+#g477 = Mux5~synth
+#g478 = Mux5~synth
+.names g232 g477 g478
+01 1
+
+#g232 = Add2~synth
+#g253 = Add2~synth
+#g479 = Mux5~synth
+.names g232 g253 g479
+10 1
+
+#g478 = Mux5~synth
+#g479 = Mux5~synth
+#g480 = Mux5~synth
+.names g478 g479 g480
+00 0
+
+#g231 = Add1~synth
+#g393 = prodreg1[13]~synth
+#g481 = Mux4~synth
+.names g231 g393 g481
+01 1
+
+#g231 = Add1~synth
+#g256 = Add1~synth
+#g482 = Mux4~synth
+.names g231 g256 g482
+10 1
+
+#g481 = Mux4~synth
+#g482 = Mux4~synth
+#g483 = Mux4~synth
+.names g481 g482 g483
+00 0
+
+#g232 = Add2~synth
+#g483 = Mux4~synth
+#g484 = Mux4~synth
+.names g232 g483 g484
+01 1
+
+#g232 = Add2~synth
+#g255 = Add2~synth
+#g485 = Mux4~synth
+.names g232 g255 g485
+10 1
+
+#g484 = Mux4~synth
+#g485 = Mux4~synth
+#g486 = Mux4~synth
+.names g484 g485 g486
+00 0
+
+#g231 = Add1~synth
+#g396 = prodreg1[14]~synth
+#g487 = Mux3~synth
+.names g231 g396 g487
+01 1
+
+#g231 = Add1~synth
+#g258 = Add1~synth
+#g488 = Mux3~synth
+.names g231 g258 g488
+10 1
+
+#g487 = Mux3~synth
+#g488 = Mux3~synth
+#g489 = Mux3~synth
+.names g487 g488 g489
+00 0
+
+#g232 = Add2~synth
+#g489 = Mux3~synth
+#g490 = Mux3~synth
+.names g232 g489 g490
+01 1
+
+#g232 = Add2~synth
+#g257 = Add2~synth
+#g491 = Mux3~synth
+.names g232 g257 g491
+10 1
+
+#g490 = Mux3~synth
+#g491 = Mux3~synth
+#g492 = Mux3~synth
+.names g490 g491 g492
+00 0
+
+#g231 = Add1~synth
+#g399 = prodreg1[15]~synth
+#g493 = Mux2~synth
+.names g231 g399 g493
+01 1
+
+#g231 = Add1~synth
+#g260 = Add1~synth
+#g494 = Mux2~synth
+.names g231 g260 g494
+10 1
+
+#g493 = Mux2~synth
+#g494 = Mux2~synth
+#g495 = Mux2~synth
+.names g493 g494 g495
+00 0
+
+#g232 = Add2~synth
+#g495 = Mux2~synth
+#g496 = Mux2~synth
+.names g232 g495 g496
+01 1
+
+#g232 = Add2~synth
+#g259 = Add2~synth
+#g497 = Mux2~synth
+.names g232 g259 g497
+10 1
+
+#g496 = Mux2~synth
+#g497 = Mux2~synth
+#g498 = Mux2~synth
+.names g496 g497 g498
+00 0
+
+#g261 = first
+#g264 = Equal0~synth
+#g499 = prodreg[0]~synth
+.names g261 g264 g499
+11 1
+
+#g261 = first
+#g500 = prodreg[0]~synth
+.names g261 ds g500
+01 1
+
+#g499 = prodreg[0]~synth
+#g500 = prodreg[0]~synth
+#g501 = prodreg[0]~synth
+.names g499 g500 g501
+00 0
+
+#g267 = Add3~synth
+#g329 = Add3~synth
+#g502 = mcreg~synth
+.names g267 g329 g502
+11 1
+
+#g2 = mcreg[0]
+#g329 = Add3~synth
+#g503 = mcreg~synth
+.names g2 g329 g503
+10 1
+
+#g502 = mcreg~synth
+#g503 = mcreg~synth
+#g504 = mcreg~synth
+.names g502 g503 g504
+00 0
+
+#g329 = Add3~synth
+#g330 = Add3~synth
+#g505 = mcreg~synth
+.names g329 g330 g505
+10 1
+
+#g329 = Add3~synth
+#g567 = mcreg[1]
+#g506 = mcreg~synth
+.names g329 g567 g506
+01 1
+
+#g505 = mcreg~synth
+#g506 = mcreg~synth
+#g507 = mcreg~synth
+.names g505 g506 g507
+00 0
+
+#g329 = Add3~synth
+#g331 = Add3~synth
+#g508 = mcreg~synth
+.names g329 g331 g508
+10 1
+
+#g329 = Add3~synth
+#g573 = mcreg[2]
+#g509 = mcreg~synth
+.names g329 g573 g509
+01 1
+
+#g508 = mcreg~synth
+#g509 = mcreg~synth
+#g510 = mcreg~synth
+.names g508 g509 g510
+00 0
+
+#g329 = Add3~synth
+#g332 = Add3~synth
+#g511 = mcreg~synth
+.names g329 g332 g511
+10 1
+
+#g329 = Add3~synth
+#g579 = mcreg[3]
+#g512 = mcreg~synth
+.names g329 g579 g512
+01 1
+
+#g511 = mcreg~synth
+#g512 = mcreg~synth
+#g513 = mcreg~synth
+.names g511 g512 g513
+00 0
+
+#g329 = Add3~synth
+#g333 = Add3~synth
+#g514 = mcreg~synth
+.names g329 g333 g514
+10 1
+
+#g329 = Add3~synth
+#g585 = mcreg[4]
+#g515 = mcreg~synth
+.names g329 g585 g515
+01 1
+
+#g514 = mcreg~synth
+#g515 = mcreg~synth
+#g516 = mcreg~synth
+.names g514 g515 g516
+00 0
+
+#g329 = Add3~synth
+#g334 = Add3~synth
+#g517 = mcreg~synth
+.names g329 g334 g517
+10 1
+
+#g329 = Add3~synth
+#g591 = mcreg[5]
+#g518 = mcreg~synth
+.names g329 g591 g518
+01 1
+
+#g517 = mcreg~synth
+#g518 = mcreg~synth
+#g519 = mcreg~synth
+.names g517 g518 g519
+00 0
+
+#g329 = Add3~synth
+#g335 = Add3~synth
+#g520 = mcreg~synth
+.names g329 g335 g520
+10 1
+
+#g329 = Add3~synth
+#g597 = mcreg[6]
+#g521 = mcreg~synth
+.names g329 g597 g521
+01 1
+
+#g520 = mcreg~synth
+#g521 = mcreg~synth
+#g522 = mcreg~synth
+.names g520 g521 g522
+00 0
+
+#g329 = Add3~synth
+#g336 = Add3~synth
+#g523 = mcreg~synth
+.names g329 g336 g523
+10 1
+
+#g329 = Add3~synth
+#g603 = mcreg[7]
+#g524 = mcreg~synth
+.names g329 g603 g524
+01 1
+
+#g523 = mcreg~synth
+#g524 = mcreg~synth
+#g525 = mcreg~synth
+.names g523 g524 g525
+00 0
+
+#g329 = Add3~synth
+#g337 = Add3~synth
+#g526 = mcreg~synth
+.names g329 g337 g526
+10 1
+
+#g329 = Add3~synth
+#g609 = mcreg[8]
+#g527 = mcreg~synth
+.names g329 g609 g527
+01 1
+
+#g526 = mcreg~synth
+#g527 = mcreg~synth
+#g528 = mcreg~synth
+.names g526 g527 g528
+00 0
+
+#g329 = Add3~synth
+#g338 = Add3~synth
+#g529 = mcreg~synth
+.names g329 g338 g529
+10 1
+
+#g329 = Add3~synth
+#g615 = mcreg[9]
+#g530 = mcreg~synth
+.names g329 g615 g530
+01 1
+
+#g529 = mcreg~synth
+#g530 = mcreg~synth
+#g531 = mcreg~synth
+.names g529 g530 g531
+00 0
+
+#g329 = Add3~synth
+#g339 = Add3~synth
+#g532 = mcreg~synth
+.names g329 g339 g532
+10 1
+
+#g329 = Add3~synth
+#g621 = mcreg[10]
+#g533 = mcreg~synth
+.names g329 g621 g533
+01 1
+
+#g532 = mcreg~synth
+#g533 = mcreg~synth
+#g534 = mcreg~synth
+.names g532 g533 g534
+00 0
+
+#g329 = Add3~synth
+#g340 = Add3~synth
+#g535 = mcreg~synth
+.names g329 g340 g535
+10 1
+
+#g329 = Add3~synth
+#g627 = mcreg[11]
+#g536 = mcreg~synth
+.names g329 g627 g536
+01 1
+
+#g535 = mcreg~synth
+#g536 = mcreg~synth
+#g537 = mcreg~synth
+.names g535 g536 g537
+00 0
+
+#g329 = Add3~synth
+#g341 = Add3~synth
+#g538 = mcreg~synth
+.names g329 g341 g538
+10 1
+
+#g329 = Add3~synth
+#g633 = mcreg[12]
+#g539 = mcreg~synth
+.names g329 g633 g539
+01 1
+
+#g538 = mcreg~synth
+#g539 = mcreg~synth
+#g540 = mcreg~synth
+.names g538 g539 g540
+00 0
+
+#g329 = Add3~synth
+#g342 = Add3~synth
+#g541 = mcreg~synth
+.names g329 g342 g541
+10 1
+
+#g329 = Add3~synth
+#g639 = mcreg[13]
+#g542 = mcreg~synth
+.names g329 g639 g542
+01 1
+
+#g541 = mcreg~synth
+#g542 = mcreg~synth
+#g543 = mcreg~synth
+.names g541 g542 g543
+00 0
+
+#g329 = Add3~synth
+#g343 = Add3~synth
+#g544 = mcreg~synth
+.names g329 g343 g544
+10 1
+
+#g329 = Add3~synth
+#g645 = mcreg[14]
+#g545 = mcreg~synth
+.names g329 g645 g545
+01 1
+
+#g544 = mcreg~synth
+#g545 = mcreg~synth
+#g546 = mcreg~synth
+.names g544 g545 g546
+00 0
+
+#g231 = Add1~synth
+#g402 = prodreg1[16]~synth
+#g547 = Mux1~synth
+.names g231 g402 g547
+01 1
+
+#g231 = Add1~synth
+#g345 = Add1~synth
+#g548 = Mux1~synth
+.names g231 g345 g548
+10 1
+
+#g547 = Mux1~synth
+#g548 = Mux1~synth
+#g549 = Mux1~synth
+.names g547 g548 g549
+00 0
+
+#g232 = Add2~synth
+#g549 = Mux1~synth
+#g550 = Mux1~synth
+.names g232 g549 g550
+01 1
+
+#g232 = Add2~synth
+#g344 = Add2~synth
+#g551 = Mux1~synth
+.names g232 g344 g551
+10 1
+
+#g550 = Mux1~synth
+#g551 = Mux1~synth
+#g552 = Mux1~synth
+.names g550 g551 g552
+00 0
+
+#g329 = Add3~synth
+#g347 = Add3~synth
+#g553 = mcreg2[15]~synth
+.names g329 g347 g553
+10 1
+
+#g329 = Add3~synth
+#g651 = mcreg[15]
+#g554 = mcreg2[15]~synth
+.names g329 g651 g554
+01 1
+
+#g553 = mcreg2[15]~synth
+#g554 = mcreg2[15]~synth
+#g555 = mcreg2[15]~synth
+.names g553 g554 g555
+00 0
+
+#g346 = mcreg[17]~synth
+#g348 = mcreg[16]~synth
+#g556 = mcreg[16]~synth
+.names g346 g348 g556
+11 1
+
+#g153 = mcreg[16]
+#g346 = mcreg[17]~synth
+#g557 = mcreg[16]~synth
+.names g153 g346 g557
+10 1
+
+#g556 = mcreg[16]~synth
+#g557 = mcreg[16]~synth
+#g558 = mcreg[16]~synth
+.names g556 g557 g558
+00 0
+
+#g265 = prodreg[0]~synth
+#g559 = prodreg[0]
+.names g265 g560 g559 g735
+1-1 1
+01- 1
+
+#g559 = prodreg[0]
+.latch g735 g559 re clk 2
+
+#g261 = first
+#g408 = Mux17~synth
+#g560 = prodreg[0]~1
+.names g261 g408 g560
+11 1
+
+#g265 = prodreg[0]~synth
+#g561 = mpreg[0]
+.names g265 g562 g561 g736
+1-1 1
+01- 1
+
+#g561 = mpreg[0]
+.latch g736 g561 re clk 2
+
+#g563 = mpreg[0]~synth
+#g564 = mpreg[0]~synth
+#g562 = mpreg[0]~synth
+.names g563 g564 g562
+00 0
+
+#g261 = first
+#g563 = mpreg[0]~synth
+.names g261 mplier[0] g563
+01 1
+
+#g261 = first
+#g713 = mpreg[1]
+#g564 = mpreg[0]~synth
+.names g261 g713 g564
+11 1
+
+#g265 = prodreg[0]~synth
+#g565 = prodreg[1]
+.names g265 g566 g565 g737
+1-1 1
+01- 1
+
+#g565 = prodreg[1]
+.latch g737 g565 re clk 2
+
+#g261 = first
+#g414 = Mux16~synth
+#g566 = prodreg[1]~3
+.names g261 g414 g566
+11 1
+
+#g265 = prodreg[0]~synth
+#g567 = mcreg[1]
+.names g265 g568 g567 g738
+1-1 1
+01- 1
+
+#g567 = mcreg[1]
+.latch g738 g567 re clk 2
+
+#g569 = mcreg[1]~synth
+#g570 = mcreg[1]~synth
+#g568 = mcreg[1]~synth
+.names g569 g570 g568
+00 0
+
+#g261 = first
+#g504 = mcreg~synth
+#g569 = mcreg[1]~synth
+.names g261 g504 g569
+11 1
+
+#g261 = first
+#g570 = mcreg[1]~synth
+.names g261 mpand[1] g570
+01 1
+
+#g265 = prodreg[0]~synth
+#g571 = prodreg[2]
+.names g265 g572 g571 g739
+1-1 1
+01- 1
+
+#g571 = prodreg[2]
+.latch g739 g571 re clk 2
+
+#g261 = first
+#g420 = Mux15~synth
+#g572 = prodreg[2]~5
+.names g261 g420 g572
+11 1
+
+#g265 = prodreg[0]~synth
+#g573 = mcreg[2]
+.names g265 g574 g573 g740
+1-1 1
+01- 1
+
+#g573 = mcreg[2]
+.latch g740 g573 re clk 2
+
+#g575 = mcreg[2]~synth
+#g576 = mcreg[2]~synth
+#g574 = mcreg[2]~synth
+.names g575 g576 g574
+00 0
+
+#g261 = first
+#g507 = mcreg~synth
+#g575 = mcreg[2]~synth
+.names g261 g507 g575
+11 1
+
+#g261 = first
+#g576 = mcreg[2]~synth
+.names g261 mpand[2] g576
+01 1
+
+#g265 = prodreg[0]~synth
+#g577 = prodreg[3]
+.names g265 g578 g577 g741
+1-1 1
+01- 1
+
+#g577 = prodreg[3]
+.latch g741 g577 re clk 2
+
+#g261 = first
+#g426 = Mux14~synth
+#g578 = prodreg[3]~7
+.names g261 g426 g578
+11 1
+
+#g265 = prodreg[0]~synth
+#g579 = mcreg[3]
+.names g265 g580 g579 g742
+1-1 1
+01- 1
+
+#g579 = mcreg[3]
+.latch g742 g579 re clk 2
+
+#g581 = mcreg[3]~synth
+#g582 = mcreg[3]~synth
+#g580 = mcreg[3]~synth
+.names g581 g582 g580
+00 0
+
+#g261 = first
+#g510 = mcreg~synth
+#g581 = mcreg[3]~synth
+.names g261 g510 g581
+11 1
+
+#g261 = first
+#g582 = mcreg[3]~synth
+.names g261 mpand[3] g582
+01 1
+
+#g265 = prodreg[0]~synth
+#g583 = prodreg[4]
+.names g265 g584 g583 g743
+1-1 1
+01- 1
+
+#g583 = prodreg[4]
+.latch g743 g583 re clk 2
+
+#g261 = first
+#g432 = Mux13~synth
+#g584 = prodreg[4]~9
+.names g261 g432 g584
+11 1
+
+#g265 = prodreg[0]~synth
+#g585 = mcreg[4]
+.names g265 g586 g585 g744
+1-1 1
+01- 1
+
+#g585 = mcreg[4]
+.latch g744 g585 re clk 2
+
+#g587 = mcreg[4]~synth
+#g588 = mcreg[4]~synth
+#g586 = mcreg[4]~synth
+.names g587 g588 g586
+00 0
+
+#g261 = first
+#g513 = mcreg~synth
+#g587 = mcreg[4]~synth
+.names g261 g513 g587
+11 1
+
+#g261 = first
+#g588 = mcreg[4]~synth
+.names g261 mpand[4] g588
+01 1
+
+#g265 = prodreg[0]~synth
+#g589 = prodreg[5]
+.names g265 g590 g589 g745
+1-1 1
+01- 1
+
+#g589 = prodreg[5]
+.latch g745 g589 re clk 2
+
+#g261 = first
+#g438 = Mux12~synth
+#g590 = prodreg[5]~11
+.names g261 g438 g590
+11 1
+
+#g265 = prodreg[0]~synth
+#g591 = mcreg[5]
+.names g265 g592 g591 g746
+1-1 1
+01- 1
+
+#g591 = mcreg[5]
+.latch g746 g591 re clk 2
+
+#g593 = mcreg[5]~synth
+#g594 = mcreg[5]~synth
+#g592 = mcreg[5]~synth
+.names g593 g594 g592
+00 0
+
+#g261 = first
+#g516 = mcreg~synth
+#g593 = mcreg[5]~synth
+.names g261 g516 g593
+11 1
+
+#g261 = first
+#g594 = mcreg[5]~synth
+.names g261 mpand[5] g594
+01 1
+
+#g265 = prodreg[0]~synth
+#g595 = prodreg[6]
+.names g265 g596 g595 g747
+1-1 1
+01- 1
+
+#g595 = prodreg[6]
+.latch g747 g595 re clk 2
+
+#g261 = first
+#g444 = Mux11~synth
+#g596 = prodreg[6]~13
+.names g261 g444 g596
+11 1
+
+#g265 = prodreg[0]~synth
+#g597 = mcreg[6]
+.names g265 g598 g597 g748
+1-1 1
+01- 1
+
+#g597 = mcreg[6]
+.latch g748 g597 re clk 2
+
+#g599 = mcreg[6]~synth
+#g600 = mcreg[6]~synth
+#g598 = mcreg[6]~synth
+.names g599 g600 g598
+00 0
+
+#g261 = first
+#g519 = mcreg~synth
+#g599 = mcreg[6]~synth
+.names g261 g519 g599
+11 1
+
+#g261 = first
+#g600 = mcreg[6]~synth
+.names g261 mpand[6] g600
+01 1
+
+#g265 = prodreg[0]~synth
+#g601 = prodreg[7]
+.names g265 g602 g601 g749
+1-1 1
+01- 1
+
+#g601 = prodreg[7]
+.latch g749 g601 re clk 2
+
+#g261 = first
+#g450 = Mux10~synth
+#g602 = prodreg[7]~15
+.names g261 g450 g602
+11 1
+
+#g265 = prodreg[0]~synth
+#g603 = mcreg[7]
+.names g265 g604 g603 g750
+1-1 1
+01- 1
+
+#g603 = mcreg[7]
+.latch g750 g603 re clk 2
+
+#g605 = mcreg[7]~synth
+#g606 = mcreg[7]~synth
+#g604 = mcreg[7]~synth
+.names g605 g606 g604
+00 0
+
+#g261 = first
+#g522 = mcreg~synth
+#g605 = mcreg[7]~synth
+.names g261 g522 g605
+11 1
+
+#g261 = first
+#g606 = mcreg[7]~synth
+.names g261 mpand[7] g606
+01 1
+
+#g265 = prodreg[0]~synth
+#g607 = prodreg[8]
+.names g265 g608 g607 g751
+1-1 1
+01- 1
+
+#g607 = prodreg[8]
+.latch g751 g607 re clk 2
+
+#g261 = first
+#g456 = Mux9~synth
+#g608 = prodreg[8]~17
+.names g261 g456 g608
+11 1
+
+#g265 = prodreg[0]~synth
+#g609 = mcreg[8]
+.names g265 g610 g609 g752
+1-1 1
+01- 1
+
+#g609 = mcreg[8]
+.latch g752 g609 re clk 2
+
+#g611 = mcreg[8]~synth
+#g612 = mcreg[8]~synth
+#g610 = mcreg[8]~synth
+.names g611 g612 g610
+00 0
+
+#g261 = first
+#g525 = mcreg~synth
+#g611 = mcreg[8]~synth
+.names g261 g525 g611
+11 1
+
+#g261 = first
+#g612 = mcreg[8]~synth
+.names g261 mpand[8] g612
+01 1
+
+#g265 = prodreg[0]~synth
+#g613 = prodreg[9]
+.names g265 g614 g613 g753
+1-1 1
+01- 1
+
+#g613 = prodreg[9]
+.latch g753 g613 re clk 2
+
+#g261 = first
+#g462 = Mux8~synth
+#g614 = prodreg[9]~19
+.names g261 g462 g614
+11 1
+
+#g265 = prodreg[0]~synth
+#g615 = mcreg[9]
+.names g265 g616 g615 g754
+1-1 1
+01- 1
+
+#g615 = mcreg[9]
+.latch g754 g615 re clk 2
+
+#g617 = mcreg[9]~synth
+#g618 = mcreg[9]~synth
+#g616 = mcreg[9]~synth
+.names g617 g618 g616
+00 0
+
+#g261 = first
+#g528 = mcreg~synth
+#g617 = mcreg[9]~synth
+.names g261 g528 g617
+11 1
+
+#g261 = first
+#g618 = mcreg[9]~synth
+.names g261 mpand[9] g618
+01 1
+
+#g265 = prodreg[0]~synth
+#g619 = prodreg[10]
+.names g265 g620 g619 g755
+1-1 1
+01- 1
+
+#g619 = prodreg[10]
+.latch g755 g619 re clk 2
+
+#g261 = first
+#g468 = Mux7~synth
+#g620 = prodreg[10]~21
+.names g261 g468 g620
+11 1
+
+#g265 = prodreg[0]~synth
+#g621 = mcreg[10]
+.names g265 g622 g621 g756
+1-1 1
+01- 1
+
+#g621 = mcreg[10]
+.latch g756 g621 re clk 2
+
+#g623 = mcreg[10]~synth
+#g624 = mcreg[10]~synth
+#g622 = mcreg[10]~synth
+.names g623 g624 g622
+00 0
+
+#g261 = first
+#g531 = mcreg~synth
+#g623 = mcreg[10]~synth
+.names g261 g531 g623
+11 1
+
+#g261 = first
+#g624 = mcreg[10]~synth
+.names g261 mpand[10] g624
+01 1
+
+#g265 = prodreg[0]~synth
+#g625 = prodreg[11]
+.names g265 g626 g625 g757
+1-1 1
+01- 1
+
+#g625 = prodreg[11]
+.latch g757 g625 re clk 2
+
+#g261 = first
+#g474 = Mux6~synth
+#g626 = prodreg[11]~23
+.names g261 g474 g626
+11 1
+
+#g265 = prodreg[0]~synth
+#g627 = mcreg[11]
+.names g265 g628 g627 g758
+1-1 1
+01- 1
+
+#g627 = mcreg[11]
+.latch g758 g627 re clk 2
+
+#g629 = mcreg[11]~synth
+#g630 = mcreg[11]~synth
+#g628 = mcreg[11]~synth
+.names g629 g630 g628
+00 0
+
+#g261 = first
+#g534 = mcreg~synth
+#g629 = mcreg[11]~synth
+.names g261 g534 g629
+11 1
+
+#g261 = first
+#g630 = mcreg[11]~synth
+.names g261 mpand[11] g630
+01 1
+
+#g265 = prodreg[0]~synth
+#g631 = prodreg[12]
+.names g265 g632 g631 g759
+1-1 1
+01- 1
+
+#g631 = prodreg[12]
+.latch g759 g631 re clk 2
+
+#g261 = first
+#g480 = Mux5~synth
+#g632 = prodreg[12]~25
+.names g261 g480 g632
+11 1
+
+#g265 = prodreg[0]~synth
+#g633 = mcreg[12]
+.names g265 g634 g633 g760
+1-1 1
+01- 1
+
+#g633 = mcreg[12]
+.latch g760 g633 re clk 2
+
+#g635 = mcreg[12]~synth
+#g636 = mcreg[12]~synth
+#g634 = mcreg[12]~synth
+.names g635 g636 g634
+00 0
+
+#g261 = first
+#g537 = mcreg~synth
+#g635 = mcreg[12]~synth
+.names g261 g537 g635
+11 1
+
+#g261 = first
+#g636 = mcreg[12]~synth
+.names g261 mpand[12] g636
+01 1
+
+#g265 = prodreg[0]~synth
+#g637 = prodreg[13]
+.names g265 g638 g637 g761
+1-1 1
+01- 1
+
+#g637 = prodreg[13]
+.latch g761 g637 re clk 2
+
+#g261 = first
+#g486 = Mux4~synth
+#g638 = prodreg[13]~27
+.names g261 g486 g638
+11 1
+
+#g265 = prodreg[0]~synth
+#g639 = mcreg[13]
+.names g265 g640 g639 g762
+1-1 1
+01- 1
+
+#g639 = mcreg[13]
+.latch g762 g639 re clk 2
+
+#g641 = mcreg[13]~synth
+#g642 = mcreg[13]~synth
+#g640 = mcreg[13]~synth
+.names g641 g642 g640
+00 0
+
+#g261 = first
+#g540 = mcreg~synth
+#g641 = mcreg[13]~synth
+.names g261 g540 g641
+11 1
+
+#g261 = first
+#g642 = mcreg[13]~synth
+.names g261 mpand[13] g642
+01 1
+
+#g265 = prodreg[0]~synth
+#g643 = prodreg[14]
+.names g265 g644 g643 g763
+1-1 1
+01- 1
+
+#g643 = prodreg[14]
+.latch g763 g643 re clk 2
+
+#g261 = first
+#g492 = Mux3~synth
+#g644 = prodreg[14]~29
+.names g261 g492 g644
+11 1
+
+#g265 = prodreg[0]~synth
+#g645 = mcreg[14]
+.names g265 g646 g645 g764
+1-1 1
+01- 1
+
+#g645 = mcreg[14]
+.latch g764 g645 re clk 2
+
+#g647 = mcreg[14]~synth
+#g648 = mcreg[14]~synth
+#g646 = mcreg[14]~synth
+.names g647 g648 g646
+00 0
+
+#g261 = first
+#g543 = mcreg~synth
+#g647 = mcreg[14]~synth
+.names g261 g543 g647
+11 1
+
+#g261 = first
+#g648 = mcreg[14]~synth
+.names g261 mpand[14] g648
+01 1
+
+#g265 = prodreg[0]~synth
+#g649 = prodreg[15]
+.names g265 g650 g649 g765
+1-1 1
+01- 1
+
+#g649 = prodreg[15]
+.latch g765 g649 re clk 2
+
+#g261 = first
+#g498 = Mux2~synth
+#g650 = prodreg[15]~31
+.names g261 g498 g650
+11 1
+
+#g265 = prodreg[0]~synth
+#g651 = mcreg[15]
+.names g265 g652 g651 g766
+1-1 1
+01- 1
+
+#g651 = mcreg[15]
+.latch g766 g651 re clk 2
+
+#g653 = mcreg[15]~synth
+#g654 = mcreg[15]~synth
+#g652 = mcreg[15]~synth
+.names g653 g654 g652
+00 0
+
+#g261 = first
+#g546 = mcreg~synth
+#g653 = mcreg[15]~synth
+.names g261 g546 g653
+11 1
+
+#g261 = first
+#g654 = mcreg[15]~synth
+.names g261 mpand[15] g654
+01 1
+
+#g346 = mcreg[17]~synth
+#g655 = prodreg[16]
+.names g346 g656 g655 g767
+0-1 1
+11- 1
+
+#g655 = prodreg[16]
+.latch g767 g655 re clk 2
+
+#g261 = first
+#g552 = Mux1~synth
+#g656 = prodreg[16]~33
+.names g261 g552 g656
+11 1
+
+#g346 = mcreg[17]~synth
+#g657 = prodreg[17]
+.names g346 g658 g657 g768
+0-1 1
+11- 1
+
+#g657 = prodreg[17]
+.latch g768 g657 re clk 2
+
+#g261 = first
+#g349 = Mux0~synth
+#g658 = prodreg[17]~35
+.names g261 g349 g658
+11 1
+
+#g346 = mcreg[17]~synth
+#g659 = mcreg[17]
+.names g346 g660 g659 g769
+0-1 1
+11- 1
+
+#g659 = mcreg[17]
+.latch g769 g659 re clk 2
+
+#g261 = first
+#g350 = mcreg2[16]~synth
+#g660 = mcreg[17]~46
+.names g261 g350 g660
+11 1
+
+#g265 = prodreg[0]~synth
+#g661 = mpreg[7]
+.names g265 g662 g661 g770
+1-1 1
+01- 1
+
+#g661 = mpreg[7]
+.latch g770 g661 re clk 2
+
+#g663 = mpreg[7]~synth
+#g664 = mpreg[7]~synth
+#g662 = mpreg[7]~synth
+.names g663 g664 g662
+00 0
+
+#g261 = first
+#g663 = mpreg[7]~synth
+.names g261 mplier[7] g663
+01 1
+
+#g261 = first
+#g669 = mpreg[8]
+#g664 = mpreg[7]~synth
+.names g261 g669 g664
+11 1
+
+#g265 = prodreg[0]~synth
+#g665 = mpreg[9]
+.names g265 g666 g665 g771
+1-1 1
+01- 1
+
+#g665 = mpreg[9]
+.latch g771 g665 re clk 2
+
+#g667 = mpreg[9]~synth
+#g668 = mpreg[9]~synth
+#g666 = mpreg[9]~synth
+.names g667 g668 g666
+00 0
+
+#g261 = first
+#g667 = mpreg[9]~synth
+.names g261 mplier[9] g667
+01 1
+
+#g261 = first
+#g681 = mpreg[10]
+#g668 = mpreg[9]~synth
+.names g261 g681 g668
+11 1
+
+#g265 = prodreg[0]~synth
+#g669 = mpreg[8]
+.names g265 g670 g669 g772
+1-1 1
+01- 1
+
+#g669 = mpreg[8]
+.latch g772 g669 re clk 2
+
+#g671 = mpreg[8]~synth
+#g672 = mpreg[8]~synth
+#g670 = mpreg[8]~synth
+.names g671 g672 g670
+00 0
+
+#g261 = first
+#g671 = mpreg[8]~synth
+.names g261 mplier[8] g671
+01 1
+
+#g261 = first
+#g665 = mpreg[9]
+#g672 = mpreg[8]~synth
+.names g261 g665 g672
+11 1
+
+#g265 = prodreg[0]~synth
+#g673 = mpreg[14]
+.names g265 g674 g673 g773
+1-1 1
+01- 1
+
+#g673 = mpreg[14]
+.latch g773 g673 re clk 2
+
+#g675 = mpreg[14]~synth
+#g676 = mpreg[14]~synth
+#g674 = mpreg[14]~synth
+.names g675 g676 g674
+00 0
+
+#g261 = first
+#g675 = mpreg[14]~synth
+.names g261 mplier[14] g675
+01 1
+
+#g261 = first
+#g263 = mpreg[15]
+#g676 = mpreg[14]~synth
+.names g261 g263 g676
+11 1
+
+#g265 = prodreg[0]~synth
+#g677 = mpreg[13]
+.names g265 g678 g677 g774
+1-1 1
+01- 1
+
+#g677 = mpreg[13]
+.latch g774 g677 re clk 2
+
+#g679 = mpreg[13]~synth
+#g680 = mpreg[13]~synth
+#g678 = mpreg[13]~synth
+.names g679 g680 g678
+00 0
+
+#g261 = first
+#g679 = mpreg[13]~synth
+.names g261 mplier[13] g679
+01 1
+
+#g261 = first
+#g673 = mpreg[14]
+#g680 = mpreg[13]~synth
+.names g261 g673 g680
+11 1
+
+#g265 = prodreg[0]~synth
+#g681 = mpreg[10]
+.names g265 g682 g681 g775
+1-1 1
+01- 1
+
+#g681 = mpreg[10]
+.latch g775 g681 re clk 2
+
+#g683 = mpreg[10]~synth
+#g684 = mpreg[10]~synth
+#g682 = mpreg[10]~synth
+.names g683 g684 g682
+00 0
+
+#g261 = first
+#g683 = mpreg[10]~synth
+.names g261 mplier[10] g683
+01 1
+
+#g261 = first
+#g689 = mpreg[11]
+#g684 = mpreg[10]~synth
+.names g261 g689 g684
+11 1
+
+#g265 = prodreg[0]~synth
+#g685 = mpreg[12]
+.names g265 g686 g685 g776
+1-1 1
+01- 1
+
+#g685 = mpreg[12]
+.latch g776 g685 re clk 2
+
+#g687 = mpreg[12]~synth
+#g688 = mpreg[12]~synth
+#g686 = mpreg[12]~synth
+.names g687 g688 g686
+00 0
+
+#g261 = first
+#g687 = mpreg[12]~synth
+.names g261 mplier[12] g687
+01 1
+
+#g261 = first
+#g677 = mpreg[13]
+#g688 = mpreg[12]~synth
+.names g261 g677 g688
+11 1
+
+#g265 = prodreg[0]~synth
+#g689 = mpreg[11]
+.names g265 g690 g689 g777
+1-1 1
+01- 1
+
+#g689 = mpreg[11]
+.latch g777 g689 re clk 2
+
+#g691 = mpreg[11]~synth
+#g692 = mpreg[11]~synth
+#g690 = mpreg[11]~synth
+.names g691 g692 g690
+00 0
+
+#g261 = first
+#g691 = mpreg[11]~synth
+.names g261 mplier[11] g691
+01 1
+
+#g261 = first
+#g685 = mpreg[12]
+#g692 = mpreg[11]~synth
+.names g261 g685 g692
+11 1
+
+#g265 = prodreg[0]~synth
+#g693 = mpreg[6]
+.names g265 g694 g693 g778
+1-1 1
+01- 1
+
+#g693 = mpreg[6]
+.latch g778 g693 re clk 2
+
+#g695 = mpreg[6]~synth
+#g696 = mpreg[6]~synth
+#g694 = mpreg[6]~synth
+.names g695 g696 g694
+00 0
+
+#g261 = first
+#g695 = mpreg[6]~synth
+.names g261 mplier[6] g695
+01 1
+
+#g261 = first
+#g661 = mpreg[7]
+#g696 = mpreg[6]~synth
+.names g261 g661 g696
+11 1
+
+#g265 = prodreg[0]~synth
+#g697 = mpreg[5]
+.names g265 g698 g697 g779
+1-1 1
+01- 1
+
+#g697 = mpreg[5]
+.latch g779 g697 re clk 2
+
+#g699 = mpreg[5]~synth
+#g700 = mpreg[5]~synth
+#g698 = mpreg[5]~synth
+.names g699 g700 g698
+00 0
+
+#g261 = first
+#g699 = mpreg[5]~synth
+.names g261 mplier[5] g699
+01 1
+
+#g261 = first
+#g693 = mpreg[6]
+#g700 = mpreg[5]~synth
+.names g261 g693 g700
+11 1
+
+#g265 = prodreg[0]~synth
+#g701 = mpreg[4]
+.names g265 g702 g701 g780
+1-1 1
+01- 1
+
+#g701 = mpreg[4]
+.latch g780 g701 re clk 2
+
+#g703 = mpreg[4]~synth
+#g704 = mpreg[4]~synth
+#g702 = mpreg[4]~synth
+.names g703 g704 g702
+00 0
+
+#g261 = first
+#g703 = mpreg[4]~synth
+.names g261 mplier[4] g703
+01 1
+
+#g261 = first
+#g697 = mpreg[5]
+#g704 = mpreg[4]~synth
+.names g261 g697 g704
+11 1
+
+#g265 = prodreg[0]~synth
+#g705 = mpreg[3]
+.names g265 g706 g705 g781
+1-1 1
+01- 1
+
+#g705 = mpreg[3]
+.latch g781 g705 re clk 2
+
+#g707 = mpreg[3]~synth
+#g708 = mpreg[3]~synth
+#g706 = mpreg[3]~synth
+.names g707 g708 g706
+00 0
+
+#g261 = first
+#g707 = mpreg[3]~synth
+.names g261 mplier[3] g707
+01 1
+
+#g261 = first
+#g701 = mpreg[4]
+#g708 = mpreg[3]~synth
+.names g261 g701 g708
+11 1
+
+#g265 = prodreg[0]~synth
+#g709 = mpreg[2]
+.names g265 g710 g709 g782
+1-1 1
+01- 1
+
+#g709 = mpreg[2]
+.latch g782 g709 re clk 2
+
+#g711 = mpreg[2]~synth
+#g712 = mpreg[2]~synth
+#g710 = mpreg[2]~synth
+.names g711 g712 g710
+00 0
+
+#g261 = first
+#g711 = mpreg[2]~synth
+.names g261 mplier[2] g711
+01 1
+
+#g261 = first
+#g705 = mpreg[3]
+#g712 = mpreg[2]~synth
+.names g261 g705 g712
+11 1
+
+#g265 = prodreg[0]~synth
+#g713 = mpreg[1]
+.names g265 g714 g713 g783
+1-1 1
+01- 1
+
+#g713 = mpreg[1]
+.latch g783 g713 re clk 2
+
+#g715 = mpreg[1]~synth
+#g716 = mpreg[1]~synth
+#g714 = mpreg[1]~synth
+.names g715 g716 g714
+00 0
+
+#g261 = first
+#g715 = mpreg[1]~synth
+.names g261 mplier[1] g715
+01 1
+
+#g261 = first
+#g709 = mpreg[2]
+#g716 = mpreg[1]~synth
+.names g261 g709 g716
+11 1
+
+.end
+

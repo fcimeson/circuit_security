@@ -1,0 +1,3478 @@
+.model des
+.inputs clk in
+.outputs out[255] out[254] out[253] out[252] out[251] out[250] out[249] out[248] out[247] out[246] out[245] out[244] out[243] out[242] out[241] out[240] out[239] out[238] out[237] out[236] out[235] out[234] out[233] out[232] out[231] out[230] out[229] out[228] out[227] out[226] out[225] out[224] out[223] out[222] out[221] out[220] out[219] out[218] out[217] out[216] out[215] out[214] out[213] out[212] out[211] out[210] out[209] out[208] out[207] out[206] out[205] out[204] out[203] out[202] out[201] out[200] out[199] out[198] out[197] out[196] out[195] out[194] out[193] out[192] out[191] out[190] out[189] out[188] out[187] out[186] out[185] out[184] out[183] out[182] out[181] out[180] out[179] out[178] out[177] out[176] out[175] out[174] out[173] out[172] out[171] out[170] out[169] out[168] out[167] out[166] out[165] out[164] out[163] out[162] out[161] out[160] out[159] out[158] out[157] out[156] out[155] out[154] out[153] out[152] out[151] out[150] out[149] out[148] out[147] out[146] out[145] out[144] out[143] out[142] out[141] out[140] out[139] out[138] out[137] out[136] out[135] out[134] out[133] out[132] out[131] out[130] out[129] out[128] out[127] out[126] out[125] out[124] out[123] out[122] out[121] out[120] out[119] out[118] out[117] out[116] out[115] out[114] out[113] out[112] out[111] out[110] out[109] out[108] out[107] out[106] out[105] out[104] out[103] out[102] out[101] out[100] out[99] out[98] out[97] out[96] out[95] out[94] out[93] out[92] out[91] out[90] out[89] out[88] out[87] out[86] out[85] out[84] out[83] out[82] out[81] out[80] out[79] out[78] out[77] out[76] out[75] out[74] out[73] out[72] out[71] out[70] out[69] out[68] out[67] out[66] out[65] out[64] out[63] out[62] out[61] out[60] out[59] out[58] out[57] out[56] out[55] out[54] out[53] out[52] out[51] out[50] out[49] out[48] out[47] out[46] out[45] out[44] out[43] out[42] out[41] out[40] out[39] out[38] out[37] out[36] out[35] out[34] out[33] out[32] out[31] out[30] out[29] out[28] out[27] out[26] out[25] out[24] out[23] out[22] out[21] out[20] out[19] out[18] out[17] out[16] out[15] out[14] out[13] out[12] out[11] out[10] out[9] out[8] out[7] out[6] out[5] out[4] out[3] out[2] out[1] out[0]
+
+#out[255] = line_sel[255]
+.latch g266 out[255] re clk 2
+
+#out[254] = line_sel[254]
+.latch g268 out[254] re clk 2
+
+#out[253] = line_sel[253]
+.latch g270 out[253] re clk 2
+
+#out[252] = line_sel[252]
+.latch g272 out[252] re clk 2
+
+#out[251] = line_sel[251]
+.latch g274 out[251] re clk 2
+
+#out[250] = line_sel[250]
+.latch g276 out[250] re clk 2
+
+#out[249] = line_sel[249]
+.latch g278 out[249] re clk 2
+
+#out[248] = line_sel[248]
+.latch g280 out[248] re clk 2
+
+#out[247] = line_sel[247]
+.latch g282 out[247] re clk 2
+
+#out[246] = line_sel[246]
+.latch g284 out[246] re clk 2
+
+#out[245] = line_sel[245]
+.latch g286 out[245] re clk 2
+
+#out[244] = line_sel[244]
+.latch g288 out[244] re clk 2
+
+#out[243] = line_sel[243]
+.latch g290 out[243] re clk 2
+
+#out[242] = line_sel[242]
+.latch g292 out[242] re clk 2
+
+#out[241] = line_sel[241]
+.latch g294 out[241] re clk 2
+
+#out[240] = line_sel[240]
+.latch g296 out[240] re clk 2
+
+#out[239] = line_sel[239]
+.latch g298 out[239] re clk 2
+
+#out[238] = line_sel[238]
+.latch g300 out[238] re clk 2
+
+#out[237] = line_sel[237]
+.latch g302 out[237] re clk 2
+
+#out[236] = line_sel[236]
+.latch g304 out[236] re clk 2
+
+#out[235] = line_sel[235]
+.latch g306 out[235] re clk 2
+
+#out[234] = line_sel[234]
+.latch g308 out[234] re clk 2
+
+#out[233] = line_sel[233]
+.latch g310 out[233] re clk 2
+
+#out[232] = line_sel[232]
+.latch g312 out[232] re clk 2
+
+#out[231] = line_sel[231]
+.latch g314 out[231] re clk 2
+
+#out[230] = line_sel[230]
+.latch g316 out[230] re clk 2
+
+#out[229] = line_sel[229]
+.latch g318 out[229] re clk 2
+
+#out[228] = line_sel[228]
+.latch g320 out[228] re clk 2
+
+#out[227] = line_sel[227]
+.latch g322 out[227] re clk 2
+
+#out[226] = line_sel[226]
+.latch g324 out[226] re clk 2
+
+#out[225] = line_sel[225]
+.latch g326 out[225] re clk 2
+
+#out[224] = line_sel[224]
+.latch g328 out[224] re clk 2
+
+#out[223] = line_sel[223]
+.latch g330 out[223] re clk 2
+
+#out[222] = line_sel[222]
+.latch g332 out[222] re clk 2
+
+#out[221] = line_sel[221]
+.latch g334 out[221] re clk 2
+
+#out[220] = line_sel[220]
+.latch g336 out[220] re clk 2
+
+#out[219] = line_sel[219]
+.latch g338 out[219] re clk 2
+
+#out[218] = line_sel[218]
+.latch g340 out[218] re clk 2
+
+#out[217] = line_sel[217]
+.latch g342 out[217] re clk 2
+
+#out[216] = line_sel[216]
+.latch g344 out[216] re clk 2
+
+#out[215] = line_sel[215]
+.latch g346 out[215] re clk 2
+
+#out[214] = line_sel[214]
+.latch g348 out[214] re clk 2
+
+#out[213] = line_sel[213]
+.latch g350 out[213] re clk 2
+
+#out[212] = line_sel[212]
+.latch g352 out[212] re clk 2
+
+#out[211] = line_sel[211]
+.latch g354 out[211] re clk 2
+
+#out[210] = line_sel[210]
+.latch g356 out[210] re clk 2
+
+#out[209] = line_sel[209]
+.latch g358 out[209] re clk 2
+
+#out[208] = line_sel[208]
+.latch g360 out[208] re clk 2
+
+#out[207] = line_sel[207]
+.latch g362 out[207] re clk 2
+
+#out[206] = line_sel[206]
+.latch g364 out[206] re clk 2
+
+#out[205] = line_sel[205]
+.latch g366 out[205] re clk 2
+
+#out[204] = line_sel[204]
+.latch g368 out[204] re clk 2
+
+#out[203] = line_sel[203]
+.latch g370 out[203] re clk 2
+
+#out[202] = line_sel[202]
+.latch g372 out[202] re clk 2
+
+#out[201] = line_sel[201]
+.latch g374 out[201] re clk 2
+
+#out[200] = line_sel[200]
+.latch g376 out[200] re clk 2
+
+#out[199] = line_sel[199]
+.latch g378 out[199] re clk 2
+
+#out[198] = line_sel[198]
+.latch g380 out[198] re clk 2
+
+#out[197] = line_sel[197]
+.latch g382 out[197] re clk 2
+
+#out[196] = line_sel[196]
+.latch g384 out[196] re clk 2
+
+#out[195] = line_sel[195]
+.latch g386 out[195] re clk 2
+
+#out[194] = line_sel[194]
+.latch g388 out[194] re clk 2
+
+#out[193] = line_sel[193]
+.latch g390 out[193] re clk 2
+
+#out[192] = line_sel[192]
+.latch g392 out[192] re clk 2
+
+#out[191] = line_sel[191]
+.latch g393 out[191] re clk 2
+
+#out[190] = line_sel[190]
+.latch g394 out[190] re clk 2
+
+#out[189] = line_sel[189]
+.latch g395 out[189] re clk 2
+
+#out[188] = line_sel[188]
+.latch g396 out[188] re clk 2
+
+#out[187] = line_sel[187]
+.latch g397 out[187] re clk 2
+
+#out[186] = line_sel[186]
+.latch g398 out[186] re clk 2
+
+#out[185] = line_sel[185]
+.latch g399 out[185] re clk 2
+
+#out[184] = line_sel[184]
+.latch g400 out[184] re clk 2
+
+#out[183] = line_sel[183]
+.latch g401 out[183] re clk 2
+
+#out[182] = line_sel[182]
+.latch g402 out[182] re clk 2
+
+#out[181] = line_sel[181]
+.latch g403 out[181] re clk 2
+
+#out[180] = line_sel[180]
+.latch g404 out[180] re clk 2
+
+#out[179] = line_sel[179]
+.latch g405 out[179] re clk 2
+
+#out[178] = line_sel[178]
+.latch g406 out[178] re clk 2
+
+#out[177] = line_sel[177]
+.latch g407 out[177] re clk 2
+
+#out[176] = line_sel[176]
+.latch g408 out[176] re clk 2
+
+#out[175] = line_sel[175]
+.latch g409 out[175] re clk 2
+
+#out[174] = line_sel[174]
+.latch g410 out[174] re clk 2
+
+#out[173] = line_sel[173]
+.latch g411 out[173] re clk 2
+
+#out[172] = line_sel[172]
+.latch g412 out[172] re clk 2
+
+#out[171] = line_sel[171]
+.latch g413 out[171] re clk 2
+
+#out[170] = line_sel[170]
+.latch g414 out[170] re clk 2
+
+#out[169] = line_sel[169]
+.latch g415 out[169] re clk 2
+
+#out[168] = line_sel[168]
+.latch g416 out[168] re clk 2
+
+#out[167] = line_sel[167]
+.latch g417 out[167] re clk 2
+
+#out[166] = line_sel[166]
+.latch g418 out[166] re clk 2
+
+#out[165] = line_sel[165]
+.latch g419 out[165] re clk 2
+
+#out[164] = line_sel[164]
+.latch g420 out[164] re clk 2
+
+#out[163] = line_sel[163]
+.latch g421 out[163] re clk 2
+
+#out[162] = line_sel[162]
+.latch g422 out[162] re clk 2
+
+#out[161] = line_sel[161]
+.latch g423 out[161] re clk 2
+
+#out[160] = line_sel[160]
+.latch g424 out[160] re clk 2
+
+#out[159] = line_sel[159]
+.latch g425 out[159] re clk 2
+
+#out[158] = line_sel[158]
+.latch g426 out[158] re clk 2
+
+#out[157] = line_sel[157]
+.latch g427 out[157] re clk 2
+
+#out[156] = line_sel[156]
+.latch g428 out[156] re clk 2
+
+#out[155] = line_sel[155]
+.latch g429 out[155] re clk 2
+
+#out[154] = line_sel[154]
+.latch g430 out[154] re clk 2
+
+#out[153] = line_sel[153]
+.latch g431 out[153] re clk 2
+
+#out[152] = line_sel[152]
+.latch g432 out[152] re clk 2
+
+#out[151] = line_sel[151]
+.latch g433 out[151] re clk 2
+
+#out[150] = line_sel[150]
+.latch g434 out[150] re clk 2
+
+#out[149] = line_sel[149]
+.latch g435 out[149] re clk 2
+
+#out[148] = line_sel[148]
+.latch g436 out[148] re clk 2
+
+#out[147] = line_sel[147]
+.latch g437 out[147] re clk 2
+
+#out[146] = line_sel[146]
+.latch g438 out[146] re clk 2
+
+#out[145] = line_sel[145]
+.latch g439 out[145] re clk 2
+
+#out[144] = line_sel[144]
+.latch g440 out[144] re clk 2
+
+#out[143] = line_sel[143]
+.latch g441 out[143] re clk 2
+
+#out[142] = line_sel[142]
+.latch g442 out[142] re clk 2
+
+#out[141] = line_sel[141]
+.latch g443 out[141] re clk 2
+
+#out[140] = line_sel[140]
+.latch g444 out[140] re clk 2
+
+#out[139] = line_sel[139]
+.latch g445 out[139] re clk 2
+
+#out[138] = line_sel[138]
+.latch g446 out[138] re clk 2
+
+#out[137] = line_sel[137]
+.latch g447 out[137] re clk 2
+
+#out[136] = line_sel[136]
+.latch g448 out[136] re clk 2
+
+#out[135] = line_sel[135]
+.latch g449 out[135] re clk 2
+
+#out[134] = line_sel[134]
+.latch g450 out[134] re clk 2
+
+#out[133] = line_sel[133]
+.latch g451 out[133] re clk 2
+
+#out[132] = line_sel[132]
+.latch g452 out[132] re clk 2
+
+#out[131] = line_sel[131]
+.latch g453 out[131] re clk 2
+
+#out[130] = line_sel[130]
+.latch g454 out[130] re clk 2
+
+#out[129] = line_sel[129]
+.latch g455 out[129] re clk 2
+
+#out[128] = line_sel[128]
+.latch g456 out[128] re clk 2
+
+#out[127] = line_sel[127]
+.latch g457 out[127] re clk 2
+
+#out[126] = line_sel[126]
+.latch g458 out[126] re clk 2
+
+#out[125] = line_sel[125]
+.latch g459 out[125] re clk 2
+
+#out[124] = line_sel[124]
+.latch g460 out[124] re clk 2
+
+#out[123] = line_sel[123]
+.latch g461 out[123] re clk 2
+
+#out[122] = line_sel[122]
+.latch g462 out[122] re clk 2
+
+#out[121] = line_sel[121]
+.latch g463 out[121] re clk 2
+
+#out[120] = line_sel[120]
+.latch g464 out[120] re clk 2
+
+#out[119] = line_sel[119]
+.latch g465 out[119] re clk 2
+
+#out[118] = line_sel[118]
+.latch g466 out[118] re clk 2
+
+#out[117] = line_sel[117]
+.latch g467 out[117] re clk 2
+
+#out[116] = line_sel[116]
+.latch g468 out[116] re clk 2
+
+#out[115] = line_sel[115]
+.latch g469 out[115] re clk 2
+
+#out[114] = line_sel[114]
+.latch g470 out[114] re clk 2
+
+#out[113] = line_sel[113]
+.latch g471 out[113] re clk 2
+
+#out[112] = line_sel[112]
+.latch g472 out[112] re clk 2
+
+#out[111] = line_sel[111]
+.latch g473 out[111] re clk 2
+
+#out[110] = line_sel[110]
+.latch g474 out[110] re clk 2
+
+#out[109] = line_sel[109]
+.latch g475 out[109] re clk 2
+
+#out[108] = line_sel[108]
+.latch g476 out[108] re clk 2
+
+#out[107] = line_sel[107]
+.latch g477 out[107] re clk 2
+
+#out[106] = line_sel[106]
+.latch g478 out[106] re clk 2
+
+#out[105] = line_sel[105]
+.latch g479 out[105] re clk 2
+
+#out[104] = line_sel[104]
+.latch g480 out[104] re clk 2
+
+#out[103] = line_sel[103]
+.latch g481 out[103] re clk 2
+
+#out[102] = line_sel[102]
+.latch g482 out[102] re clk 2
+
+#out[101] = line_sel[101]
+.latch g483 out[101] re clk 2
+
+#out[100] = line_sel[100]
+.latch g484 out[100] re clk 2
+
+#out[99] = line_sel[99]
+.latch g485 out[99] re clk 2
+
+#out[98] = line_sel[98]
+.latch g486 out[98] re clk 2
+
+#out[97] = line_sel[97]
+.latch g487 out[97] re clk 2
+
+#out[96] = line_sel[96]
+.latch g488 out[96] re clk 2
+
+#out[95] = line_sel[95]
+.latch g489 out[95] re clk 2
+
+#out[94] = line_sel[94]
+.latch g490 out[94] re clk 2
+
+#out[93] = line_sel[93]
+.latch g491 out[93] re clk 2
+
+#out[92] = line_sel[92]
+.latch g492 out[92] re clk 2
+
+#out[91] = line_sel[91]
+.latch g493 out[91] re clk 2
+
+#out[90] = line_sel[90]
+.latch g494 out[90] re clk 2
+
+#out[89] = line_sel[89]
+.latch g495 out[89] re clk 2
+
+#out[88] = line_sel[88]
+.latch g496 out[88] re clk 2
+
+#out[87] = line_sel[87]
+.latch g497 out[87] re clk 2
+
+#out[86] = line_sel[86]
+.latch g498 out[86] re clk 2
+
+#out[85] = line_sel[85]
+.latch g499 out[85] re clk 2
+
+#out[84] = line_sel[84]
+.latch g500 out[84] re clk 2
+
+#out[83] = line_sel[83]
+.latch g501 out[83] re clk 2
+
+#out[82] = line_sel[82]
+.latch g502 out[82] re clk 2
+
+#out[81] = line_sel[81]
+.latch g503 out[81] re clk 2
+
+#out[80] = line_sel[80]
+.latch g504 out[80] re clk 2
+
+#out[79] = line_sel[79]
+.latch g505 out[79] re clk 2
+
+#out[78] = line_sel[78]
+.latch g506 out[78] re clk 2
+
+#out[77] = line_sel[77]
+.latch g507 out[77] re clk 2
+
+#out[76] = line_sel[76]
+.latch g508 out[76] re clk 2
+
+#out[75] = line_sel[75]
+.latch g509 out[75] re clk 2
+
+#out[74] = line_sel[74]
+.latch g510 out[74] re clk 2
+
+#out[73] = line_sel[73]
+.latch g511 out[73] re clk 2
+
+#out[72] = line_sel[72]
+.latch g512 out[72] re clk 2
+
+#out[71] = line_sel[71]
+.latch g513 out[71] re clk 2
+
+#out[70] = line_sel[70]
+.latch g514 out[70] re clk 2
+
+#out[69] = line_sel[69]
+.latch g515 out[69] re clk 2
+
+#out[68] = line_sel[68]
+.latch g516 out[68] re clk 2
+
+#out[67] = line_sel[67]
+.latch g517 out[67] re clk 2
+
+#out[66] = line_sel[66]
+.latch g518 out[66] re clk 2
+
+#out[65] = line_sel[65]
+.latch g519 out[65] re clk 2
+
+#out[64] = line_sel[64]
+.latch g520 out[64] re clk 2
+
+#out[63] = line_sel[63]
+.latch g521 out[63] re clk 2
+
+#out[62] = line_sel[62]
+.latch g522 out[62] re clk 2
+
+#out[61] = line_sel[61]
+.latch g523 out[61] re clk 2
+
+#out[60] = line_sel[60]
+.latch g524 out[60] re clk 2
+
+#out[59] = line_sel[59]
+.latch g525 out[59] re clk 2
+
+#out[58] = line_sel[58]
+.latch g526 out[58] re clk 2
+
+#out[57] = line_sel[57]
+.latch g527 out[57] re clk 2
+
+#out[56] = line_sel[56]
+.latch g528 out[56] re clk 2
+
+#out[55] = line_sel[55]
+.latch g529 out[55] re clk 2
+
+#out[54] = line_sel[54]
+.latch g530 out[54] re clk 2
+
+#out[53] = line_sel[53]
+.latch g531 out[53] re clk 2
+
+#out[52] = line_sel[52]
+.latch g532 out[52] re clk 2
+
+#out[51] = line_sel[51]
+.latch g533 out[51] re clk 2
+
+#out[50] = line_sel[50]
+.latch g534 out[50] re clk 2
+
+#out[49] = line_sel[49]
+.latch g535 out[49] re clk 2
+
+#out[48] = line_sel[48]
+.latch g536 out[48] re clk 2
+
+#out[47] = line_sel[47]
+.latch g537 out[47] re clk 2
+
+#out[46] = line_sel[46]
+.latch g538 out[46] re clk 2
+
+#out[45] = line_sel[45]
+.latch g539 out[45] re clk 2
+
+#out[44] = line_sel[44]
+.latch g540 out[44] re clk 2
+
+#out[43] = line_sel[43]
+.latch g541 out[43] re clk 2
+
+#out[42] = line_sel[42]
+.latch g542 out[42] re clk 2
+
+#out[41] = line_sel[41]
+.latch g543 out[41] re clk 2
+
+#out[40] = line_sel[40]
+.latch g544 out[40] re clk 2
+
+#out[39] = line_sel[39]
+.latch g545 out[39] re clk 2
+
+#out[38] = line_sel[38]
+.latch g546 out[38] re clk 2
+
+#out[37] = line_sel[37]
+.latch g547 out[37] re clk 2
+
+#out[36] = line_sel[36]
+.latch g548 out[36] re clk 2
+
+#out[35] = line_sel[35]
+.latch g549 out[35] re clk 2
+
+#out[34] = line_sel[34]
+.latch g550 out[34] re clk 2
+
+#out[33] = line_sel[33]
+.latch g551 out[33] re clk 2
+
+#out[32] = line_sel[32]
+.latch g552 out[32] re clk 2
+
+#out[31] = line_sel[31]
+.latch g553 out[31] re clk 2
+
+#out[30] = line_sel[30]
+.latch g554 out[30] re clk 2
+
+#out[29] = line_sel[29]
+.latch g555 out[29] re clk 2
+
+#out[28] = line_sel[28]
+.latch g556 out[28] re clk 2
+
+#out[27] = line_sel[27]
+.latch g557 out[27] re clk 2
+
+#out[26] = line_sel[26]
+.latch g558 out[26] re clk 2
+
+#out[25] = line_sel[25]
+.latch g559 out[25] re clk 2
+
+#out[24] = line_sel[24]
+.latch g560 out[24] re clk 2
+
+#out[23] = line_sel[23]
+.latch g561 out[23] re clk 2
+
+#out[22] = line_sel[22]
+.latch g562 out[22] re clk 2
+
+#out[21] = line_sel[21]
+.latch g563 out[21] re clk 2
+
+#out[20] = line_sel[20]
+.latch g564 out[20] re clk 2
+
+#out[19] = line_sel[19]
+.latch g565 out[19] re clk 2
+
+#out[18] = line_sel[18]
+.latch g566 out[18] re clk 2
+
+#out[17] = line_sel[17]
+.latch g567 out[17] re clk 2
+
+#out[16] = line_sel[16]
+.latch g568 out[16] re clk 2
+
+#out[15] = line_sel[15]
+.latch g569 out[15] re clk 2
+
+#out[14] = line_sel[14]
+.latch g570 out[14] re clk 2
+
+#out[13] = line_sel[13]
+.latch g571 out[13] re clk 2
+
+#out[12] = line_sel[12]
+.latch g572 out[12] re clk 2
+
+#out[11] = line_sel[11]
+.latch g573 out[11] re clk 2
+
+#out[10] = line_sel[10]
+.latch g574 out[10] re clk 2
+
+#out[9] = line_sel[9]
+.latch g575 out[9] re clk 2
+
+#out[8] = line_sel[8]
+.latch g576 out[8] re clk 2
+
+#out[7] = line_sel[7]
+.latch g577 out[7] re clk 2
+
+#out[6] = line_sel[6]
+.latch g578 out[6] re clk 2
+
+#out[5] = line_sel[5]
+.latch g579 out[5] re clk 2
+
+#out[4] = line_sel[4]
+.latch g580 out[4] re clk 2
+
+#out[3] = line_sel[3]
+.latch g581 out[3] re clk 2
+
+#out[2] = line_sel[2]
+.latch g582 out[2] re clk 2
+
+#out[1] = line_sel[1]
+.latch g583 out[1] re clk 2
+
+#out[0] = line_sel[0]
+.latch g584 out[0] re clk 2
+
+#g257 = trigger[1]
+.latch g604 g257 re clk 2
+
+#g258 = trigger[0]
+.latch g607 g258 re clk 2
+
+#g259 = trigger[7]
+.latch g610 g259 re clk 2
+
+#g260 = trigger[6]
+.latch g613 g260 re clk 2
+
+#g261 = trigger[5]
+.latch g616 g261 re clk 2
+
+#g262 = trigger[4]
+.latch g619 g262 re clk 2
+
+#g263 = trigger[3]
+.latch g622 g263 re clk 2
+
+#g264 = trigger[2]
+.latch g625 g264 re clk 2
+
+#g259 = trigger[7]
+#g260 = trigger[6]
+#g261 = trigger[5]
+#g262 = trigger[4]
+#g263 = trigger[3]
+#g264 = trigger[2]
+#g265 = Decoder1~synth
+.names g259 g260 g261 g262 g263 g264 g265
+111111 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g265 = Decoder1~synth
+#g266 = Decoder1~synth
+.names g257 g258 g265 g266
+111 1
+
+#g259 = trigger[7]
+#g260 = trigger[6]
+#g261 = trigger[5]
+#g262 = trigger[4]
+#g263 = trigger[3]
+#g264 = trigger[2]
+#g267 = Decoder1~synth
+.names g259 g260 g261 g262 g263 g264 g267
+011111 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g267 = Decoder1~synth
+#g268 = Decoder1~synth
+.names g257 g258 g267 g268
+111 1
+
+#g259 = trigger[7]
+#g260 = trigger[6]
+#g261 = trigger[5]
+#g262 = trigger[4]
+#g263 = trigger[3]
+#g264 = trigger[2]
+#g269 = Decoder1~synth
+.names g259 g260 g261 g262 g263 g264 g269
+101111 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g269 = Decoder1~synth
+#g270 = Decoder1~synth
+.names g257 g258 g269 g270
+111 1
+
+#g259 = trigger[7]
+#g260 = trigger[6]
+#g261 = trigger[5]
+#g262 = trigger[4]
+#g263 = trigger[3]
+#g264 = trigger[2]
+#g271 = Decoder1~synth
+.names g259 g260 g261 g262 g263 g264 g271
+001111 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g271 = Decoder1~synth
+#g272 = Decoder1~synth
+.names g257 g258 g271 g272
+111 1
+
+#g259 = trigger[7]
+#g260 = trigger[6]
+#g261 = trigger[5]
+#g262 = trigger[4]
+#g263 = trigger[3]
+#g264 = trigger[2]
+#g273 = Decoder1~synth
+.names g259 g260 g261 g262 g263 g264 g273
+110111 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g273 = Decoder1~synth
+#g274 = Decoder1~synth
+.names g257 g258 g273 g274
+111 1
+
+#g259 = trigger[7]
+#g260 = trigger[6]
+#g261 = trigger[5]
+#g262 = trigger[4]
+#g263 = trigger[3]
+#g264 = trigger[2]
+#g275 = Decoder1~synth
+.names g259 g260 g261 g262 g263 g264 g275
+010111 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g275 = Decoder1~synth
+#g276 = Decoder1~synth
+.names g257 g258 g275 g276
+111 1
+
+#g259 = trigger[7]
+#g260 = trigger[6]
+#g261 = trigger[5]
+#g262 = trigger[4]
+#g263 = trigger[3]
+#g264 = trigger[2]
+#g277 = Decoder1~synth
+.names g259 g260 g261 g262 g263 g264 g277
+100111 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g277 = Decoder1~synth
+#g278 = Decoder1~synth
+.names g257 g258 g277 g278
+111 1
+
+#g259 = trigger[7]
+#g260 = trigger[6]
+#g261 = trigger[5]
+#g262 = trigger[4]
+#g263 = trigger[3]
+#g264 = trigger[2]
+#g279 = Decoder1~synth
+.names g259 g260 g261 g262 g263 g264 g279
+000111 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g279 = Decoder1~synth
+#g280 = Decoder1~synth
+.names g257 g258 g279 g280
+111 1
+
+#g259 = trigger[7]
+#g260 = trigger[6]
+#g261 = trigger[5]
+#g262 = trigger[4]
+#g263 = trigger[3]
+#g264 = trigger[2]
+#g281 = Decoder1~synth
+.names g259 g260 g261 g262 g263 g264 g281
+111011 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g281 = Decoder1~synth
+#g282 = Decoder1~synth
+.names g257 g258 g281 g282
+111 1
+
+#g259 = trigger[7]
+#g260 = trigger[6]
+#g261 = trigger[5]
+#g262 = trigger[4]
+#g263 = trigger[3]
+#g264 = trigger[2]
+#g283 = Decoder1~synth
+.names g259 g260 g261 g262 g263 g264 g283
+011011 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g283 = Decoder1~synth
+#g284 = Decoder1~synth
+.names g257 g258 g283 g284
+111 1
+
+#g259 = trigger[7]
+#g260 = trigger[6]
+#g261 = trigger[5]
+#g262 = trigger[4]
+#g263 = trigger[3]
+#g264 = trigger[2]
+#g285 = Decoder1~synth
+.names g259 g260 g261 g262 g263 g264 g285
+101011 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g285 = Decoder1~synth
+#g286 = Decoder1~synth
+.names g257 g258 g285 g286
+111 1
+
+#g259 = trigger[7]
+#g260 = trigger[6]
+#g261 = trigger[5]
+#g262 = trigger[4]
+#g263 = trigger[3]
+#g264 = trigger[2]
+#g287 = Decoder1~synth
+.names g259 g260 g261 g262 g263 g264 g287
+001011 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g287 = Decoder1~synth
+#g288 = Decoder1~synth
+.names g257 g258 g287 g288
+111 1
+
+#g259 = trigger[7]
+#g260 = trigger[6]
+#g261 = trigger[5]
+#g262 = trigger[4]
+#g263 = trigger[3]
+#g264 = trigger[2]
+#g289 = Decoder1~synth
+.names g259 g260 g261 g262 g263 g264 g289
+110011 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g289 = Decoder1~synth
+#g290 = Decoder1~synth
+.names g257 g258 g289 g290
+111 1
+
+#g259 = trigger[7]
+#g260 = trigger[6]
+#g261 = trigger[5]
+#g262 = trigger[4]
+#g263 = trigger[3]
+#g264 = trigger[2]
+#g291 = Decoder1~synth
+.names g259 g260 g261 g262 g263 g264 g291
+010011 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g291 = Decoder1~synth
+#g292 = Decoder1~synth
+.names g257 g258 g291 g292
+111 1
+
+#g259 = trigger[7]
+#g260 = trigger[6]
+#g261 = trigger[5]
+#g262 = trigger[4]
+#g263 = trigger[3]
+#g264 = trigger[2]
+#g293 = Decoder1~synth
+.names g259 g260 g261 g262 g263 g264 g293
+100011 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g293 = Decoder1~synth
+#g294 = Decoder1~synth
+.names g257 g258 g293 g294
+111 1
+
+#g259 = trigger[7]
+#g260 = trigger[6]
+#g261 = trigger[5]
+#g262 = trigger[4]
+#g263 = trigger[3]
+#g264 = trigger[2]
+#g295 = Decoder1~synth
+.names g259 g260 g261 g262 g263 g264 g295
+000011 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g295 = Decoder1~synth
+#g296 = Decoder1~synth
+.names g257 g258 g295 g296
+111 1
+
+#g259 = trigger[7]
+#g260 = trigger[6]
+#g261 = trigger[5]
+#g262 = trigger[4]
+#g263 = trigger[3]
+#g264 = trigger[2]
+#g297 = Decoder1~synth
+.names g259 g260 g261 g262 g263 g264 g297
+111101 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g297 = Decoder1~synth
+#g298 = Decoder1~synth
+.names g257 g258 g297 g298
+111 1
+
+#g259 = trigger[7]
+#g260 = trigger[6]
+#g261 = trigger[5]
+#g262 = trigger[4]
+#g263 = trigger[3]
+#g264 = trigger[2]
+#g299 = Decoder1~synth
+.names g259 g260 g261 g262 g263 g264 g299
+011101 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g299 = Decoder1~synth
+#g300 = Decoder1~synth
+.names g257 g258 g299 g300
+111 1
+
+#g259 = trigger[7]
+#g260 = trigger[6]
+#g261 = trigger[5]
+#g262 = trigger[4]
+#g263 = trigger[3]
+#g264 = trigger[2]
+#g301 = Decoder1~synth
+.names g259 g260 g261 g262 g263 g264 g301
+101101 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g301 = Decoder1~synth
+#g302 = Decoder1~synth
+.names g257 g258 g301 g302
+111 1
+
+#g259 = trigger[7]
+#g260 = trigger[6]
+#g261 = trigger[5]
+#g262 = trigger[4]
+#g263 = trigger[3]
+#g264 = trigger[2]
+#g303 = Decoder1~synth
+.names g259 g260 g261 g262 g263 g264 g303
+001101 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g303 = Decoder1~synth
+#g304 = Decoder1~synth
+.names g257 g258 g303 g304
+111 1
+
+#g259 = trigger[7]
+#g260 = trigger[6]
+#g261 = trigger[5]
+#g262 = trigger[4]
+#g263 = trigger[3]
+#g264 = trigger[2]
+#g305 = Decoder1~synth
+.names g259 g260 g261 g262 g263 g264 g305
+110101 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g305 = Decoder1~synth
+#g306 = Decoder1~synth
+.names g257 g258 g305 g306
+111 1
+
+#g259 = trigger[7]
+#g260 = trigger[6]
+#g261 = trigger[5]
+#g262 = trigger[4]
+#g263 = trigger[3]
+#g264 = trigger[2]
+#g307 = Decoder1~synth
+.names g259 g260 g261 g262 g263 g264 g307
+010101 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g307 = Decoder1~synth
+#g308 = Decoder1~synth
+.names g257 g258 g307 g308
+111 1
+
+#g259 = trigger[7]
+#g260 = trigger[6]
+#g261 = trigger[5]
+#g262 = trigger[4]
+#g263 = trigger[3]
+#g264 = trigger[2]
+#g309 = Decoder1~synth
+.names g259 g260 g261 g262 g263 g264 g309
+100101 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g309 = Decoder1~synth
+#g310 = Decoder1~synth
+.names g257 g258 g309 g310
+111 1
+
+#g259 = trigger[7]
+#g260 = trigger[6]
+#g261 = trigger[5]
+#g262 = trigger[4]
+#g263 = trigger[3]
+#g264 = trigger[2]
+#g311 = Decoder1~synth
+.names g259 g260 g261 g262 g263 g264 g311
+000101 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g311 = Decoder1~synth
+#g312 = Decoder1~synth
+.names g257 g258 g311 g312
+111 1
+
+#g259 = trigger[7]
+#g260 = trigger[6]
+#g261 = trigger[5]
+#g262 = trigger[4]
+#g263 = trigger[3]
+#g264 = trigger[2]
+#g313 = Decoder1~synth
+.names g259 g260 g261 g262 g263 g264 g313
+111001 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g313 = Decoder1~synth
+#g314 = Decoder1~synth
+.names g257 g258 g313 g314
+111 1
+
+#g259 = trigger[7]
+#g260 = trigger[6]
+#g261 = trigger[5]
+#g262 = trigger[4]
+#g263 = trigger[3]
+#g264 = trigger[2]
+#g315 = Decoder1~synth
+.names g259 g260 g261 g262 g263 g264 g315
+011001 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g315 = Decoder1~synth
+#g316 = Decoder1~synth
+.names g257 g258 g315 g316
+111 1
+
+#g259 = trigger[7]
+#g260 = trigger[6]
+#g261 = trigger[5]
+#g262 = trigger[4]
+#g263 = trigger[3]
+#g264 = trigger[2]
+#g317 = Decoder1~synth
+.names g259 g260 g261 g262 g263 g264 g317
+101001 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g317 = Decoder1~synth
+#g318 = Decoder1~synth
+.names g257 g258 g317 g318
+111 1
+
+#g259 = trigger[7]
+#g260 = trigger[6]
+#g261 = trigger[5]
+#g262 = trigger[4]
+#g263 = trigger[3]
+#g264 = trigger[2]
+#g319 = Decoder1~synth
+.names g259 g260 g261 g262 g263 g264 g319
+001001 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g319 = Decoder1~synth
+#g320 = Decoder1~synth
+.names g257 g258 g319 g320
+111 1
+
+#g259 = trigger[7]
+#g260 = trigger[6]
+#g261 = trigger[5]
+#g262 = trigger[4]
+#g263 = trigger[3]
+#g264 = trigger[2]
+#g321 = Decoder1~synth
+.names g259 g260 g261 g262 g263 g264 g321
+110001 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g321 = Decoder1~synth
+#g322 = Decoder1~synth
+.names g257 g258 g321 g322
+111 1
+
+#g259 = trigger[7]
+#g260 = trigger[6]
+#g261 = trigger[5]
+#g262 = trigger[4]
+#g263 = trigger[3]
+#g264 = trigger[2]
+#g323 = Decoder1~synth
+.names g259 g260 g261 g262 g263 g264 g323
+010001 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g323 = Decoder1~synth
+#g324 = Decoder1~synth
+.names g257 g258 g323 g324
+111 1
+
+#g259 = trigger[7]
+#g260 = trigger[6]
+#g261 = trigger[5]
+#g262 = trigger[4]
+#g263 = trigger[3]
+#g264 = trigger[2]
+#g325 = Decoder1~synth
+.names g259 g260 g261 g262 g263 g264 g325
+100001 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g325 = Decoder1~synth
+#g326 = Decoder1~synth
+.names g257 g258 g325 g326
+111 1
+
+#g259 = trigger[7]
+#g260 = trigger[6]
+#g261 = trigger[5]
+#g262 = trigger[4]
+#g263 = trigger[3]
+#g264 = trigger[2]
+#g327 = Decoder1~synth
+.names g259 g260 g261 g262 g263 g264 g327
+000001 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g327 = Decoder1~synth
+#g328 = Decoder1~synth
+.names g257 g258 g327 g328
+111 1
+
+#g259 = trigger[7]
+#g260 = trigger[6]
+#g261 = trigger[5]
+#g262 = trigger[4]
+#g263 = trigger[3]
+#g264 = trigger[2]
+#g329 = Decoder1~synth
+.names g259 g260 g261 g262 g263 g264 g329
+111110 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g329 = Decoder1~synth
+#g330 = Decoder1~synth
+.names g257 g258 g329 g330
+111 1
+
+#g259 = trigger[7]
+#g260 = trigger[6]
+#g261 = trigger[5]
+#g262 = trigger[4]
+#g263 = trigger[3]
+#g264 = trigger[2]
+#g331 = Decoder1~synth
+.names g259 g260 g261 g262 g263 g264 g331
+011110 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g331 = Decoder1~synth
+#g332 = Decoder1~synth
+.names g257 g258 g331 g332
+111 1
+
+#g259 = trigger[7]
+#g260 = trigger[6]
+#g261 = trigger[5]
+#g262 = trigger[4]
+#g263 = trigger[3]
+#g264 = trigger[2]
+#g333 = Decoder1~synth
+.names g259 g260 g261 g262 g263 g264 g333
+101110 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g333 = Decoder1~synth
+#g334 = Decoder1~synth
+.names g257 g258 g333 g334
+111 1
+
+#g259 = trigger[7]
+#g260 = trigger[6]
+#g261 = trigger[5]
+#g262 = trigger[4]
+#g263 = trigger[3]
+#g264 = trigger[2]
+#g335 = Decoder1~synth
+.names g259 g260 g261 g262 g263 g264 g335
+001110 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g335 = Decoder1~synth
+#g336 = Decoder1~synth
+.names g257 g258 g335 g336
+111 1
+
+#g259 = trigger[7]
+#g260 = trigger[6]
+#g261 = trigger[5]
+#g262 = trigger[4]
+#g263 = trigger[3]
+#g264 = trigger[2]
+#g337 = Decoder1~synth
+.names g259 g260 g261 g262 g263 g264 g337
+110110 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g337 = Decoder1~synth
+#g338 = Decoder1~synth
+.names g257 g258 g337 g338
+111 1
+
+#g259 = trigger[7]
+#g260 = trigger[6]
+#g261 = trigger[5]
+#g262 = trigger[4]
+#g263 = trigger[3]
+#g264 = trigger[2]
+#g339 = Decoder1~synth
+.names g259 g260 g261 g262 g263 g264 g339
+010110 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g339 = Decoder1~synth
+#g340 = Decoder1~synth
+.names g257 g258 g339 g340
+111 1
+
+#g259 = trigger[7]
+#g260 = trigger[6]
+#g261 = trigger[5]
+#g262 = trigger[4]
+#g263 = trigger[3]
+#g264 = trigger[2]
+#g341 = Decoder1~synth
+.names g259 g260 g261 g262 g263 g264 g341
+100110 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g341 = Decoder1~synth
+#g342 = Decoder1~synth
+.names g257 g258 g341 g342
+111 1
+
+#g259 = trigger[7]
+#g260 = trigger[6]
+#g261 = trigger[5]
+#g262 = trigger[4]
+#g263 = trigger[3]
+#g264 = trigger[2]
+#g343 = Decoder1~synth
+.names g259 g260 g261 g262 g263 g264 g343
+000110 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g343 = Decoder1~synth
+#g344 = Decoder1~synth
+.names g257 g258 g343 g344
+111 1
+
+#g259 = trigger[7]
+#g260 = trigger[6]
+#g261 = trigger[5]
+#g262 = trigger[4]
+#g263 = trigger[3]
+#g264 = trigger[2]
+#g345 = Decoder1~synth
+.names g259 g260 g261 g262 g263 g264 g345
+111010 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g345 = Decoder1~synth
+#g346 = Decoder1~synth
+.names g257 g258 g345 g346
+111 1
+
+#g259 = trigger[7]
+#g260 = trigger[6]
+#g261 = trigger[5]
+#g262 = trigger[4]
+#g263 = trigger[3]
+#g264 = trigger[2]
+#g347 = Decoder1~synth
+.names g259 g260 g261 g262 g263 g264 g347
+011010 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g347 = Decoder1~synth
+#g348 = Decoder1~synth
+.names g257 g258 g347 g348
+111 1
+
+#g259 = trigger[7]
+#g260 = trigger[6]
+#g261 = trigger[5]
+#g262 = trigger[4]
+#g263 = trigger[3]
+#g264 = trigger[2]
+#g349 = Decoder1~synth
+.names g259 g260 g261 g262 g263 g264 g349
+101010 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g349 = Decoder1~synth
+#g350 = Decoder1~synth
+.names g257 g258 g349 g350
+111 1
+
+#g259 = trigger[7]
+#g260 = trigger[6]
+#g261 = trigger[5]
+#g262 = trigger[4]
+#g263 = trigger[3]
+#g264 = trigger[2]
+#g351 = Decoder1~synth
+.names g259 g260 g261 g262 g263 g264 g351
+001010 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g351 = Decoder1~synth
+#g352 = Decoder1~synth
+.names g257 g258 g351 g352
+111 1
+
+#g259 = trigger[7]
+#g260 = trigger[6]
+#g261 = trigger[5]
+#g262 = trigger[4]
+#g263 = trigger[3]
+#g264 = trigger[2]
+#g353 = Decoder1~synth
+.names g259 g260 g261 g262 g263 g264 g353
+110010 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g353 = Decoder1~synth
+#g354 = Decoder1~synth
+.names g257 g258 g353 g354
+111 1
+
+#g259 = trigger[7]
+#g260 = trigger[6]
+#g261 = trigger[5]
+#g262 = trigger[4]
+#g263 = trigger[3]
+#g264 = trigger[2]
+#g355 = Decoder1~synth
+.names g259 g260 g261 g262 g263 g264 g355
+010010 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g355 = Decoder1~synth
+#g356 = Decoder1~synth
+.names g257 g258 g355 g356
+111 1
+
+#g259 = trigger[7]
+#g260 = trigger[6]
+#g261 = trigger[5]
+#g262 = trigger[4]
+#g263 = trigger[3]
+#g264 = trigger[2]
+#g357 = Decoder1~synth
+.names g259 g260 g261 g262 g263 g264 g357
+100010 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g357 = Decoder1~synth
+#g358 = Decoder1~synth
+.names g257 g258 g357 g358
+111 1
+
+#g259 = trigger[7]
+#g260 = trigger[6]
+#g261 = trigger[5]
+#g262 = trigger[4]
+#g263 = trigger[3]
+#g264 = trigger[2]
+#g359 = Decoder1~synth
+.names g259 g260 g261 g262 g263 g264 g359
+000010 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g359 = Decoder1~synth
+#g360 = Decoder1~synth
+.names g257 g258 g359 g360
+111 1
+
+#g259 = trigger[7]
+#g260 = trigger[6]
+#g261 = trigger[5]
+#g262 = trigger[4]
+#g263 = trigger[3]
+#g264 = trigger[2]
+#g361 = Decoder1~synth
+.names g259 g260 g261 g262 g263 g264 g361
+111100 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g361 = Decoder1~synth
+#g362 = Decoder1~synth
+.names g257 g258 g361 g362
+111 1
+
+#g259 = trigger[7]
+#g260 = trigger[6]
+#g261 = trigger[5]
+#g262 = trigger[4]
+#g263 = trigger[3]
+#g264 = trigger[2]
+#g363 = Decoder1~synth
+.names g259 g260 g261 g262 g263 g264 g363
+011100 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g363 = Decoder1~synth
+#g364 = Decoder1~synth
+.names g257 g258 g363 g364
+111 1
+
+#g259 = trigger[7]
+#g260 = trigger[6]
+#g261 = trigger[5]
+#g262 = trigger[4]
+#g263 = trigger[3]
+#g264 = trigger[2]
+#g365 = Decoder1~synth
+.names g259 g260 g261 g262 g263 g264 g365
+101100 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g365 = Decoder1~synth
+#g366 = Decoder1~synth
+.names g257 g258 g365 g366
+111 1
+
+#g259 = trigger[7]
+#g260 = trigger[6]
+#g261 = trigger[5]
+#g262 = trigger[4]
+#g263 = trigger[3]
+#g264 = trigger[2]
+#g367 = Decoder1~synth
+.names g259 g260 g261 g262 g263 g264 g367
+001100 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g367 = Decoder1~synth
+#g368 = Decoder1~synth
+.names g257 g258 g367 g368
+111 1
+
+#g259 = trigger[7]
+#g260 = trigger[6]
+#g261 = trigger[5]
+#g262 = trigger[4]
+#g263 = trigger[3]
+#g264 = trigger[2]
+#g369 = Decoder1~synth
+.names g259 g260 g261 g262 g263 g264 g369
+110100 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g369 = Decoder1~synth
+#g370 = Decoder1~synth
+.names g257 g258 g369 g370
+111 1
+
+#g259 = trigger[7]
+#g260 = trigger[6]
+#g261 = trigger[5]
+#g262 = trigger[4]
+#g263 = trigger[3]
+#g264 = trigger[2]
+#g371 = Decoder1~synth
+.names g259 g260 g261 g262 g263 g264 g371
+010100 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g371 = Decoder1~synth
+#g372 = Decoder1~synth
+.names g257 g258 g371 g372
+111 1
+
+#g259 = trigger[7]
+#g260 = trigger[6]
+#g261 = trigger[5]
+#g262 = trigger[4]
+#g263 = trigger[3]
+#g264 = trigger[2]
+#g373 = Decoder1~synth
+.names g259 g260 g261 g262 g263 g264 g373
+100100 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g373 = Decoder1~synth
+#g374 = Decoder1~synth
+.names g257 g258 g373 g374
+111 1
+
+#g259 = trigger[7]
+#g260 = trigger[6]
+#g261 = trigger[5]
+#g262 = trigger[4]
+#g263 = trigger[3]
+#g264 = trigger[2]
+#g375 = Decoder1~synth
+.names g259 g260 g261 g262 g263 g264 g375
+000100 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g375 = Decoder1~synth
+#g376 = Decoder1~synth
+.names g257 g258 g375 g376
+111 1
+
+#g259 = trigger[7]
+#g260 = trigger[6]
+#g261 = trigger[5]
+#g262 = trigger[4]
+#g263 = trigger[3]
+#g264 = trigger[2]
+#g377 = Decoder1~synth
+.names g259 g260 g261 g262 g263 g264 g377
+111000 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g377 = Decoder1~synth
+#g378 = Decoder1~synth
+.names g257 g258 g377 g378
+111 1
+
+#g259 = trigger[7]
+#g260 = trigger[6]
+#g261 = trigger[5]
+#g262 = trigger[4]
+#g263 = trigger[3]
+#g264 = trigger[2]
+#g379 = Decoder1~synth
+.names g259 g260 g261 g262 g263 g264 g379
+011000 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g379 = Decoder1~synth
+#g380 = Decoder1~synth
+.names g257 g258 g379 g380
+111 1
+
+#g259 = trigger[7]
+#g260 = trigger[6]
+#g261 = trigger[5]
+#g262 = trigger[4]
+#g263 = trigger[3]
+#g264 = trigger[2]
+#g381 = Decoder1~synth
+.names g259 g260 g261 g262 g263 g264 g381
+101000 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g381 = Decoder1~synth
+#g382 = Decoder1~synth
+.names g257 g258 g381 g382
+111 1
+
+#g259 = trigger[7]
+#g260 = trigger[6]
+#g261 = trigger[5]
+#g262 = trigger[4]
+#g263 = trigger[3]
+#g264 = trigger[2]
+#g383 = Decoder1~synth
+.names g259 g260 g261 g262 g263 g264 g383
+001000 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g383 = Decoder1~synth
+#g384 = Decoder1~synth
+.names g257 g258 g383 g384
+111 1
+
+#g259 = trigger[7]
+#g260 = trigger[6]
+#g261 = trigger[5]
+#g262 = trigger[4]
+#g263 = trigger[3]
+#g264 = trigger[2]
+#g385 = Decoder1~synth
+.names g259 g260 g261 g262 g263 g264 g385
+110000 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g385 = Decoder1~synth
+#g386 = Decoder1~synth
+.names g257 g258 g385 g386
+111 1
+
+#g259 = trigger[7]
+#g260 = trigger[6]
+#g261 = trigger[5]
+#g262 = trigger[4]
+#g263 = trigger[3]
+#g264 = trigger[2]
+#g387 = Decoder1~synth
+.names g259 g260 g261 g262 g263 g264 g387
+010000 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g387 = Decoder1~synth
+#g388 = Decoder1~synth
+.names g257 g258 g387 g388
+111 1
+
+#g259 = trigger[7]
+#g260 = trigger[6]
+#g261 = trigger[5]
+#g262 = trigger[4]
+#g263 = trigger[3]
+#g264 = trigger[2]
+#g389 = Decoder1~synth
+.names g259 g260 g261 g262 g263 g264 g389
+100000 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g389 = Decoder1~synth
+#g390 = Decoder1~synth
+.names g257 g258 g389 g390
+111 1
+
+#g259 = trigger[7]
+#g260 = trigger[6]
+#g261 = trigger[5]
+#g262 = trigger[4]
+#g263 = trigger[3]
+#g264 = trigger[2]
+#g391 = Decoder1~synth
+.names g259 g260 g261 g262 g263 g264 g391
+000000 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g391 = Decoder1~synth
+#g392 = Decoder1~synth
+.names g257 g258 g391 g392
+111 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g265 = Decoder1~synth
+#g393 = Decoder1~synth
+.names g257 g258 g265 g393
+011 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g267 = Decoder1~synth
+#g394 = Decoder1~synth
+.names g257 g258 g267 g394
+011 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g269 = Decoder1~synth
+#g395 = Decoder1~synth
+.names g257 g258 g269 g395
+011 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g271 = Decoder1~synth
+#g396 = Decoder1~synth
+.names g257 g258 g271 g396
+011 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g273 = Decoder1~synth
+#g397 = Decoder1~synth
+.names g257 g258 g273 g397
+011 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g275 = Decoder1~synth
+#g398 = Decoder1~synth
+.names g257 g258 g275 g398
+011 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g277 = Decoder1~synth
+#g399 = Decoder1~synth
+.names g257 g258 g277 g399
+011 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g279 = Decoder1~synth
+#g400 = Decoder1~synth
+.names g257 g258 g279 g400
+011 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g281 = Decoder1~synth
+#g401 = Decoder1~synth
+.names g257 g258 g281 g401
+011 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g283 = Decoder1~synth
+#g402 = Decoder1~synth
+.names g257 g258 g283 g402
+011 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g285 = Decoder1~synth
+#g403 = Decoder1~synth
+.names g257 g258 g285 g403
+011 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g287 = Decoder1~synth
+#g404 = Decoder1~synth
+.names g257 g258 g287 g404
+011 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g289 = Decoder1~synth
+#g405 = Decoder1~synth
+.names g257 g258 g289 g405
+011 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g291 = Decoder1~synth
+#g406 = Decoder1~synth
+.names g257 g258 g291 g406
+011 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g293 = Decoder1~synth
+#g407 = Decoder1~synth
+.names g257 g258 g293 g407
+011 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g295 = Decoder1~synth
+#g408 = Decoder1~synth
+.names g257 g258 g295 g408
+011 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g297 = Decoder1~synth
+#g409 = Decoder1~synth
+.names g257 g258 g297 g409
+011 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g299 = Decoder1~synth
+#g410 = Decoder1~synth
+.names g257 g258 g299 g410
+011 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g301 = Decoder1~synth
+#g411 = Decoder1~synth
+.names g257 g258 g301 g411
+011 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g303 = Decoder1~synth
+#g412 = Decoder1~synth
+.names g257 g258 g303 g412
+011 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g305 = Decoder1~synth
+#g413 = Decoder1~synth
+.names g257 g258 g305 g413
+011 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g307 = Decoder1~synth
+#g414 = Decoder1~synth
+.names g257 g258 g307 g414
+011 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g309 = Decoder1~synth
+#g415 = Decoder1~synth
+.names g257 g258 g309 g415
+011 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g311 = Decoder1~synth
+#g416 = Decoder1~synth
+.names g257 g258 g311 g416
+011 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g313 = Decoder1~synth
+#g417 = Decoder1~synth
+.names g257 g258 g313 g417
+011 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g315 = Decoder1~synth
+#g418 = Decoder1~synth
+.names g257 g258 g315 g418
+011 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g317 = Decoder1~synth
+#g419 = Decoder1~synth
+.names g257 g258 g317 g419
+011 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g319 = Decoder1~synth
+#g420 = Decoder1~synth
+.names g257 g258 g319 g420
+011 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g321 = Decoder1~synth
+#g421 = Decoder1~synth
+.names g257 g258 g321 g421
+011 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g323 = Decoder1~synth
+#g422 = Decoder1~synth
+.names g257 g258 g323 g422
+011 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g325 = Decoder1~synth
+#g423 = Decoder1~synth
+.names g257 g258 g325 g423
+011 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g327 = Decoder1~synth
+#g424 = Decoder1~synth
+.names g257 g258 g327 g424
+011 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g329 = Decoder1~synth
+#g425 = Decoder1~synth
+.names g257 g258 g329 g425
+011 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g331 = Decoder1~synth
+#g426 = Decoder1~synth
+.names g257 g258 g331 g426
+011 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g333 = Decoder1~synth
+#g427 = Decoder1~synth
+.names g257 g258 g333 g427
+011 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g335 = Decoder1~synth
+#g428 = Decoder1~synth
+.names g257 g258 g335 g428
+011 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g337 = Decoder1~synth
+#g429 = Decoder1~synth
+.names g257 g258 g337 g429
+011 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g339 = Decoder1~synth
+#g430 = Decoder1~synth
+.names g257 g258 g339 g430
+011 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g341 = Decoder1~synth
+#g431 = Decoder1~synth
+.names g257 g258 g341 g431
+011 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g343 = Decoder1~synth
+#g432 = Decoder1~synth
+.names g257 g258 g343 g432
+011 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g345 = Decoder1~synth
+#g433 = Decoder1~synth
+.names g257 g258 g345 g433
+011 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g347 = Decoder1~synth
+#g434 = Decoder1~synth
+.names g257 g258 g347 g434
+011 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g349 = Decoder1~synth
+#g435 = Decoder1~synth
+.names g257 g258 g349 g435
+011 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g351 = Decoder1~synth
+#g436 = Decoder1~synth
+.names g257 g258 g351 g436
+011 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g353 = Decoder1~synth
+#g437 = Decoder1~synth
+.names g257 g258 g353 g437
+011 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g355 = Decoder1~synth
+#g438 = Decoder1~synth
+.names g257 g258 g355 g438
+011 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g357 = Decoder1~synth
+#g439 = Decoder1~synth
+.names g257 g258 g357 g439
+011 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g359 = Decoder1~synth
+#g440 = Decoder1~synth
+.names g257 g258 g359 g440
+011 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g361 = Decoder1~synth
+#g441 = Decoder1~synth
+.names g257 g258 g361 g441
+011 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g363 = Decoder1~synth
+#g442 = Decoder1~synth
+.names g257 g258 g363 g442
+011 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g365 = Decoder1~synth
+#g443 = Decoder1~synth
+.names g257 g258 g365 g443
+011 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g367 = Decoder1~synth
+#g444 = Decoder1~synth
+.names g257 g258 g367 g444
+011 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g369 = Decoder1~synth
+#g445 = Decoder1~synth
+.names g257 g258 g369 g445
+011 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g371 = Decoder1~synth
+#g446 = Decoder1~synth
+.names g257 g258 g371 g446
+011 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g373 = Decoder1~synth
+#g447 = Decoder1~synth
+.names g257 g258 g373 g447
+011 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g375 = Decoder1~synth
+#g448 = Decoder1~synth
+.names g257 g258 g375 g448
+011 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g377 = Decoder1~synth
+#g449 = Decoder1~synth
+.names g257 g258 g377 g449
+011 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g379 = Decoder1~synth
+#g450 = Decoder1~synth
+.names g257 g258 g379 g450
+011 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g381 = Decoder1~synth
+#g451 = Decoder1~synth
+.names g257 g258 g381 g451
+011 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g383 = Decoder1~synth
+#g452 = Decoder1~synth
+.names g257 g258 g383 g452
+011 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g385 = Decoder1~synth
+#g453 = Decoder1~synth
+.names g257 g258 g385 g453
+011 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g387 = Decoder1~synth
+#g454 = Decoder1~synth
+.names g257 g258 g387 g454
+011 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g389 = Decoder1~synth
+#g455 = Decoder1~synth
+.names g257 g258 g389 g455
+011 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g391 = Decoder1~synth
+#g456 = Decoder1~synth
+.names g257 g258 g391 g456
+011 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g265 = Decoder1~synth
+#g457 = Decoder1~synth
+.names g257 g258 g265 g457
+101 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g267 = Decoder1~synth
+#g458 = Decoder1~synth
+.names g257 g258 g267 g458
+101 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g269 = Decoder1~synth
+#g459 = Decoder1~synth
+.names g257 g258 g269 g459
+101 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g271 = Decoder1~synth
+#g460 = Decoder1~synth
+.names g257 g258 g271 g460
+101 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g273 = Decoder1~synth
+#g461 = Decoder1~synth
+.names g257 g258 g273 g461
+101 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g275 = Decoder1~synth
+#g462 = Decoder1~synth
+.names g257 g258 g275 g462
+101 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g277 = Decoder1~synth
+#g463 = Decoder1~synth
+.names g257 g258 g277 g463
+101 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g279 = Decoder1~synth
+#g464 = Decoder1~synth
+.names g257 g258 g279 g464
+101 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g281 = Decoder1~synth
+#g465 = Decoder1~synth
+.names g257 g258 g281 g465
+101 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g283 = Decoder1~synth
+#g466 = Decoder1~synth
+.names g257 g258 g283 g466
+101 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g285 = Decoder1~synth
+#g467 = Decoder1~synth
+.names g257 g258 g285 g467
+101 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g287 = Decoder1~synth
+#g468 = Decoder1~synth
+.names g257 g258 g287 g468
+101 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g289 = Decoder1~synth
+#g469 = Decoder1~synth
+.names g257 g258 g289 g469
+101 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g291 = Decoder1~synth
+#g470 = Decoder1~synth
+.names g257 g258 g291 g470
+101 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g293 = Decoder1~synth
+#g471 = Decoder1~synth
+.names g257 g258 g293 g471
+101 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g295 = Decoder1~synth
+#g472 = Decoder1~synth
+.names g257 g258 g295 g472
+101 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g297 = Decoder1~synth
+#g473 = Decoder1~synth
+.names g257 g258 g297 g473
+101 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g299 = Decoder1~synth
+#g474 = Decoder1~synth
+.names g257 g258 g299 g474
+101 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g301 = Decoder1~synth
+#g475 = Decoder1~synth
+.names g257 g258 g301 g475
+101 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g303 = Decoder1~synth
+#g476 = Decoder1~synth
+.names g257 g258 g303 g476
+101 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g305 = Decoder1~synth
+#g477 = Decoder1~synth
+.names g257 g258 g305 g477
+101 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g307 = Decoder1~synth
+#g478 = Decoder1~synth
+.names g257 g258 g307 g478
+101 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g309 = Decoder1~synth
+#g479 = Decoder1~synth
+.names g257 g258 g309 g479
+101 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g311 = Decoder1~synth
+#g480 = Decoder1~synth
+.names g257 g258 g311 g480
+101 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g313 = Decoder1~synth
+#g481 = Decoder1~synth
+.names g257 g258 g313 g481
+101 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g315 = Decoder1~synth
+#g482 = Decoder1~synth
+.names g257 g258 g315 g482
+101 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g317 = Decoder1~synth
+#g483 = Decoder1~synth
+.names g257 g258 g317 g483
+101 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g319 = Decoder1~synth
+#g484 = Decoder1~synth
+.names g257 g258 g319 g484
+101 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g321 = Decoder1~synth
+#g485 = Decoder1~synth
+.names g257 g258 g321 g485
+101 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g323 = Decoder1~synth
+#g486 = Decoder1~synth
+.names g257 g258 g323 g486
+101 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g325 = Decoder1~synth
+#g487 = Decoder1~synth
+.names g257 g258 g325 g487
+101 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g327 = Decoder1~synth
+#g488 = Decoder1~synth
+.names g257 g258 g327 g488
+101 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g329 = Decoder1~synth
+#g489 = Decoder1~synth
+.names g257 g258 g329 g489
+101 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g331 = Decoder1~synth
+#g490 = Decoder1~synth
+.names g257 g258 g331 g490
+101 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g333 = Decoder1~synth
+#g491 = Decoder1~synth
+.names g257 g258 g333 g491
+101 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g335 = Decoder1~synth
+#g492 = Decoder1~synth
+.names g257 g258 g335 g492
+101 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g337 = Decoder1~synth
+#g493 = Decoder1~synth
+.names g257 g258 g337 g493
+101 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g339 = Decoder1~synth
+#g494 = Decoder1~synth
+.names g257 g258 g339 g494
+101 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g341 = Decoder1~synth
+#g495 = Decoder1~synth
+.names g257 g258 g341 g495
+101 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g343 = Decoder1~synth
+#g496 = Decoder1~synth
+.names g257 g258 g343 g496
+101 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g345 = Decoder1~synth
+#g497 = Decoder1~synth
+.names g257 g258 g345 g497
+101 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g347 = Decoder1~synth
+#g498 = Decoder1~synth
+.names g257 g258 g347 g498
+101 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g349 = Decoder1~synth
+#g499 = Decoder1~synth
+.names g257 g258 g349 g499
+101 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g351 = Decoder1~synth
+#g500 = Decoder1~synth
+.names g257 g258 g351 g500
+101 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g353 = Decoder1~synth
+#g501 = Decoder1~synth
+.names g257 g258 g353 g501
+101 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g355 = Decoder1~synth
+#g502 = Decoder1~synth
+.names g257 g258 g355 g502
+101 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g357 = Decoder1~synth
+#g503 = Decoder1~synth
+.names g257 g258 g357 g503
+101 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g359 = Decoder1~synth
+#g504 = Decoder1~synth
+.names g257 g258 g359 g504
+101 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g361 = Decoder1~synth
+#g505 = Decoder1~synth
+.names g257 g258 g361 g505
+101 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g363 = Decoder1~synth
+#g506 = Decoder1~synth
+.names g257 g258 g363 g506
+101 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g365 = Decoder1~synth
+#g507 = Decoder1~synth
+.names g257 g258 g365 g507
+101 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g367 = Decoder1~synth
+#g508 = Decoder1~synth
+.names g257 g258 g367 g508
+101 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g369 = Decoder1~synth
+#g509 = Decoder1~synth
+.names g257 g258 g369 g509
+101 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g371 = Decoder1~synth
+#g510 = Decoder1~synth
+.names g257 g258 g371 g510
+101 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g373 = Decoder1~synth
+#g511 = Decoder1~synth
+.names g257 g258 g373 g511
+101 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g375 = Decoder1~synth
+#g512 = Decoder1~synth
+.names g257 g258 g375 g512
+101 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g377 = Decoder1~synth
+#g513 = Decoder1~synth
+.names g257 g258 g377 g513
+101 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g379 = Decoder1~synth
+#g514 = Decoder1~synth
+.names g257 g258 g379 g514
+101 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g381 = Decoder1~synth
+#g515 = Decoder1~synth
+.names g257 g258 g381 g515
+101 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g383 = Decoder1~synth
+#g516 = Decoder1~synth
+.names g257 g258 g383 g516
+101 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g385 = Decoder1~synth
+#g517 = Decoder1~synth
+.names g257 g258 g385 g517
+101 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g387 = Decoder1~synth
+#g518 = Decoder1~synth
+.names g257 g258 g387 g518
+101 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g389 = Decoder1~synth
+#g519 = Decoder1~synth
+.names g257 g258 g389 g519
+101 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g391 = Decoder1~synth
+#g520 = Decoder1~synth
+.names g257 g258 g391 g520
+101 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g265 = Decoder1~synth
+#g521 = Decoder1~synth
+.names g257 g258 g265 g521
+001 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g267 = Decoder1~synth
+#g522 = Decoder1~synth
+.names g257 g258 g267 g522
+001 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g269 = Decoder1~synth
+#g523 = Decoder1~synth
+.names g257 g258 g269 g523
+001 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g271 = Decoder1~synth
+#g524 = Decoder1~synth
+.names g257 g258 g271 g524
+001 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g273 = Decoder1~synth
+#g525 = Decoder1~synth
+.names g257 g258 g273 g525
+001 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g275 = Decoder1~synth
+#g526 = Decoder1~synth
+.names g257 g258 g275 g526
+001 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g277 = Decoder1~synth
+#g527 = Decoder1~synth
+.names g257 g258 g277 g527
+001 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g279 = Decoder1~synth
+#g528 = Decoder1~synth
+.names g257 g258 g279 g528
+001 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g281 = Decoder1~synth
+#g529 = Decoder1~synth
+.names g257 g258 g281 g529
+001 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g283 = Decoder1~synth
+#g530 = Decoder1~synth
+.names g257 g258 g283 g530
+001 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g285 = Decoder1~synth
+#g531 = Decoder1~synth
+.names g257 g258 g285 g531
+001 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g287 = Decoder1~synth
+#g532 = Decoder1~synth
+.names g257 g258 g287 g532
+001 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g289 = Decoder1~synth
+#g533 = Decoder1~synth
+.names g257 g258 g289 g533
+001 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g291 = Decoder1~synth
+#g534 = Decoder1~synth
+.names g257 g258 g291 g534
+001 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g293 = Decoder1~synth
+#g535 = Decoder1~synth
+.names g257 g258 g293 g535
+001 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g295 = Decoder1~synth
+#g536 = Decoder1~synth
+.names g257 g258 g295 g536
+001 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g297 = Decoder1~synth
+#g537 = Decoder1~synth
+.names g257 g258 g297 g537
+001 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g299 = Decoder1~synth
+#g538 = Decoder1~synth
+.names g257 g258 g299 g538
+001 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g301 = Decoder1~synth
+#g539 = Decoder1~synth
+.names g257 g258 g301 g539
+001 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g303 = Decoder1~synth
+#g540 = Decoder1~synth
+.names g257 g258 g303 g540
+001 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g305 = Decoder1~synth
+#g541 = Decoder1~synth
+.names g257 g258 g305 g541
+001 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g307 = Decoder1~synth
+#g542 = Decoder1~synth
+.names g257 g258 g307 g542
+001 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g309 = Decoder1~synth
+#g543 = Decoder1~synth
+.names g257 g258 g309 g543
+001 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g311 = Decoder1~synth
+#g544 = Decoder1~synth
+.names g257 g258 g311 g544
+001 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g313 = Decoder1~synth
+#g545 = Decoder1~synth
+.names g257 g258 g313 g545
+001 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g315 = Decoder1~synth
+#g546 = Decoder1~synth
+.names g257 g258 g315 g546
+001 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g317 = Decoder1~synth
+#g547 = Decoder1~synth
+.names g257 g258 g317 g547
+001 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g319 = Decoder1~synth
+#g548 = Decoder1~synth
+.names g257 g258 g319 g548
+001 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g321 = Decoder1~synth
+#g549 = Decoder1~synth
+.names g257 g258 g321 g549
+001 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g323 = Decoder1~synth
+#g550 = Decoder1~synth
+.names g257 g258 g323 g550
+001 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g325 = Decoder1~synth
+#g551 = Decoder1~synth
+.names g257 g258 g325 g551
+001 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g327 = Decoder1~synth
+#g552 = Decoder1~synth
+.names g257 g258 g327 g552
+001 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g329 = Decoder1~synth
+#g553 = Decoder1~synth
+.names g257 g258 g329 g553
+001 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g331 = Decoder1~synth
+#g554 = Decoder1~synth
+.names g257 g258 g331 g554
+001 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g333 = Decoder1~synth
+#g555 = Decoder1~synth
+.names g257 g258 g333 g555
+001 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g335 = Decoder1~synth
+#g556 = Decoder1~synth
+.names g257 g258 g335 g556
+001 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g337 = Decoder1~synth
+#g557 = Decoder1~synth
+.names g257 g258 g337 g557
+001 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g339 = Decoder1~synth
+#g558 = Decoder1~synth
+.names g257 g258 g339 g558
+001 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g341 = Decoder1~synth
+#g559 = Decoder1~synth
+.names g257 g258 g341 g559
+001 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g343 = Decoder1~synth
+#g560 = Decoder1~synth
+.names g257 g258 g343 g560
+001 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g345 = Decoder1~synth
+#g561 = Decoder1~synth
+.names g257 g258 g345 g561
+001 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g347 = Decoder1~synth
+#g562 = Decoder1~synth
+.names g257 g258 g347 g562
+001 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g349 = Decoder1~synth
+#g563 = Decoder1~synth
+.names g257 g258 g349 g563
+001 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g351 = Decoder1~synth
+#g564 = Decoder1~synth
+.names g257 g258 g351 g564
+001 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g353 = Decoder1~synth
+#g565 = Decoder1~synth
+.names g257 g258 g353 g565
+001 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g355 = Decoder1~synth
+#g566 = Decoder1~synth
+.names g257 g258 g355 g566
+001 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g357 = Decoder1~synth
+#g567 = Decoder1~synth
+.names g257 g258 g357 g567
+001 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g359 = Decoder1~synth
+#g568 = Decoder1~synth
+.names g257 g258 g359 g568
+001 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g361 = Decoder1~synth
+#g569 = Decoder1~synth
+.names g257 g258 g361 g569
+001 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g363 = Decoder1~synth
+#g570 = Decoder1~synth
+.names g257 g258 g363 g570
+001 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g365 = Decoder1~synth
+#g571 = Decoder1~synth
+.names g257 g258 g365 g571
+001 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g367 = Decoder1~synth
+#g572 = Decoder1~synth
+.names g257 g258 g367 g572
+001 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g369 = Decoder1~synth
+#g573 = Decoder1~synth
+.names g257 g258 g369 g573
+001 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g371 = Decoder1~synth
+#g574 = Decoder1~synth
+.names g257 g258 g371 g574
+001 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g373 = Decoder1~synth
+#g575 = Decoder1~synth
+.names g257 g258 g373 g575
+001 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g375 = Decoder1~synth
+#g576 = Decoder1~synth
+.names g257 g258 g375 g576
+001 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g377 = Decoder1~synth
+#g577 = Decoder1~synth
+.names g257 g258 g377 g577
+001 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g379 = Decoder1~synth
+#g578 = Decoder1~synth
+.names g257 g258 g379 g578
+001 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g381 = Decoder1~synth
+#g579 = Decoder1~synth
+.names g257 g258 g381 g579
+001 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g383 = Decoder1~synth
+#g580 = Decoder1~synth
+.names g257 g258 g383 g580
+001 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g385 = Decoder1~synth
+#g581 = Decoder1~synth
+.names g257 g258 g385 g581
+001 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g387 = Decoder1~synth
+#g582 = Decoder1~synth
+.names g257 g258 g387 g582
+001 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g389 = Decoder1~synth
+#g583 = Decoder1~synth
+.names g257 g258 g389 g583
+001 1
+
+#g257 = trigger[1]
+#g258 = trigger[0]
+#g391 = Decoder1~synth
+#g584 = Decoder1~synth
+.names g257 g258 g391 g584
+001 1
+
+.names g585 g626
+0 1
+
+#g585 = count[3]
+.latch g626 g585 re clk 2
+
+#g586 = count[2]
+.latch g597 g586 re clk 2
+
+#g587 = count[1]
+.latch g599 g587 re clk 2
+
+#g588 = count[0]
+.latch g601 g588 re clk 2
+
+#g585 = count[3]
+#g586 = count[2]
+#g587 = count[1]
+#g588 = count[0]
+#g589 = Decoder0~synth
+.names g585 g586 g587 g588 g589
+1000 1
+
+#g585 = count[3]
+#g586 = count[2]
+#g587 = count[1]
+#g588 = count[0]
+#g590 = Decoder0~synth
+.names g585 g586 g587 g588 g590
+0000 1
+
+#g585 = count[3]
+#g586 = count[2]
+#g587 = count[1]
+#g588 = count[0]
+#g591 = Decoder0~synth
+.names g585 g586 g587 g588 g591
+1110 1
+
+#g585 = count[3]
+#g586 = count[2]
+#g587 = count[1]
+#g588 = count[0]
+#g592 = Decoder0~synth
+.names g585 g586 g587 g588 g592
+0110 1
+
+#g585 = count[3]
+#g586 = count[2]
+#g587 = count[1]
+#g588 = count[0]
+#g593 = Decoder0~synth
+.names g585 g586 g587 g588 g593
+1010 1
+
+#g585 = count[3]
+#g586 = count[2]
+#g587 = count[1]
+#g588 = count[0]
+#g594 = Decoder0~synth
+.names g585 g586 g587 g588 g594
+0010 1
+
+#g585 = count[3]
+#g586 = count[2]
+#g587 = count[1]
+#g588 = count[0]
+#g595 = Decoder0~synth
+.names g585 g586 g587 g588 g595
+1100 1
+
+#g585 = count[3]
+#g586 = count[2]
+#g587 = count[1]
+#g588 = count[0]
+#g596 = Decoder0~synth
+.names g585 g586 g587 g588 g596
+0100 1
+
+#g585 = count[3]
+#g586 = count[2]
+#g597 = count[2]~synth
+.names g585 g586 g597
+10 1
+01 1
+
+#g585 = count[3]
+#g586 = count[2]
+#g598 = Add0~synth
+.names g585 g586 g598
+11 1
+
+#g587 = count[1]
+#g598 = Add0~synth
+#g599 = count[1]~synth
+.names g587 g598 g599
+10 1
+01 1
+
+#g587 = count[1]
+#g598 = Add0~synth
+#g600 = Add0~synth
+.names g587 g598 g600
+11 1
+
+#g588 = count[0]
+#g600 = Add0~synth
+#g601 = count[0]~synth
+.names g588 g600 g601
+10 1
+01 1
+
+#g589 = Decoder0~synth
+#g602 = trigger[1]~synth
+.names in g589 g602
+11 1
+
+#g257 = trigger[1]
+#g589 = Decoder0~synth
+#g603 = trigger[1]~synth
+.names g257 g589 g603
+10 1
+
+#g602 = trigger[1]~synth
+#g603 = trigger[1]~synth
+#g604 = trigger[1]~synth
+.names g602 g603 g604
+00 0
+
+#g590 = Decoder0~synth
+#g605 = trigger[0]~synth
+.names in g590 g605
+11 1
+
+#g258 = trigger[0]
+#g590 = Decoder0~synth
+#g606 = trigger[0]~synth
+.names g258 g590 g606
+10 1
+
+#g605 = trigger[0]~synth
+#g606 = trigger[0]~synth
+#g607 = trigger[0]~synth
+.names g605 g606 g607
+00 0
+
+#g591 = Decoder0~synth
+#g608 = trigger[7]~synth
+.names in g591 g608
+11 1
+
+#g259 = trigger[7]
+#g591 = Decoder0~synth
+#g609 = trigger[7]~synth
+.names g259 g591 g609
+10 1
+
+#g608 = trigger[7]~synth
+#g609 = trigger[7]~synth
+#g610 = trigger[7]~synth
+.names g608 g609 g610
+00 0
+
+#g592 = Decoder0~synth
+#g611 = trigger[6]~synth
+.names in g592 g611
+11 1
+
+#g260 = trigger[6]
+#g592 = Decoder0~synth
+#g612 = trigger[6]~synth
+.names g260 g592 g612
+10 1
+
+#g611 = trigger[6]~synth
+#g612 = trigger[6]~synth
+#g613 = trigger[6]~synth
+.names g611 g612 g613
+00 0
+
+#g593 = Decoder0~synth
+#g614 = trigger[5]~synth
+.names in g593 g614
+11 1
+
+#g261 = trigger[5]
+#g593 = Decoder0~synth
+#g615 = trigger[5]~synth
+.names g261 g593 g615
+10 1
+
+#g614 = trigger[5]~synth
+#g615 = trigger[5]~synth
+#g616 = trigger[5]~synth
+.names g614 g615 g616
+00 0
+
+#g594 = Decoder0~synth
+#g617 = trigger[4]~synth
+.names in g594 g617
+11 1
+
+#g262 = trigger[4]
+#g594 = Decoder0~synth
+#g618 = trigger[4]~synth
+.names g262 g594 g618
+10 1
+
+#g617 = trigger[4]~synth
+#g618 = trigger[4]~synth
+#g619 = trigger[4]~synth
+.names g617 g618 g619
+00 0
+
+#g595 = Decoder0~synth
+#g620 = trigger[3]~synth
+.names in g595 g620
+11 1
+
+#g263 = trigger[3]
+#g595 = Decoder0~synth
+#g621 = trigger[3]~synth
+.names g263 g595 g621
+10 1
+
+#g620 = trigger[3]~synth
+#g621 = trigger[3]~synth
+#g622 = trigger[3]~synth
+.names g620 g621 g622
+00 0
+
+#g596 = Decoder0~synth
+#g623 = trigger[2]~synth
+.names in g596 g623
+11 1
+
+#g264 = trigger[2]
+#g596 = Decoder0~synth
+#g624 = trigger[2]~synth
+.names g264 g596 g624
+10 1
+
+#g623 = trigger[2]~synth
+#g624 = trigger[2]~synth
+#g625 = trigger[2]~synth
+.names g623 g624 g625
+00 0
+
+.end
+

@@ -1,0 +1,5356 @@
+.model faulty_tiger_branch
+.inputs reset rs[0] exception control[21] stall control[5] control[6] control[7] rt[0] rs[1] rt[1] rs[2] rt[2] rs[3] rt[3] rs[4] rt[4] rs[5] rt[5] rs[6] rt[6] rs[7] rt[7] rs[8] rt[8] rs[9] rt[9] rs[10] rt[10] rs[11] rt[11] rs[12] rt[12] rs[13] rt[13] rs[14] rt[14] rs[15] rt[15] rs[16] rt[16] rs[17] rt[17] rs[18] rt[18] rs[19] rt[19] rs[20] rt[20] rs[21] rt[21] rs[22] rt[22] rs[23] rt[23] rs[24] rt[24] rs[25] rt[25] rs[26] rt[26] rs[27] rt[27] rs[28] rt[28] rs[29] rt[29] rs[30] rt[30] rs[31] rt[31] control[24] control[20] instr[0] instr[1] instr[2] instr[3] instr[4] instr[5] instr[6] instr[7] instr[8] instr[9] instr[10] instr[11] instr[12] instr[13] instr[14] instr[15] instr[16] instr[17] instr[18] instr[19] instr[20] instr[21] instr[22] instr[23] instr[24] instr[25] clk
+.outputs branchout[0] branchout[1] branchout[2] branchout[3] branchout[4] branchout[5] branchout[6] branchout[7] branchout[8] branchout[9] branchout[10] branchout[11] branchout[12] branchout[13] branchout[14] branchout[15] branchout[16] branchout[17] branchout[18] branchout[19] branchout[20] branchout[21] branchout[22] branchout[23] branchout[24] branchout[25] branchout[26] branchout[27] branchout[28] branchout[29] branchout[30] branchout[31] epc[0] epc[1] epc[2] epc[3] epc[4] epc[5] epc[6] epc[7] epc[8] epc[9] epc[10] epc[11] epc[12] epc[13] epc[14] epc[15] epc[16] epc[17] epc[18] epc[19] epc[20] epc[21] epc[22] epc[23] epc[24] epc[25] epc[26] epc[27] epc[28] epc[29] epc[30] epc[31] branchDelay nextpc[0] nextpc[1] nextpc[2] nextpc[3] nextpc[4] nextpc[5] nextpc[6] nextpc[7] nextpc[8] nextpc[9] nextpc[10] nextpc[11] nextpc[12] nextpc[13] nextpc[14] nextpc[15] nextpc[16] nextpc[17] nextpc[18] nextpc[19] nextpc[20] nextpc[21] nextpc[22] nextpc[23] nextpc[24] nextpc[25] nextpc[26] nextpc[27] nextpc[28] nextpc[29] nextpc[30] nextpc[31]
+
+# g1 = branchout[0]~reg0
+.names g1 branchout[0]
+1 1
+
+# g2 = branchout[1]~reg0
+.names g2 branchout[1]
+1 1
+
+# g3 = branchout[2]~reg0
+.names g3 branchout[2]
+1 1
+
+# g4 = branchout[3]~reg0
+.names g4 branchout[3]
+1 1
+
+# g5 = branchout[4]~reg0
+.names g5 branchout[4]
+1 1
+
+# g6 = branchout[5]~reg0
+.names g6 branchout[5]
+1 1
+
+# g7 = branchout[6]~reg0
+.names g7 branchout[6]
+1 1
+
+# g8 = branchout[7]~reg0
+.names g8 branchout[7]
+1 1
+
+# g9 = branchout[8]~reg0
+.names g9 branchout[8]
+1 1
+
+# g10 = branchout[9]~reg0
+.names g10 branchout[9]
+1 1
+
+# g11 = branchout[10]~reg0
+.names g11 branchout[10]
+1 1
+
+# g12 = branchout[11]~reg0
+.names g12 branchout[11]
+1 1
+
+# g13 = branchout[12]~reg0
+.names g13 branchout[12]
+1 1
+
+# g14 = branchout[13]~reg0
+.names g14 branchout[13]
+1 1
+
+# g15 = branchout[14]~reg0
+.names g15 branchout[14]
+1 1
+
+# g16 = branchout[15]~reg0
+.names g16 branchout[15]
+1 1
+
+# g17 = branchout[16]~reg0
+.names g17 branchout[16]
+1 1
+
+# g18 = branchout[17]~reg0
+.names g18 branchout[17]
+1 1
+
+# g19 = branchout[18]~reg0
+.names g19 branchout[18]
+1 1
+
+# g20 = branchout[19]~reg0
+.names g20 branchout[19]
+1 1
+
+# g21 = branchout[20]~reg0
+.names g21 branchout[20]
+1 1
+
+# g22 = branchout[21]~reg0
+.names g22 branchout[21]
+1 1
+
+# g23 = branchout[22]~reg0
+.names g23 branchout[22]
+1 1
+
+# g24 = branchout[23]~reg0
+.names g24 branchout[23]
+1 1
+
+# g25 = branchout[24]~reg0
+.names g25 branchout[24]
+1 1
+
+# g26 = branchout[25]~reg0
+.names g26 branchout[25]
+1 1
+
+# g27 = branchout[26]~reg0
+.names g27 branchout[26]
+1 1
+
+# g28 = branchout[27]~reg0
+.names g28 branchout[27]
+1 1
+
+# g29 = branchout[28]~reg0
+.names g29 branchout[28]
+1 1
+
+# g30 = branchout[29]~reg0
+.names g30 branchout[29]
+1 1
+
+# g31 = branchout[30]~reg0
+.names g31 branchout[30]
+1 1
+
+# g32 = branchout[31]~reg0
+.names g32 branchout[31]
+1 1
+
+# g565 = epc~synth
+.names g565 epc[3]
+0 1
+
+# g568 = epc~synth
+.names g568 epc[4]
+0 1
+
+# g571 = epc~synth
+.names g571 epc[5]
+0 1
+
+# g574 = epc~synth
+.names g574 epc[6]
+0 1
+
+# g577 = epc~synth
+.names g577 epc[7]
+0 1
+
+# g580 = epc~synth
+.names g580 epc[8]
+0 1
+
+# g583 = epc~synth
+.names g583 epc[9]
+0 1
+
+# g586 = epc~synth
+.names g586 epc[10]
+0 1
+
+# g589 = epc~synth
+.names g589 epc[11]
+0 1
+
+# g592 = epc~synth
+.names g592 epc[12]
+0 1
+
+# g595 = epc~synth
+.names g595 epc[13]
+0 1
+
+# g598 = epc~synth
+.names g598 epc[14]
+0 1
+
+# g601 = epc~synth
+.names g601 epc[15]
+0 1
+
+# g604 = epc~synth
+.names g604 epc[16]
+0 1
+
+# g607 = epc~synth
+.names g607 epc[17]
+0 1
+
+# g610 = epc~synth
+.names g610 epc[18]
+0 1
+
+# g613 = epc~synth
+.names g613 epc[19]
+0 1
+
+# g616 = epc~synth
+.names g616 epc[20]
+0 1
+
+# g619 = epc~synth
+.names g619 epc[21]
+0 1
+
+# g622 = epc~synth
+.names g622 epc[22]
+0 1
+
+# g625 = epc~synth
+.names g625 epc[23]
+0 1
+
+# g628 = epc~synth
+.names g628 epc[24]
+0 1
+
+# g631 = epc~synth
+.names g631 epc[25]
+0 1
+
+# g634 = epc~synth
+.names g634 epc[26]
+0 1
+
+# g637 = epc~synth
+.names g637 epc[27]
+0 1
+
+# g640 = epc~synth
+.names g640 epc[28]
+0 1
+
+# g643 = epc~synth
+.names g643 epc[29]
+0 1
+
+# g749 = branchDelay~reg0
+.names g749 branchDelay
+1 1
+
+# g227 = nextpc~synth
+.names g227 nextpc[0]
+1 1
+
+# g229 = nextpc~synth
+.names g229 nextpc[1]
+1 1
+
+# g236 = nextpc~synth
+.names g236 nextpc[2]
+1 1
+
+# g242 = nextpc~synth
+.names g242 nextpc[3]
+1 1
+
+# g253 = nextpc~synth
+.names g253 nextpc[4]
+1 1
+
+# g264 = nextpc~synth
+.names g264 nextpc[5]
+1 1
+
+# g275 = nextpc~synth
+.names g275 nextpc[6]
+1 1
+
+# g286 = nextpc~synth
+.names g286 nextpc[7]
+1 1
+
+# g297 = nextpc~synth
+.names g297 nextpc[8]
+1 1
+
+# g308 = nextpc~synth
+.names g308 nextpc[9]
+1 1
+
+# g319 = nextpc~synth
+.names g319 nextpc[10]
+1 1
+
+# g330 = nextpc~synth
+.names g330 nextpc[11]
+1 1
+
+# g341 = nextpc~synth
+.names g341 nextpc[12]
+1 1
+
+# g352 = nextpc~synth
+.names g352 nextpc[13]
+1 1
+
+# g363 = nextpc~synth
+.names g363 nextpc[14]
+1 1
+
+# g374 = nextpc~synth
+.names g374 nextpc[15]
+1 1
+
+# g385 = nextpc~synth
+.names g385 nextpc[16]
+1 1
+
+# g396 = nextpc~synth
+.names g396 nextpc[17]
+1 1
+
+# g407 = nextpc~synth
+.names g407 nextpc[18]
+1 1
+
+# g418 = nextpc~synth
+.names g418 nextpc[19]
+1 1
+
+# g429 = nextpc~synth
+.names g429 nextpc[20]
+1 1
+
+# g440 = nextpc~synth
+.names g440 nextpc[21]
+1 1
+
+# g451 = nextpc~synth
+.names g451 nextpc[22]
+1 1
+
+# g462 = nextpc~synth
+.names g462 nextpc[23]
+1 1
+
+# g473 = nextpc~synth
+.names g473 nextpc[24]
+1 1
+
+# g484 = nextpc~synth
+.names g484 nextpc[25]
+1 1
+
+# g495 = nextpc~synth
+.names g495 nextpc[26]
+1 1
+
+# g506 = nextpc~synth
+.names g506 nextpc[27]
+1 1
+
+# g521 = nextpc~synth
+.names g521 nextpc[28]
+1 1
+
+# g531 = nextpc~synth
+.names g531 nextpc[29]
+1 1
+
+# g541 = nextpc~synth
+.names g541 nextpc[30]
+1 1
+
+# g551 = nextpc~synth
+.names g551 nextpc[31]
+1 1
+
+#g552 = branchout[10]~synth
+#g1 = branchout[0]~reg0
+.names g552 g33 g1 g751
+1-1 1
+01- 1
+
+#g1 = branchout[0]~reg0
+.latch g751 g1 re clk 2
+
+#g552 = branchout[10]~synth
+#g2 = branchout[1]~reg0
+.names g552 g34 g2 g752
+1-1 1
+01- 1
+
+#g2 = branchout[1]~reg0
+.latch g752 g2 re clk 2
+
+.names g35 g753
+0 1
+
+#g552 = branchout[10]~synth
+#g3 = branchout[2]~reg0
+.names g552 g753 g3 g754
+1-1 1
+01- 1
+
+#g3 = branchout[2]~reg0
+.latch g754 g3 re clk 2
+
+#g552 = branchout[10]~synth
+#g4 = branchout[3]~reg0
+.names g552 g37 g4 g755
+1-1 1
+01- 1
+
+#g4 = branchout[3]~reg0
+.latch g755 g4 re clk 2
+
+#g552 = branchout[10]~synth
+#g5 = branchout[4]~reg0
+.names g552 g244 g5 g756
+1-1 1
+01- 1
+
+#g5 = branchout[4]~reg0
+.latch g756 g5 re clk 2
+
+#g552 = branchout[10]~synth
+#g6 = branchout[5]~reg0
+.names g552 g255 g6 g757
+1-1 1
+01- 1
+
+#g6 = branchout[5]~reg0
+.latch g757 g6 re clk 2
+
+#g552 = branchout[10]~synth
+#g7 = branchout[6]~reg0
+.names g552 g266 g7 g758
+1-1 1
+01- 1
+
+#g7 = branchout[6]~reg0
+.latch g758 g7 re clk 2
+
+#g552 = branchout[10]~synth
+#g8 = branchout[7]~reg0
+.names g552 g277 g8 g759
+1-1 1
+01- 1
+
+#g8 = branchout[7]~reg0
+.latch g759 g8 re clk 2
+
+#g552 = branchout[10]~synth
+#g9 = branchout[8]~reg0
+.names g552 g288 g9 g760
+1-1 1
+01- 1
+
+#g9 = branchout[8]~reg0
+.latch g760 g9 re clk 2
+
+#g552 = branchout[10]~synth
+#g10 = branchout[9]~reg0
+.names g552 g299 g10 g761
+1-1 1
+01- 1
+
+#g10 = branchout[9]~reg0
+.latch g761 g10 re clk 2
+
+#g552 = branchout[10]~synth
+#g11 = branchout[10]~reg0
+.names g552 g310 g11 g762
+1-1 1
+01- 1
+
+#g11 = branchout[10]~reg0
+.latch g762 g11 re clk 2
+
+#g552 = branchout[10]~synth
+#g12 = branchout[11]~reg0
+.names g552 g321 g12 g763
+1-1 1
+01- 1
+
+#g12 = branchout[11]~reg0
+.latch g763 g12 re clk 2
+
+#g552 = branchout[10]~synth
+#g13 = branchout[12]~reg0
+.names g552 g332 g13 g764
+1-1 1
+01- 1
+
+#g13 = branchout[12]~reg0
+.latch g764 g13 re clk 2
+
+#g552 = branchout[10]~synth
+#g14 = branchout[13]~reg0
+.names g552 g343 g14 g765
+1-1 1
+01- 1
+
+#g14 = branchout[13]~reg0
+.latch g765 g14 re clk 2
+
+#g552 = branchout[10]~synth
+#g15 = branchout[14]~reg0
+.names g552 g354 g15 g766
+1-1 1
+01- 1
+
+#g15 = branchout[14]~reg0
+.latch g766 g15 re clk 2
+
+#g552 = branchout[10]~synth
+#g16 = branchout[15]~reg0
+.names g552 g365 g16 g767
+1-1 1
+01- 1
+
+#g16 = branchout[15]~reg0
+.latch g767 g16 re clk 2
+
+#g552 = branchout[10]~synth
+#g17 = branchout[16]~reg0
+.names g552 g376 g17 g768
+1-1 1
+01- 1
+
+#g17 = branchout[16]~reg0
+.latch g768 g17 re clk 2
+
+#g552 = branchout[10]~synth
+#g18 = branchout[17]~reg0
+.names g552 g387 g18 g769
+1-1 1
+01- 1
+
+#g18 = branchout[17]~reg0
+.latch g769 g18 re clk 2
+
+#g552 = branchout[10]~synth
+#g19 = branchout[18]~reg0
+.names g552 g398 g19 g770
+1-1 1
+01- 1
+
+#g19 = branchout[18]~reg0
+.latch g770 g19 re clk 2
+
+#g552 = branchout[10]~synth
+#g20 = branchout[19]~reg0
+.names g552 g409 g20 g771
+1-1 1
+01- 1
+
+#g20 = branchout[19]~reg0
+.latch g771 g20 re clk 2
+
+#g552 = branchout[10]~synth
+#g21 = branchout[20]~reg0
+.names g552 g420 g21 g772
+1-1 1
+01- 1
+
+#g21 = branchout[20]~reg0
+.latch g772 g21 re clk 2
+
+#g552 = branchout[10]~synth
+#g22 = branchout[21]~reg0
+.names g552 g431 g22 g773
+1-1 1
+01- 1
+
+#g22 = branchout[21]~reg0
+.latch g773 g22 re clk 2
+
+#g552 = branchout[10]~synth
+#g23 = branchout[22]~reg0
+.names g552 g442 g23 g774
+1-1 1
+01- 1
+
+#g23 = branchout[22]~reg0
+.latch g774 g23 re clk 2
+
+#g552 = branchout[10]~synth
+#g24 = branchout[23]~reg0
+.names g552 g453 g24 g775
+1-1 1
+01- 1
+
+#g24 = branchout[23]~reg0
+.latch g775 g24 re clk 2
+
+#g552 = branchout[10]~synth
+#g25 = branchout[24]~reg0
+.names g552 g464 g25 g776
+1-1 1
+01- 1
+
+#g25 = branchout[24]~reg0
+.latch g776 g25 re clk 2
+
+#g552 = branchout[10]~synth
+#g26 = branchout[25]~reg0
+.names g552 g475 g26 g777
+1-1 1
+01- 1
+
+#g26 = branchout[25]~reg0
+.latch g777 g26 re clk 2
+
+#g552 = branchout[10]~synth
+#g27 = branchout[26]~reg0
+.names g552 g486 g27 g778
+1-1 1
+01- 1
+
+#g27 = branchout[26]~reg0
+.latch g778 g27 re clk 2
+
+#g552 = branchout[10]~synth
+#g28 = branchout[27]~reg0
+.names g552 g497 g28 g779
+1-1 1
+01- 1
+
+#g28 = branchout[27]~reg0
+.latch g779 g28 re clk 2
+
+#g552 = branchout[10]~synth
+#g29 = branchout[28]~reg0
+.names g552 g508 g29 g780
+1-1 1
+01- 1
+
+#g29 = branchout[28]~reg0
+.latch g780 g29 re clk 2
+
+#g552 = branchout[10]~synth
+#g30 = branchout[29]~reg0
+.names g552 g523 g30 g781
+1-1 1
+01- 1
+
+#g30 = branchout[29]~reg0
+.latch g781 g30 re clk 2
+
+#g552 = branchout[10]~synth
+#g31 = branchout[30]~reg0
+.names g552 g533 g31 g782
+1-1 1
+01- 1
+
+#g31 = branchout[30]~reg0
+.latch g782 g31 re clk 2
+
+#g552 = branchout[10]~synth
+#g32 = branchout[31]~reg0
+.names g552 g543 g32 g783
+1-1 1
+01- 1
+
+#g32 = branchout[31]~reg0
+.latch g783 g32 re clk 2
+
+#g33 = currentpc[0]
+.latch g227 g33 re clk 2
+
+#g34 = currentpc[1]
+.latch g229 g34 re clk 2
+
+#g35 = currentpc[2]
+.latch g236 g35 re clk 2
+
+#g36 = currentpc[3]
+.latch g242 g36 re clk 2
+
+#g35 = currentpc[2]
+#g36 = currentpc[3]
+#g37 = Add3~synth
+.names g35 g36 g37
+10 1
+01 1
+
+#g38 = currentpc[4]
+.latch g253 g38 re clk 2
+
+#g35 = currentpc[2]
+#g36 = currentpc[3]
+#g39 = Add3~synth
+.names g35 g36 g39
+00 0
+
+#g38 = currentpc[4]
+#g39 = Add3~synth
+#g40 = Add3~synth
+.names g38 g39 g40
+10 1
+01 1
+
+#g4 = branchout[3]~reg0
+#g5 = branchout[4]~reg0
+#g41 = Add2~synth
+.names g4 g5 g41
+10 1
+01 1
+
+#g42 = currentpc[5]
+.latch g264 g42 re clk 2
+
+#g38 = currentpc[4]
+#g39 = Add3~synth
+#g43 = Add3~synth
+.names g38 g39 g43
+00 0
+
+#g42 = currentpc[5]
+#g43 = Add3~synth
+#g44 = Add3~synth
+.names g42 g43 g44
+10 1
+01 1
+
+#g4 = branchout[3]~reg0
+#g5 = branchout[4]~reg0
+#g45 = Add2~synth
+.names g4 g5 g45
+00 0
+
+#g6 = branchout[5]~reg0
+#g45 = Add2~synth
+#g46 = Add2~synth
+.names g6 g45 g46
+10 1
+01 1
+
+#g47 = currentpc[6]
+.latch g275 g47 re clk 2
+
+#g42 = currentpc[5]
+#g43 = Add3~synth
+#g48 = Add3~synth
+.names g42 g43 g48
+00 0
+
+#g47 = currentpc[6]
+#g48 = Add3~synth
+#g49 = Add3~synth
+.names g47 g48 g49
+10 1
+01 1
+
+#g6 = branchout[5]~reg0
+#g45 = Add2~synth
+#g50 = Add2~synth
+.names g6 g45 g50
+00 0
+
+#g7 = branchout[6]~reg0
+#g50 = Add2~synth
+#g51 = Add2~synth
+.names g7 g50 g51
+10 1
+01 1
+
+#g52 = currentpc[7]
+.latch g286 g52 re clk 2
+
+#g47 = currentpc[6]
+#g48 = Add3~synth
+#g53 = Add3~synth
+.names g47 g48 g53
+00 0
+
+#g52 = currentpc[7]
+#g53 = Add3~synth
+#g54 = Add3~synth
+.names g52 g53 g54
+10 1
+01 1
+
+#g7 = branchout[6]~reg0
+#g50 = Add2~synth
+#g55 = Add2~synth
+.names g7 g50 g55
+00 0
+
+#g8 = branchout[7]~reg0
+#g55 = Add2~synth
+#g56 = Add2~synth
+.names g8 g55 g56
+10 1
+01 1
+
+#g57 = currentpc[8]
+.latch g297 g57 re clk 2
+
+#g52 = currentpc[7]
+#g53 = Add3~synth
+#g58 = Add3~synth
+.names g52 g53 g58
+00 0
+
+#g57 = currentpc[8]
+#g58 = Add3~synth
+#g59 = Add3~synth
+.names g57 g58 g59
+10 1
+01 1
+
+#g8 = branchout[7]~reg0
+#g55 = Add2~synth
+#g60 = Add2~synth
+.names g8 g55 g60
+00 0
+
+#g9 = branchout[8]~reg0
+#g60 = Add2~synth
+#g61 = Add2~synth
+.names g9 g60 g61
+10 1
+01 1
+
+#g62 = currentpc[9]
+.latch g308 g62 re clk 2
+
+#g57 = currentpc[8]
+#g58 = Add3~synth
+#g63 = Add3~synth
+.names g57 g58 g63
+00 0
+
+#g62 = currentpc[9]
+#g63 = Add3~synth
+#g64 = Add3~synth
+.names g62 g63 g64
+10 1
+01 1
+
+#g9 = branchout[8]~reg0
+#g60 = Add2~synth
+#g65 = Add2~synth
+.names g9 g60 g65
+00 0
+
+#g10 = branchout[9]~reg0
+#g65 = Add2~synth
+#g66 = Add2~synth
+.names g10 g65 g66
+10 1
+01 1
+
+#g67 = currentpc[10]
+.latch g319 g67 re clk 2
+
+#g62 = currentpc[9]
+#g63 = Add3~synth
+#g68 = Add3~synth
+.names g62 g63 g68
+00 0
+
+#g67 = currentpc[10]
+#g68 = Add3~synth
+#g69 = Add3~synth
+.names g67 g68 g69
+10 1
+01 1
+
+#g10 = branchout[9]~reg0
+#g65 = Add2~synth
+#g70 = Add2~synth
+.names g10 g65 g70
+00 0
+
+#g11 = branchout[10]~reg0
+#g70 = Add2~synth
+#g71 = Add2~synth
+.names g11 g70 g71
+10 1
+01 1
+
+#g72 = currentpc[11]
+.latch g330 g72 re clk 2
+
+#g67 = currentpc[10]
+#g68 = Add3~synth
+#g73 = Add3~synth
+.names g67 g68 g73
+00 0
+
+#g72 = currentpc[11]
+#g73 = Add3~synth
+#g74 = Add3~synth
+.names g72 g73 g74
+10 1
+01 1
+
+#g11 = branchout[10]~reg0
+#g70 = Add2~synth
+#g75 = Add2~synth
+.names g11 g70 g75
+00 0
+
+#g12 = branchout[11]~reg0
+#g75 = Add2~synth
+#g76 = Add2~synth
+.names g12 g75 g76
+10 1
+01 1
+
+#g77 = currentpc[12]
+.latch g341 g77 re clk 2
+
+#g72 = currentpc[11]
+#g73 = Add3~synth
+#g78 = Add3~synth
+.names g72 g73 g78
+00 0
+
+#g77 = currentpc[12]
+#g78 = Add3~synth
+#g79 = Add3~synth
+.names g77 g78 g79
+10 1
+01 1
+
+#g12 = branchout[11]~reg0
+#g75 = Add2~synth
+#g80 = Add2~synth
+.names g12 g75 g80
+00 0
+
+#g13 = branchout[12]~reg0
+#g80 = Add2~synth
+#g81 = Add2~synth
+.names g13 g80 g81
+10 1
+01 1
+
+#g82 = currentpc[13]
+.latch g352 g82 re clk 2
+
+#g77 = currentpc[12]
+#g78 = Add3~synth
+#g83 = Add3~synth
+.names g77 g78 g83
+00 0
+
+#g82 = currentpc[13]
+#g83 = Add3~synth
+#g84 = Add3~synth
+.names g82 g83 g84
+10 1
+01 1
+
+#g13 = branchout[12]~reg0
+#g80 = Add2~synth
+#g85 = Add2~synth
+.names g13 g80 g85
+00 0
+
+#g14 = branchout[13]~reg0
+#g85 = Add2~synth
+#g86 = Add2~synth
+.names g14 g85 g86
+10 1
+01 1
+
+#g87 = currentpc[14]
+.latch g363 g87 re clk 2
+
+#g82 = currentpc[13]
+#g83 = Add3~synth
+#g88 = Add3~synth
+.names g82 g83 g88
+00 0
+
+#g87 = currentpc[14]
+#g88 = Add3~synth
+#g89 = Add3~synth
+.names g87 g88 g89
+10 1
+01 1
+
+#g14 = branchout[13]~reg0
+#g85 = Add2~synth
+#g90 = Add2~synth
+.names g14 g85 g90
+00 0
+
+#g15 = branchout[14]~reg0
+#g90 = Add2~synth
+#g91 = Add2~synth
+.names g15 g90 g91
+10 1
+01 1
+
+#g92 = currentpc[15]
+.latch g374 g92 re clk 2
+
+#g87 = currentpc[14]
+#g88 = Add3~synth
+#g93 = Add3~synth
+.names g87 g88 g93
+00 0
+
+#g92 = currentpc[15]
+#g93 = Add3~synth
+#g94 = Add3~synth
+.names g92 g93 g94
+10 1
+01 1
+
+#g15 = branchout[14]~reg0
+#g90 = Add2~synth
+#g95 = Add2~synth
+.names g15 g90 g95
+00 0
+
+#g16 = branchout[15]~reg0
+#g95 = Add2~synth
+#g96 = Add2~synth
+.names g16 g95 g96
+10 1
+01 1
+
+#g97 = currentpc[16]
+.latch g385 g97 re clk 2
+
+#g92 = currentpc[15]
+#g93 = Add3~synth
+#g98 = Add3~synth
+.names g92 g93 g98
+00 0
+
+#g97 = currentpc[16]
+#g98 = Add3~synth
+#g99 = Add3~synth
+.names g97 g98 g99
+10 1
+01 1
+
+#g16 = branchout[15]~reg0
+#g95 = Add2~synth
+#g100 = Add2~synth
+.names g16 g95 g100
+00 0
+
+#g17 = branchout[16]~reg0
+#g100 = Add2~synth
+#g101 = Add2~synth
+.names g17 g100 g101
+10 1
+01 1
+
+#g102 = currentpc[17]
+.latch g396 g102 re clk 2
+
+#g97 = currentpc[16]
+#g98 = Add3~synth
+#g103 = Add3~synth
+.names g97 g98 g103
+00 0
+
+#g102 = currentpc[17]
+#g103 = Add3~synth
+#g104 = Add3~synth
+.names g102 g103 g104
+10 1
+01 1
+
+#g17 = branchout[16]~reg0
+#g100 = Add2~synth
+#g105 = Add2~synth
+.names g17 g100 g105
+00 0
+
+#g18 = branchout[17]~reg0
+#g105 = Add2~synth
+#g106 = Add2~synth
+.names g18 g105 g106
+10 1
+01 1
+
+#g107 = currentpc[18]
+.latch g407 g107 re clk 2
+
+#g102 = currentpc[17]
+#g103 = Add3~synth
+#g108 = Add3~synth
+.names g102 g103 g108
+00 0
+
+#g107 = currentpc[18]
+#g108 = Add3~synth
+#g109 = Add3~synth
+.names g107 g108 g109
+10 1
+01 1
+
+#g18 = branchout[17]~reg0
+#g105 = Add2~synth
+#g110 = Add2~synth
+.names g18 g105 g110
+00 0
+
+#g19 = branchout[18]~reg0
+#g110 = Add2~synth
+#g111 = Add2~synth
+.names g19 g110 g111
+10 1
+01 1
+
+#g112 = currentpc[19]
+.latch g418 g112 re clk 2
+
+#g107 = currentpc[18]
+#g108 = Add3~synth
+#g113 = Add3~synth
+.names g107 g108 g113
+00 0
+
+#g112 = currentpc[19]
+#g113 = Add3~synth
+#g114 = Add3~synth
+.names g112 g113 g114
+10 1
+01 1
+
+#g19 = branchout[18]~reg0
+#g110 = Add2~synth
+#g115 = Add2~synth
+.names g19 g110 g115
+00 0
+
+#g20 = branchout[19]~reg0
+#g115 = Add2~synth
+#g116 = Add2~synth
+.names g20 g115 g116
+10 1
+01 1
+
+#g117 = currentpc[20]
+.latch g429 g117 re clk 2
+
+#g112 = currentpc[19]
+#g113 = Add3~synth
+#g118 = Add3~synth
+.names g112 g113 g118
+00 0
+
+#g117 = currentpc[20]
+#g118 = Add3~synth
+#g119 = Add3~synth
+.names g117 g118 g119
+10 1
+01 1
+
+#g20 = branchout[19]~reg0
+#g115 = Add2~synth
+#g120 = Add2~synth
+.names g20 g115 g120
+00 0
+
+#g21 = branchout[20]~reg0
+#g120 = Add2~synth
+#g121 = Add2~synth
+.names g21 g120 g121
+10 1
+01 1
+
+#g122 = currentpc[21]
+.latch g440 g122 re clk 2
+
+#g117 = currentpc[20]
+#g118 = Add3~synth
+#g123 = Add3~synth
+.names g117 g118 g123
+00 0
+
+#g122 = currentpc[21]
+#g123 = Add3~synth
+#g124 = Add3~synth
+.names g122 g123 g124
+10 1
+01 1
+
+#g21 = branchout[20]~reg0
+#g120 = Add2~synth
+#g125 = Add2~synth
+.names g21 g120 g125
+00 0
+
+#g22 = branchout[21]~reg0
+#g125 = Add2~synth
+#g126 = Add2~synth
+.names g22 g125 g126
+10 1
+01 1
+
+#g127 = currentpc[22]
+.latch g451 g127 re clk 2
+
+#g122 = currentpc[21]
+#g123 = Add3~synth
+#g128 = Add3~synth
+.names g122 g123 g128
+00 0
+
+#g127 = currentpc[22]
+#g128 = Add3~synth
+#g129 = Add3~synth
+.names g127 g128 g129
+10 1
+01 1
+
+#g22 = branchout[21]~reg0
+#g125 = Add2~synth
+#g130 = Add2~synth
+.names g22 g125 g130
+00 0
+
+#g23 = branchout[22]~reg0
+#g130 = Add2~synth
+#g131 = Add2~synth
+.names g23 g130 g131
+10 1
+01 1
+
+#g132 = currentpc[23]
+.latch g462 g132 re clk 2
+
+#g127 = currentpc[22]
+#g128 = Add3~synth
+#g133 = Add3~synth
+.names g127 g128 g133
+00 0
+
+#g132 = currentpc[23]
+#g133 = Add3~synth
+#g134 = Add3~synth
+.names g132 g133 g134
+10 1
+01 1
+
+#g23 = branchout[22]~reg0
+#g130 = Add2~synth
+#g135 = Add2~synth
+.names g23 g130 g135
+00 0
+
+#g24 = branchout[23]~reg0
+#g135 = Add2~synth
+#g136 = Add2~synth
+.names g24 g135 g136
+10 1
+01 1
+
+#g137 = currentpc[24]
+.latch g473 g137 re clk 2
+
+#g132 = currentpc[23]
+#g133 = Add3~synth
+#g138 = Add3~synth
+.names g132 g133 g138
+00 0
+
+#g137 = currentpc[24]
+#g138 = Add3~synth
+#g139 = Add3~synth
+.names g137 g138 g139
+10 1
+01 1
+
+#g24 = branchout[23]~reg0
+#g135 = Add2~synth
+#g140 = Add2~synth
+.names g24 g135 g140
+00 0
+
+#g25 = branchout[24]~reg0
+#g140 = Add2~synth
+#g141 = Add2~synth
+.names g25 g140 g141
+10 1
+01 1
+
+#g142 = currentpc[25]
+.latch g484 g142 re clk 2
+
+#g137 = currentpc[24]
+#g138 = Add3~synth
+#g143 = Add3~synth
+.names g137 g138 g143
+00 0
+
+#g142 = currentpc[25]
+#g143 = Add3~synth
+#g144 = Add3~synth
+.names g142 g143 g144
+10 1
+01 1
+
+#g25 = branchout[24]~reg0
+#g140 = Add2~synth
+#g145 = Add2~synth
+.names g25 g140 g145
+00 0
+
+#g26 = branchout[25]~reg0
+#g145 = Add2~synth
+#g146 = Add2~synth
+.names g26 g145 g146
+10 1
+01 1
+
+#g147 = currentpc[26]
+.latch g495 g147 re clk 2
+
+#g142 = currentpc[25]
+#g143 = Add3~synth
+#g148 = Add3~synth
+.names g142 g143 g148
+00 0
+
+#g147 = currentpc[26]
+#g148 = Add3~synth
+#g149 = Add3~synth
+.names g147 g148 g149
+10 1
+01 1
+
+#g26 = branchout[25]~reg0
+#g145 = Add2~synth
+#g150 = Add2~synth
+.names g26 g145 g150
+00 0
+
+#g27 = branchout[26]~reg0
+#g150 = Add2~synth
+#g151 = Add2~synth
+.names g27 g150 g151
+10 1
+01 1
+
+#g152 = currentpc[27]
+.latch g506 g152 re clk 2
+
+#g147 = currentpc[26]
+#g148 = Add3~synth
+#g153 = Add3~synth
+.names g147 g148 g153
+00 0
+
+#g152 = currentpc[27]
+#g153 = Add3~synth
+#g154 = Add3~synth
+.names g152 g153 g154
+10 1
+01 1
+
+#g27 = branchout[26]~reg0
+#g150 = Add2~synth
+#g155 = Add2~synth
+.names g27 g150 g155
+00 0
+
+#g28 = branchout[27]~reg0
+#g155 = Add2~synth
+#g156 = Add2~synth
+.names g28 g155 g156
+10 1
+01 1
+
+#g157 = currentpc[28]
+.latch g521 g157 re clk 2
+
+#g152 = currentpc[27]
+#g153 = Add3~synth
+#g158 = Add3~synth
+.names g152 g153 g158
+00 0
+
+#g157 = currentpc[28]
+#g158 = Add3~synth
+#g159 = Add3~synth
+.names g157 g158 g159
+10 1
+01 1
+
+#g28 = branchout[27]~reg0
+#g155 = Add2~synth
+#g160 = Add2~synth
+.names g28 g155 g160
+00 0
+
+#g29 = branchout[28]~reg0
+#g160 = Add2~synth
+#g161 = Add2~synth
+.names g29 g160 g161
+10 1
+01 1
+
+#g162 = currentpc[29]
+.latch g531 g162 re clk 2
+
+#g157 = currentpc[28]
+#g158 = Add3~synth
+#g163 = Add3~synth
+.names g157 g158 g163
+00 0
+
+#g162 = currentpc[29]
+#g163 = Add3~synth
+#g164 = Add3~synth
+.names g162 g163 g164
+10 1
+01 1
+
+#g29 = branchout[28]~reg0
+#g160 = Add2~synth
+#g165 = Add2~synth
+.names g29 g160 g165
+00 0
+
+#g30 = branchout[29]~reg0
+#g165 = Add2~synth
+#g166 = Add2~synth
+.names g30 g165 g166
+10 1
+01 1
+
+#g30 = branchout[29]~reg0
+#g165 = Add2~synth
+#g167 = Add2~synth
+.names g30 g165 g167
+00 0
+
+#g31 = branchout[30]~reg0
+#g167 = Add2~synth
+#g168 = Add2~synth
+.names g31 g167 g168
+10 1
+01 1
+
+#g169 = currentpc[30]
+.latch g541 g169 re clk 2
+
+#g158 = Add3~synth
+#g169 = currentpc[30]
+#g170 = epc~synth
+.names g158 g169 g170
+10 1
+01 1
+
+#g157 = currentpc[28]
+#g162 = currentpc[29]
+#g171 = epc~synth
+.names g157 g162 g171
+00 0
+
+#g31 = branchout[30]~reg0
+#g167 = Add2~synth
+#g172 = Add2~synth
+.names g31 g167 g172
+00 0
+
+#g32 = branchout[31]~reg0
+#g172 = Add2~synth
+#g173 = Add2~synth
+.names g32 g172 g173
+10 1
+01 1
+
+#g174 = currentpc[31]
+.latch g551 g174 re clk 2
+
+#g163 = Add3~synth
+#g174 = currentpc[31]
+#g175 = epc~synth
+.names g163 g174 g175
+10 1
+01 1
+
+#g162 = currentpc[29]
+#g169 = currentpc[30]
+#g176 = epc~synth
+.names g162 g169 g176
+00 0
+
+#g177 = nextpc~synth
+.names exception control[21] g177
+00 0
+
+#g177 = nextpc~synth
+#g178 = nextpc~synth
+.names rs[0] g177 g178
+10 1
+
+#g179 = Equal4~synth
+.names rs[0] rt[0] g179
+10 1
+01 1
+
+#g180 = Equal4~synth
+.names rs[1] rt[1] g180
+10 1
+01 1
+
+#g181 = Equal4~synth
+.names rs[2] rt[2] g181
+10 1
+01 1
+
+#g182 = Equal4~synth
+.names rs[3] rt[3] g182
+10 1
+01 1
+
+#g183 = Equal4~synth
+.names rs[4] rt[4] g183
+10 1
+01 1
+
+#g184 = Equal4~synth
+.names rs[5] rt[5] g184
+10 1
+01 1
+
+#g185 = Equal4~synth
+.names rs[6] rt[6] g185
+10 1
+01 1
+
+#g186 = Equal4~synth
+.names rs[7] rt[7] g186
+10 1
+01 1
+
+#g187 = Equal4~synth
+.names rs[8] rt[8] g187
+10 1
+01 1
+
+#g188 = Equal4~synth
+.names rs[9] rt[9] g188
+10 1
+01 1
+
+#g189 = Equal4~synth
+.names rs[10] rt[10] g189
+10 1
+01 1
+
+#g190 = Equal4~synth
+.names rs[11] rt[11] g190
+10 1
+01 1
+
+#g191 = Equal4~synth
+.names rs[12] rt[12] g191
+10 1
+01 1
+
+#g192 = Equal4~synth
+.names rs[13] rt[13] g192
+10 1
+01 1
+
+#g193 = Equal4~synth
+.names rs[14] rt[14] g193
+10 1
+01 1
+
+#g194 = Equal4~synth
+.names rs[15] rt[15] g194
+10 1
+01 1
+
+#g195 = Equal4~synth
+.names rs[16] rt[16] g195
+10 1
+01 1
+
+#g196 = Equal4~synth
+.names rs[17] rt[17] g196
+10 1
+01 1
+
+#g197 = Equal4~synth
+.names rs[18] rt[18] g197
+10 1
+01 1
+
+#g198 = Equal4~synth
+.names rs[19] rt[19] g198
+10 1
+01 1
+
+#g199 = Equal4~synth
+.names rs[20] rt[20] g199
+10 1
+01 1
+
+#g200 = Equal4~synth
+.names rs[21] rt[21] g200
+10 1
+01 1
+
+#g201 = Equal4~synth
+.names rs[22] rt[22] g201
+10 1
+01 1
+
+#g202 = Equal4~synth
+.names rs[23] rt[23] g202
+10 1
+01 1
+
+#g203 = Equal4~synth
+.names rs[24] rt[24] g203
+10 1
+01 1
+
+#g204 = Equal4~synth
+.names rs[25] rt[25] g204
+10 1
+01 1
+
+#g205 = Equal4~synth
+.names rs[26] rt[26] g205
+10 1
+01 1
+
+#g206 = Equal4~synth
+.names rs[27] rt[27] g206
+10 1
+01 1
+
+#g207 = Equal4~synth
+.names rs[28] rt[28] g207
+10 1
+01 1
+
+#g208 = Equal4~synth
+.names rs[29] rt[29] g208
+10 1
+01 1
+
+#g209 = Equal4~synth
+.names rs[30] rt[30] g209
+10 1
+01 1
+
+#g210 = Equal4~synth
+.names rs[31] rt[31] g210
+10 1
+01 1
+
+#g179 = Equal4~synth
+#g180 = Equal4~synth
+#g181 = Equal4~synth
+#g182 = Equal4~synth
+#g183 = Equal4~synth
+#g184 = Equal4~synth
+#g185 = Equal4~synth
+#g186 = Equal4~synth
+#g187 = Equal4~synth
+#g188 = Equal4~synth
+#g189 = Equal4~synth
+#g190 = Equal4~synth
+#g191 = Equal4~synth
+#g192 = Equal4~synth
+#g193 = Equal4~synth
+#g194 = Equal4~synth
+#g195 = Equal4~synth
+#g196 = Equal4~synth
+#g197 = Equal4~synth
+#g198 = Equal4~synth
+#g199 = Equal4~synth
+#g200 = Equal4~synth
+#g201 = Equal4~synth
+#g202 = Equal4~synth
+#g203 = Equal4~synth
+#g204 = Equal4~synth
+#g205 = Equal4~synth
+#g206 = Equal4~synth
+#g207 = Equal4~synth
+#g208 = Equal4~synth
+#g209 = Equal4~synth
+#g210 = Equal4~synth
+#g211 = Equal4~synth
+.names g179 g180 g181 g182 g183 g184 g185 g186 g187 g188 g189 g190 g191 g192 g193 g194 g195 g196 g197 g198 g199 g200 g201 g202 g203 g204 g205 g206 g207 g208 g209 g210 g211
+00000000000000000000000000000000 1
+
+#g211 = Equal4~synth
+#g212 = comb~synth
+.names control[5] control[6] control[7] g211 g212
+1101 1
+
+#g211 = Equal4~synth
+#g213 = comb~synth
+.names control[5] control[6] control[7] g211 g213
+0010 1
+
+#g214 = Equal3~synth
+.names control[5] control[6] control[7] g214
+101 1
+
+#g214 = Equal3~synth
+#g215 = comb~synth
+.names rs[31] g214 g215
+11 1
+
+#g216 = Equal7~synth
+.names rs[0] rs[1] rs[2] rs[3] rs[4] rs[5] rs[6] rs[7] rs[8] rs[9] rs[10] rs[11] rs[12] rs[13] rs[14] rs[15] rs[16] rs[17] rs[18] rs[19] rs[20] rs[21] rs[22] rs[23] rs[24] rs[25] rs[26] rs[27] rs[28] rs[29] rs[30] rs[31] g216
+00000000000000000000000000000000 1
+
+#g214 = Equal3~synth
+#g216 = Equal7~synth
+#g217 = comb~synth
+.names g214 g216 g217
+11 1
+
+#g216 = Equal7~synth
+#g218 = comb~synth
+.names control[5] control[6] control[7] rs[31] g216 g218
+01100 1
+
+#g219 = Equal3~synth
+.names control[5] control[6] control[7] g219
+010 1
+
+#g220 = Equal3~synth
+.names control[5] control[6] control[7] g220
+100 1
+
+#g212 = comb~synth
+#g213 = comb~synth
+#g215 = comb~synth
+#g217 = comb~synth
+#g218 = comb~synth
+#g658 = comb~synth
+#g221 = comb~synth
+.names g212 g213 g215 g217 g218 g658 g221
+000000 0
+
+#g221 = comb~synth
+#g222 = takebranch
+.names g221 control[24] g222
+11 1
+
+#g223 = nextpc~synth
+.names control[21] control[20] g223
+00 0
+
+#g222 = takebranch
+#g223 = nextpc~synth
+#g224 = nextpc~synth
+.names g222 g223 g224
+01 0
+
+#g224 = nextpc~synth
+#g225 = nextpc~synth
+.names exception g224 g225
+01 1
+
+#g225 = nextpc~synth
+#g226 = nextpc~synth
+.names stall g225 g226
+00 0
+
+#g661 = nextpc~synth
+#g227 = nextpc~synth
+.names reset g661 g227
+01 1
+
+#g177 = nextpc~synth
+#g228 = nextpc~synth
+.names g177 rs[1] g228
+01 1
+
+#g664 = nextpc~synth
+#g229 = nextpc~synth
+.names reset g664 g229
+01 1
+
+#g222 = takebranch
+#g230 = nextpc~synth
+.names control[21] g222 g230
+00 0
+
+#g231 = nextpc~synth
+.names control[21] control[20] g231
+01 1
+
+#g222 = takebranch
+#g231 = nextpc~synth
+#g232 = nextpc~synth
+.names g222 g231 g232
+00 0
+
+#g230 = nextpc~synth
+#g232 = nextpc~synth
+#g35 = currentpc[2]
+#g233 = nextpc~synth
+.names g230 rs[2] g232 g35 g233
+0000 1
+0100 1
+1010 1
+0110 1
+1110 1
+1011 1
+0111 1
+1111 1
+
+#g35 = currentpc[2]
+#g233 = nextpc~synth
+#g230 = nextpc~synth
+#g234 = nextpc~synth
+.names g35 g233 g230 instr[0] g234
+0100 1
+1100 1
+1110 1
+0101 1
+1101 1
+0011 1
+1011 1
+0111 1
+
+#g234 = nextpc~synth
+#g235 = nextpc~synth
+.names exception g234 g235
+01 1
+
+#g667 = nextpc~synth
+#g236 = nextpc~synth
+.names reset g667 g236
+01 1
+
+#g232 = nextpc~synth
+#g230 = nextpc~synth
+#g37 = Add3~synth
+#g237 = nextpc~synth
+.names g232 instr[1] g230 g37 g237
+1010 1
+0110 1
+1110 1
+0001 1
+0101 1
+1011 1
+0111 1
+1111 1
+
+#g35 = currentpc[2]
+#g238 = Add1~synth
+.names g35 instr[0] g238
+11 1
+
+#g36 = currentpc[3]
+#g238 = Add1~synth
+#g239 = Add1~synth
+.names g36 instr[1] g238 g239
+100 1
+010 1
+001 1
+111 1
+
+#g232 = nextpc~synth
+#g237 = nextpc~synth
+#g239 = Add1~synth
+#g240 = nextpc~synth
+.names rs[3] g232 g237 g239 g240
+1100 1
+0010 1
+1010 1
+1101 1
+0011 1
+1011 1
+0111 1
+1111 1
+
+#g240 = nextpc~synth
+#g241 = nextpc~synth
+.names exception g240 g241
+01 1
+
+#g670 = nextpc~synth
+#g242 = nextpc~synth
+.names reset g670 g242
+01 1
+
+#g35 = currentpc[2]
+#g36 = currentpc[3]
+#g243 = Add3~synth
+.names g35 g36 g243
+11 1
+
+#g38 = currentpc[4]
+#g243 = Add3~synth
+#g244 = Add0~synth
+.names g38 g243 g244
+10 1
+01 1
+
+#g230 = nextpc~synth
+#g232 = nextpc~synth
+#g244 = Add0~synth
+#g245 = nextpc~synth
+.names g230 rs[4] g232 g244 g245
+1010 1
+0110 1
+1110 1
+0001 1
+0101 1
+1011 1
+0111 1
+1111 1
+
+#g36 = currentpc[3]
+#g238 = Add1~synth
+#g246 = Add1~synth
+.names g36 g238 g246
+11 1
+
+#g238 = Add1~synth
+#g247 = Add1~synth
+.names instr[1] g238 g247
+11 1
+
+#g36 = currentpc[3]
+#g248 = Add1~synth
+.names g36 instr[1] g248
+11 1
+
+#g246 = Add1~synth
+#g247 = Add1~synth
+#g248 = Add1~synth
+#g249 = Add1~synth
+.names g246 g247 g248 g249
+000 0
+
+#g38 = currentpc[4]
+#g249 = Add1~synth
+#g250 = Add1~synth
+.names g38 instr[2] g249 g250
+100 1
+010 1
+001 1
+111 1
+
+#g230 = nextpc~synth
+#g245 = nextpc~synth
+#g250 = Add1~synth
+#g251 = nextpc~synth
+.names instr[2] g230 g245 g250 g251
+1100 1
+0010 1
+1010 1
+1101 1
+0011 1
+1011 1
+0111 1
+1111 1
+
+#g251 = nextpc~synth
+#g252 = nextpc~synth
+.names exception g251 g252
+01 1
+
+#g673 = nextpc~synth
+#g253 = nextpc~synth
+.names reset g673 g253
+01 1
+
+#g38 = currentpc[4]
+#g243 = Add3~synth
+#g254 = Add0~synth
+.names g38 g243 g254
+11 1
+
+#g42 = currentpc[5]
+#g254 = Add0~synth
+#g255 = Add0~synth
+.names g42 g254 g255
+10 1
+01 1
+
+#g232 = nextpc~synth
+#g230 = nextpc~synth
+#g255 = Add0~synth
+#g256 = nextpc~synth
+.names g232 instr[3] g230 g255 g256
+1010 1
+0110 1
+1110 1
+0001 1
+0101 1
+1011 1
+0111 1
+1111 1
+
+#g38 = currentpc[4]
+#g249 = Add1~synth
+#g257 = Add1~synth
+.names g38 g249 g257
+11 1
+
+#g249 = Add1~synth
+#g258 = Add1~synth
+.names instr[2] g249 g258
+11 1
+
+#g38 = currentpc[4]
+#g259 = Add1~synth
+.names g38 instr[2] g259
+11 1
+
+#g257 = Add1~synth
+#g258 = Add1~synth
+#g259 = Add1~synth
+#g260 = Add1~synth
+.names g257 g258 g259 g260
+000 0
+
+#g42 = currentpc[5]
+#g260 = Add1~synth
+#g261 = Add1~synth
+.names g42 instr[3] g260 g261
+100 1
+010 1
+001 1
+111 1
+
+#g232 = nextpc~synth
+#g256 = nextpc~synth
+#g261 = Add1~synth
+#g262 = nextpc~synth
+.names rs[5] g232 g256 g261 g262
+1100 1
+0010 1
+1010 1
+1101 1
+0011 1
+1011 1
+0111 1
+1111 1
+
+#g262 = nextpc~synth
+#g263 = nextpc~synth
+.names exception g262 g263
+01 1
+
+#g676 = nextpc~synth
+#g264 = nextpc~synth
+.names reset g676 g264
+01 1
+
+#g42 = currentpc[5]
+#g254 = Add0~synth
+#g265 = Add0~synth
+.names g42 g254 g265
+11 1
+
+#g47 = currentpc[6]
+#g265 = Add0~synth
+#g266 = Add0~synth
+.names g47 g265 g266
+10 1
+01 1
+
+#g230 = nextpc~synth
+#g232 = nextpc~synth
+#g266 = Add0~synth
+#g267 = nextpc~synth
+.names g230 rs[6] g232 g266 g267
+1010 1
+0110 1
+1110 1
+0001 1
+0101 1
+1011 1
+0111 1
+1111 1
+
+#g42 = currentpc[5]
+#g260 = Add1~synth
+#g268 = Add1~synth
+.names g42 g260 g268
+11 1
+
+#g260 = Add1~synth
+#g269 = Add1~synth
+.names instr[3] g260 g269
+11 1
+
+#g42 = currentpc[5]
+#g270 = Add1~synth
+.names g42 instr[3] g270
+11 1
+
+#g268 = Add1~synth
+#g269 = Add1~synth
+#g270 = Add1~synth
+#g271 = Add1~synth
+.names g268 g269 g270 g271
+000 0
+
+#g47 = currentpc[6]
+#g271 = Add1~synth
+#g272 = Add1~synth
+.names g47 instr[4] g271 g272
+100 1
+010 1
+001 1
+111 1
+
+#g230 = nextpc~synth
+#g267 = nextpc~synth
+#g272 = Add1~synth
+#g273 = nextpc~synth
+.names instr[4] g230 g267 g272 g273
+1100 1
+0010 1
+1010 1
+1101 1
+0011 1
+1011 1
+0111 1
+1111 1
+
+#g273 = nextpc~synth
+#g274 = nextpc~synth
+.names exception g273 g274
+01 1
+
+#g679 = nextpc~synth
+#g275 = nextpc~synth
+.names reset g679 g275
+01 1
+
+#g47 = currentpc[6]
+#g265 = Add0~synth
+#g276 = Add0~synth
+.names g47 g265 g276
+11 1
+
+#g52 = currentpc[7]
+#g276 = Add0~synth
+#g277 = Add0~synth
+.names g52 g276 g277
+10 1
+01 1
+
+#g232 = nextpc~synth
+#g230 = nextpc~synth
+#g277 = Add0~synth
+#g278 = nextpc~synth
+.names g232 instr[5] g230 g277 g278
+1010 1
+0110 1
+1110 1
+0001 1
+0101 1
+1011 1
+0111 1
+1111 1
+
+#g47 = currentpc[6]
+#g271 = Add1~synth
+#g279 = Add1~synth
+.names g47 g271 g279
+11 1
+
+#g271 = Add1~synth
+#g280 = Add1~synth
+.names instr[4] g271 g280
+11 1
+
+#g47 = currentpc[6]
+#g281 = Add1~synth
+.names g47 instr[4] g281
+11 1
+
+#g279 = Add1~synth
+#g280 = Add1~synth
+#g281 = Add1~synth
+#g282 = Add1~synth
+.names g279 g280 g281 g282
+000 0
+
+#g52 = currentpc[7]
+#g282 = Add1~synth
+#g283 = Add1~synth
+.names g52 instr[5] g282 g283
+100 1
+010 1
+001 1
+111 1
+
+#g232 = nextpc~synth
+#g278 = nextpc~synth
+#g283 = Add1~synth
+#g284 = nextpc~synth
+.names rs[7] g232 g278 g283 g284
+1100 1
+0010 1
+1010 1
+1101 1
+0011 1
+1011 1
+0111 1
+1111 1
+
+#g284 = nextpc~synth
+#g285 = nextpc~synth
+.names exception g284 g285
+01 1
+
+#g682 = nextpc~synth
+#g286 = nextpc~synth
+.names reset g682 g286
+01 1
+
+#g52 = currentpc[7]
+#g276 = Add0~synth
+#g287 = Add0~synth
+.names g52 g276 g287
+11 1
+
+#g57 = currentpc[8]
+#g287 = Add0~synth
+#g288 = Add0~synth
+.names g57 g287 g288
+10 1
+01 1
+
+#g230 = nextpc~synth
+#g232 = nextpc~synth
+#g288 = Add0~synth
+#g289 = nextpc~synth
+.names g230 rs[8] g232 g288 g289
+1010 1
+0110 1
+1110 1
+0001 1
+0101 1
+1011 1
+0111 1
+1111 1
+
+#g52 = currentpc[7]
+#g282 = Add1~synth
+#g290 = Add1~synth
+.names g52 g282 g290
+11 1
+
+#g282 = Add1~synth
+#g291 = Add1~synth
+.names instr[5] g282 g291
+11 1
+
+#g52 = currentpc[7]
+#g292 = Add1~synth
+.names g52 instr[5] g292
+11 1
+
+#g290 = Add1~synth
+#g291 = Add1~synth
+#g292 = Add1~synth
+#g293 = Add1~synth
+.names g290 g291 g292 g293
+000 0
+
+#g57 = currentpc[8]
+#g293 = Add1~synth
+#g294 = Add1~synth
+.names g57 instr[6] g293 g294
+100 1
+010 1
+001 1
+111 1
+
+#g230 = nextpc~synth
+#g289 = nextpc~synth
+#g294 = Add1~synth
+#g295 = nextpc~synth
+.names instr[6] g230 g289 g294 g295
+1100 1
+0010 1
+1010 1
+1101 1
+0011 1
+1011 1
+0111 1
+1111 1
+
+#g295 = nextpc~synth
+#g296 = nextpc~synth
+.names exception g295 g296
+01 1
+
+#g685 = nextpc~synth
+#g297 = nextpc~synth
+.names reset g685 g297
+01 1
+
+#g57 = currentpc[8]
+#g287 = Add0~synth
+#g298 = Add0~synth
+.names g57 g287 g298
+11 1
+
+#g62 = currentpc[9]
+#g298 = Add0~synth
+#g299 = Add0~synth
+.names g62 g298 g299
+10 1
+01 1
+
+#g232 = nextpc~synth
+#g230 = nextpc~synth
+#g299 = Add0~synth
+#g300 = nextpc~synth
+.names g232 instr[7] g230 g299 g300
+1010 1
+0110 1
+1110 1
+0001 1
+0101 1
+1011 1
+0111 1
+1111 1
+
+#g57 = currentpc[8]
+#g293 = Add1~synth
+#g301 = Add1~synth
+.names g57 g293 g301
+11 1
+
+#g293 = Add1~synth
+#g302 = Add1~synth
+.names instr[6] g293 g302
+11 1
+
+#g57 = currentpc[8]
+#g303 = Add1~synth
+.names g57 instr[6] g303
+11 1
+
+#g301 = Add1~synth
+#g302 = Add1~synth
+#g303 = Add1~synth
+#g304 = Add1~synth
+.names g301 g302 g303 g304
+000 0
+
+#g62 = currentpc[9]
+#g304 = Add1~synth
+#g305 = Add1~synth
+.names g62 instr[7] g304 g305
+100 1
+010 1
+001 1
+111 1
+
+#g232 = nextpc~synth
+#g300 = nextpc~synth
+#g305 = Add1~synth
+#g306 = nextpc~synth
+.names rs[9] g232 g300 g305 g306
+1100 1
+0010 1
+1010 1
+1101 1
+0011 1
+1011 1
+0111 1
+1111 1
+
+#g306 = nextpc~synth
+#g307 = nextpc~synth
+.names exception g306 g307
+00 0
+
+#g688 = nextpc~synth
+#g308 = nextpc~synth
+.names reset g688 g308
+01 1
+
+#g62 = currentpc[9]
+#g298 = Add0~synth
+#g309 = Add0~synth
+.names g62 g298 g309
+11 1
+
+#g67 = currentpc[10]
+#g309 = Add0~synth
+#g310 = Add0~synth
+.names g67 g309 g310
+10 1
+01 1
+
+#g230 = nextpc~synth
+#g232 = nextpc~synth
+#g310 = Add0~synth
+#g311 = nextpc~synth
+.names g230 rs[10] g232 g310 g311
+1010 1
+0110 1
+1110 1
+0001 1
+0101 1
+1011 1
+0111 1
+1111 1
+
+#g62 = currentpc[9]
+#g304 = Add1~synth
+#g312 = Add1~synth
+.names g62 g304 g312
+11 1
+
+#g304 = Add1~synth
+#g313 = Add1~synth
+.names instr[7] g304 g313
+11 1
+
+#g62 = currentpc[9]
+#g314 = Add1~synth
+.names g62 instr[7] g314
+11 1
+
+#g312 = Add1~synth
+#g313 = Add1~synth
+#g314 = Add1~synth
+#g315 = Add1~synth
+.names g312 g313 g314 g315
+000 0
+
+#g67 = currentpc[10]
+#g315 = Add1~synth
+#g316 = Add1~synth
+.names g67 instr[8] g315 g316
+100 1
+010 1
+001 1
+111 1
+
+#g230 = nextpc~synth
+#g311 = nextpc~synth
+#g316 = Add1~synth
+#g317 = nextpc~synth
+.names instr[8] g230 g311 g316 g317
+1100 1
+0010 1
+1010 1
+1101 1
+0011 1
+1011 1
+0111 1
+1111 1
+
+#g317 = nextpc~synth
+#g318 = nextpc~synth
+.names exception g317 g318
+01 1
+
+#g691 = nextpc~synth
+#g319 = nextpc~synth
+.names reset g691 g319
+01 1
+
+#g67 = currentpc[10]
+#g309 = Add0~synth
+#g320 = Add0~synth
+.names g67 g309 g320
+11 1
+
+#g72 = currentpc[11]
+#g320 = Add0~synth
+#g321 = Add0~synth
+.names g72 g320 g321
+10 1
+01 1
+
+#g232 = nextpc~synth
+#g230 = nextpc~synth
+#g321 = Add0~synth
+#g322 = nextpc~synth
+.names g232 instr[9] g230 g321 g322
+1010 1
+0110 1
+1110 1
+0001 1
+0101 1
+1011 1
+0111 1
+1111 1
+
+#g67 = currentpc[10]
+#g315 = Add1~synth
+#g323 = Add1~synth
+.names g67 g315 g323
+11 1
+
+#g315 = Add1~synth
+#g324 = Add1~synth
+.names instr[8] g315 g324
+11 1
+
+#g67 = currentpc[10]
+#g325 = Add1~synth
+.names g67 instr[8] g325
+11 1
+
+#g323 = Add1~synth
+#g324 = Add1~synth
+#g325 = Add1~synth
+#g326 = Add1~synth
+.names g323 g324 g325 g326
+000 0
+
+#g72 = currentpc[11]
+#g326 = Add1~synth
+#g327 = Add1~synth
+.names g72 instr[9] g326 g327
+100 1
+010 1
+001 1
+111 1
+
+#g232 = nextpc~synth
+#g322 = nextpc~synth
+#g327 = Add1~synth
+#g328 = nextpc~synth
+.names rs[11] g232 g322 g327 g328
+1100 1
+0010 1
+1010 1
+1101 1
+0011 1
+1011 1
+0111 1
+1111 1
+
+#g328 = nextpc~synth
+#g329 = nextpc~synth
+.names exception g328 g329
+00 0
+
+#g694 = nextpc~synth
+#g330 = nextpc~synth
+.names reset g694 g330
+01 1
+
+#g72 = currentpc[11]
+#g320 = Add0~synth
+#g331 = Add0~synth
+.names g72 g320 g331
+11 1
+
+#g77 = currentpc[12]
+#g331 = Add0~synth
+#g332 = Add0~synth
+.names g77 g331 g332
+10 1
+01 1
+
+#g230 = nextpc~synth
+#g232 = nextpc~synth
+#g332 = Add0~synth
+#g333 = nextpc~synth
+.names g230 rs[12] g232 g332 g333
+1010 1
+0110 1
+1110 1
+0001 1
+0101 1
+1011 1
+0111 1
+1111 1
+
+#g72 = currentpc[11]
+#g326 = Add1~synth
+#g334 = Add1~synth
+.names g72 g326 g334
+11 1
+
+#g326 = Add1~synth
+#g335 = Add1~synth
+.names instr[9] g326 g335
+11 1
+
+#g72 = currentpc[11]
+#g336 = Add1~synth
+.names g72 instr[9] g336
+11 1
+
+#g334 = Add1~synth
+#g335 = Add1~synth
+#g336 = Add1~synth
+#g337 = Add1~synth
+.names g334 g335 g336 g337
+000 0
+
+#g77 = currentpc[12]
+#g337 = Add1~synth
+#g338 = Add1~synth
+.names g77 instr[10] g337 g338
+100 1
+010 1
+001 1
+111 1
+
+#g230 = nextpc~synth
+#g333 = nextpc~synth
+#g338 = Add1~synth
+#g339 = nextpc~synth
+.names instr[10] g230 g333 g338 g339
+1100 1
+0010 1
+1010 1
+1101 1
+0011 1
+1011 1
+0111 1
+1111 1
+
+#g339 = nextpc~synth
+#g340 = nextpc~synth
+.names exception g339 g340
+01 1
+
+#g697 = nextpc~synth
+#g341 = nextpc~synth
+.names reset g697 g341
+01 1
+
+#g77 = currentpc[12]
+#g331 = Add0~synth
+#g342 = Add0~synth
+.names g77 g331 g342
+11 1
+
+#g82 = currentpc[13]
+#g342 = Add0~synth
+#g343 = Add0~synth
+.names g82 g342 g343
+10 1
+01 1
+
+#g232 = nextpc~synth
+#g230 = nextpc~synth
+#g343 = Add0~synth
+#g344 = nextpc~synth
+.names g232 instr[11] g230 g343 g344
+1010 1
+0110 1
+1110 1
+0001 1
+0101 1
+1011 1
+0111 1
+1111 1
+
+#g77 = currentpc[12]
+#g337 = Add1~synth
+#g345 = Add1~synth
+.names g77 g337 g345
+11 1
+
+#g337 = Add1~synth
+#g346 = Add1~synth
+.names instr[10] g337 g346
+11 1
+
+#g77 = currentpc[12]
+#g347 = Add1~synth
+.names g77 instr[10] g347
+11 1
+
+#g345 = Add1~synth
+#g346 = Add1~synth
+#g347 = Add1~synth
+#g348 = Add1~synth
+.names g345 g346 g347 g348
+000 0
+
+#g82 = currentpc[13]
+#g348 = Add1~synth
+#g349 = Add1~synth
+.names g82 instr[11] g348 g349
+100 1
+010 1
+001 1
+111 1
+
+#g232 = nextpc~synth
+#g344 = nextpc~synth
+#g349 = Add1~synth
+#g350 = nextpc~synth
+.names rs[13] g232 g344 g349 g350
+1100 1
+0010 1
+1010 1
+1101 1
+0011 1
+1011 1
+0111 1
+1111 1
+
+#g350 = nextpc~synth
+#g351 = nextpc~synth
+.names exception g350 g351
+01 1
+
+#g700 = nextpc~synth
+#g352 = nextpc~synth
+.names reset g700 g352
+01 1
+
+#g82 = currentpc[13]
+#g342 = Add0~synth
+#g353 = Add0~synth
+.names g82 g342 g353
+11 1
+
+#g87 = currentpc[14]
+#g353 = Add0~synth
+#g354 = Add0~synth
+.names g87 g353 g354
+10 1
+01 1
+
+#g230 = nextpc~synth
+#g232 = nextpc~synth
+#g354 = Add0~synth
+#g355 = nextpc~synth
+.names g230 rs[14] g232 g354 g355
+1010 1
+0110 1
+1110 1
+0001 1
+0101 1
+1011 1
+0111 1
+1111 1
+
+#g82 = currentpc[13]
+#g348 = Add1~synth
+#g356 = Add1~synth
+.names g82 g348 g356
+11 1
+
+#g348 = Add1~synth
+#g357 = Add1~synth
+.names instr[11] g348 g357
+11 1
+
+#g82 = currentpc[13]
+#g358 = Add1~synth
+.names g82 instr[11] g358
+11 1
+
+#g356 = Add1~synth
+#g357 = Add1~synth
+#g358 = Add1~synth
+#g359 = Add1~synth
+.names g356 g357 g358 g359
+000 0
+
+#g87 = currentpc[14]
+#g359 = Add1~synth
+#g360 = Add1~synth
+.names g87 instr[12] g359 g360
+100 1
+010 1
+001 1
+111 1
+
+#g230 = nextpc~synth
+#g355 = nextpc~synth
+#g360 = Add1~synth
+#g361 = nextpc~synth
+.names instr[12] g230 g355 g360 g361
+1100 1
+0010 1
+1010 1
+1101 1
+0011 1
+1011 1
+0111 1
+1111 1
+
+#g361 = nextpc~synth
+#g362 = nextpc~synth
+.names exception g361 g362
+01 1
+
+#g703 = nextpc~synth
+#g363 = nextpc~synth
+.names reset g703 g363
+01 1
+
+#g87 = currentpc[14]
+#g353 = Add0~synth
+#g364 = Add0~synth
+.names g87 g353 g364
+11 1
+
+#g92 = currentpc[15]
+#g364 = Add0~synth
+#g365 = Add0~synth
+.names g92 g364 g365
+10 1
+01 1
+
+#g232 = nextpc~synth
+#g230 = nextpc~synth
+#g365 = Add0~synth
+#g366 = nextpc~synth
+.names g232 instr[13] g230 g365 g366
+1010 1
+0110 1
+1110 1
+0001 1
+0101 1
+1011 1
+0111 1
+1111 1
+
+#g87 = currentpc[14]
+#g359 = Add1~synth
+#g367 = Add1~synth
+.names g87 g359 g367
+11 1
+
+#g359 = Add1~synth
+#g368 = Add1~synth
+.names instr[12] g359 g368
+11 1
+
+#g87 = currentpc[14]
+#g369 = Add1~synth
+.names g87 instr[12] g369
+11 1
+
+#g367 = Add1~synth
+#g368 = Add1~synth
+#g369 = Add1~synth
+#g370 = Add1~synth
+.names g367 g368 g369 g370
+000 0
+
+#g92 = currentpc[15]
+#g370 = Add1~synth
+#g371 = Add1~synth
+.names g92 instr[13] g370 g371
+100 1
+010 1
+001 1
+111 1
+
+#g232 = nextpc~synth
+#g366 = nextpc~synth
+#g371 = Add1~synth
+#g372 = nextpc~synth
+.names rs[15] g232 g366 g371 g372
+1100 1
+0010 1
+1010 1
+1101 1
+0011 1
+1011 1
+0111 1
+1111 1
+
+#g372 = nextpc~synth
+#g373 = nextpc~synth
+.names exception g372 g373
+01 1
+
+#g706 = nextpc~synth
+#g374 = nextpc~synth
+.names reset g706 g374
+01 1
+
+#g92 = currentpc[15]
+#g364 = Add0~synth
+#g375 = Add0~synth
+.names g92 g364 g375
+11 1
+
+#g97 = currentpc[16]
+#g375 = Add0~synth
+#g376 = Add0~synth
+.names g97 g375 g376
+10 1
+01 1
+
+#g230 = nextpc~synth
+#g232 = nextpc~synth
+#g376 = Add0~synth
+#g377 = nextpc~synth
+.names g230 rs[16] g232 g376 g377
+1010 1
+0110 1
+1110 1
+0001 1
+0101 1
+1011 1
+0111 1
+1111 1
+
+#g92 = currentpc[15]
+#g370 = Add1~synth
+#g378 = Add1~synth
+.names g92 g370 g378
+11 1
+
+#g370 = Add1~synth
+#g379 = Add1~synth
+.names instr[13] g370 g379
+11 1
+
+#g92 = currentpc[15]
+#g380 = Add1~synth
+.names g92 instr[13] g380
+11 1
+
+#g378 = Add1~synth
+#g379 = Add1~synth
+#g380 = Add1~synth
+#g381 = Add1~synth
+.names g378 g379 g380 g381
+000 0
+
+#g97 = currentpc[16]
+#g381 = Add1~synth
+#g382 = Add1~synth
+.names g97 instr[14] g381 g382
+100 1
+010 1
+001 1
+111 1
+
+#g230 = nextpc~synth
+#g377 = nextpc~synth
+#g382 = Add1~synth
+#g383 = nextpc~synth
+.names instr[14] g230 g377 g382 g383
+1100 1
+0010 1
+1010 1
+1101 1
+0011 1
+1011 1
+0111 1
+1111 1
+
+#g383 = nextpc~synth
+#g384 = nextpc~synth
+.names exception g383 g384
+01 1
+
+#g709 = nextpc~synth
+#g385 = nextpc~synth
+.names reset g709 g385
+01 1
+
+#g97 = currentpc[16]
+#g375 = Add0~synth
+#g386 = Add0~synth
+.names g97 g375 g386
+11 1
+
+#g102 = currentpc[17]
+#g386 = Add0~synth
+#g387 = Add0~synth
+.names g102 g386 g387
+10 1
+01 1
+
+#g232 = nextpc~synth
+#g230 = nextpc~synth
+#g387 = Add0~synth
+#g388 = nextpc~synth
+.names g232 instr[15] g230 g387 g388
+1010 1
+0110 1
+1110 1
+0001 1
+0101 1
+1011 1
+0111 1
+1111 1
+
+#g97 = currentpc[16]
+#g381 = Add1~synth
+#g389 = Add1~synth
+.names g97 g381 g389
+11 1
+
+#g381 = Add1~synth
+#g390 = Add1~synth
+.names instr[14] g381 g390
+11 1
+
+#g97 = currentpc[16]
+#g391 = Add1~synth
+.names g97 instr[14] g391
+11 1
+
+#g389 = Add1~synth
+#g390 = Add1~synth
+#g391 = Add1~synth
+#g392 = Add1~synth
+.names g389 g390 g391 g392
+000 0
+
+#g102 = currentpc[17]
+#g392 = Add1~synth
+#g393 = Add1~synth
+.names g102 instr[15] g392 g393
+100 1
+010 1
+001 1
+111 1
+
+#g232 = nextpc~synth
+#g388 = nextpc~synth
+#g393 = Add1~synth
+#g394 = nextpc~synth
+.names rs[17] g232 g388 g393 g394
+1100 1
+0010 1
+1010 1
+1101 1
+0011 1
+1011 1
+0111 1
+1111 1
+
+#g394 = nextpc~synth
+#g395 = nextpc~synth
+.names exception g394 g395
+01 1
+
+#g712 = nextpc~synth
+#g396 = nextpc~synth
+.names reset g712 g396
+01 1
+
+#g102 = currentpc[17]
+#g386 = Add0~synth
+#g397 = Add0~synth
+.names g102 g386 g397
+11 1
+
+#g107 = currentpc[18]
+#g397 = Add0~synth
+#g398 = Add0~synth
+.names g107 g397 g398
+10 1
+01 1
+
+#g230 = nextpc~synth
+#g232 = nextpc~synth
+#g398 = Add0~synth
+#g399 = nextpc~synth
+.names g230 rs[18] g232 g398 g399
+1010 1
+0110 1
+1110 1
+0001 1
+0101 1
+1011 1
+0111 1
+1111 1
+
+#g102 = currentpc[17]
+#g392 = Add1~synth
+#g400 = Add1~synth
+.names g102 g392 g400
+11 1
+
+#g392 = Add1~synth
+#g401 = Add1~synth
+.names instr[15] g392 g401
+11 1
+
+#g102 = currentpc[17]
+#g402 = Add1~synth
+.names g102 instr[15] g402
+11 1
+
+#g400 = Add1~synth
+#g401 = Add1~synth
+#g402 = Add1~synth
+#g403 = Add1~synth
+.names g400 g401 g402 g403
+000 0
+
+#g107 = currentpc[18]
+#g403 = Add1~synth
+#g404 = Add1~synth
+.names g107 instr[15] g403 g404
+100 1
+010 1
+001 1
+111 1
+
+#g230 = nextpc~synth
+#g399 = nextpc~synth
+#g404 = Add1~synth
+#g405 = nextpc~synth
+.names instr[16] g230 g399 g404 g405
+1100 1
+0010 1
+1010 1
+1101 1
+0011 1
+1011 1
+0111 1
+1111 1
+
+#g405 = nextpc~synth
+#g406 = nextpc~synth
+.names exception g405 g406
+01 1
+
+#g715 = nextpc~synth
+#g407 = nextpc~synth
+.names reset g715 g407
+01 1
+
+#g107 = currentpc[18]
+#g397 = Add0~synth
+#g408 = Add0~synth
+.names g107 g397 g408
+11 1
+
+#g112 = currentpc[19]
+#g408 = Add0~synth
+#g409 = Add0~synth
+.names g112 g408 g409
+10 1
+01 1
+
+#g232 = nextpc~synth
+#g230 = nextpc~synth
+#g409 = Add0~synth
+#g410 = nextpc~synth
+.names g232 instr[17] g230 g409 g410
+1010 1
+0110 1
+1110 1
+0001 1
+0101 1
+1011 1
+0111 1
+1111 1
+
+#g107 = currentpc[18]
+#g403 = Add1~synth
+#g411 = Add1~synth
+.names g107 g403 g411
+11 1
+
+#g403 = Add1~synth
+#g412 = Add1~synth
+.names instr[15] g403 g412
+11 1
+
+#g107 = currentpc[18]
+#g413 = Add1~synth
+.names g107 instr[15] g413
+11 1
+
+#g411 = Add1~synth
+#g412 = Add1~synth
+#g413 = Add1~synth
+#g414 = Add1~synth
+.names g411 g412 g413 g414
+000 0
+
+#g112 = currentpc[19]
+#g414 = Add1~synth
+#g415 = Add1~synth
+.names g112 instr[15] g414 g415
+100 1
+010 1
+001 1
+111 1
+
+#g232 = nextpc~synth
+#g410 = nextpc~synth
+#g415 = Add1~synth
+#g416 = nextpc~synth
+.names rs[19] g232 g410 g415 g416
+1100 1
+0010 1
+1010 1
+1101 1
+0011 1
+1011 1
+0111 1
+1111 1
+
+#g416 = nextpc~synth
+#g417 = nextpc~synth
+.names exception g416 g417
+01 1
+
+#g718 = nextpc~synth
+#g418 = nextpc~synth
+.names reset g718 g418
+01 1
+
+#g112 = currentpc[19]
+#g408 = Add0~synth
+#g419 = Add0~synth
+.names g112 g408 g419
+11 1
+
+#g117 = currentpc[20]
+#g419 = Add0~synth
+#g420 = Add0~synth
+.names g117 g419 g420
+10 1
+01 1
+
+#g230 = nextpc~synth
+#g232 = nextpc~synth
+#g420 = Add0~synth
+#g421 = nextpc~synth
+.names g230 rs[20] g232 g420 g421
+1010 1
+0110 1
+1110 1
+0001 1
+0101 1
+1011 1
+0111 1
+1111 1
+
+#g112 = currentpc[19]
+#g414 = Add1~synth
+#g422 = Add1~synth
+.names g112 g414 g422
+11 1
+
+#g414 = Add1~synth
+#g423 = Add1~synth
+.names instr[15] g414 g423
+11 1
+
+#g112 = currentpc[19]
+#g424 = Add1~synth
+.names g112 instr[15] g424
+11 1
+
+#g422 = Add1~synth
+#g423 = Add1~synth
+#g424 = Add1~synth
+#g425 = Add1~synth
+.names g422 g423 g424 g425
+000 0
+
+#g117 = currentpc[20]
+#g425 = Add1~synth
+#g426 = Add1~synth
+.names g117 instr[15] g425 g426
+100 1
+010 1
+001 1
+111 1
+
+#g230 = nextpc~synth
+#g421 = nextpc~synth
+#g426 = Add1~synth
+#g427 = nextpc~synth
+.names instr[18] g230 g421 g426 g427
+1100 1
+0010 1
+1010 1
+1101 1
+0011 1
+1011 1
+0111 1
+1111 1
+
+#g427 = nextpc~synth
+#g428 = nextpc~synth
+.names exception g427 g428
+01 1
+
+#g721 = nextpc~synth
+#g429 = nextpc~synth
+.names reset g721 g429
+01 1
+
+#g117 = currentpc[20]
+#g419 = Add0~synth
+#g430 = Add0~synth
+.names g117 g419 g430
+11 1
+
+#g122 = currentpc[21]
+#g430 = Add0~synth
+#g431 = Add0~synth
+.names g122 g430 g431
+10 1
+01 1
+
+#g232 = nextpc~synth
+#g230 = nextpc~synth
+#g431 = Add0~synth
+#g432 = nextpc~synth
+.names g232 instr[19] g230 g431 g432
+1010 1
+0110 1
+1110 1
+0001 1
+0101 1
+1011 1
+0111 1
+1111 1
+
+#g117 = currentpc[20]
+#g425 = Add1~synth
+#g433 = Add1~synth
+.names g117 g425 g433
+11 1
+
+#g425 = Add1~synth
+#g434 = Add1~synth
+.names instr[15] g425 g434
+11 1
+
+#g117 = currentpc[20]
+#g435 = Add1~synth
+.names g117 instr[15] g435
+11 1
+
+#g433 = Add1~synth
+#g434 = Add1~synth
+#g435 = Add1~synth
+#g436 = Add1~synth
+.names g433 g434 g435 g436
+000 0
+
+#g122 = currentpc[21]
+#g436 = Add1~synth
+#g437 = Add1~synth
+.names g122 instr[15] g436 g437
+100 1
+010 1
+001 1
+111 1
+
+#g232 = nextpc~synth
+#g432 = nextpc~synth
+#g437 = Add1~synth
+#g438 = nextpc~synth
+.names rs[21] g232 g432 g437 g438
+1100 1
+0010 1
+1010 1
+1101 1
+0011 1
+1011 1
+0111 1
+1111 1
+
+#g438 = nextpc~synth
+#g439 = nextpc~synth
+.names exception g438 g439
+01 1
+
+#g724 = nextpc~synth
+#g440 = nextpc~synth
+.names reset g724 g440
+01 1
+
+#g122 = currentpc[21]
+#g430 = Add0~synth
+#g441 = Add0~synth
+.names g122 g430 g441
+11 1
+
+#g127 = currentpc[22]
+#g441 = Add0~synth
+#g442 = Add0~synth
+.names g127 g441 g442
+10 1
+01 1
+
+#g230 = nextpc~synth
+#g232 = nextpc~synth
+#g442 = Add0~synth
+#g443 = nextpc~synth
+.names g230 rs[22] g232 g442 g443
+1010 1
+0110 1
+1110 1
+0001 1
+0101 1
+1011 1
+0111 1
+1111 1
+
+#g122 = currentpc[21]
+#g436 = Add1~synth
+#g444 = Add1~synth
+.names g122 g436 g444
+11 1
+
+#g436 = Add1~synth
+#g445 = Add1~synth
+.names instr[15] g436 g445
+11 1
+
+#g122 = currentpc[21]
+#g446 = Add1~synth
+.names g122 instr[15] g446
+11 1
+
+#g444 = Add1~synth
+#g445 = Add1~synth
+#g446 = Add1~synth
+#g447 = Add1~synth
+.names g444 g445 g446 g447
+000 0
+
+#g127 = currentpc[22]
+#g447 = Add1~synth
+#g448 = Add1~synth
+.names g127 instr[15] g447 g448
+100 1
+010 1
+001 1
+111 1
+
+#g230 = nextpc~synth
+#g443 = nextpc~synth
+#g448 = Add1~synth
+#g449 = nextpc~synth
+.names instr[20] g230 g443 g448 g449
+1100 1
+0010 1
+1010 1
+1101 1
+0011 1
+1011 1
+0111 1
+1111 1
+
+#g449 = nextpc~synth
+#g450 = nextpc~synth
+.names exception g449 g450
+01 1
+
+#g727 = nextpc~synth
+#g451 = nextpc~synth
+.names reset g727 g451
+00 0
+
+#g127 = currentpc[22]
+#g441 = Add0~synth
+#g452 = Add0~synth
+.names g127 g441 g452
+11 1
+
+#g132 = currentpc[23]
+#g452 = Add0~synth
+#g453 = Add0~synth
+.names g132 g452 g453
+10 1
+01 1
+
+#g232 = nextpc~synth
+#g230 = nextpc~synth
+#g453 = Add0~synth
+#g454 = nextpc~synth
+.names g232 instr[21] g230 g453 g454
+1010 1
+0110 1
+1110 1
+0001 1
+0101 1
+1011 1
+0111 1
+1111 1
+
+#g127 = currentpc[22]
+#g447 = Add1~synth
+#g455 = Add1~synth
+.names g127 g447 g455
+11 1
+
+#g447 = Add1~synth
+#g456 = Add1~synth
+.names instr[15] g447 g456
+11 1
+
+#g127 = currentpc[22]
+#g457 = Add1~synth
+.names g127 instr[15] g457
+11 1
+
+#g455 = Add1~synth
+#g456 = Add1~synth
+#g457 = Add1~synth
+#g458 = Add1~synth
+.names g455 g456 g457 g458
+000 0
+
+#g132 = currentpc[23]
+#g458 = Add1~synth
+#g459 = Add1~synth
+.names g132 instr[15] g458 g459
+100 1
+010 1
+001 1
+111 1
+
+#g232 = nextpc~synth
+#g454 = nextpc~synth
+#g459 = Add1~synth
+#g460 = nextpc~synth
+.names rs[23] g232 g454 g459 g460
+1100 1
+0010 1
+1010 1
+1101 1
+0011 1
+1011 1
+0111 1
+1111 1
+
+#g460 = nextpc~synth
+#g461 = nextpc~synth
+.names exception g460 g461
+01 1
+
+#g730 = nextpc~synth
+#g462 = nextpc~synth
+.names reset g730 g462
+01 1
+
+#g132 = currentpc[23]
+#g452 = Add0~synth
+#g463 = Add0~synth
+.names g132 g452 g463
+11 1
+
+#g137 = currentpc[24]
+#g463 = Add0~synth
+#g464 = Add0~synth
+.names g137 g463 g464
+10 1
+01 1
+
+#g230 = nextpc~synth
+#g232 = nextpc~synth
+#g464 = Add0~synth
+#g465 = nextpc~synth
+.names g230 rs[24] g232 g464 g465
+1010 1
+0110 1
+1110 1
+0001 1
+0101 1
+1011 1
+0111 1
+1111 1
+
+#g132 = currentpc[23]
+#g458 = Add1~synth
+#g466 = Add1~synth
+.names g132 g458 g466
+11 1
+
+#g458 = Add1~synth
+#g467 = Add1~synth
+.names instr[15] g458 g467
+11 1
+
+#g132 = currentpc[23]
+#g468 = Add1~synth
+.names g132 instr[15] g468
+11 1
+
+#g466 = Add1~synth
+#g467 = Add1~synth
+#g468 = Add1~synth
+#g469 = Add1~synth
+.names g466 g467 g468 g469
+000 0
+
+#g137 = currentpc[24]
+#g469 = Add1~synth
+#g470 = Add1~synth
+.names g137 instr[15] g469 g470
+100 1
+010 1
+001 1
+111 1
+
+#g230 = nextpc~synth
+#g465 = nextpc~synth
+#g470 = Add1~synth
+#g471 = nextpc~synth
+.names instr[22] g230 g465 g470 g471
+1100 1
+0010 1
+1010 1
+1101 1
+0011 1
+1011 1
+0111 1
+1111 1
+
+#g471 = nextpc~synth
+#g472 = nextpc~synth
+.names exception g471 g472
+01 1
+
+#g733 = nextpc~synth
+#g473 = nextpc~synth
+.names reset g733 g473
+01 1
+
+#g137 = currentpc[24]
+#g463 = Add0~synth
+#g474 = Add0~synth
+.names g137 g463 g474
+11 1
+
+#g142 = currentpc[25]
+#g474 = Add0~synth
+#g475 = Add0~synth
+.names g142 g474 g475
+10 1
+01 1
+
+#g232 = nextpc~synth
+#g230 = nextpc~synth
+#g475 = Add0~synth
+#g476 = nextpc~synth
+.names g232 instr[23] g230 g475 g476
+1010 1
+0110 1
+1110 1
+0001 1
+0101 1
+1011 1
+0111 1
+1111 1
+
+#g137 = currentpc[24]
+#g469 = Add1~synth
+#g477 = Add1~synth
+.names g137 g469 g477
+11 1
+
+#g469 = Add1~synth
+#g478 = Add1~synth
+.names instr[15] g469 g478
+11 1
+
+#g137 = currentpc[24]
+#g479 = Add1~synth
+.names g137 instr[15] g479
+11 1
+
+#g477 = Add1~synth
+#g478 = Add1~synth
+#g479 = Add1~synth
+#g480 = Add1~synth
+.names g477 g478 g479 g480
+000 0
+
+#g142 = currentpc[25]
+#g480 = Add1~synth
+#g481 = Add1~synth
+.names g142 instr[15] g480 g481
+100 1
+010 1
+001 1
+111 1
+
+#g232 = nextpc~synth
+#g476 = nextpc~synth
+#g481 = Add1~synth
+#g482 = nextpc~synth
+.names rs[25] g232 g476 g481 g482
+1100 1
+0010 1
+1010 1
+1101 1
+0011 1
+1011 1
+0111 1
+1111 1
+
+#g482 = nextpc~synth
+#g483 = nextpc~synth
+.names exception g482 g483
+01 1
+
+#g736 = nextpc~synth
+#g484 = nextpc~synth
+.names reset g736 g484
+01 1
+
+#g142 = currentpc[25]
+#g474 = Add0~synth
+#g485 = Add0~synth
+.names g142 g474 g485
+11 1
+
+#g147 = currentpc[26]
+#g485 = Add0~synth
+#g486 = Add0~synth
+.names g147 g485 g486
+10 1
+01 1
+
+#g230 = nextpc~synth
+#g232 = nextpc~synth
+#g486 = Add0~synth
+#g487 = nextpc~synth
+.names g230 rs[26] g232 g486 g487
+1010 1
+0110 1
+1110 1
+0001 1
+0101 1
+1011 1
+0111 1
+1111 1
+
+#g142 = currentpc[25]
+#g480 = Add1~synth
+#g488 = Add1~synth
+.names g142 g480 g488
+11 1
+
+#g480 = Add1~synth
+#g489 = Add1~synth
+.names instr[15] g480 g489
+11 1
+
+#g142 = currentpc[25]
+#g490 = Add1~synth
+.names g142 instr[15] g490
+11 1
+
+#g488 = Add1~synth
+#g489 = Add1~synth
+#g490 = Add1~synth
+#g491 = Add1~synth
+.names g488 g489 g490 g491
+000 0
+
+#g147 = currentpc[26]
+#g491 = Add1~synth
+#g492 = Add1~synth
+.names g147 instr[15] g491 g492
+100 1
+010 1
+001 1
+111 1
+
+#g230 = nextpc~synth
+#g487 = nextpc~synth
+#g492 = Add1~synth
+#g493 = nextpc~synth
+.names instr[24] g230 g487 g492 g493
+1100 1
+0010 1
+1010 1
+1101 1
+0011 1
+1011 1
+0111 1
+1111 1
+
+#g493 = nextpc~synth
+#g494 = nextpc~synth
+.names exception g493 g494
+01 1
+
+#g739 = nextpc~synth
+#g495 = nextpc~synth
+.names reset g739 g495
+01 1
+
+#g147 = currentpc[26]
+#g485 = Add0~synth
+#g496 = Add0~synth
+.names g147 g485 g496
+11 1
+
+#g152 = currentpc[27]
+#g496 = Add0~synth
+#g497 = Add0~synth
+.names g152 g496 g497
+10 1
+01 1
+
+#g232 = nextpc~synth
+#g230 = nextpc~synth
+#g497 = Add0~synth
+#g498 = nextpc~synth
+.names g232 instr[25] g230 g497 g498
+1010 1
+0110 1
+1110 1
+0001 1
+0101 1
+1011 1
+0111 1
+1111 1
+
+#g147 = currentpc[26]
+#g491 = Add1~synth
+#g499 = Add1~synth
+.names g147 g491 g499
+11 1
+
+#g491 = Add1~synth
+#g500 = Add1~synth
+.names instr[15] g491 g500
+11 1
+
+#g147 = currentpc[26]
+#g501 = Add1~synth
+.names g147 instr[15] g501
+11 1
+
+#g499 = Add1~synth
+#g500 = Add1~synth
+#g501 = Add1~synth
+#g502 = Add1~synth
+.names g499 g500 g501 g502
+000 0
+
+#g152 = currentpc[27]
+#g502 = Add1~synth
+#g503 = Add1~synth
+.names g152 instr[15] g502 g503
+100 1
+010 1
+001 1
+111 1
+
+#g232 = nextpc~synth
+#g498 = nextpc~synth
+#g503 = Add1~synth
+#g504 = nextpc~synth
+.names rs[27] g232 g498 g503 g504
+1100 1
+0010 1
+1010 1
+1101 1
+0011 1
+1011 1
+0111 1
+1111 1
+
+#g504 = nextpc~synth
+#g505 = nextpc~synth
+.names exception g504 g505
+01 1
+
+#g742 = nextpc~synth
+#g506 = nextpc~synth
+.names reset g742 g506
+01 1
+
+#g152 = currentpc[27]
+#g496 = Add0~synth
+#g507 = Add0~synth
+.names g152 g496 g507
+11 1
+
+#g157 = currentpc[28]
+#g507 = Add0~synth
+#g508 = Add0~synth
+.names g157 g507 g508
+10 1
+01 1
+
+#g222 = takebranch
+#g509 = nextpc~synth
+.names exception control[21] stall g222 g509
+0000 0
+
+#g152 = currentpc[27]
+#g502 = Add1~synth
+#g510 = Add1~synth
+.names g152 g502 g510
+11 1
+
+#g502 = Add1~synth
+#g511 = Add1~synth
+.names instr[15] g502 g511
+11 1
+
+#g152 = currentpc[27]
+#g512 = Add1~synth
+.names g152 instr[15] g512
+11 1
+
+#g510 = Add1~synth
+#g511 = Add1~synth
+#g512 = Add1~synth
+#g513 = Add1~synth
+.names g510 g511 g512 g513
+000 0
+
+#g157 = currentpc[28]
+#g513 = Add1~synth
+#g514 = Add1~synth
+.names g157 instr[15] g513 g514
+100 1
+010 1
+001 1
+111 1
+
+#g222 = takebranch
+#g515 = nextpc~synth
+.names exception control[21] g222 g515
+010 1
+
+#g515 = nextpc~synth
+#g516 = nextpc~synth
+.names stall g515 g516
+00 0
+
+#g745 = nextpc~synth
+#g517 = nextpc~synth
+.names exception g745 g517
+10 0
+
+#g509 = nextpc~synth
+#g517 = nextpc~synth
+#g518 = nextpc~synth
+.names g509 g517 g518
+11 1
+
+#g514 = Add1~synth
+#g157 = currentpc[28]
+#g518 = nextpc~synth
+#g745 = nextpc~synth
+#g519 = nextpc~synth
+.names g514 g157 g518 g745 g519
+1010 1
+1110 1
+0001 1
+1001 1
+0101 1
+1101 1
+0111 1
+1111 1
+
+#g508 = Add0~synth
+#g509 = nextpc~synth
+#g519 = nextpc~synth
+#g520 = nextpc~synth
+.names g508 rs[28] g509 g519 g520
+1000 1
+1100 1
+0101 1
+1101 1
+0011 1
+1011 1
+0111 1
+1111 1
+
+#g520 = nextpc~synth
+#g521 = nextpc~synth
+.names reset g520 g521
+01 1
+
+#g157 = currentpc[28]
+#g507 = Add0~synth
+#g522 = Add0~synth
+.names g157 g507 g522
+11 1
+
+#g162 = currentpc[29]
+#g522 = Add0~synth
+#g523 = Add0~synth
+.names g162 g522 g523
+10 1
+01 1
+
+#g157 = currentpc[28]
+#g513 = Add1~synth
+#g524 = Add1~synth
+.names g157 g513 g524
+11 1
+
+#g513 = Add1~synth
+#g525 = Add1~synth
+.names instr[15] g513 g525
+11 1
+
+#g157 = currentpc[28]
+#g526 = Add1~synth
+.names g157 instr[15] g526
+11 1
+
+#g524 = Add1~synth
+#g525 = Add1~synth
+#g526 = Add1~synth
+#g527 = Add1~synth
+.names g524 g525 g526 g527
+000 0
+
+#g162 = currentpc[29]
+#g527 = Add1~synth
+#g528 = Add1~synth
+.names g162 instr[15] g527 g528
+100 1
+010 1
+001 1
+111 1
+
+#g528 = Add1~synth
+#g162 = currentpc[29]
+#g518 = nextpc~synth
+#g745 = nextpc~synth
+#g529 = nextpc~synth
+.names g528 g162 g518 g745 g529
+1010 1
+1110 1
+0001 1
+1001 1
+0101 1
+1101 1
+0111 1
+1111 1
+
+#g523 = Add0~synth
+#g509 = nextpc~synth
+#g529 = nextpc~synth
+#g530 = nextpc~synth
+.names g523 rs[29] g509 g529 g530
+1000 1
+1100 1
+0101 1
+1101 1
+0011 1
+1011 1
+0111 1
+1111 1
+
+#g530 = nextpc~synth
+#g531 = nextpc~synth
+.names reset g530 g531
+01 1
+
+#g162 = currentpc[29]
+#g522 = Add0~synth
+#g532 = Add0~synth
+.names g162 g522 g532
+11 1
+
+#g169 = currentpc[30]
+#g532 = Add0~synth
+#g533 = Add0~synth
+.names g169 g532 g533
+10 1
+01 1
+
+#g162 = currentpc[29]
+#g527 = Add1~synth
+#g534 = Add1~synth
+.names g162 g527 g534
+11 1
+
+#g527 = Add1~synth
+#g535 = Add1~synth
+.names instr[15] g527 g535
+11 1
+
+#g162 = currentpc[29]
+#g536 = Add1~synth
+.names g162 instr[15] g536
+11 1
+
+#g534 = Add1~synth
+#g535 = Add1~synth
+#g536 = Add1~synth
+#g537 = Add1~synth
+.names g534 g535 g536 g537
+000 0
+
+#g169 = currentpc[30]
+#g537 = Add1~synth
+#g538 = Add1~synth
+.names g169 instr[15] g537 g538
+100 1
+010 1
+001 1
+111 1
+
+#g538 = Add1~synth
+#g169 = currentpc[30]
+#g518 = nextpc~synth
+#g745 = nextpc~synth
+#g539 = nextpc~synth
+.names g538 g169 g518 g745 g539
+1010 1
+1110 1
+0001 1
+1001 1
+0101 1
+1101 1
+0111 1
+1111 1
+
+#g533 = Add0~synth
+#g509 = nextpc~synth
+#g539 = nextpc~synth
+#g540 = nextpc~synth
+.names g533 rs[30] g509 g539 g540
+1000 1
+1100 1
+0101 1
+1101 1
+0011 1
+1011 1
+0111 1
+1111 1
+
+#g540 = nextpc~synth
+#g541 = nextpc~synth
+.names reset g540 g541
+01 1
+
+#g169 = currentpc[30]
+#g532 = Add0~synth
+#g542 = Add0~synth
+.names g169 g532 g542
+11 1
+
+#g174 = currentpc[31]
+#g542 = Add0~synth
+#g543 = Add0~synth
+.names g174 g542 g543
+10 1
+01 1
+
+#g169 = currentpc[30]
+#g537 = Add1~synth
+#g544 = Add1~synth
+.names g169 g537 g544
+11 1
+
+#g537 = Add1~synth
+#g545 = Add1~synth
+.names instr[15] g537 g545
+11 1
+
+#g169 = currentpc[30]
+#g546 = Add1~synth
+.names g169 instr[15] g546
+11 1
+
+#g544 = Add1~synth
+#g545 = Add1~synth
+#g546 = Add1~synth
+#g547 = Add1~synth
+.names g544 g545 g546 g547
+000 0
+
+#g174 = currentpc[31]
+#g547 = Add1~synth
+#g548 = Add1~synth
+.names g174 instr[15] g547 g548
+100 1
+010 1
+001 1
+111 1
+
+#g548 = Add1~synth
+#g174 = currentpc[31]
+#g518 = nextpc~synth
+#g745 = nextpc~synth
+#g549 = nextpc~synth
+.names g548 g174 g518 g745 g549
+1010 1
+1110 1
+0001 1
+1001 1
+0101 1
+1101 1
+0111 1
+1111 1
+
+#g543 = Add0~synth
+#g509 = nextpc~synth
+#g549 = nextpc~synth
+#g550 = nextpc~synth
+.names g543 rs[31] g509 g549 g550
+1000 1
+1100 1
+0101 1
+1101 1
+0011 1
+1011 1
+0111 1
+1111 1
+
+#g550 = nextpc~synth
+#g551 = nextpc~synth
+.names reset g550 g551
+01 1
+
+#g552 = branchout[10]~synth
+.names reset stall g552
+00 0
+
+#g222 = takebranch
+#g553 = always0~synth
+.names control[21] g222 control[20] g553
+000 0
+
+#g1 = branchout[0]~reg0
+#g749 = branchDelay~reg0
+#g554 = epc~synth
+.names g1 g749 g554
+11 1
+
+#g33 = currentpc[0]
+#g749 = branchDelay~reg0
+#g555 = epc~synth
+.names g33 g749 g555
+10 1
+
+#g554 = epc~synth
+#g555 = epc~synth
+#epc[0] = epc~synth
+.names g554 g555 epc[0]
+00 0
+
+#g2 = branchout[1]~reg0
+#g749 = branchDelay~reg0
+#g557 = epc~synth
+.names g2 g749 g557
+11 1
+
+#g34 = currentpc[1]
+#g749 = branchDelay~reg0
+#g558 = epc~synth
+.names g34 g749 g558
+10 1
+
+#g557 = epc~synth
+#g558 = epc~synth
+#epc[1] = epc~synth
+.names g557 g558 epc[1]
+00 0
+
+#g3 = branchout[2]~reg0
+#g749 = branchDelay~reg0
+#g560 = epc~synth
+.names g3 g749 g560
+11 1
+
+#g35 = currentpc[2]
+#g749 = branchDelay~reg0
+#g561 = epc~synth
+.names g35 g749 g561
+00 1
+
+#g560 = epc~synth
+#g561 = epc~synth
+#epc[2] = epc~synth
+.names g560 g561 epc[2]
+00 0
+
+#g4 = branchout[3]~reg0
+#g749 = branchDelay~reg0
+#g563 = epc~synth
+.names g4 g749 g563
+11 1
+
+#g37 = Add3~synth
+#g749 = branchDelay~reg0
+#g564 = epc~synth
+.names g37 g749 g564
+10 1
+
+#g563 = epc~synth
+#g564 = epc~synth
+#g565 = epc~synth
+.names g563 g564 g565
+00 0
+
+#g41 = Add2~synth
+#g749 = branchDelay~reg0
+#g566 = epc~synth
+.names g41 g749 g566
+11 1
+
+#g40 = Add3~synth
+#g749 = branchDelay~reg0
+#g567 = epc~synth
+.names g40 g749 g567
+10 1
+
+#g566 = epc~synth
+#g567 = epc~synth
+#g568 = epc~synth
+.names g566 g567 g568
+00 0
+
+#g46 = Add2~synth
+#g749 = branchDelay~reg0
+#g569 = epc~synth
+.names g46 g749 g569
+11 1
+
+#g44 = Add3~synth
+#g749 = branchDelay~reg0
+#g570 = epc~synth
+.names g44 g749 g570
+10 1
+
+#g569 = epc~synth
+#g570 = epc~synth
+#g571 = epc~synth
+.names g569 g570 g571
+00 0
+
+#g51 = Add2~synth
+#g749 = branchDelay~reg0
+#g572 = epc~synth
+.names g51 g749 g572
+11 1
+
+#g49 = Add3~synth
+#g749 = branchDelay~reg0
+#g573 = epc~synth
+.names g49 g749 g573
+10 1
+
+#g572 = epc~synth
+#g573 = epc~synth
+#g574 = epc~synth
+.names g572 g573 g574
+00 0
+
+#g56 = Add2~synth
+#g749 = branchDelay~reg0
+#g575 = epc~synth
+.names g56 g749 g575
+11 1
+
+#g54 = Add3~synth
+#g749 = branchDelay~reg0
+#g576 = epc~synth
+.names g54 g749 g576
+10 1
+
+#g575 = epc~synth
+#g576 = epc~synth
+#g577 = epc~synth
+.names g575 g576 g577
+00 0
+
+#g61 = Add2~synth
+#g749 = branchDelay~reg0
+#g578 = epc~synth
+.names g61 g749 g578
+11 1
+
+#g59 = Add3~synth
+#g749 = branchDelay~reg0
+#g579 = epc~synth
+.names g59 g749 g579
+10 1
+
+#g578 = epc~synth
+#g579 = epc~synth
+#g580 = epc~synth
+.names g578 g579 g580
+00 0
+
+#g66 = Add2~synth
+#g749 = branchDelay~reg0
+#g581 = epc~synth
+.names g66 g749 g581
+11 1
+
+#g64 = Add3~synth
+#g749 = branchDelay~reg0
+#g582 = epc~synth
+.names g64 g749 g582
+10 1
+
+#g581 = epc~synth
+#g582 = epc~synth
+#g583 = epc~synth
+.names g581 g582 g583
+00 0
+
+#g71 = Add2~synth
+#g749 = branchDelay~reg0
+#g584 = epc~synth
+.names g71 g749 g584
+11 1
+
+#g69 = Add3~synth
+#g749 = branchDelay~reg0
+#g585 = epc~synth
+.names g69 g749 g585
+10 1
+
+#g584 = epc~synth
+#g585 = epc~synth
+#g586 = epc~synth
+.names g584 g585 g586
+00 0
+
+#g76 = Add2~synth
+#g749 = branchDelay~reg0
+#g587 = epc~synth
+.names g76 g749 g587
+11 1
+
+#g74 = Add3~synth
+#g749 = branchDelay~reg0
+#g588 = epc~synth
+.names g74 g749 g588
+10 1
+
+#g587 = epc~synth
+#g588 = epc~synth
+#g589 = epc~synth
+.names g587 g588 g589
+00 0
+
+#g81 = Add2~synth
+#g749 = branchDelay~reg0
+#g590 = epc~synth
+.names g81 g749 g590
+11 1
+
+#g79 = Add3~synth
+#g749 = branchDelay~reg0
+#g591 = epc~synth
+.names g79 g749 g591
+10 1
+
+#g590 = epc~synth
+#g591 = epc~synth
+#g592 = epc~synth
+.names g590 g591 g592
+00 0
+
+#g86 = Add2~synth
+#g749 = branchDelay~reg0
+#g593 = epc~synth
+.names g86 g749 g593
+11 1
+
+#g84 = Add3~synth
+#g749 = branchDelay~reg0
+#g594 = epc~synth
+.names g84 g749 g594
+10 1
+
+#g593 = epc~synth
+#g594 = epc~synth
+#g595 = epc~synth
+.names g593 g594 g595
+00 0
+
+#g91 = Add2~synth
+#g749 = branchDelay~reg0
+#g596 = epc~synth
+.names g91 g749 g596
+11 1
+
+#g89 = Add3~synth
+#g749 = branchDelay~reg0
+#g597 = epc~synth
+.names g89 g749 g597
+10 1
+
+#g596 = epc~synth
+#g597 = epc~synth
+#g598 = epc~synth
+.names g596 g597 g598
+00 0
+
+#g96 = Add2~synth
+#g749 = branchDelay~reg0
+#g599 = epc~synth
+.names g96 g749 g599
+11 1
+
+#g94 = Add3~synth
+#g749 = branchDelay~reg0
+#g600 = epc~synth
+.names g94 g749 g600
+10 1
+
+#g599 = epc~synth
+#g600 = epc~synth
+#g601 = epc~synth
+.names g599 g600 g601
+00 0
+
+#g101 = Add2~synth
+#g749 = branchDelay~reg0
+#g602 = epc~synth
+.names g101 g749 g602
+11 1
+
+#g99 = Add3~synth
+#g749 = branchDelay~reg0
+#g603 = epc~synth
+.names g99 g749 g603
+10 1
+
+#g602 = epc~synth
+#g603 = epc~synth
+#g604 = epc~synth
+.names g602 g603 g604
+00 0
+
+#g106 = Add2~synth
+#g749 = branchDelay~reg0
+#g605 = epc~synth
+.names g106 g749 g605
+11 1
+
+#g104 = Add3~synth
+#g749 = branchDelay~reg0
+#g606 = epc~synth
+.names g104 g749 g606
+10 1
+
+#g605 = epc~synth
+#g606 = epc~synth
+#g607 = epc~synth
+.names g605 g606 g607
+00 0
+
+#g111 = Add2~synth
+#g749 = branchDelay~reg0
+#g608 = epc~synth
+.names g111 g749 g608
+11 1
+
+#g109 = Add3~synth
+#g749 = branchDelay~reg0
+#g609 = epc~synth
+.names g109 g749 g609
+10 1
+
+#g608 = epc~synth
+#g609 = epc~synth
+#g610 = epc~synth
+.names g608 g609 g610
+00 0
+
+#g116 = Add2~synth
+#g749 = branchDelay~reg0
+#g611 = epc~synth
+.names g116 g749 g611
+11 1
+
+#g114 = Add3~synth
+#g749 = branchDelay~reg0
+#g612 = epc~synth
+.names g114 g749 g612
+10 1
+
+#g611 = epc~synth
+#g612 = epc~synth
+#g613 = epc~synth
+.names g611 g612 g613
+00 0
+
+#g121 = Add2~synth
+#g749 = branchDelay~reg0
+#g614 = epc~synth
+.names g121 g749 g614
+11 1
+
+#g119 = Add3~synth
+#g749 = branchDelay~reg0
+#g615 = epc~synth
+.names g119 g749 g615
+10 1
+
+#g614 = epc~synth
+#g615 = epc~synth
+#g616 = epc~synth
+.names g614 g615 g616
+00 0
+
+#g126 = Add2~synth
+#g749 = branchDelay~reg0
+#g617 = epc~synth
+.names g126 g749 g617
+11 1
+
+#g124 = Add3~synth
+#g749 = branchDelay~reg0
+#g618 = epc~synth
+.names g124 g749 g618
+10 1
+
+#g617 = epc~synth
+#g618 = epc~synth
+#g619 = epc~synth
+.names g617 g618 g619
+00 0
+
+#g131 = Add2~synth
+#g749 = branchDelay~reg0
+#g620 = epc~synth
+.names g131 g749 g620
+11 1
+
+#g129 = Add3~synth
+#g749 = branchDelay~reg0
+#g621 = epc~synth
+.names g129 g749 g621
+10 1
+
+#g620 = epc~synth
+#g621 = epc~synth
+#g622 = epc~synth
+.names g620 g621 g622
+00 0
+
+#g136 = Add2~synth
+#g749 = branchDelay~reg0
+#g623 = epc~synth
+.names g136 g749 g623
+11 1
+
+#g134 = Add3~synth
+#g749 = branchDelay~reg0
+#g624 = epc~synth
+.names g134 g749 g624
+10 1
+
+#g623 = epc~synth
+#g624 = epc~synth
+#g625 = epc~synth
+.names g623 g624 g625
+00 0
+
+#g141 = Add2~synth
+#g749 = branchDelay~reg0
+#g626 = epc~synth
+.names g141 g749 g626
+11 1
+
+#g139 = Add3~synth
+#g749 = branchDelay~reg0
+#g627 = epc~synth
+.names g139 g749 g627
+10 1
+
+#g626 = epc~synth
+#g627 = epc~synth
+#g628 = epc~synth
+.names g626 g627 g628
+00 0
+
+#g146 = Add2~synth
+#g749 = branchDelay~reg0
+#g629 = epc~synth
+.names g146 g749 g629
+11 1
+
+#g144 = Add3~synth
+#g749 = branchDelay~reg0
+#g630 = epc~synth
+.names g144 g749 g630
+10 1
+
+#g629 = epc~synth
+#g630 = epc~synth
+#g631 = epc~synth
+.names g629 g630 g631
+00 0
+
+#g151 = Add2~synth
+#g749 = branchDelay~reg0
+#g632 = epc~synth
+.names g151 g749 g632
+11 1
+
+#g149 = Add3~synth
+#g749 = branchDelay~reg0
+#g633 = epc~synth
+.names g149 g749 g633
+10 1
+
+#g632 = epc~synth
+#g633 = epc~synth
+#g634 = epc~synth
+.names g632 g633 g634
+00 0
+
+#g156 = Add2~synth
+#g749 = branchDelay~reg0
+#g635 = epc~synth
+.names g156 g749 g635
+11 1
+
+#g154 = Add3~synth
+#g749 = branchDelay~reg0
+#g636 = epc~synth
+.names g154 g749 g636
+10 1
+
+#g635 = epc~synth
+#g636 = epc~synth
+#g637 = epc~synth
+.names g635 g636 g637
+00 0
+
+#g161 = Add2~synth
+#g749 = branchDelay~reg0
+#g638 = epc~synth
+.names g161 g749 g638
+11 1
+
+#g159 = Add3~synth
+#g749 = branchDelay~reg0
+#g639 = epc~synth
+.names g159 g749 g639
+10 1
+
+#g638 = epc~synth
+#g639 = epc~synth
+#g640 = epc~synth
+.names g638 g639 g640
+00 0
+
+#g166 = Add2~synth
+#g749 = branchDelay~reg0
+#g641 = epc~synth
+.names g166 g749 g641
+11 1
+
+#g164 = Add3~synth
+#g749 = branchDelay~reg0
+#g642 = epc~synth
+.names g164 g749 g642
+10 1
+
+#g641 = epc~synth
+#g642 = epc~synth
+#g643 = epc~synth
+.names g641 g642 g643
+00 0
+
+#g169 = currentpc[30]
+#g171 = epc~synth
+#g644 = epc~synth
+.names g169 g171 g644
+11 1
+
+#g170 = epc~synth
+#g171 = epc~synth
+#g645 = epc~synth
+.names g170 g171 g645
+00 1
+
+#g644 = epc~synth
+#g645 = epc~synth
+#g646 = epc~synth
+.names g644 g645 g646
+00 0
+
+#g646 = epc~synth
+#g749 = branchDelay~reg0
+#g647 = epc~synth
+.names g646 g749 g647
+10 1
+
+#g168 = Add2~synth
+#g749 = branchDelay~reg0
+#g648 = epc~synth
+.names g168 g749 g648
+01 1
+
+#g647 = epc~synth
+#g648 = epc~synth
+#epc[30] = epc~synth
+.names g647 g648 epc[30]
+00 0
+
+#g174 = currentpc[31]
+#g176 = epc~synth
+#g650 = epc~synth
+.names g174 g176 g650
+11 1
+
+#g175 = epc~synth
+#g176 = epc~synth
+#g651 = epc~synth
+.names g175 g176 g651
+00 1
+
+#g650 = epc~synth
+#g651 = epc~synth
+#g652 = epc~synth
+.names g650 g651 g652
+00 0
+
+#g652 = epc~synth
+#g749 = branchDelay~reg0
+#g653 = epc~synth
+.names g652 g749 g653
+10 1
+
+#g173 = Add2~synth
+#g749 = branchDelay~reg0
+#g654 = epc~synth
+.names g173 g749 g654
+01 1
+
+#g653 = epc~synth
+#g654 = epc~synth
+#epc[31] = epc~synth
+.names g653 g654 epc[31]
+00 0
+
+#g220 = Equal3~synth
+#g656 = comb~synth
+.names rs[31] g220 g656
+11 1
+
+#g219 = Equal3~synth
+#g657 = comb~synth
+.names rs[31] g219 g657
+01 1
+
+#g656 = comb~synth
+#g657 = comb~synth
+#g658 = comb~synth
+.names g656 g657 g658
+00 0
+
+#g33 = currentpc[0]
+#g226 = nextpc~synth
+#g659 = nextpc~synth
+.names g33 g226 g659
+11 1
+
+#g178 = nextpc~synth
+#g226 = nextpc~synth
+#g660 = nextpc~synth
+.names g178 g226 g660
+10 1
+
+#g659 = nextpc~synth
+#g660 = nextpc~synth
+#g661 = nextpc~synth
+.names g659 g660 g661
+00 0
+
+#g34 = currentpc[1]
+#g226 = nextpc~synth
+#g662 = nextpc~synth
+.names g34 g226 g662
+11 1
+
+#g226 = nextpc~synth
+#g228 = nextpc~synth
+#g663 = nextpc~synth
+.names g226 g228 g663
+01 1
+
+#g662 = nextpc~synth
+#g663 = nextpc~synth
+#g664 = nextpc~synth
+.names g662 g663 g664
+00 0
+
+#g35 = currentpc[2]
+#g665 = nextpc~synth
+.names g35 stall g665
+11 1
+
+#g235 = nextpc~synth
+#g666 = nextpc~synth
+.names stall g235 g666
+01 1
+
+#g665 = nextpc~synth
+#g666 = nextpc~synth
+#g667 = nextpc~synth
+.names g665 g666 g667
+00 0
+
+#g36 = currentpc[3]
+#g668 = nextpc~synth
+.names g36 stall g668
+11 1
+
+#g241 = nextpc~synth
+#g669 = nextpc~synth
+.names stall g241 g669
+01 1
+
+#g668 = nextpc~synth
+#g669 = nextpc~synth
+#g670 = nextpc~synth
+.names g668 g669 g670
+00 0
+
+#g38 = currentpc[4]
+#g671 = nextpc~synth
+.names g38 stall g671
+11 1
+
+#g252 = nextpc~synth
+#g672 = nextpc~synth
+.names stall g252 g672
+01 1
+
+#g671 = nextpc~synth
+#g672 = nextpc~synth
+#g673 = nextpc~synth
+.names g671 g672 g673
+00 0
+
+#g42 = currentpc[5]
+#g674 = nextpc~synth
+.names g42 stall g674
+11 1
+
+#g263 = nextpc~synth
+#g675 = nextpc~synth
+.names stall g263 g675
+01 1
+
+#g674 = nextpc~synth
+#g675 = nextpc~synth
+#g676 = nextpc~synth
+.names g674 g675 g676
+00 0
+
+#g47 = currentpc[6]
+#g677 = nextpc~synth
+.names g47 stall g677
+11 1
+
+#g274 = nextpc~synth
+#g678 = nextpc~synth
+.names stall g274 g678
+01 1
+
+#g677 = nextpc~synth
+#g678 = nextpc~synth
+#g679 = nextpc~synth
+.names g677 g678 g679
+00 0
+
+#g52 = currentpc[7]
+#g680 = nextpc~synth
+.names g52 stall g680
+11 1
+
+#g285 = nextpc~synth
+#g681 = nextpc~synth
+.names stall g285 g681
+01 1
+
+#g680 = nextpc~synth
+#g681 = nextpc~synth
+#g682 = nextpc~synth
+.names g680 g681 g682
+00 0
+
+#g57 = currentpc[8]
+#g683 = nextpc~synth
+.names g57 stall g683
+11 1
+
+#g296 = nextpc~synth
+#g684 = nextpc~synth
+.names stall g296 g684
+01 1
+
+#g683 = nextpc~synth
+#g684 = nextpc~synth
+#g685 = nextpc~synth
+.names g683 g684 g685
+00 0
+
+#g62 = currentpc[9]
+#g686 = nextpc~synth
+.names g62 stall g686
+11 1
+
+#g307 = nextpc~synth
+#g687 = nextpc~synth
+.names stall g307 g687
+01 1
+
+#g686 = nextpc~synth
+#g687 = nextpc~synth
+#g688 = nextpc~synth
+.names g686 g687 g688
+00 0
+
+#g67 = currentpc[10]
+#g689 = nextpc~synth
+.names g67 stall g689
+11 1
+
+#g318 = nextpc~synth
+#g690 = nextpc~synth
+.names stall g318 g690
+01 1
+
+#g689 = nextpc~synth
+#g690 = nextpc~synth
+#g691 = nextpc~synth
+.names g689 g690 g691
+00 0
+
+#g72 = currentpc[11]
+#g692 = nextpc~synth
+.names g72 stall g692
+11 1
+
+#g329 = nextpc~synth
+#g693 = nextpc~synth
+.names stall g329 g693
+01 1
+
+#g692 = nextpc~synth
+#g693 = nextpc~synth
+#g694 = nextpc~synth
+.names g692 g693 g694
+00 0
+
+#g77 = currentpc[12]
+#g695 = nextpc~synth
+.names g77 stall g695
+11 1
+
+#g340 = nextpc~synth
+#g696 = nextpc~synth
+.names stall g340 g696
+01 1
+
+#g695 = nextpc~synth
+#g696 = nextpc~synth
+#g697 = nextpc~synth
+.names g695 g696 g697
+00 0
+
+#g82 = currentpc[13]
+#g698 = nextpc~synth
+.names g82 stall g698
+11 1
+
+#g351 = nextpc~synth
+#g699 = nextpc~synth
+.names stall g351 g699
+01 1
+
+#g698 = nextpc~synth
+#g699 = nextpc~synth
+#g700 = nextpc~synth
+.names g698 g699 g700
+00 0
+
+#g87 = currentpc[14]
+#g701 = nextpc~synth
+.names g87 stall g701
+11 1
+
+#g362 = nextpc~synth
+#g702 = nextpc~synth
+.names stall g362 g702
+01 1
+
+#g701 = nextpc~synth
+#g702 = nextpc~synth
+#g703 = nextpc~synth
+.names g701 g702 g703
+00 0
+
+#g92 = currentpc[15]
+#g704 = nextpc~synth
+.names g92 stall g704
+11 1
+
+#g373 = nextpc~synth
+#g705 = nextpc~synth
+.names stall g373 g705
+01 1
+
+#g704 = nextpc~synth
+#g705 = nextpc~synth
+#g706 = nextpc~synth
+.names g704 g705 g706
+00 0
+
+#g97 = currentpc[16]
+#g707 = nextpc~synth
+.names g97 stall g707
+11 1
+
+#g384 = nextpc~synth
+#g708 = nextpc~synth
+.names stall g384 g708
+01 1
+
+#g707 = nextpc~synth
+#g708 = nextpc~synth
+#g709 = nextpc~synth
+.names g707 g708 g709
+00 0
+
+#g102 = currentpc[17]
+#g710 = nextpc~synth
+.names g102 stall g710
+11 1
+
+#g395 = nextpc~synth
+#g711 = nextpc~synth
+.names stall g395 g711
+01 1
+
+#g710 = nextpc~synth
+#g711 = nextpc~synth
+#g712 = nextpc~synth
+.names g710 g711 g712
+00 0
+
+#g107 = currentpc[18]
+#g713 = nextpc~synth
+.names g107 stall g713
+11 1
+
+#g406 = nextpc~synth
+#g714 = nextpc~synth
+.names stall g406 g714
+01 1
+
+#g713 = nextpc~synth
+#g714 = nextpc~synth
+#g715 = nextpc~synth
+.names g713 g714 g715
+00 0
+
+#g112 = currentpc[19]
+#g716 = nextpc~synth
+.names g112 stall g716
+11 1
+
+#g417 = nextpc~synth
+#g717 = nextpc~synth
+.names stall g417 g717
+01 1
+
+#g716 = nextpc~synth
+#g717 = nextpc~synth
+#g718 = nextpc~synth
+.names g716 g717 g718
+00 0
+
+#g117 = currentpc[20]
+#g719 = nextpc~synth
+.names g117 stall g719
+11 1
+
+#g428 = nextpc~synth
+#g720 = nextpc~synth
+.names stall g428 g720
+01 1
+
+#g719 = nextpc~synth
+#g720 = nextpc~synth
+#g721 = nextpc~synth
+.names g719 g720 g721
+00 0
+
+#g122 = currentpc[21]
+#g722 = nextpc~synth
+.names g122 stall g722
+11 1
+
+#g439 = nextpc~synth
+#g723 = nextpc~synth
+.names stall g439 g723
+01 1
+
+#g722 = nextpc~synth
+#g723 = nextpc~synth
+#g724 = nextpc~synth
+.names g722 g723 g724
+00 0
+
+#g127 = currentpc[22]
+#g725 = nextpc~synth
+.names g127 stall g725
+11 1
+
+#g450 = nextpc~synth
+#g726 = nextpc~synth
+.names stall g450 g726
+01 1
+
+#g725 = nextpc~synth
+#g726 = nextpc~synth
+#g727 = nextpc~synth
+.names g725 g726 g727
+00 0
+
+#g132 = currentpc[23]
+#g728 = nextpc~synth
+.names g132 stall g728
+11 1
+
+#g461 = nextpc~synth
+#g729 = nextpc~synth
+.names stall g461 g729
+01 1
+
+#g728 = nextpc~synth
+#g729 = nextpc~synth
+#g730 = nextpc~synth
+.names g728 g729 g730
+00 0
+
+#g137 = currentpc[24]
+#g731 = nextpc~synth
+.names g137 stall g731
+11 1
+
+#g472 = nextpc~synth
+#g732 = nextpc~synth
+.names stall g472 g732
+01 1
+
+#g731 = nextpc~synth
+#g732 = nextpc~synth
+#g733 = nextpc~synth
+.names g731 g732 g733
+00 0
+
+#g142 = currentpc[25]
+#g734 = nextpc~synth
+.names g142 stall g734
+11 1
+
+#g483 = nextpc~synth
+#g735 = nextpc~synth
+.names stall g483 g735
+01 1
+
+#g734 = nextpc~synth
+#g735 = nextpc~synth
+#g736 = nextpc~synth
+.names g734 g735 g736
+00 0
+
+#g147 = currentpc[26]
+#g737 = nextpc~synth
+.names g147 stall g737
+11 1
+
+#g494 = nextpc~synth
+#g738 = nextpc~synth
+.names stall g494 g738
+01 1
+
+#g737 = nextpc~synth
+#g738 = nextpc~synth
+#g739 = nextpc~synth
+.names g737 g738 g739
+00 0
+
+#g152 = currentpc[27]
+#g740 = nextpc~synth
+.names g152 stall g740
+11 1
+
+#g505 = nextpc~synth
+#g741 = nextpc~synth
+.names stall g505 g741
+01 1
+
+#g740 = nextpc~synth
+#g741 = nextpc~synth
+#g742 = nextpc~synth
+.names g740 g741 g742
+00 0
+
+#g509 = nextpc~synth
+#g516 = nextpc~synth
+#g743 = nextpc~synth
+.names g509 g516 g743
+11 1
+
+#g509 = nextpc~synth
+#g744 = nextpc~synth
+.names control[20] g509 g744
+10 1
+
+#g743 = nextpc~synth
+#g744 = nextpc~synth
+#g745 = nextpc~synth
+.names g743 g744 g745
+00 0
+
+#g749 = branchDelay~reg0
+#g746 = branchDelay~synth
+.names stall g749 g746
+11 1
+
+#g553 = always0~synth
+#g747 = branchDelay~synth
+.names stall g553 g747
+01 1
+
+#g746 = branchDelay~synth
+#g747 = branchDelay~synth
+#g748 = branchDelay~synth
+.names g746 g747 g748
+00 0
+
+#g749 = branchDelay~reg0
+.latch g750 g749 re clk 2
+
+#g748 = branchDelay~synth
+#g750 = branchDelay~1
+.names reset g748 g750
+01 1
+
+.end
+

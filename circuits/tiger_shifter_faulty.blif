@@ -1,0 +1,4487 @@
+.model faulty_tiger_shifter
+.inputs amt[0] dir src[0] amt[1] amt[2] amt[3] amt[4] src[10] src[26] src[18] src[2] src[6] src[22] src[14] src[30] src[16] src[8] src[24] src[4] src[20] src[12] src[28] src[17] src[9] src[25] src[1] src[5] src[21] src[13] src[29] src[11] src[27] src[19] src[3] src[7] src[23] src[15] src[31] alusigned
+.outputs shifted[0] shifted[1] shifted[2] shifted[3] shifted[4] shifted[5] shifted[6] shifted[7] shifted[8] shifted[9] shifted[10] shifted[11] shifted[12] shifted[13] shifted[14] shifted[15] shifted[16] shifted[17] shifted[18] shifted[19] shifted[20] shifted[21] shifted[22] shifted[23] shifted[24] shifted[25] shifted[26] shifted[27] shifted[28] shifted[29] shifted[30] shifted[31]
+
+#g1 = left8[0]~synth
+.names amt[3] amt[4] g1
+00 0
+
+#g1 = left8[0]~synth
+#g2 = left4[0]~synth
+.names amt[2] g1 g2
+00 0
+
+#g2 = left4[0]~synth
+#g3 = left2[0]~synth
+.names amt[1] g2 g3
+00 0
+
+#g3 = left2[0]~synth
+#g4 = left2[0]~synth
+.names src[0] g3 g4
+10 1
+
+#g4 = left2[0]~synth
+#g5 = shifted~synth
+.names amt[0] dir g4 g5
+001 1
+
+#g6 = left4[28]~synth
+.names amt[2] amt[3] g6
+00 0
+
+#g7 = left4[28]~synth
+.names amt[3] amt[4] g7
+01 1
+
+#g7 = left4[28]~synth
+#g8 = left4[28]~synth
+.names amt[2] g7 g8
+00 0
+
+#g6 = left4[28]~synth
+#g8 = left4[28]~synth
+#g9 = right4[2]~synth
+.names g6 src[18] g8 src[2] g9
+1010 1
+0110 1
+1110 1
+0001 1
+0101 1
+1011 1
+0111 1
+1111 1
+
+#g127 = right16[10]~synth
+#g6 = left4[28]~synth
+#g9 = right4[2]~synth
+#g136 = right8[6]~synth
+#g10 = right4[2]~synth
+.names g127 g6 g9 g136 g10
+1100 1
+0010 1
+1010 1
+1101 1
+0011 1
+1011 1
+0111 1
+1111 1
+
+#g160 = right2[0]~synth
+#g11 = shifted~synth
+.names amt[0] dir g160 g11
+011 1
+
+#g8 = left4[28]~synth
+#g163 = right16[9]~synth
+#g6 = left4[28]~synth
+#g12 = right2[1]~synth
+.names g8 g163 g6 src[1] g12
+1010 1
+0110 1
+1110 1
+0001 1
+0101 1
+1011 1
+0111 1
+1111 1
+
+#g8 = left4[28]~synth
+#g12 = right2[1]~synth
+#g172 = right8[5]~synth
+#g13 = right2[1]~synth
+.names src[17] g8 g12 g172 g13
+1100 1
+0010 1
+1010 1
+1101 1
+0011 1
+1011 1
+0111 1
+1111 1
+
+#g6 = left4[28]~synth
+#g8 = left4[28]~synth
+#g14 = right4[3]~synth
+.names g6 src[19] g8 src[3] g14
+1010 1
+0110 1
+1110 1
+0001 1
+0101 1
+1011 1
+0111 1
+1111 1
+
+#g175 = right16[11]~synth
+#g6 = left4[28]~synth
+#g14 = right4[3]~synth
+#g184 = right8[7]~synth
+#g15 = right4[3]~synth
+.names g175 g6 g14 g184 g15
+1100 1
+0010 1
+1010 1
+1101 1
+0011 1
+1011 1
+0111 1
+1111 1
+
+#g187 = right2[1]~synth
+#g16 = shifted~synth
+.names amt[0] dir g187 g16
+111 1
+
+#g5 = shifted~synth
+#g11 = shifted~synth
+#g16 = shifted~synth
+#shifted[0] = shifted~synth
+.names g5 g11 g16 shifted[0]
+000 0
+
+#g3 = left2[0]~synth
+#g18 = left2[1]~synth
+.names g3 src[1] g18
+01 1
+
+#g4 = left2[0]~synth
+#g18 = left2[1]~synth
+#g19 = shifted~synth
+.names dir g4 amt[0] g18 g19
+1010 1
+0110 1
+1110 1
+0001 1
+0101 1
+1011 1
+0111 1
+1111 1
+
+#g20 = fillbit
+.names src[31] alusigned g20
+11 1
+
+#g187 = right2[1]~synth
+#g19 = shifted~synth
+#g199 = right2[2]~synth
+#shifted[1] = shifted~synth
+.names g187 dir g19 g199 shifted[1]
+1100 1
+0010 1
+1010 1
+1101 1
+0011 1
+1011 1
+0111 1
+1111 1
+
+#g2 = left4[0]~synth
+#g202 = left2[2]~synth
+#g22 = left2[2]~synth
+.names g2 g202 g22
+01 1
+
+#g199 = right2[2]~synth
+#g22 = left2[2]~synth
+#g23 = shifted~synth
+.names amt[0] g199 dir g22 g23
+1010 1
+0110 1
+1110 1
+0001 1
+0101 1
+1011 1
+0111 1
+1111 1
+
+#g18 = left2[1]~synth
+#g23 = shifted~synth
+#g214 = right2[3]~synth
+#shifted[2] = shifted~synth
+.names g18 amt[0] g23 g214 shifted[2]
+1100 1
+0010 1
+1010 1
+1101 1
+0011 1
+1011 1
+0111 1
+1111 1
+
+#g2 = left4[0]~synth
+#g217 = left2[3]~synth
+#g25 = left2[3]~synth
+.names g2 g217 g25
+01 1
+
+#g22 = left2[2]~synth
+#g25 = left2[3]~synth
+#g26 = shifted~synth
+.names dir g22 amt[0] g25 g26
+1010 1
+0110 1
+1110 1
+0001 1
+0101 1
+1011 1
+0111 1
+1111 1
+
+#g214 = right2[3]~synth
+#g26 = shifted~synth
+#g229 = right2[4]~synth
+#shifted[3] = shifted~synth
+.names g214 dir g26 g229 shifted[3]
+1100 1
+0010 1
+1010 1
+1101 1
+0011 1
+1011 1
+0111 1
+1111 1
+
+#g28 = left2[4]~synth
+.names amt[1] amt[2] g28
+11 1
+
+#g1 = left8[0]~synth
+#g28 = left2[4]~synth
+#g29 = left2[4]~synth
+.names g1 g28 g29
+00 0
+
+#g29 = left2[4]~synth
+#g235 = left2[4]~synth
+#g30 = left2[4]~synth
+.names g29 g235 g30
+01 1
+
+#g229 = right2[4]~synth
+#g30 = left2[4]~synth
+#g31 = shifted~synth
+.names amt[0] g229 dir g30 g31
+1010 1
+0110 1
+1110 1
+0001 1
+0101 1
+1011 1
+0111 1
+1111 1
+
+#g25 = left2[3]~synth
+#g31 = shifted~synth
+#g247 = right2[5]~synth
+#shifted[4] = shifted~synth
+.names g25 amt[0] g31 g247 shifted[4]
+1100 1
+0010 1
+1010 1
+1101 1
+0011 1
+1011 1
+0111 1
+1111 1
+
+#g29 = left2[4]~synth
+#g253 = left2[5]~synth
+#g33 = left2[5]~synth
+.names g29 g253 g33
+01 1
+
+#g30 = left2[4]~synth
+#g33 = left2[5]~synth
+#g34 = shifted~synth
+.names dir g30 amt[0] g33 g34
+1010 1
+0110 1
+1110 1
+0001 1
+0101 1
+1011 1
+0111 1
+1111 1
+
+#g247 = right2[5]~synth
+#g34 = shifted~synth
+#g265 = right2[6]~synth
+#shifted[5] = shifted~synth
+.names g247 dir g34 g265 shifted[5]
+1100 1
+0010 1
+1010 1
+1101 1
+0011 1
+1011 1
+0111 1
+1111 1
+
+#g1 = left8[0]~synth
+#g271 = left2[6]~synth
+#g36 = left2[6]~synth
+.names g1 g271 g36
+01 1
+
+#g265 = right2[6]~synth
+#g36 = left2[6]~synth
+#g37 = shifted~synth
+.names amt[0] g265 dir g36 g37
+1010 1
+0110 1
+1110 1
+0001 1
+0101 1
+1011 1
+0111 1
+1111 1
+
+#g33 = left2[5]~synth
+#g37 = shifted~synth
+#g283 = right2[7]~synth
+#shifted[6] = shifted~synth
+.names g33 amt[0] g37 g283 shifted[6]
+1100 1
+0010 1
+1010 1
+1101 1
+0011 1
+1011 1
+0111 1
+1111 1
+
+#g1 = left8[0]~synth
+#g289 = left2[7]~synth
+#g39 = left2[7]~synth
+.names g1 g289 g39
+01 1
+
+#g36 = left2[6]~synth
+#g39 = left2[7]~synth
+#g40 = shifted~synth
+.names dir g36 amt[0] g39 g40
+1010 1
+0110 1
+1110 1
+0001 1
+0101 1
+1011 1
+0111 1
+1111 1
+
+#g283 = right2[7]~synth
+#g40 = shifted~synth
+#g301 = right2[8]~synth
+#shifted[7] = shifted~synth
+.names g283 dir g40 g301 shifted[7]
+1100 1
+0010 1
+1010 1
+1101 1
+0011 1
+1011 1
+0111 1
+1111 1
+
+#g42 = left2[8]~synth
+.names amt[1] amt[2] g42
+00 0
+
+#g42 = left2[8]~synth
+#g43 = left2[8]~synth
+.names amt[3] g42 g43
+11 1
+
+#g43 = left2[8]~synth
+#g44 = left2[8]~synth
+.names amt[4] g43 g44
+00 0
+
+#g44 = left2[8]~synth
+#g310 = left2[8]~synth
+#g45 = left2[8]~synth
+.names g44 g310 g45
+01 1
+
+#g301 = right2[8]~synth
+#g45 = left2[8]~synth
+#g46 = shifted~synth
+.names amt[0] g301 dir g45 g46
+1010 1
+0110 1
+1110 1
+0001 1
+0101 1
+1011 1
+0111 1
+1111 1
+
+#g39 = left2[7]~synth
+#g46 = shifted~synth
+#g322 = right2[9]~synth
+#shifted[8] = shifted~synth
+.names g39 amt[0] g46 g322 shifted[8]
+1100 1
+0010 1
+1010 1
+1101 1
+0011 1
+1011 1
+0111 1
+1111 1
+
+#g44 = left2[8]~synth
+#g331 = left2[9]~synth
+#g48 = left2[9]~synth
+.names g44 g331 g48
+01 1
+
+#g45 = left2[8]~synth
+#g48 = left2[9]~synth
+#g49 = shifted~synth
+.names dir g45 amt[0] g48 g49
+1010 1
+0110 1
+1110 1
+0001 1
+0101 1
+1011 1
+0111 1
+1111 1
+
+#g322 = right2[9]~synth
+#g49 = shifted~synth
+#g343 = right2[10]~synth
+#shifted[9] = shifted~synth
+.names g322 dir g49 g343 shifted[9]
+1100 1
+0010 1
+1010 1
+1101 1
+0011 1
+1011 1
+0111 1
+1111 1
+
+#g51 = left4[8]~synth
+.names amt[2] amt[3] g51
+11 1
+
+#g51 = left4[8]~synth
+#g52 = left4[8]~synth
+.names amt[4] g51 g52
+00 0
+
+#g52 = left4[8]~synth
+#g352 = left2[10]~synth
+#g53 = left2[10]~synth
+.names g52 g352 g53
+01 1
+
+#g343 = right2[10]~synth
+#g53 = left2[10]~synth
+#g54 = shifted~synth
+.names amt[0] g343 dir g53 g54
+1010 1
+0110 1
+1110 1
+0001 1
+0101 1
+1011 1
+0111 1
+1111 1
+
+#g48 = left2[9]~synth
+#g54 = shifted~synth
+#g364 = right2[11]~synth
+#shifted[10] = shifted~synth
+.names g48 amt[0] g54 g364 shifted[10]
+1100 1
+0010 1
+1010 1
+1101 1
+0011 1
+1011 1
+0111 1
+1111 1
+
+#g52 = left4[8]~synth
+#g373 = left2[11]~synth
+#g56 = left2[11]~synth
+.names g52 g373 g56
+01 1
+
+#g53 = left2[10]~synth
+#g56 = left2[11]~synth
+#g57 = shifted~synth
+.names dir g53 amt[0] g56 g57
+1010 1
+0110 1
+1110 1
+0001 1
+0101 1
+1011 1
+0111 1
+1111 1
+
+#g364 = right2[11]~synth
+#g57 = shifted~synth
+#g385 = right2[12]~synth
+#shifted[11] = shifted~synth
+.names g364 dir g57 g385 shifted[11]
+1100 1
+0010 1
+1010 1
+1101 1
+0011 1
+1011 1
+0111 1
+1111 1
+
+#g28 = left2[4]~synth
+#g59 = left2[12]~synth
+.names amt[3] g28 g59
+11 1
+
+#g59 = left2[12]~synth
+#g60 = left2[12]~synth
+.names amt[4] g59 g60
+00 0
+
+#g60 = left2[12]~synth
+#g394 = left2[12]~synth
+#g61 = left2[12]~synth
+.names g60 g394 g61
+01 1
+
+#g385 = right2[12]~synth
+#g61 = left2[12]~synth
+#g62 = shifted~synth
+.names amt[0] g385 dir g61 g62
+1010 1
+0110 1
+1110 1
+0001 1
+0101 1
+1011 1
+0111 1
+1111 1
+
+#g56 = left2[11]~synth
+#g62 = shifted~synth
+#g406 = right2[13]~synth
+#shifted[12] = shifted~synth
+.names g56 amt[0] g62 g406 shifted[12]
+1100 1
+0010 1
+1010 1
+1101 1
+0011 1
+1011 1
+0111 1
+1111 1
+
+#g60 = left2[12]~synth
+#g415 = left2[13]~synth
+#g64 = left2[13]~synth
+.names g60 g415 g64
+01 1
+
+#g61 = left2[12]~synth
+#g64 = left2[13]~synth
+#g65 = shifted~synth
+.names dir g61 amt[0] g64 g65
+1010 1
+0110 1
+1110 1
+0001 1
+0101 1
+1011 1
+0111 1
+1111 1
+
+#g406 = right2[13]~synth
+#g65 = shifted~synth
+#g427 = right2[14]~synth
+#shifted[13] = shifted~synth
+.names g406 dir g65 g427 shifted[13]
+1100 1
+0010 1
+1010 1
+1101 1
+0011 1
+1011 1
+0111 1
+1111 1
+
+#g436 = left2[14]~synth
+#g67 = left2[14]~synth
+.names amt[4] g436 g67
+01 1
+
+#g427 = right2[14]~synth
+#g67 = left2[14]~synth
+#g68 = shifted~synth
+.names amt[0] g427 dir g67 g68
+1010 1
+0110 1
+1110 1
+0001 1
+0101 1
+1011 1
+0111 1
+1111 1
+
+#g64 = left2[13]~synth
+#g68 = shifted~synth
+#g448 = right2[15]~synth
+#shifted[14] = shifted~synth
+.names g64 amt[0] g68 g448 shifted[14]
+1100 1
+0010 1
+1010 1
+1101 1
+0011 1
+1011 1
+0111 1
+1111 1
+
+#g457 = left2[15]~synth
+#g70 = left2[15]~synth
+.names amt[4] g457 g70
+01 1
+
+#g67 = left2[14]~synth
+#g70 = left2[15]~synth
+#g71 = shifted~synth
+.names dir g67 amt[0] g70 g71
+1010 1
+0110 1
+1110 1
+0001 1
+0101 1
+1011 1
+0111 1
+1111 1
+
+#g448 = right2[15]~synth
+#g71 = shifted~synth
+#g469 = right2[16]~synth
+#shifted[15] = shifted~synth
+.names g448 dir g71 g469 shifted[15]
+1100 1
+0010 1
+1010 1
+1101 1
+0011 1
+1011 1
+0111 1
+1111 1
+
+#g433 = left4[14]~synth
+#g73 = left4[14]~synth
+.names amt[4] g433 g73
+01 1
+
+#g388 = left8[12]~synth
+#g74 = left8[12]~synth
+.names amt[4] g388 g74
+01 1
+
+#g75 = left16[8]~synth
+.names amt[4] src[8] g75
+01 1
+
+#g469 = right2[16]~synth
+#g481 = left2[16]~synth
+#g76 = shifted~synth
+.names amt[0] g469 dir g481 g76
+1010 1
+0110 1
+1110 1
+0001 1
+0101 1
+1011 1
+0111 1
+1111 1
+
+#g70 = left2[15]~synth
+#g76 = shifted~synth
+#g493 = right2[17]~synth
+#shifted[16] = shifted~synth
+.names g70 amt[0] g76 g493 shifted[16]
+1100 1
+0010 1
+1010 1
+1101 1
+0011 1
+1011 1
+0111 1
+1111 1
+
+#g454 = left4[15]~synth
+#g78 = left4[15]~synth
+.names amt[4] g454 g78
+01 1
+
+#g409 = left8[13]~synth
+#g79 = left8[13]~synth
+.names amt[4] g409 g79
+01 1
+
+#g80 = left16[9]~synth
+.names amt[4] src[9] g80
+01 1
+
+#g481 = left2[16]~synth
+#g505 = left2[17]~synth
+#g81 = shifted~synth
+.names dir g481 amt[0] g505 g81
+1010 1
+0110 1
+1110 1
+0001 1
+0101 1
+1011 1
+0111 1
+1111 1
+
+#g493 = right2[17]~synth
+#g81 = shifted~synth
+#g514 = right2[18]~synth
+#shifted[17] = shifted~synth
+.names g493 dir g81 g514 shifted[17]
+1100 1
+0010 1
+1010 1
+1101 1
+0011 1
+1011 1
+0111 1
+1111 1
+
+#g430 = left8[14]~synth
+#g83 = left8[14]~synth
+.names amt[4] g430 g83
+01 1
+
+#g84 = left16[10]~synth
+.names amt[4] src[10] g84
+01 1
+
+#g514 = right2[18]~synth
+#g526 = left2[18]~synth
+#g85 = shifted~synth
+.names amt[0] g514 dir g526 g85
+1010 1
+0110 1
+1110 1
+0001 1
+0101 1
+1011 1
+0111 1
+1111 1
+
+#g505 = left2[17]~synth
+#g85 = shifted~synth
+#g535 = right2[19]~synth
+#shifted[18] = shifted~synth
+.names g505 amt[0] g85 g535 shifted[18]
+1100 1
+0010 1
+1010 1
+1101 1
+0011 1
+1011 1
+0111 1
+1111 1
+
+#g451 = left8[15]~synth
+#g87 = left8[15]~synth
+.names amt[4] g451 g87
+01 1
+
+#g88 = left16[11]~synth
+.names amt[4] src[11] g88
+01 1
+
+#g526 = left2[18]~synth
+#g547 = left2[19]~synth
+#g89 = shifted~synth
+.names dir g526 amt[0] g547 g89
+1010 1
+0110 1
+1110 1
+0001 1
+0101 1
+1011 1
+0111 1
+1111 1
+
+#g535 = right2[19]~synth
+#g89 = shifted~synth
+#g556 = right2[20]~synth
+#shifted[19] = shifted~synth
+.names g535 dir g89 g556 shifted[19]
+1100 1
+0010 1
+1010 1
+1101 1
+0011 1
+1011 1
+0111 1
+1111 1
+
+#g91 = left16[12]~synth
+.names amt[4] src[12] g91
+01 1
+
+#g556 = right2[20]~synth
+#g568 = left2[20]~synth
+#g92 = shifted~synth
+.names amt[0] g556 dir g568 g92
+1010 1
+0110 1
+1110 1
+0001 1
+0101 1
+1011 1
+0111 1
+1111 1
+
+#g547 = left2[19]~synth
+#g92 = shifted~synth
+#g577 = right2[21]~synth
+#shifted[20] = shifted~synth
+.names g547 amt[0] g92 g577 shifted[20]
+1100 1
+0010 1
+1010 1
+1101 1
+0011 1
+1011 1
+0111 1
+1111 1
+
+#g94 = left16[13]~synth
+.names amt[4] src[13] g94
+01 1
+
+#g568 = left2[20]~synth
+#g589 = left2[21]~synth
+#g95 = shifted~synth
+.names dir g568 amt[0] g589 g95
+1010 1
+0110 1
+1110 1
+0001 1
+0101 1
+1011 1
+0111 1
+1111 1
+
+#g577 = right2[21]~synth
+#g95 = shifted~synth
+#g598 = right2[22]~synth
+#shifted[21] = shifted~synth
+.names g577 dir g95 g598 shifted[21]
+1100 1
+0010 1
+1010 1
+1101 1
+0011 1
+1011 1
+0111 1
+1111 1
+
+#g97 = left16[14]~synth
+.names amt[4] src[14] g97
+01 1
+
+#g598 = right2[22]~synth
+#g610 = left2[22]~synth
+#g98 = shifted~synth
+.names amt[0] g598 dir g610 g98
+1010 1
+0110 1
+1110 1
+0001 1
+0101 1
+1011 1
+0111 1
+1111 1
+
+#g589 = left2[21]~synth
+#g98 = shifted~synth
+#g619 = right2[23]~synth
+#shifted[22] = shifted~synth
+.names g589 amt[0] g98 g619 shifted[22]
+1100 1
+0010 1
+1010 1
+1101 1
+0011 1
+1011 1
+0111 1
+1111 1
+
+#g100 = left16[15]~synth
+.names amt[4] src[15] g100
+01 1
+
+#g610 = left2[22]~synth
+#g631 = left2[23]~synth
+#g101 = shifted~synth
+.names dir g610 amt[0] g631 g101
+1010 1
+0110 1
+1110 1
+0001 1
+0101 1
+1011 1
+0111 1
+1111 1
+
+#g619 = right2[23]~synth
+#g101 = shifted~synth
+#g640 = right2[24]~synth
+#shifted[23] = shifted~synth
+.names g619 dir g101 g640 shifted[23]
+1100 1
+0010 1
+1010 1
+1101 1
+0011 1
+1011 1
+0111 1
+1111 1
+
+#g640 = right2[24]~synth
+#g652 = left2[24]~synth
+#g103 = shifted~synth
+.names amt[0] g640 dir g652 g103
+1010 1
+0110 1
+1110 1
+0001 1
+0101 1
+1011 1
+0111 1
+1111 1
+
+#g631 = left2[23]~synth
+#g103 = shifted~synth
+#g661 = right2[25]~synth
+#shifted[24] = shifted~synth
+.names g631 amt[0] g103 g661 shifted[24]
+1100 1
+0010 1
+1010 1
+1101 1
+0011 1
+1011 1
+0111 1
+1111 1
+
+#g652 = left2[24]~synth
+#g673 = left2[25]~synth
+#g105 = shifted~synth
+.names dir g652 amt[0] g673 g105
+1010 1
+0110 1
+1110 1
+0001 1
+0101 1
+1011 1
+0111 1
+1111 1
+
+#g661 = right2[25]~synth
+#g105 = shifted~synth
+#g679 = right2[26]~synth
+#shifted[25] = shifted~synth
+.names g661 dir g105 g679 shifted[25]
+1100 1
+0010 1
+1010 1
+1101 1
+0011 1
+1011 1
+0111 1
+1111 1
+
+#g679 = right2[26]~synth
+#g691 = left2[26]~synth
+#g107 = shifted~synth
+.names amt[0] g679 dir g691 g107
+1010 1
+0110 1
+1110 1
+0001 1
+0101 1
+1011 1
+0111 1
+1111 1
+
+#g673 = left2[25]~synth
+#g107 = shifted~synth
+#g697 = right2[27]~synth
+#shifted[26] = shifted~synth
+.names g673 amt[0] g107 g697 shifted[26]
+1100 1
+0010 1
+1010 1
+1101 1
+0011 1
+1011 1
+0111 1
+1111 1
+
+#g691 = left2[26]~synth
+#g709 = left2[27]~synth
+#g109 = shifted~synth
+.names dir g691 amt[0] g709 g109
+1010 1
+0110 1
+1110 1
+0001 1
+0101 1
+1011 1
+0111 1
+1111 1
+
+#g697 = right2[27]~synth
+#g109 = shifted~synth
+#g715 = right2[28]~synth
+#shifted[27] = shifted~synth
+.names g697 dir g109 g715 shifted[27]
+1100 1
+0010 1
+1010 1
+1101 1
+0011 1
+1011 1
+0111 1
+1111 1
+
+#g8 = left4[28]~synth
+#g559 = left16[20]~synth
+#g6 = left4[28]~synth
+#g111 = left4[28]~synth
+.names g8 g559 g6 src[28] g111
+1010 1
+0110 1
+1110 1
+0001 1
+0101 1
+1011 1
+0111 1
+1111 1
+
+#g8 = left4[28]~synth
+#g111 = left4[28]~synth
+#g646 = left8[24]~synth
+#g112 = left4[28]~synth
+.names src[12] g8 g111 g646 g112
+1100 1
+0010 1
+1010 1
+1101 1
+0011 1
+1011 1
+0111 1
+1111 1
+
+#g715 = right2[28]~synth
+#g718 = left2[28]~synth
+#g113 = shifted~synth
+.names amt[0] g715 dir g718 g113
+1010 1
+0110 1
+1110 1
+0001 1
+0101 1
+1011 1
+0111 1
+1111 1
+
+#g709 = left2[27]~synth
+#g113 = shifted~synth
+#g724 = right2[29]~synth
+#shifted[28] = shifted~synth
+.names g709 amt[0] g113 g724 shifted[28]
+1100 1
+0010 1
+1010 1
+1101 1
+0011 1
+1011 1
+0111 1
+1111 1
+
+#g6 = left4[28]~synth
+#g8 = left4[28]~synth
+#g115 = left4[29]~synth
+.names g6 src[13] g8 src[29] g115
+1010 1
+0110 1
+1110 1
+0001 1
+0101 1
+1011 1
+0111 1
+1111 1
+
+#g580 = left16[21]~synth
+#g6 = left4[28]~synth
+#g115 = left4[29]~synth
+#g667 = left8[25]~synth
+#g116 = left4[29]~synth
+.names g580 g6 g115 g667 g116
+1100 1
+0010 1
+1010 1
+1101 1
+0011 1
+1011 1
+0111 1
+1111 1
+
+#g718 = left2[28]~synth
+#g727 = left2[29]~synth
+#g117 = shifted~synth
+.names dir g718 amt[0] g727 g117
+1010 1
+0110 1
+1110 1
+0001 1
+0101 1
+1011 1
+0111 1
+1111 1
+
+#g724 = right2[29]~synth
+#g117 = shifted~synth
+#g730 = right2[30]~synth
+#shifted[29] = shifted~synth
+.names g724 dir g117 g730 shifted[29]
+1100 1
+0010 1
+1010 1
+1101 1
+0011 1
+1011 1
+0111 1
+1111 1
+
+#g8 = left4[28]~synth
+#g601 = left16[22]~synth
+#g6 = left4[28]~synth
+#g119 = left2[30]~synth
+.names g8 g601 g6 src[30] g119
+1010 1
+0110 1
+1110 1
+0001 1
+0101 1
+1011 1
+0111 1
+1111 1
+
+#g8 = left4[28]~synth
+#g119 = left2[30]~synth
+#g685 = left8[26]~synth
+#g120 = left2[30]~synth
+.names src[14] g8 g119 g685 g120
+1100 1
+0010 1
+1010 1
+1101 1
+0011 1
+1011 1
+0111 1
+1111 1
+
+#g730 = right2[30]~synth
+#g733 = left2[30]~synth
+#g121 = shifted~synth
+.names amt[0] g730 dir g733 g121
+1010 1
+0110 1
+1110 1
+0001 1
+0101 1
+1011 1
+0111 1
+1111 1
+
+#g727 = left2[29]~synth
+#g121 = shifted~synth
+#g736 = right2[31]~synth
+#shifted[30] = shifted~synth
+.names g727 amt[0] g121 g736 shifted[30]
+1100 1
+0010 1
+1010 1
+1101 1
+0011 1
+1011 1
+0111 1
+1111 1
+
+#g733 = left2[30]~synth
+#g748 = left2[31]~synth
+#g123 = shifted~synth
+.names dir g733 amt[0] g748 g123
+1010 1
+0110 1
+1110 1
+0001 1
+0101 1
+1011 1
+0111 1
+1111 1
+
+#g736 = right2[31]~synth
+#g123 = shifted~synth
+#g20 = fillbit
+#shifted[31] = shifted~synth
+.names g736 dir g123 g20 shifted[31]
+1100 1
+0010 1
+1010 1
+1101 1
+0011 1
+1011 1
+0111 1
+1111 1
+
+#g125 = right16[10]~synth
+.names amt[4] src[26] g125
+11 1
+
+#g126 = right16[10]~synth
+.names amt[4] src[10] g126
+01 1
+
+#g125 = right16[10]~synth
+#g126 = right16[10]~synth
+#g127 = right16[10]~synth
+.names g125 g126 g127
+00 0
+
+#g128 = right8[6]~synth
+.names amt[4] src[22] g128
+11 1
+
+#g129 = right8[6]~synth
+.names amt[4] src[6] g129
+01 1
+
+#g128 = right8[6]~synth
+#g129 = right8[6]~synth
+#g130 = right8[6]~synth
+.names g128 g129 g130
+00 0
+
+#g131 = right16[14]~synth
+.names amt[4] src[30] g131
+11 1
+
+#g132 = right16[14]~synth
+.names amt[4] src[14] g132
+01 1
+
+#g131 = right16[14]~synth
+#g132 = right16[14]~synth
+#g133 = right16[14]~synth
+.names g131 g132 g133
+00 0
+
+#g133 = right16[14]~synth
+#g134 = right8[6]~synth
+.names amt[3] g133 g134
+11 1
+
+#g130 = right8[6]~synth
+#g135 = right8[6]~synth
+.names amt[3] g130 g135
+01 1
+
+#g134 = right8[6]~synth
+#g135 = right8[6]~synth
+#g136 = right8[6]~synth
+.names g134 g135 g136
+00 0
+
+#g137 = right16[0]~synth
+.names amt[4] src[16] g137
+11 1
+
+#g138 = right16[0]~synth
+.names src[0] amt[4] g138
+10 1
+
+#g137 = right16[0]~synth
+#g138 = right16[0]~synth
+#g139 = right16[0]~synth
+.names g137 g138 g139
+00 0
+
+#g140 = right16[8]~synth
+.names amt[4] src[24] g140
+11 1
+
+#g141 = right16[8]~synth
+.names amt[4] src[8] g141
+01 1
+
+#g140 = right16[8]~synth
+#g141 = right16[8]~synth
+#g142 = right16[8]~synth
+.names g140 g141 g142
+00 0
+
+#g142 = right16[8]~synth
+#g143 = right8[0]~synth
+.names amt[3] g142 g143
+11 1
+
+#g139 = right16[0]~synth
+#g144 = right8[0]~synth
+.names amt[3] g139 g144
+01 1
+
+#g143 = right8[0]~synth
+#g144 = right8[0]~synth
+#g145 = right8[0]~synth
+.names g143 g144 g145
+00 0
+
+#g146 = right8[4]~synth
+.names amt[4] src[20] g146
+11 1
+
+#g147 = right8[4]~synth
+.names amt[4] src[4] g147
+01 1
+
+#g146 = right8[4]~synth
+#g147 = right8[4]~synth
+#g148 = right8[4]~synth
+.names g146 g147 g148
+00 0
+
+#g149 = right16[12]~synth
+.names amt[4] src[28] g149
+11 1
+
+#g150 = right16[12]~synth
+.names amt[4] src[12] g150
+01 1
+
+#g149 = right16[12]~synth
+#g150 = right16[12]~synth
+#g151 = right16[12]~synth
+.names g149 g150 g151
+00 0
+
+#g151 = right16[12]~synth
+#g152 = right8[4]~synth
+.names amt[3] g151 g152
+11 1
+
+#g148 = right8[4]~synth
+#g153 = right8[4]~synth
+.names amt[3] g148 g153
+01 1
+
+#g152 = right8[4]~synth
+#g153 = right8[4]~synth
+#g154 = right8[4]~synth
+.names g152 g153 g154
+00 0
+
+#g154 = right8[4]~synth
+#g155 = right4[0]~synth
+.names amt[2] g154 g155
+11 1
+
+#g145 = right8[0]~synth
+#g156 = right4[0]~synth
+.names amt[2] g145 g156
+01 1
+
+#g155 = right4[0]~synth
+#g156 = right4[0]~synth
+#g157 = right4[0]~synth
+.names g155 g156 g157
+00 0
+
+#g157 = right4[0]~synth
+#g158 = right2[0]~synth
+.names amt[1] g157 g158
+01 1
+
+#g10 = right4[2]~synth
+#g159 = right2[0]~synth
+.names amt[1] g10 g159
+11 1
+
+#g158 = right2[0]~synth
+#g159 = right2[0]~synth
+#g160 = right2[0]~synth
+.names g158 g159 g160
+00 0
+
+#g161 = right16[9]~synth
+.names amt[4] src[25] g161
+11 1
+
+#g162 = right16[9]~synth
+.names amt[4] src[9] g162
+01 1
+
+#g161 = right16[9]~synth
+#g162 = right16[9]~synth
+#g163 = right16[9]~synth
+.names g161 g162 g163
+00 0
+
+#g164 = right8[5]~synth
+.names amt[4] src[21] g164
+11 1
+
+#g165 = right8[5]~synth
+.names amt[4] src[5] g165
+01 1
+
+#g164 = right8[5]~synth
+#g165 = right8[5]~synth
+#g166 = right8[5]~synth
+.names g164 g165 g166
+00 0
+
+#g167 = right16[13]~synth
+.names amt[4] src[29] g167
+11 1
+
+#g168 = right16[13]~synth
+.names amt[4] src[13] g168
+01 1
+
+#g167 = right16[13]~synth
+#g168 = right16[13]~synth
+#g169 = right16[13]~synth
+.names g167 g168 g169
+00 0
+
+#g169 = right16[13]~synth
+#g170 = right8[5]~synth
+.names amt[3] g169 g170
+11 1
+
+#g166 = right8[5]~synth
+#g171 = right8[5]~synth
+.names amt[3] g166 g171
+01 1
+
+#g170 = right8[5]~synth
+#g171 = right8[5]~synth
+#g172 = right8[5]~synth
+.names g170 g171 g172
+00 0
+
+#g173 = right16[11]~synth
+.names amt[4] src[27] g173
+11 1
+
+#g174 = right16[11]~synth
+.names amt[4] src[11] g174
+01 1
+
+#g173 = right16[11]~synth
+#g174 = right16[11]~synth
+#g175 = right16[11]~synth
+.names g173 g174 g175
+00 0
+
+#g176 = right8[7]~synth
+.names amt[4] src[23] g176
+11 1
+
+#g177 = right8[7]~synth
+.names amt[4] src[7] g177
+01 1
+
+#g176 = right8[7]~synth
+#g177 = right8[7]~synth
+#g178 = right8[7]~synth
+.names g176 g177 g178
+00 0
+
+#g179 = right16[15]~synth
+.names amt[4] src[31] g179
+11 1
+
+#g180 = right16[15]~synth
+.names amt[4] src[15] g180
+01 1
+
+#g179 = right16[15]~synth
+#g180 = right16[15]~synth
+#g181 = right16[15]~synth
+.names g179 g180 g181
+00 0
+
+#g181 = right16[15]~synth
+#g182 = right8[7]~synth
+.names amt[3] g181 g182
+11 1
+
+#g178 = right8[7]~synth
+#g183 = right8[7]~synth
+.names amt[3] g178 g183
+01 1
+
+#g182 = right8[7]~synth
+#g183 = right8[7]~synth
+#g184 = right8[7]~synth
+.names g182 g183 g184
+00 0
+
+#g15 = right4[3]~synth
+#g185 = right2[1]~synth
+.names amt[1] g15 g185
+11 1
+
+#g13 = right2[1]~synth
+#g186 = right2[1]~synth
+.names amt[1] g13 g186
+01 1
+
+#g185 = right2[1]~synth
+#g186 = right2[1]~synth
+#g187 = right2[1]~synth
+.names g185 g186 g187
+00 0
+
+#g20 = fillbit
+#g188 = right16[16]~synth
+.names amt[4] g20 g188
+11 1
+
+#g189 = right16[16]~synth
+.names amt[4] src[16] g189
+01 1
+
+#g188 = right16[16]~synth
+#g189 = right16[16]~synth
+#g190 = right16[16]~synth
+.names g188 g189 g190
+00 0
+
+#g190 = right16[16]~synth
+#g191 = right8[8]~synth
+.names amt[3] g190 g191
+11 1
+
+#g142 = right16[8]~synth
+#g192 = right8[8]~synth
+.names amt[3] g142 g192
+01 1
+
+#g191 = right8[8]~synth
+#g192 = right8[8]~synth
+#g193 = right8[8]~synth
+.names g191 g192 g193
+00 0
+
+#g193 = right8[8]~synth
+#g194 = right4[4]~synth
+.names amt[2] g193 g194
+11 1
+
+#g154 = right8[4]~synth
+#g195 = right4[4]~synth
+.names amt[2] g154 g195
+01 1
+
+#g194 = right4[4]~synth
+#g195 = right4[4]~synth
+#g196 = right4[4]~synth
+.names g194 g195 g196
+00 0
+
+#g196 = right4[4]~synth
+#g197 = right2[2]~synth
+.names amt[1] g196 g197
+11 1
+
+#g10 = right4[2]~synth
+#g198 = right2[2]~synth
+.names amt[1] g10 g198
+01 1
+
+#g197 = right2[2]~synth
+#g198 = right2[2]~synth
+#g199 = right2[2]~synth
+.names g197 g198 g199
+00 0
+
+#g200 = left2[2]~synth
+.names src[0] amt[1] g200
+11 1
+
+#g201 = left2[2]~synth
+.names amt[1] src[2] g201
+01 1
+
+#g200 = left2[2]~synth
+#g201 = left2[2]~synth
+#g202 = left2[2]~synth
+.names g200 g201 g202
+00 0
+
+#g20 = fillbit
+#g203 = right16[17]~synth
+.names amt[4] g20 g203
+11 1
+
+#g204 = right16[17]~synth
+.names amt[4] src[17] g204
+01 1
+
+#g203 = right16[17]~synth
+#g204 = right16[17]~synth
+#g205 = right16[17]~synth
+.names g203 g204 g205
+00 0
+
+#g205 = right16[17]~synth
+#g206 = right8[9]~synth
+.names amt[3] g205 g206
+11 1
+
+#g163 = right16[9]~synth
+#g207 = right8[9]~synth
+.names amt[3] g163 g207
+01 1
+
+#g206 = right8[9]~synth
+#g207 = right8[9]~synth
+#g208 = right8[9]~synth
+.names g206 g207 g208
+00 0
+
+#g208 = right8[9]~synth
+#g209 = right4[5]~synth
+.names amt[2] g208 g209
+11 1
+
+#g172 = right8[5]~synth
+#g210 = right4[5]~synth
+.names amt[2] g172 g210
+01 1
+
+#g209 = right4[5]~synth
+#g210 = right4[5]~synth
+#g211 = right4[5]~synth
+.names g209 g210 g211
+00 0
+
+#g211 = right4[5]~synth
+#g212 = right2[3]~synth
+.names amt[1] g211 g212
+11 1
+
+#g15 = right4[3]~synth
+#g213 = right2[3]~synth
+.names amt[1] g15 g213
+01 1
+
+#g212 = right2[3]~synth
+#g213 = right2[3]~synth
+#g214 = right2[3]~synth
+.names g212 g213 g214
+00 0
+
+#g215 = left2[3]~synth
+.names amt[1] src[1] g215
+11 1
+
+#g216 = left2[3]~synth
+.names amt[1] src[3] g216
+01 1
+
+#g215 = left2[3]~synth
+#g216 = left2[3]~synth
+#g217 = left2[3]~synth
+.names g215 g216 g217
+00 0
+
+#g20 = fillbit
+#g218 = right16[18]~synth
+.names amt[4] g20 g218
+11 1
+
+#g219 = right16[18]~synth
+.names amt[4] src[18] g219
+01 1
+
+#g218 = right16[18]~synth
+#g219 = right16[18]~synth
+#g220 = right16[18]~synth
+.names g218 g219 g220
+00 0
+
+#g220 = right16[18]~synth
+#g221 = right8[10]~synth
+.names amt[3] g220 g221
+11 1
+
+#g127 = right16[10]~synth
+#g222 = right8[10]~synth
+.names amt[3] g127 g222
+01 1
+
+#g221 = right8[10]~synth
+#g222 = right8[10]~synth
+#g223 = right8[10]~synth
+.names g221 g222 g223
+00 0
+
+#g223 = right8[10]~synth
+#g224 = right4[6]~synth
+.names amt[2] g223 g224
+11 1
+
+#g136 = right8[6]~synth
+#g225 = right4[6]~synth
+.names amt[2] g136 g225
+01 1
+
+#g224 = right4[6]~synth
+#g225 = right4[6]~synth
+#g226 = right4[6]~synth
+.names g224 g225 g226
+00 0
+
+#g226 = right4[6]~synth
+#g227 = right2[4]~synth
+.names amt[1] g226 g227
+11 1
+
+#g196 = right4[4]~synth
+#g228 = right2[4]~synth
+.names amt[1] g196 g228
+01 1
+
+#g227 = right2[4]~synth
+#g228 = right2[4]~synth
+#g229 = right2[4]~synth
+.names g227 g228 g229
+00 0
+
+#g230 = left4[4]~synth
+.names src[0] amt[2] g230
+11 1
+
+#g231 = left4[4]~synth
+.names amt[2] src[4] g231
+01 1
+
+#g230 = left4[4]~synth
+#g231 = left4[4]~synth
+#g232 = left4[4]~synth
+.names g230 g231 g232
+00 0
+
+#g232 = left4[4]~synth
+#g233 = left2[4]~synth
+.names amt[1] g232 g233
+01 1
+
+#g234 = left2[4]~synth
+.names amt[1] src[2] g234
+11 1
+
+#g233 = left2[4]~synth
+#g234 = left2[4]~synth
+#g235 = left2[4]~synth
+.names g233 g234 g235
+00 0
+
+#g20 = fillbit
+#g236 = right16[19]~synth
+.names amt[4] g20 g236
+11 1
+
+#g237 = right16[19]~synth
+.names amt[4] src[19] g237
+01 1
+
+#g236 = right16[19]~synth
+#g237 = right16[19]~synth
+#g238 = right16[19]~synth
+.names g236 g237 g238
+00 0
+
+#g238 = right16[19]~synth
+#g239 = right8[11]~synth
+.names amt[3] g238 g239
+11 1
+
+#g175 = right16[11]~synth
+#g240 = right8[11]~synth
+.names amt[3] g175 g240
+01 1
+
+#g239 = right8[11]~synth
+#g240 = right8[11]~synth
+#g241 = right8[11]~synth
+.names g239 g240 g241
+00 0
+
+#g241 = right8[11]~synth
+#g242 = right4[7]~synth
+.names amt[2] g241 g242
+11 1
+
+#g184 = right8[7]~synth
+#g243 = right4[7]~synth
+.names amt[2] g184 g243
+01 1
+
+#g242 = right4[7]~synth
+#g243 = right4[7]~synth
+#g244 = right4[7]~synth
+.names g242 g243 g244
+00 0
+
+#g244 = right4[7]~synth
+#g245 = right2[5]~synth
+.names amt[1] g244 g245
+11 1
+
+#g211 = right4[5]~synth
+#g246 = right2[5]~synth
+.names amt[1] g211 g246
+01 1
+
+#g245 = right2[5]~synth
+#g246 = right2[5]~synth
+#g247 = right2[5]~synth
+.names g245 g246 g247
+00 0
+
+#g248 = left4[5]~synth
+.names amt[2] src[1] g248
+11 1
+
+#g249 = left4[5]~synth
+.names amt[2] src[5] g249
+01 1
+
+#g248 = left4[5]~synth
+#g249 = left4[5]~synth
+#g250 = left4[5]~synth
+.names g248 g249 g250
+00 0
+
+#g250 = left4[5]~synth
+#g251 = left2[5]~synth
+.names amt[1] g250 g251
+01 1
+
+#g252 = left2[5]~synth
+.names amt[1] src[3] g252
+11 1
+
+#g251 = left2[5]~synth
+#g252 = left2[5]~synth
+#g253 = left2[5]~synth
+.names g251 g252 g253
+00 0
+
+#g20 = fillbit
+#g254 = right16[20]~synth
+.names amt[4] g20 g254
+11 1
+
+#g255 = right16[20]~synth
+.names amt[4] src[20] g255
+01 1
+
+#g254 = right16[20]~synth
+#g255 = right16[20]~synth
+#g256 = right16[20]~synth
+.names g254 g255 g256
+00 0
+
+#g256 = right16[20]~synth
+#g257 = right8[12]~synth
+.names amt[3] g256 g257
+11 1
+
+#g151 = right16[12]~synth
+#g258 = right8[12]~synth
+.names amt[3] g151 g258
+01 1
+
+#g257 = right8[12]~synth
+#g258 = right8[12]~synth
+#g259 = right8[12]~synth
+.names g257 g258 g259
+00 0
+
+#g259 = right8[12]~synth
+#g260 = right4[8]~synth
+.names amt[2] g259 g260
+11 1
+
+#g193 = right8[8]~synth
+#g261 = right4[8]~synth
+.names amt[2] g193 g261
+01 1
+
+#g260 = right4[8]~synth
+#g261 = right4[8]~synth
+#g262 = right4[8]~synth
+.names g260 g261 g262
+00 0
+
+#g262 = right4[8]~synth
+#g263 = right2[6]~synth
+.names amt[1] g262 g263
+11 1
+
+#g226 = right4[6]~synth
+#g264 = right2[6]~synth
+.names amt[1] g226 g264
+01 1
+
+#g263 = right2[6]~synth
+#g264 = right2[6]~synth
+#g265 = right2[6]~synth
+.names g263 g264 g265
+00 0
+
+#g266 = left4[6]~synth
+.names amt[2] src[2] g266
+11 1
+
+#g267 = left4[6]~synth
+.names amt[2] src[6] g267
+01 1
+
+#g266 = left4[6]~synth
+#g267 = left4[6]~synth
+#g268 = left4[6]~synth
+.names g266 g267 g268
+00 0
+
+#g232 = left4[4]~synth
+#g269 = left2[6]~synth
+.names amt[1] g232 g269
+11 1
+
+#g268 = left4[6]~synth
+#g270 = left2[6]~synth
+.names amt[1] g268 g270
+01 1
+
+#g269 = left2[6]~synth
+#g270 = left2[6]~synth
+#g271 = left2[6]~synth
+.names g269 g270 g271
+00 0
+
+#g20 = fillbit
+#g272 = right16[21]~synth
+.names amt[4] g20 g272
+11 1
+
+#g273 = right16[21]~synth
+.names amt[4] src[21] g273
+01 1
+
+#g272 = right16[21]~synth
+#g273 = right16[21]~synth
+#g274 = right16[21]~synth
+.names g272 g273 g274
+00 0
+
+#g274 = right16[21]~synth
+#g275 = right8[13]~synth
+.names amt[3] g274 g275
+11 1
+
+#g169 = right16[13]~synth
+#g276 = right8[13]~synth
+.names amt[3] g169 g276
+01 1
+
+#g275 = right8[13]~synth
+#g276 = right8[13]~synth
+#g277 = right8[13]~synth
+.names g275 g276 g277
+00 0
+
+#g277 = right8[13]~synth
+#g278 = right4[9]~synth
+.names amt[2] g277 g278
+11 1
+
+#g208 = right8[9]~synth
+#g279 = right4[9]~synth
+.names amt[2] g208 g279
+01 1
+
+#g278 = right4[9]~synth
+#g279 = right4[9]~synth
+#g280 = right4[9]~synth
+.names g278 g279 g280
+00 0
+
+#g280 = right4[9]~synth
+#g281 = right2[7]~synth
+.names amt[1] g280 g281
+11 1
+
+#g244 = right4[7]~synth
+#g282 = right2[7]~synth
+.names amt[1] g244 g282
+01 1
+
+#g281 = right2[7]~synth
+#g282 = right2[7]~synth
+#g283 = right2[7]~synth
+.names g281 g282 g283
+00 0
+
+#g284 = left4[7]~synth
+.names amt[2] src[3] g284
+11 1
+
+#g285 = left4[7]~synth
+.names amt[2] src[7] g285
+01 1
+
+#g284 = left4[7]~synth
+#g285 = left4[7]~synth
+#g286 = left4[7]~synth
+.names g284 g285 g286
+00 0
+
+#g250 = left4[5]~synth
+#g287 = left2[7]~synth
+.names amt[1] g250 g287
+11 1
+
+#g286 = left4[7]~synth
+#g288 = left2[7]~synth
+.names amt[1] g286 g288
+01 1
+
+#g287 = left2[7]~synth
+#g288 = left2[7]~synth
+#g289 = left2[7]~synth
+.names g287 g288 g289
+00 0
+
+#g20 = fillbit
+#g290 = right16[22]~synth
+.names amt[4] g20 g290
+11 1
+
+#g291 = right16[22]~synth
+.names amt[4] src[22] g291
+01 1
+
+#g290 = right16[22]~synth
+#g291 = right16[22]~synth
+#g292 = right16[22]~synth
+.names g290 g291 g292
+00 0
+
+#g292 = right16[22]~synth
+#g293 = right8[14]~synth
+.names amt[3] g292 g293
+11 1
+
+#g133 = right16[14]~synth
+#g294 = right8[14]~synth
+.names amt[3] g133 g294
+01 1
+
+#g293 = right8[14]~synth
+#g294 = right8[14]~synth
+#g295 = right8[14]~synth
+.names g293 g294 g295
+00 0
+
+#g295 = right8[14]~synth
+#g296 = right4[10]~synth
+.names amt[2] g295 g296
+11 1
+
+#g223 = right8[10]~synth
+#g297 = right4[10]~synth
+.names amt[2] g223 g297
+01 1
+
+#g296 = right4[10]~synth
+#g297 = right4[10]~synth
+#g298 = right4[10]~synth
+.names g296 g297 g298
+00 0
+
+#g298 = right4[10]~synth
+#g299 = right2[8]~synth
+.names amt[1] g298 g299
+11 1
+
+#g262 = right4[8]~synth
+#g300 = right2[8]~synth
+.names amt[1] g262 g300
+01 1
+
+#g299 = right2[8]~synth
+#g300 = right2[8]~synth
+#g301 = right2[8]~synth
+.names g299 g300 g301
+00 0
+
+#g302 = left8[8]~synth
+.names src[0] amt[3] g302
+11 1
+
+#g303 = left8[8]~synth
+.names amt[3] src[8] g303
+01 1
+
+#g302 = left8[8]~synth
+#g303 = left8[8]~synth
+#g304 = left8[8]~synth
+.names g302 g303 g304
+00 0
+
+#g304 = left8[8]~synth
+#g305 = left4[8]~synth
+.names amt[2] g304 g305
+01 1
+
+#g306 = left4[8]~synth
+.names amt[2] src[4] g306
+11 1
+
+#g305 = left4[8]~synth
+#g306 = left4[8]~synth
+#g307 = left4[8]~synth
+.names g305 g306 g307
+00 0
+
+#g268 = left4[6]~synth
+#g308 = left2[8]~synth
+.names amt[1] g268 g308
+11 1
+
+#g307 = left4[8]~synth
+#g309 = left2[8]~synth
+.names amt[1] g307 g309
+01 1
+
+#g308 = left2[8]~synth
+#g309 = left2[8]~synth
+#g310 = left2[8]~synth
+.names g308 g309 g310
+00 0
+
+#g20 = fillbit
+#g311 = right16[23]~synth
+.names amt[4] g20 g311
+11 1
+
+#g312 = right16[23]~synth
+.names amt[4] src[23] g312
+01 1
+
+#g311 = right16[23]~synth
+#g312 = right16[23]~synth
+#g313 = right16[23]~synth
+.names g311 g312 g313
+00 0
+
+#g313 = right16[23]~synth
+#g314 = right8[15]~synth
+.names amt[3] g313 g314
+11 1
+
+#g181 = right16[15]~synth
+#g315 = right8[15]~synth
+.names amt[3] g181 g315
+01 1
+
+#g314 = right8[15]~synth
+#g315 = right8[15]~synth
+#g316 = right8[15]~synth
+.names g314 g315 g316
+00 0
+
+#g316 = right8[15]~synth
+#g317 = right4[11]~synth
+.names amt[2] g316 g317
+11 1
+
+#g241 = right8[11]~synth
+#g318 = right4[11]~synth
+.names amt[2] g241 g318
+01 1
+
+#g317 = right4[11]~synth
+#g318 = right4[11]~synth
+#g319 = right4[11]~synth
+.names g317 g318 g319
+00 0
+
+#g319 = right4[11]~synth
+#g320 = right2[9]~synth
+.names amt[1] g319 g320
+11 1
+
+#g280 = right4[9]~synth
+#g321 = right2[9]~synth
+.names amt[1] g280 g321
+01 1
+
+#g320 = right2[9]~synth
+#g321 = right2[9]~synth
+#g322 = right2[9]~synth
+.names g320 g321 g322
+00 0
+
+#g323 = left8[9]~synth
+.names amt[3] src[1] g323
+11 1
+
+#g324 = left8[9]~synth
+.names amt[3] src[9] g324
+01 1
+
+#g323 = left8[9]~synth
+#g324 = left8[9]~synth
+#g325 = left8[9]~synth
+.names g323 g324 g325
+00 0
+
+#g325 = left8[9]~synth
+#g326 = left4[9]~synth
+.names amt[2] g325 g326
+01 1
+
+#g327 = left4[9]~synth
+.names amt[2] src[5] g327
+11 1
+
+#g326 = left4[9]~synth
+#g327 = left4[9]~synth
+#g328 = left4[9]~synth
+.names g326 g327 g328
+00 0
+
+#g286 = left4[7]~synth
+#g329 = left2[9]~synth
+.names amt[1] g286 g329
+11 1
+
+#g328 = left4[9]~synth
+#g330 = left2[9]~synth
+.names amt[1] g328 g330
+01 1
+
+#g329 = left2[9]~synth
+#g330 = left2[9]~synth
+#g331 = left2[9]~synth
+.names g329 g330 g331
+00 0
+
+#g332 = right8[16]~synth
+.names amt[3] src[24] g332
+11 1
+
+#g333 = right8[16]~synth
+.names amt[3] src[16] g333
+01 1
+
+#g332 = right8[16]~synth
+#g333 = right8[16]~synth
+#g334 = right8[16]~synth
+.names g332 g333 g334
+00 0
+
+#g334 = right8[16]~synth
+#g335 = right8[16]~synth
+.names amt[4] g334 g335
+01 1
+
+#g20 = fillbit
+#g336 = right8[16]~synth
+.names amt[4] g20 g336
+11 1
+
+#g335 = right8[16]~synth
+#g336 = right8[16]~synth
+#g337 = right8[16]~synth
+.names g335 g336 g337
+00 0
+
+#g337 = right8[16]~synth
+#g338 = right4[12]~synth
+.names amt[2] g337 g338
+11 1
+
+#g259 = right8[12]~synth
+#g339 = right4[12]~synth
+.names amt[2] g259 g339
+01 1
+
+#g338 = right4[12]~synth
+#g339 = right4[12]~synth
+#g340 = right4[12]~synth
+.names g338 g339 g340
+00 0
+
+#g340 = right4[12]~synth
+#g341 = right2[10]~synth
+.names amt[1] g340 g341
+11 1
+
+#g298 = right4[10]~synth
+#g342 = right2[10]~synth
+.names amt[1] g298 g342
+01 1
+
+#g341 = right2[10]~synth
+#g342 = right2[10]~synth
+#g343 = right2[10]~synth
+.names g341 g342 g343
+00 0
+
+#g344 = left8[10]~synth
+.names amt[3] src[2] g344
+11 1
+
+#g345 = left8[10]~synth
+.names amt[3] src[10] g345
+01 1
+
+#g344 = left8[10]~synth
+#g345 = left8[10]~synth
+#g346 = left8[10]~synth
+.names g344 g345 g346
+00 0
+
+#g346 = left8[10]~synth
+#g347 = left4[10]~synth
+.names amt[2] g346 g347
+01 1
+
+#g348 = left4[10]~synth
+.names amt[2] src[6] g348
+11 1
+
+#g347 = left4[10]~synth
+#g348 = left4[10]~synth
+#g349 = left4[10]~synth
+.names g347 g348 g349
+00 0
+
+#g307 = left4[8]~synth
+#g350 = left2[10]~synth
+.names amt[1] g307 g350
+11 1
+
+#g349 = left4[10]~synth
+#g351 = left2[10]~synth
+.names amt[1] g349 g351
+01 1
+
+#g350 = left2[10]~synth
+#g351 = left2[10]~synth
+#g352 = left2[10]~synth
+.names g350 g351 g352
+00 0
+
+#g353 = right8[17]~synth
+.names amt[3] src[25] g353
+11 1
+
+#g354 = right8[17]~synth
+.names amt[3] src[17] g354
+01 1
+
+#g353 = right8[17]~synth
+#g354 = right8[17]~synth
+#g355 = right8[17]~synth
+.names g353 g354 g355
+00 0
+
+#g355 = right8[17]~synth
+#g356 = right8[17]~synth
+.names amt[4] g355 g356
+01 1
+
+#g20 = fillbit
+#g357 = right8[17]~synth
+.names amt[4] g20 g357
+11 1
+
+#g356 = right8[17]~synth
+#g357 = right8[17]~synth
+#g358 = right8[17]~synth
+.names g356 g357 g358
+00 0
+
+#g358 = right8[17]~synth
+#g359 = right4[13]~synth
+.names amt[2] g358 g359
+11 1
+
+#g277 = right8[13]~synth
+#g360 = right4[13]~synth
+.names amt[2] g277 g360
+01 1
+
+#g359 = right4[13]~synth
+#g360 = right4[13]~synth
+#g361 = right4[13]~synth
+.names g359 g360 g361
+00 0
+
+#g361 = right4[13]~synth
+#g362 = right2[11]~synth
+.names amt[1] g361 g362
+11 1
+
+#g319 = right4[11]~synth
+#g363 = right2[11]~synth
+.names amt[1] g319 g363
+01 1
+
+#g362 = right2[11]~synth
+#g363 = right2[11]~synth
+#g364 = right2[11]~synth
+.names g362 g363 g364
+00 0
+
+#g365 = left8[11]~synth
+.names amt[3] src[3] g365
+11 1
+
+#g366 = left8[11]~synth
+.names amt[3] src[11] g366
+01 1
+
+#g365 = left8[11]~synth
+#g366 = left8[11]~synth
+#g367 = left8[11]~synth
+.names g365 g366 g367
+00 0
+
+#g367 = left8[11]~synth
+#g368 = left4[11]~synth
+.names amt[2] g367 g368
+01 1
+
+#g369 = left4[11]~synth
+.names amt[2] src[7] g369
+11 1
+
+#g368 = left4[11]~synth
+#g369 = left4[11]~synth
+#g370 = left4[11]~synth
+.names g368 g369 g370
+00 0
+
+#g328 = left4[9]~synth
+#g371 = left2[11]~synth
+.names amt[1] g328 g371
+11 1
+
+#g370 = left4[11]~synth
+#g372 = left2[11]~synth
+.names amt[1] g370 g372
+01 1
+
+#g371 = left2[11]~synth
+#g372 = left2[11]~synth
+#g373 = left2[11]~synth
+.names g371 g372 g373
+00 0
+
+#g374 = right8[18]~synth
+.names amt[3] src[26] g374
+11 1
+
+#g375 = right8[18]~synth
+.names amt[3] src[18] g375
+01 1
+
+#g374 = right8[18]~synth
+#g375 = right8[18]~synth
+#g376 = right8[18]~synth
+.names g374 g375 g376
+00 0
+
+#g376 = right8[18]~synth
+#g377 = right8[18]~synth
+.names amt[4] g376 g377
+01 1
+
+#g20 = fillbit
+#g378 = right8[18]~synth
+.names amt[4] g20 g378
+11 1
+
+#g377 = right8[18]~synth
+#g378 = right8[18]~synth
+#g379 = right8[18]~synth
+.names g377 g378 g379
+00 0
+
+#g379 = right8[18]~synth
+#g380 = right4[14]~synth
+.names amt[2] g379 g380
+11 1
+
+#g295 = right8[14]~synth
+#g381 = right4[14]~synth
+.names amt[2] g295 g381
+01 1
+
+#g380 = right4[14]~synth
+#g381 = right4[14]~synth
+#g382 = right4[14]~synth
+.names g380 g381 g382
+00 0
+
+#g382 = right4[14]~synth
+#g383 = right2[12]~synth
+.names amt[1] g382 g383
+11 1
+
+#g340 = right4[12]~synth
+#g384 = right2[12]~synth
+.names amt[1] g340 g384
+01 1
+
+#g383 = right2[12]~synth
+#g384 = right2[12]~synth
+#g385 = right2[12]~synth
+.names g383 g384 g385
+00 0
+
+#g386 = left8[12]~synth
+.names amt[3] src[4] g386
+11 1
+
+#g387 = left8[12]~synth
+.names amt[3] src[12] g387
+01 1
+
+#g386 = left8[12]~synth
+#g387 = left8[12]~synth
+#g388 = left8[12]~synth
+.names g386 g387 g388
+00 0
+
+#g304 = left8[8]~synth
+#g389 = left4[12]~synth
+.names amt[2] g304 g389
+11 1
+
+#g388 = left8[12]~synth
+#g390 = left4[12]~synth
+.names amt[2] g388 g390
+01 1
+
+#g389 = left4[12]~synth
+#g390 = left4[12]~synth
+#g391 = left4[12]~synth
+.names g389 g390 g391
+00 0
+
+#g349 = left4[10]~synth
+#g392 = left2[12]~synth
+.names amt[1] g349 g392
+11 1
+
+#g391 = left4[12]~synth
+#g393 = left2[12]~synth
+.names amt[1] g391 g393
+01 1
+
+#g392 = left2[12]~synth
+#g393 = left2[12]~synth
+#g394 = left2[12]~synth
+.names g392 g393 g394
+00 0
+
+#g395 = right8[19]~synth
+.names amt[3] src[27] g395
+11 1
+
+#g396 = right8[19]~synth
+.names amt[3] src[19] g396
+01 1
+
+#g395 = right8[19]~synth
+#g396 = right8[19]~synth
+#g397 = right8[19]~synth
+.names g395 g396 g397
+00 0
+
+#g397 = right8[19]~synth
+#g398 = right8[19]~synth
+.names amt[4] g397 g398
+01 1
+
+#g20 = fillbit
+#g399 = right8[19]~synth
+.names amt[4] g20 g399
+11 1
+
+#g398 = right8[19]~synth
+#g399 = right8[19]~synth
+#g400 = right8[19]~synth
+.names g398 g399 g400
+00 0
+
+#g400 = right8[19]~synth
+#g401 = right4[15]~synth
+.names amt[2] g400 g401
+11 1
+
+#g316 = right8[15]~synth
+#g402 = right4[15]~synth
+.names amt[2] g316 g402
+01 1
+
+#g401 = right4[15]~synth
+#g402 = right4[15]~synth
+#g403 = right4[15]~synth
+.names g401 g402 g403
+00 0
+
+#g403 = right4[15]~synth
+#g404 = right2[13]~synth
+.names amt[1] g403 g404
+11 1
+
+#g361 = right4[13]~synth
+#g405 = right2[13]~synth
+.names amt[1] g361 g405
+01 1
+
+#g404 = right2[13]~synth
+#g405 = right2[13]~synth
+#g406 = right2[13]~synth
+.names g404 g405 g406
+00 0
+
+#g407 = left8[13]~synth
+.names amt[3] src[5] g407
+11 1
+
+#g408 = left8[13]~synth
+.names amt[3] src[13] g408
+01 1
+
+#g407 = left8[13]~synth
+#g408 = left8[13]~synth
+#g409 = left8[13]~synth
+.names g407 g408 g409
+00 0
+
+#g325 = left8[9]~synth
+#g410 = left4[13]~synth
+.names amt[2] g325 g410
+11 1
+
+#g409 = left8[13]~synth
+#g411 = left4[13]~synth
+.names amt[2] g409 g411
+01 1
+
+#g410 = left4[13]~synth
+#g411 = left4[13]~synth
+#g412 = left4[13]~synth
+.names g410 g411 g412
+00 0
+
+#g370 = left4[11]~synth
+#g413 = left2[13]~synth
+.names amt[1] g370 g413
+11 1
+
+#g412 = left4[13]~synth
+#g414 = left2[13]~synth
+.names amt[1] g412 g414
+01 1
+
+#g413 = left2[13]~synth
+#g414 = left2[13]~synth
+#g415 = left2[13]~synth
+.names g413 g414 g415
+00 0
+
+#g416 = right8[20]~synth
+.names amt[3] src[28] g416
+11 1
+
+#g417 = right8[20]~synth
+.names amt[3] src[20] g417
+01 1
+
+#g416 = right8[20]~synth
+#g417 = right8[20]~synth
+#g418 = right8[20]~synth
+.names g416 g417 g418
+00 0
+
+#g418 = right8[20]~synth
+#g419 = right4[16]~synth
+.names amt[2] g418 g419
+11 1
+
+#g334 = right8[16]~synth
+#g420 = right4[16]~synth
+.names amt[2] g334 g420
+01 1
+
+#g419 = right4[16]~synth
+#g420 = right4[16]~synth
+#g421 = right4[16]~synth
+.names g419 g420 g421
+00 0
+
+#g421 = right4[16]~synth
+#g422 = right4[16]~synth
+.names amt[4] g421 g422
+01 1
+
+#g20 = fillbit
+#g423 = right4[16]~synth
+.names amt[4] g20 g423
+11 1
+
+#g422 = right4[16]~synth
+#g423 = right4[16]~synth
+#g424 = right4[16]~synth
+.names g422 g423 g424
+00 0
+
+#g424 = right4[16]~synth
+#g425 = right2[14]~synth
+.names amt[1] g424 g425
+11 1
+
+#g382 = right4[14]~synth
+#g426 = right2[14]~synth
+.names amt[1] g382 g426
+01 1
+
+#g425 = right2[14]~synth
+#g426 = right2[14]~synth
+#g427 = right2[14]~synth
+.names g425 g426 g427
+00 0
+
+#g428 = left8[14]~synth
+.names amt[3] src[6] g428
+11 1
+
+#g429 = left8[14]~synth
+.names amt[3] src[14] g429
+01 1
+
+#g428 = left8[14]~synth
+#g429 = left8[14]~synth
+#g430 = left8[14]~synth
+.names g428 g429 g430
+00 0
+
+#g346 = left8[10]~synth
+#g431 = left4[14]~synth
+.names amt[2] g346 g431
+11 1
+
+#g430 = left8[14]~synth
+#g432 = left4[14]~synth
+.names amt[2] g430 g432
+01 1
+
+#g431 = left4[14]~synth
+#g432 = left4[14]~synth
+#g433 = left4[14]~synth
+.names g431 g432 g433
+00 0
+
+#g391 = left4[12]~synth
+#g434 = left2[14]~synth
+.names amt[1] g391 g434
+11 1
+
+#g433 = left4[14]~synth
+#g435 = left2[14]~synth
+.names amt[1] g433 g435
+01 1
+
+#g434 = left2[14]~synth
+#g435 = left2[14]~synth
+#g436 = left2[14]~synth
+.names g434 g435 g436
+00 0
+
+#g437 = right8[21]~synth
+.names amt[3] src[29] g437
+11 1
+
+#g438 = right8[21]~synth
+.names amt[3] src[21] g438
+01 1
+
+#g437 = right8[21]~synth
+#g438 = right8[21]~synth
+#g439 = right8[21]~synth
+.names g437 g438 g439
+00 0
+
+#g439 = right8[21]~synth
+#g440 = right4[17]~synth
+.names amt[2] g439 g440
+11 1
+
+#g355 = right8[17]~synth
+#g441 = right4[17]~synth
+.names amt[2] g355 g441
+01 1
+
+#g440 = right4[17]~synth
+#g441 = right4[17]~synth
+#g442 = right4[17]~synth
+.names g440 g441 g442
+00 0
+
+#g442 = right4[17]~synth
+#g443 = right4[17]~synth
+.names amt[4] g442 g443
+01 1
+
+#g20 = fillbit
+#g444 = right4[17]~synth
+.names amt[4] g20 g444
+11 1
+
+#g443 = right4[17]~synth
+#g444 = right4[17]~synth
+#g445 = right4[17]~synth
+.names g443 g444 g445
+00 0
+
+#g445 = right4[17]~synth
+#g446 = right2[15]~synth
+.names amt[1] g445 g446
+11 1
+
+#g403 = right4[15]~synth
+#g447 = right2[15]~synth
+.names amt[1] g403 g447
+01 1
+
+#g446 = right2[15]~synth
+#g447 = right2[15]~synth
+#g448 = right2[15]~synth
+.names g446 g447 g448
+00 0
+
+#g449 = left8[15]~synth
+.names amt[3] src[7] g449
+11 1
+
+#g450 = left8[15]~synth
+.names amt[3] src[15] g450
+01 1
+
+#g449 = left8[15]~synth
+#g450 = left8[15]~synth
+#g451 = left8[15]~synth
+.names g449 g450 g451
+00 0
+
+#g367 = left8[11]~synth
+#g452 = left4[15]~synth
+.names amt[2] g367 g452
+11 1
+
+#g451 = left8[15]~synth
+#g453 = left4[15]~synth
+.names amt[2] g451 g453
+01 1
+
+#g452 = left4[15]~synth
+#g453 = left4[15]~synth
+#g454 = left4[15]~synth
+.names g452 g453 g454
+00 0
+
+#g412 = left4[13]~synth
+#g455 = left2[15]~synth
+.names amt[1] g412 g455
+11 1
+
+#g454 = left4[15]~synth
+#g456 = left2[15]~synth
+.names amt[1] g454 g456
+01 1
+
+#g455 = left2[15]~synth
+#g456 = left2[15]~synth
+#g457 = left2[15]~synth
+.names g455 g456 g457
+00 0
+
+#g458 = right8[22]~synth
+.names amt[3] src[30] g458
+11 1
+
+#g459 = right8[22]~synth
+.names amt[3] src[22] g459
+01 1
+
+#g458 = right8[22]~synth
+#g459 = right8[22]~synth
+#g460 = right8[22]~synth
+.names g458 g459 g460
+00 0
+
+#g460 = right8[22]~synth
+#g461 = right4[18]~synth
+.names amt[2] g460 g461
+11 1
+
+#g376 = right8[18]~synth
+#g462 = right4[18]~synth
+.names amt[2] g376 g462
+01 1
+
+#g461 = right4[18]~synth
+#g462 = right4[18]~synth
+#g463 = right4[18]~synth
+.names g461 g462 g463
+00 0
+
+#g463 = right4[18]~synth
+#g464 = right2[16]~synth
+.names amt[1] g463 g464
+11 1
+
+#g421 = right4[16]~synth
+#g465 = right2[16]~synth
+.names amt[1] g421 g465
+01 1
+
+#g464 = right2[16]~synth
+#g465 = right2[16]~synth
+#g466 = right2[16]~synth
+.names g464 g465 g466
+00 0
+
+#g466 = right2[16]~synth
+#g467 = right2[16]~synth
+.names amt[4] g466 g467
+01 1
+
+#g20 = fillbit
+#g468 = right2[16]~synth
+.names amt[4] g20 g468
+11 1
+
+#g467 = right2[16]~synth
+#g468 = right2[16]~synth
+#g469 = right2[16]~synth
+.names g467 g468 g469
+00 0
+
+#g470 = left16[16]~synth
+.names src[0] amt[4] g470
+11 1
+
+#g471 = left16[16]~synth
+.names amt[4] src[16] g471
+01 1
+
+#g470 = left16[16]~synth
+#g471 = left16[16]~synth
+#g472 = left16[16]~synth
+.names g470 g471 g472
+00 0
+
+#g472 = left16[16]~synth
+#g473 = left8[16]~synth
+.names amt[3] g472 g473
+01 1
+
+#g75 = left16[8]~synth
+#g474 = left8[16]~synth
+.names amt[3] g75 g474
+11 1
+
+#g473 = left8[16]~synth
+#g474 = left8[16]~synth
+#g475 = left8[16]~synth
+.names g473 g474 g475
+00 0
+
+#g475 = left8[16]~synth
+#g476 = left4[16]~synth
+.names amt[2] g475 g476
+01 1
+
+#g74 = left8[12]~synth
+#g477 = left4[16]~synth
+.names amt[2] g74 g477
+11 1
+
+#g476 = left4[16]~synth
+#g477 = left4[16]~synth
+#g478 = left4[16]~synth
+.names g476 g477 g478
+00 0
+
+#g478 = left4[16]~synth
+#g479 = left2[16]~synth
+.names amt[1] g478 g479
+01 1
+
+#g73 = left4[14]~synth
+#g480 = left2[16]~synth
+.names amt[1] g73 g480
+11 1
+
+#g479 = left2[16]~synth
+#g480 = left2[16]~synth
+#g481 = left2[16]~synth
+.names g479 g480 g481
+00 0
+
+#g482 = right8[23]~synth
+.names amt[3] src[31] g482
+11 1
+
+#g483 = right8[23]~synth
+.names amt[3] src[23] g483
+01 1
+
+#g482 = right8[23]~synth
+#g483 = right8[23]~synth
+#g484 = right8[23]~synth
+.names g482 g483 g484
+00 0
+
+#g484 = right8[23]~synth
+#g485 = right4[19]~synth
+.names amt[2] g484 g485
+11 1
+
+#g397 = right8[19]~synth
+#g486 = right4[19]~synth
+.names amt[2] g397 g486
+01 1
+
+#g485 = right4[19]~synth
+#g486 = right4[19]~synth
+#g487 = right4[19]~synth
+.names g485 g486 g487
+00 0
+
+#g487 = right4[19]~synth
+#g488 = right2[17]~synth
+.names amt[1] g487 g488
+11 1
+
+#g442 = right4[17]~synth
+#g489 = right2[17]~synth
+.names amt[1] g442 g489
+01 1
+
+#g488 = right2[17]~synth
+#g489 = right2[17]~synth
+#g490 = right2[17]~synth
+.names g488 g489 g490
+00 0
+
+#g490 = right2[17]~synth
+#g491 = right2[17]~synth
+.names amt[4] g490 g491
+01 1
+
+#g20 = fillbit
+#g492 = right2[17]~synth
+.names amt[4] g20 g492
+11 1
+
+#g491 = right2[17]~synth
+#g492 = right2[17]~synth
+#g493 = right2[17]~synth
+.names g491 g492 g493
+00 0
+
+#g494 = left16[17]~synth
+.names amt[4] src[1] g494
+11 1
+
+#g495 = left16[17]~synth
+.names amt[4] src[17] g495
+01 1
+
+#g494 = left16[17]~synth
+#g495 = left16[17]~synth
+#g496 = left16[17]~synth
+.names g494 g495 g496
+00 0
+
+#g496 = left16[17]~synth
+#g497 = left8[17]~synth
+.names amt[3] g496 g497
+01 1
+
+#g80 = left16[9]~synth
+#g498 = left8[17]~synth
+.names amt[3] g80 g498
+11 1
+
+#g497 = left8[17]~synth
+#g498 = left8[17]~synth
+#g499 = left8[17]~synth
+.names g497 g498 g499
+00 0
+
+#g499 = left8[17]~synth
+#g500 = left4[17]~synth
+.names amt[2] g499 g500
+01 1
+
+#g79 = left8[13]~synth
+#g501 = left4[17]~synth
+.names amt[2] g79 g501
+11 1
+
+#g500 = left4[17]~synth
+#g501 = left4[17]~synth
+#g502 = left4[17]~synth
+.names g500 g501 g502
+00 0
+
+#g502 = left4[17]~synth
+#g503 = left2[17]~synth
+.names amt[1] g502 g503
+01 1
+
+#g78 = left4[15]~synth
+#g504 = left2[17]~synth
+.names amt[1] g78 g504
+11 1
+
+#g503 = left2[17]~synth
+#g504 = left2[17]~synth
+#g505 = left2[17]~synth
+.names g503 g504 g505
+00 0
+
+#g418 = right8[20]~synth
+#g506 = right4[20]~synth
+.names amt[2] g418 g506
+01 1
+
+#g507 = right4[20]~synth
+.names amt[2] src[24] g507
+11 1
+
+#g506 = right4[20]~synth
+#g507 = right4[20]~synth
+#g508 = right4[20]~synth
+.names g506 g507 g508
+00 0
+
+#g508 = right4[20]~synth
+#g509 = right2[18]~synth
+.names amt[1] g508 g509
+11 1
+
+#g463 = right4[18]~synth
+#g510 = right2[18]~synth
+.names amt[1] g463 g510
+01 1
+
+#g509 = right2[18]~synth
+#g510 = right2[18]~synth
+#g511 = right2[18]~synth
+.names g509 g510 g511
+00 0
+
+#g60 = left2[12]~synth
+#g511 = right2[18]~synth
+#g512 = right2[18]~synth
+.names g60 g511 g512
+01 1
+
+#g20 = fillbit
+#g60 = left2[12]~synth
+#g513 = right2[18]~synth
+.names g20 g60 g513
+11 1
+
+#g512 = right2[18]~synth
+#g513 = right2[18]~synth
+#g514 = right2[18]~synth
+.names g512 g513 g514
+00 0
+
+#g515 = left16[18]~synth
+.names amt[4] src[2] g515
+11 1
+
+#g516 = left16[18]~synth
+.names amt[4] src[18] g516
+01 1
+
+#g515 = left16[18]~synth
+#g516 = left16[18]~synth
+#g517 = left16[18]~synth
+.names g515 g516 g517
+00 0
+
+#g517 = left16[18]~synth
+#g518 = left8[18]~synth
+.names amt[3] g517 g518
+01 1
+
+#g84 = left16[10]~synth
+#g519 = left8[18]~synth
+.names amt[3] g84 g519
+11 1
+
+#g518 = left8[18]~synth
+#g519 = left8[18]~synth
+#g520 = left8[18]~synth
+.names g518 g519 g520
+00 0
+
+#g520 = left8[18]~synth
+#g521 = left4[18]~synth
+.names amt[2] g520 g521
+01 1
+
+#g83 = left8[14]~synth
+#g522 = left4[18]~synth
+.names amt[2] g83 g522
+11 1
+
+#g521 = left4[18]~synth
+#g522 = left4[18]~synth
+#g523 = left4[18]~synth
+.names g521 g522 g523
+00 0
+
+#g478 = left4[16]~synth
+#g524 = left2[18]~synth
+.names amt[1] g478 g524
+11 1
+
+#g523 = left4[18]~synth
+#g525 = left2[18]~synth
+.names amt[1] g523 g525
+01 1
+
+#g524 = left2[18]~synth
+#g525 = left2[18]~synth
+#g526 = left2[18]~synth
+.names g524 g525 g526
+00 0
+
+#g439 = right8[21]~synth
+#g527 = right4[21]~synth
+.names amt[2] g439 g527
+01 1
+
+#g528 = right4[21]~synth
+.names amt[2] src[25] g528
+11 1
+
+#g527 = right4[21]~synth
+#g528 = right4[21]~synth
+#g529 = right4[21]~synth
+.names g527 g528 g529
+00 0
+
+#g529 = right4[21]~synth
+#g530 = right2[19]~synth
+.names amt[1] g529 g530
+11 1
+
+#g487 = right4[19]~synth
+#g531 = right2[19]~synth
+.names amt[1] g487 g531
+01 1
+
+#g530 = right2[19]~synth
+#g531 = right2[19]~synth
+#g532 = right2[19]~synth
+.names g530 g531 g532
+00 0
+
+#g60 = left2[12]~synth
+#g532 = right2[19]~synth
+#g533 = right2[19]~synth
+.names g60 g532 g533
+01 1
+
+#g20 = fillbit
+#g60 = left2[12]~synth
+#g534 = right2[19]~synth
+.names g20 g60 g534
+11 1
+
+#g533 = right2[19]~synth
+#g534 = right2[19]~synth
+#g535 = right2[19]~synth
+.names g533 g534 g535
+00 0
+
+#g536 = left16[19]~synth
+.names amt[4] src[3] g536
+11 1
+
+#g537 = left16[19]~synth
+.names amt[4] src[19] g537
+01 1
+
+#g536 = left16[19]~synth
+#g537 = left16[19]~synth
+#g538 = left16[19]~synth
+.names g536 g537 g538
+00 0
+
+#g538 = left16[19]~synth
+#g539 = left8[19]~synth
+.names amt[3] g538 g539
+01 1
+
+#g88 = left16[11]~synth
+#g540 = left8[19]~synth
+.names amt[3] g88 g540
+11 1
+
+#g539 = left8[19]~synth
+#g540 = left8[19]~synth
+#g541 = left8[19]~synth
+.names g539 g540 g541
+00 0
+
+#g541 = left8[19]~synth
+#g542 = left4[19]~synth
+.names amt[2] g541 g542
+01 1
+
+#g87 = left8[15]~synth
+#g543 = left4[19]~synth
+.names amt[2] g87 g543
+11 1
+
+#g542 = left4[19]~synth
+#g543 = left4[19]~synth
+#g544 = left4[19]~synth
+.names g542 g543 g544
+00 0
+
+#g502 = left4[17]~synth
+#g545 = left2[19]~synth
+.names amt[1] g502 g545
+11 1
+
+#g544 = left4[19]~synth
+#g546 = left2[19]~synth
+.names amt[1] g544 g546
+01 1
+
+#g545 = left2[19]~synth
+#g546 = left2[19]~synth
+#g547 = left2[19]~synth
+.names g545 g546 g547
+00 0
+
+#g460 = right8[22]~synth
+#g548 = right4[22]~synth
+.names amt[2] g460 g548
+01 1
+
+#g549 = right4[22]~synth
+.names amt[2] src[26] g549
+11 1
+
+#g548 = right4[22]~synth
+#g549 = right4[22]~synth
+#g550 = right4[22]~synth
+.names g548 g549 g550
+00 0
+
+#g550 = right4[22]~synth
+#g551 = right2[20]~synth
+.names amt[1] g550 g551
+11 1
+
+#g508 = right4[20]~synth
+#g552 = right2[20]~synth
+.names amt[1] g508 g552
+01 1
+
+#g551 = right2[20]~synth
+#g552 = right2[20]~synth
+#g553 = right2[20]~synth
+.names g551 g552 g553
+00 0
+
+#g52 = left4[8]~synth
+#g553 = right2[20]~synth
+#g554 = right2[20]~synth
+.names g52 g553 g554
+01 1
+
+#g20 = fillbit
+#g52 = left4[8]~synth
+#g555 = right2[20]~synth
+.names g20 g52 g555
+11 1
+
+#g554 = right2[20]~synth
+#g555 = right2[20]~synth
+#g556 = right2[20]~synth
+.names g554 g555 g556
+00 0
+
+#g557 = left16[20]~synth
+.names amt[4] src[4] g557
+11 1
+
+#g558 = left16[20]~synth
+.names amt[4] src[20] g558
+01 1
+
+#g557 = left16[20]~synth
+#g558 = left16[20]~synth
+#g559 = left16[20]~synth
+.names g557 g558 g559
+00 0
+
+#g559 = left16[20]~synth
+#g560 = left8[20]~synth
+.names amt[3] g559 g560
+01 1
+
+#g91 = left16[12]~synth
+#g561 = left8[20]~synth
+.names amt[3] g91 g561
+11 1
+
+#g560 = left8[20]~synth
+#g561 = left8[20]~synth
+#g562 = left8[20]~synth
+.names g560 g561 g562
+00 0
+
+#g475 = left8[16]~synth
+#g563 = left4[20]~synth
+.names amt[2] g475 g563
+11 1
+
+#g562 = left8[20]~synth
+#g564 = left4[20]~synth
+.names amt[2] g562 g564
+01 1
+
+#g563 = left4[20]~synth
+#g564 = left4[20]~synth
+#g565 = left4[20]~synth
+.names g563 g564 g565
+00 0
+
+#g523 = left4[18]~synth
+#g566 = left2[20]~synth
+.names amt[1] g523 g566
+11 1
+
+#g565 = left4[20]~synth
+#g567 = left2[20]~synth
+.names amt[1] g565 g567
+01 1
+
+#g566 = left2[20]~synth
+#g567 = left2[20]~synth
+#g568 = left2[20]~synth
+.names g566 g567 g568
+00 0
+
+#g484 = right8[23]~synth
+#g569 = right4[23]~synth
+.names amt[2] g484 g569
+01 1
+
+#g570 = right4[23]~synth
+.names amt[2] src[27] g570
+11 1
+
+#g569 = right4[23]~synth
+#g570 = right4[23]~synth
+#g571 = right4[23]~synth
+.names g569 g570 g571
+00 0
+
+#g571 = right4[23]~synth
+#g572 = right2[21]~synth
+.names amt[1] g571 g572
+11 1
+
+#g529 = right4[21]~synth
+#g573 = right2[21]~synth
+.names amt[1] g529 g573
+01 1
+
+#g572 = right2[21]~synth
+#g573 = right2[21]~synth
+#g574 = right2[21]~synth
+.names g572 g573 g574
+00 0
+
+#g52 = left4[8]~synth
+#g574 = right2[21]~synth
+#g575 = right2[21]~synth
+.names g52 g574 g575
+01 1
+
+#g20 = fillbit
+#g52 = left4[8]~synth
+#g576 = right2[21]~synth
+.names g20 g52 g576
+11 1
+
+#g575 = right2[21]~synth
+#g576 = right2[21]~synth
+#g577 = right2[21]~synth
+.names g575 g576 g577
+00 0
+
+#g578 = left16[21]~synth
+.names amt[4] src[5] g578
+11 1
+
+#g579 = left16[21]~synth
+.names amt[4] src[21] g579
+01 1
+
+#g578 = left16[21]~synth
+#g579 = left16[21]~synth
+#g580 = left16[21]~synth
+.names g578 g579 g580
+00 0
+
+#g580 = left16[21]~synth
+#g581 = left8[21]~synth
+.names amt[3] g580 g581
+01 1
+
+#g94 = left16[13]~synth
+#g582 = left8[21]~synth
+.names amt[3] g94 g582
+11 1
+
+#g581 = left8[21]~synth
+#g582 = left8[21]~synth
+#g583 = left8[21]~synth
+.names g581 g582 g583
+00 0
+
+#g499 = left8[17]~synth
+#g584 = left4[21]~synth
+.names amt[2] g499 g584
+11 1
+
+#g583 = left8[21]~synth
+#g585 = left4[21]~synth
+.names amt[2] g583 g585
+01 1
+
+#g584 = left4[21]~synth
+#g585 = left4[21]~synth
+#g586 = left4[21]~synth
+.names g584 g585 g586
+00 0
+
+#g544 = left4[19]~synth
+#g587 = left2[21]~synth
+.names amt[1] g544 g587
+11 1
+
+#g586 = left4[21]~synth
+#g588 = left2[21]~synth
+.names amt[1] g586 g588
+01 1
+
+#g587 = left2[21]~synth
+#g588 = left2[21]~synth
+#g589 = left2[21]~synth
+.names g587 g588 g589
+00 0
+
+#g590 = right4[24]~synth
+.names amt[2] src[28] g590
+11 1
+
+#g591 = right4[24]~synth
+.names amt[2] src[24] g591
+01 1
+
+#g590 = right4[24]~synth
+#g591 = right4[24]~synth
+#g592 = right4[24]~synth
+.names g590 g591 g592
+00 0
+
+#g592 = right4[24]~synth
+#g593 = right2[22]~synth
+.names amt[1] g592 g593
+11 1
+
+#g550 = right4[22]~synth
+#g594 = right2[22]~synth
+.names amt[1] g550 g594
+01 1
+
+#g593 = right2[22]~synth
+#g594 = right2[22]~synth
+#g595 = right2[22]~synth
+.names g593 g594 g595
+00 0
+
+#g44 = left2[8]~synth
+#g595 = right2[22]~synth
+#g596 = right2[22]~synth
+.names g44 g595 g596
+01 1
+
+#g20 = fillbit
+#g44 = left2[8]~synth
+#g597 = right2[22]~synth
+.names g20 g44 g597
+11 1
+
+#g596 = right2[22]~synth
+#g597 = right2[22]~synth
+#g598 = right2[22]~synth
+.names g596 g597 g598
+00 0
+
+#g599 = left16[22]~synth
+.names amt[4] src[6] g599
+11 1
+
+#g600 = left16[22]~synth
+.names amt[4] src[22] g600
+01 1
+
+#g599 = left16[22]~synth
+#g600 = left16[22]~synth
+#g601 = left16[22]~synth
+.names g599 g600 g601
+00 0
+
+#g601 = left16[22]~synth
+#g602 = left8[22]~synth
+.names amt[3] g601 g602
+01 1
+
+#g97 = left16[14]~synth
+#g603 = left8[22]~synth
+.names amt[3] g97 g603
+11 1
+
+#g602 = left8[22]~synth
+#g603 = left8[22]~synth
+#g604 = left8[22]~synth
+.names g602 g603 g604
+00 0
+
+#g520 = left8[18]~synth
+#g605 = left4[22]~synth
+.names amt[2] g520 g605
+11 1
+
+#g604 = left8[22]~synth
+#g606 = left4[22]~synth
+.names amt[2] g604 g606
+01 1
+
+#g605 = left4[22]~synth
+#g606 = left4[22]~synth
+#g607 = left4[22]~synth
+.names g605 g606 g607
+00 0
+
+#g565 = left4[20]~synth
+#g608 = left2[22]~synth
+.names amt[1] g565 g608
+11 1
+
+#g607 = left4[22]~synth
+#g609 = left2[22]~synth
+.names amt[1] g607 g609
+01 1
+
+#g608 = left2[22]~synth
+#g609 = left2[22]~synth
+#g610 = left2[22]~synth
+.names g608 g609 g610
+00 0
+
+#g611 = right4[25]~synth
+.names amt[2] src[29] g611
+11 1
+
+#g612 = right4[25]~synth
+.names amt[2] src[25] g612
+01 1
+
+#g611 = right4[25]~synth
+#g612 = right4[25]~synth
+#g613 = right4[25]~synth
+.names g611 g612 g613
+00 0
+
+#g613 = right4[25]~synth
+#g614 = right2[23]~synth
+.names amt[1] g613 g614
+11 1
+
+#g571 = right4[23]~synth
+#g615 = right2[23]~synth
+.names amt[1] g571 g615
+01 1
+
+#g614 = right2[23]~synth
+#g615 = right2[23]~synth
+#g616 = right2[23]~synth
+.names g614 g615 g616
+00 0
+
+#g44 = left2[8]~synth
+#g616 = right2[23]~synth
+#g617 = right2[23]~synth
+.names g44 g616 g617
+01 1
+
+#g20 = fillbit
+#g44 = left2[8]~synth
+#g618 = right2[23]~synth
+.names g20 g44 g618
+11 1
+
+#g617 = right2[23]~synth
+#g618 = right2[23]~synth
+#g619 = right2[23]~synth
+.names g617 g618 g619
+00 0
+
+#g620 = left16[23]~synth
+.names amt[4] src[7] g620
+11 1
+
+#g621 = left16[23]~synth
+.names amt[4] src[23] g621
+01 1
+
+#g620 = left16[23]~synth
+#g621 = left16[23]~synth
+#g622 = left16[23]~synth
+.names g620 g621 g622
+00 0
+
+#g622 = left16[23]~synth
+#g623 = left8[23]~synth
+.names amt[3] g622 g623
+01 1
+
+#g100 = left16[15]~synth
+#g624 = left8[23]~synth
+.names amt[3] g100 g624
+11 1
+
+#g623 = left8[23]~synth
+#g624 = left8[23]~synth
+#g625 = left8[23]~synth
+.names g623 g624 g625
+00 0
+
+#g541 = left8[19]~synth
+#g626 = left4[23]~synth
+.names amt[2] g541 g626
+11 1
+
+#g625 = left8[23]~synth
+#g627 = left4[23]~synth
+.names amt[2] g625 g627
+01 1
+
+#g626 = left4[23]~synth
+#g627 = left4[23]~synth
+#g628 = left4[23]~synth
+.names g626 g627 g628
+00 0
+
+#g586 = left4[21]~synth
+#g629 = left2[23]~synth
+.names amt[1] g586 g629
+11 1
+
+#g628 = left4[23]~synth
+#g630 = left2[23]~synth
+.names amt[1] g628 g630
+01 1
+
+#g629 = left2[23]~synth
+#g630 = left2[23]~synth
+#g631 = left2[23]~synth
+.names g629 g630 g631
+00 0
+
+#g632 = right4[26]~synth
+.names amt[2] src[30] g632
+11 1
+
+#g633 = right4[26]~synth
+.names amt[2] src[26] g633
+01 1
+
+#g632 = right4[26]~synth
+#g633 = right4[26]~synth
+#g634 = right4[26]~synth
+.names g632 g633 g634
+00 0
+
+#g634 = right4[26]~synth
+#g635 = right2[24]~synth
+.names amt[1] g634 g635
+11 1
+
+#g592 = right4[24]~synth
+#g636 = right2[24]~synth
+.names amt[1] g592 g636
+01 1
+
+#g635 = right2[24]~synth
+#g636 = right2[24]~synth
+#g637 = right2[24]~synth
+.names g635 g636 g637
+00 0
+
+#g1 = left8[0]~synth
+#g637 = right2[24]~synth
+#g638 = right2[24]~synth
+.names g1 g637 g638
+01 1
+
+#g1 = left8[0]~synth
+#g20 = fillbit
+#g639 = right2[24]~synth
+.names g1 g20 g639
+11 1
+
+#g638 = right2[24]~synth
+#g639 = right2[24]~synth
+#g640 = right2[24]~synth
+.names g638 g639 g640
+00 0
+
+#g641 = left8[24]~synth
+.names amt[4] src[8] g641
+11 1
+
+#g642 = left8[24]~synth
+.names amt[4] src[24] g642
+01 1
+
+#g641 = left8[24]~synth
+#g642 = left8[24]~synth
+#g643 = left8[24]~synth
+.names g641 g642 g643
+00 0
+
+#g472 = left16[16]~synth
+#g644 = left8[24]~synth
+.names amt[3] g472 g644
+11 1
+
+#g643 = left8[24]~synth
+#g645 = left8[24]~synth
+.names amt[3] g643 g645
+01 1
+
+#g644 = left8[24]~synth
+#g645 = left8[24]~synth
+#g646 = left8[24]~synth
+.names g644 g645 g646
+00 0
+
+#g562 = left8[20]~synth
+#g647 = left4[24]~synth
+.names amt[2] g562 g647
+11 1
+
+#g646 = left8[24]~synth
+#g648 = left4[24]~synth
+.names amt[2] g646 g648
+01 1
+
+#g647 = left4[24]~synth
+#g648 = left4[24]~synth
+#g649 = left4[24]~synth
+.names g647 g648 g649
+00 0
+
+#g607 = left4[22]~synth
+#g650 = left2[24]~synth
+.names amt[1] g607 g650
+11 1
+
+#g649 = left4[24]~synth
+#g651 = left2[24]~synth
+.names amt[1] g649 g651
+01 1
+
+#g650 = left2[24]~synth
+#g651 = left2[24]~synth
+#g652 = left2[24]~synth
+.names g650 g651 g652
+00 0
+
+#g653 = right4[27]~synth
+.names amt[2] src[31] g653
+11 1
+
+#g654 = right4[27]~synth
+.names amt[2] src[27] g654
+01 1
+
+#g653 = right4[27]~synth
+#g654 = right4[27]~synth
+#g655 = right4[27]~synth
+.names g653 g654 g655
+00 0
+
+#g655 = right4[27]~synth
+#g656 = right2[25]~synth
+.names amt[1] g655 g656
+11 1
+
+#g613 = right4[25]~synth
+#g657 = right2[25]~synth
+.names amt[1] g613 g657
+01 1
+
+#g656 = right2[25]~synth
+#g657 = right2[25]~synth
+#g658 = right2[25]~synth
+.names g656 g657 g658
+00 0
+
+#g1 = left8[0]~synth
+#g658 = right2[25]~synth
+#g659 = right2[25]~synth
+.names g1 g658 g659
+01 1
+
+#g1 = left8[0]~synth
+#g20 = fillbit
+#g660 = right2[25]~synth
+.names g1 g20 g660
+11 1
+
+#g659 = right2[25]~synth
+#g660 = right2[25]~synth
+#g661 = right2[25]~synth
+.names g659 g660 g661
+00 0
+
+#g662 = left8[25]~synth
+.names amt[4] src[9] g662
+11 1
+
+#g663 = left8[25]~synth
+.names amt[4] src[25] g663
+01 1
+
+#g662 = left8[25]~synth
+#g663 = left8[25]~synth
+#g664 = left8[25]~synth
+.names g662 g663 g664
+00 0
+
+#g496 = left16[17]~synth
+#g665 = left8[25]~synth
+.names amt[3] g496 g665
+11 1
+
+#g664 = left8[25]~synth
+#g666 = left8[25]~synth
+.names amt[3] g664 g666
+01 1
+
+#g665 = left8[25]~synth
+#g666 = left8[25]~synth
+#g667 = left8[25]~synth
+.names g665 g666 g667
+00 0
+
+#g583 = left8[21]~synth
+#g668 = left4[25]~synth
+.names amt[2] g583 g668
+11 1
+
+#g667 = left8[25]~synth
+#g669 = left4[25]~synth
+.names amt[2] g667 g669
+01 1
+
+#g668 = left4[25]~synth
+#g669 = left4[25]~synth
+#g670 = left4[25]~synth
+.names g668 g669 g670
+00 0
+
+#g628 = left4[23]~synth
+#g671 = left2[25]~synth
+.names amt[1] g628 g671
+11 1
+
+#g670 = left4[25]~synth
+#g672 = left2[25]~synth
+.names amt[1] g670 g672
+01 1
+
+#g671 = left2[25]~synth
+#g672 = left2[25]~synth
+#g673 = left2[25]~synth
+.names g671 g672 g673
+00 0
+
+#g634 = right4[26]~synth
+#g674 = right2[26]~synth
+.names amt[1] g634 g674
+01 1
+
+#g675 = right2[26]~synth
+.names amt[1] src[28] g675
+11 1
+
+#g674 = right2[26]~synth
+#g675 = right2[26]~synth
+#g676 = right2[26]~synth
+.names g674 g675 g676
+00 0
+
+#g29 = left2[4]~synth
+#g676 = right2[26]~synth
+#g677 = right2[26]~synth
+.names g29 g676 g677
+01 1
+
+#g20 = fillbit
+#g29 = left2[4]~synth
+#g678 = right2[26]~synth
+.names g20 g29 g678
+11 1
+
+#g677 = right2[26]~synth
+#g678 = right2[26]~synth
+#g679 = right2[26]~synth
+.names g677 g678 g679
+00 0
+
+#g680 = left8[26]~synth
+.names amt[4] src[10] g680
+11 1
+
+#g681 = left8[26]~synth
+.names amt[4] src[26] g681
+01 1
+
+#g680 = left8[26]~synth
+#g681 = left8[26]~synth
+#g682 = left8[26]~synth
+.names g680 g681 g682
+00 0
+
+#g517 = left16[18]~synth
+#g683 = left8[26]~synth
+.names amt[3] g517 g683
+11 1
+
+#g682 = left8[26]~synth
+#g684 = left8[26]~synth
+.names amt[3] g682 g684
+01 1
+
+#g683 = left8[26]~synth
+#g684 = left8[26]~synth
+#g685 = left8[26]~synth
+.names g683 g684 g685
+00 0
+
+#g604 = left8[22]~synth
+#g686 = left4[26]~synth
+.names amt[2] g604 g686
+11 1
+
+#g685 = left8[26]~synth
+#g687 = left4[26]~synth
+.names amt[2] g685 g687
+01 1
+
+#g686 = left4[26]~synth
+#g687 = left4[26]~synth
+#g688 = left4[26]~synth
+.names g686 g687 g688
+00 0
+
+#g649 = left4[24]~synth
+#g689 = left2[26]~synth
+.names amt[1] g649 g689
+11 1
+
+#g688 = left4[26]~synth
+#g690 = left2[26]~synth
+.names amt[1] g688 g690
+01 1
+
+#g689 = left2[26]~synth
+#g690 = left2[26]~synth
+#g691 = left2[26]~synth
+.names g689 g690 g691
+00 0
+
+#g655 = right4[27]~synth
+#g692 = right2[27]~synth
+.names amt[1] g655 g692
+01 1
+
+#g693 = right2[27]~synth
+.names amt[1] src[29] g693
+11 1
+
+#g692 = right2[27]~synth
+#g693 = right2[27]~synth
+#g694 = right2[27]~synth
+.names g692 g693 g694
+00 0
+
+#g29 = left2[4]~synth
+#g694 = right2[27]~synth
+#g695 = right2[27]~synth
+.names g29 g694 g695
+01 1
+
+#g20 = fillbit
+#g29 = left2[4]~synth
+#g696 = right2[27]~synth
+.names g20 g29 g696
+11 1
+
+#g695 = right2[27]~synth
+#g696 = right2[27]~synth
+#g697 = right2[27]~synth
+.names g695 g696 g697
+00 0
+
+#g698 = left8[27]~synth
+.names amt[4] src[11] g698
+11 1
+
+#g699 = left8[27]~synth
+.names amt[4] src[27] g699
+01 1
+
+#g698 = left8[27]~synth
+#g699 = left8[27]~synth
+#g700 = left8[27]~synth
+.names g698 g699 g700
+00 0
+
+#g538 = left16[19]~synth
+#g701 = left8[27]~synth
+.names amt[3] g538 g701
+11 1
+
+#g700 = left8[27]~synth
+#g702 = left8[27]~synth
+.names amt[3] g700 g702
+01 1
+
+#g701 = left8[27]~synth
+#g702 = left8[27]~synth
+#g703 = left8[27]~synth
+.names g701 g702 g703
+00 0
+
+#g625 = left8[23]~synth
+#g704 = left4[27]~synth
+.names amt[2] g625 g704
+11 1
+
+#g703 = left8[27]~synth
+#g705 = left4[27]~synth
+.names amt[2] g703 g705
+01 1
+
+#g704 = left4[27]~synth
+#g705 = left4[27]~synth
+#g706 = left4[27]~synth
+.names g704 g705 g706
+00 0
+
+#g670 = left4[25]~synth
+#g707 = left2[27]~synth
+.names amt[1] g670 g707
+11 1
+
+#g706 = left4[27]~synth
+#g708 = left2[27]~synth
+.names amt[1] g706 g708
+01 1
+
+#g707 = left2[27]~synth
+#g708 = left2[27]~synth
+#g709 = left2[27]~synth
+.names g707 g708 g709
+00 0
+
+#g710 = right2[28]~synth
+.names amt[1] src[30] g710
+11 1
+
+#g711 = right2[28]~synth
+.names amt[1] src[28] g711
+01 1
+
+#g710 = right2[28]~synth
+#g711 = right2[28]~synth
+#g712 = right2[28]~synth
+.names g710 g711 g712
+00 0
+
+#g2 = left4[0]~synth
+#g712 = right2[28]~synth
+#g713 = right2[28]~synth
+.names g2 g712 g713
+01 1
+
+#g2 = left4[0]~synth
+#g20 = fillbit
+#g714 = right2[28]~synth
+.names g2 g20 g714
+11 1
+
+#g713 = right2[28]~synth
+#g714 = right2[28]~synth
+#g715 = right2[28]~synth
+.names g713 g714 g715
+00 0
+
+#g688 = left4[26]~synth
+#g716 = left2[28]~synth
+.names amt[1] g688 g716
+11 1
+
+#g112 = left4[28]~synth
+#g717 = left2[28]~synth
+.names amt[1] g112 g717
+01 1
+
+#g716 = left2[28]~synth
+#g717 = left2[28]~synth
+#g718 = left2[28]~synth
+.names g716 g717 g718
+00 0
+
+#g719 = right2[29]~synth
+.names amt[1] src[31] g719
+11 1
+
+#g720 = right2[29]~synth
+.names amt[1] src[29] g720
+01 1
+
+#g719 = right2[29]~synth
+#g720 = right2[29]~synth
+#g721 = right2[29]~synth
+.names g719 g720 g721
+00 0
+
+#g2 = left4[0]~synth
+#g721 = right2[29]~synth
+#g722 = right2[29]~synth
+.names g2 g721 g722
+01 1
+
+#g2 = left4[0]~synth
+#g20 = fillbit
+#g723 = right2[29]~synth
+.names g2 g20 g723
+11 1
+
+#g722 = right2[29]~synth
+#g723 = right2[29]~synth
+#g724 = right2[29]~synth
+.names g722 g723 g724
+00 0
+
+#g706 = left4[27]~synth
+#g725 = left2[29]~synth
+.names amt[1] g706 g725
+11 1
+
+#g116 = left4[29]~synth
+#g726 = left2[29]~synth
+.names amt[1] g116 g726
+01 1
+
+#g725 = left2[29]~synth
+#g726 = left2[29]~synth
+#g727 = left2[29]~synth
+.names g725 g726 g727
+00 0
+
+#g3 = left2[0]~synth
+#g20 = fillbit
+#g728 = right2[30]~synth
+.names g3 g20 g728
+11 1
+
+#g3 = left2[0]~synth
+#g729 = right2[30]~synth
+.names g3 src[30] g729
+01 1
+
+#g728 = right2[30]~synth
+#g729 = right2[30]~synth
+#g730 = right2[30]~synth
+.names g728 g729 g730
+00 0
+
+#g112 = left4[28]~synth
+#g731 = left2[30]~synth
+.names amt[1] g112 g731
+11 1
+
+#g120 = left2[30]~synth
+#g732 = left2[30]~synth
+.names amt[1] g120 g732
+01 1
+
+#g731 = left2[30]~synth
+#g732 = left2[30]~synth
+#g733 = left2[30]~synth
+.names g731 g732 g733
+00 0
+
+#g3 = left2[0]~synth
+#g20 = fillbit
+#g734 = right2[31]~synth
+.names g3 g20 g734
+11 1
+
+#g3 = left2[0]~synth
+#g735 = right2[31]~synth
+.names g3 src[31] g735
+01 1
+
+#g734 = right2[31]~synth
+#g735 = right2[31]~synth
+#g736 = right2[31]~synth
+.names g734 g735 g736
+00 0
+
+#g737 = left16[31]~synth
+.names amt[4] src[15] g737
+11 1
+
+#g738 = left16[31]~synth
+.names amt[4] src[31] g738
+01 1
+
+#g737 = left16[31]~synth
+#g738 = left16[31]~synth
+#g739 = left16[31]~synth
+.names g737 g738 g739
+00 0
+
+#g622 = left16[23]~synth
+#g740 = left8[31]~synth
+.names amt[3] g622 g740
+11 1
+
+#g739 = left16[31]~synth
+#g741 = left8[31]~synth
+.names amt[3] g739 g741
+01 1
+
+#g740 = left8[31]~synth
+#g741 = left8[31]~synth
+#g742 = left8[31]~synth
+.names g740 g741 g742
+00 0
+
+#g703 = left8[27]~synth
+#g743 = left4[31]~synth
+.names amt[2] g703 g743
+11 1
+
+#g742 = left8[31]~synth
+#g744 = left4[31]~synth
+.names amt[2] g742 g744
+01 1
+
+#g743 = left4[31]~synth
+#g744 = left4[31]~synth
+#g745 = left4[31]~synth
+.names g743 g744 g745
+00 0
+
+#g745 = left4[31]~synth
+#g746 = left2[31]~synth
+.names amt[1] g745 g746
+01 1
+
+#g116 = left4[29]~synth
+#g747 = left2[31]~synth
+.names amt[1] g116 g747
+11 1
+
+#g746 = left2[31]~synth
+#g747 = left2[31]~synth
+#g748 = left2[31]~synth
+.names g746 g747 g748
+00 0
+
+.end
+

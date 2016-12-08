@@ -1,0 +1,564 @@
+# Benchmark "tiger_decoder" written by ABC on Thu Jan 17 17:57:22 2013
+.model tiger_decoder
+.inputs instr[27] instr[28] instr[26] instr[29] instr[30] instr[31] instr[0] instr[1] instr[2] instr[3] instr[4] instr[5] instr[23] instr[16] instr[11] instr[12] instr[17] instr[13] instr[18] instr[14] instr[19] instr[15] instr[20]
+
+.outputs controls[0] controls[1] controls[2] controls[3] controls[4] controls[5] controls[6] controls[7] controls[8] controls[9] controls[10]  controls[11] controls[12] controls[13] controls[14] controls[15] alucontrol[0] alucontrol[1] alucontrol[2] alucontrol[3] alucontrol[4]  branchtype[0] branchtype[1] branchtype[2] destreg[0] destreg[1] destreg[2] destreg[3] destreg[4]
+
+.names n52
+ 1
+.names instr[27] instr[28] n53
+11 1
+.names instr[26] n53 n54
+11 1
+.names instr[29] n54 n55
+00 1
+.names instr[30] n55 n56
+01 1
+.names instr[31] n56 controls[9]
+11 1
+.names n53 controls[9] controls[1]
+11 1
+.names instr[27] instr[28] n59
+10 1
+.names instr[26] n59 n60
+01 1
+.names controls[9] n60 controls[2]
+11 1
+.names instr[28] instr[29] n62
+10 1
+.names instr[30] n62 n63
+01 1
+.names instr[31] n63 n64
+01 1
+.names instr[27] instr[28] n65
+00 1
+.names instr[26] n65 n66
+11 1
+.names instr[29] n66 n67
+01 1
+.names instr[30] n67 n68
+01 1
+.names instr[31] n68 n69
+01 1
+.names instr[26] n65 n70
+01 1
+.names instr[29] n70 n71
+01 1
+.names instr[30] n71 n72
+01 1
+.names instr[31] n72 n73
+01 1
+.names instr[29] instr[30] n74
+10 1
+.names instr[31] n74 n75
+01 1
+.names instr[27] instr[26] n76
+10 1
+.names instr[28] instr[29] n77
+01 1
+.names instr[30] n77 n78
+01 1
+.names instr[31] n78 n79
+11 1
+.names n76 n79 controls[10]
+01 1
+.names controls[9] n64 n81
+00 1
+.names n69 n81 n82
+01 1
+.names n73 n82 n83
+01 1
+.names n75 n83 n84
+01 1
+.names controls[10] n84 n85
+01 1
+.names n64 n69 n86
+00 1
+.names n73 n86 n87
+01 1
+.names n75 n87 n88
+01 1
+.names n85 n88 n89
+01 1
+.names instr[27] instr[26] n90
+00 1
+.names n89 n90 controls[3]
+11 1
+.names instr[27] instr[26] n92
+01 1
+.names n89 n92 controls[4]
+11 1
+.names instr[0] instr[1] n94
+10 1
+.names instr[2] n94 n95
+01 1
+.names instr[3] n95 n96
+11 1
+.names instr[4] n96 n97
+01 1
+.names instr[5] n97 n98
+01 1
+.names instr[27] n98 n99
+00 1
+.names n76 n92 n100
+00 1
+.names instr[28] instr[29] n101
+00 1
+.names instr[30] n101 n102
+01 1
+.names instr[31] n102 n103
+01 1
+.names n99 n103 n104
+01 1
+.names n100 n104 controls[5]
+11 1
+.names instr[27] instr[26] n106
+11 1
+.names instr[28] n106 n107
+10 1
+.names n75 n107 n108
+11 1
+.names instr[27] instr[28] n109
+01 1
+.names controls[9] n109 n110
+11 1
+.names n75 n110 n111
+01 1
+.names n108 n111 n112
+00 1
+.names instr[0] instr[1] n113
+00 1
+.names instr[2] n113 n114
+01 1
+.names instr[3] n114 n115
+11 1
+.names instr[4] n115 n116
+01 1
+.names instr[5] n116 n117
+01 1
+.names n98 n117 n118
+00 1
+.names n73 n118 controls[7]
+10 1
+.names instr[29] n59 n120
+01 1
+.names instr[30] n120 n121
+01 1
+.names instr[31] n121 controls[8]
+01 1
+.names instr[30] instr[31] n123
+00 1
+.names n120 n123 n124
+01 1
+.names controls[9] controls[10] n125
+00 1
+.names n124 n125 n126
+00 1
+.names n87 n124 n127
+11 1
+.names n126 n127 n128
+00 1
+.names instr[26] n117 n129
+01 1
+.names instr[28] n100 n130
+01 1
+.names n129 n130 n131
+01 1
+.names instr[29] n131 n132
+00 1
+.names n123 n132 n133
+10 1
+.names instr[27] n77 n134
+01 1
+.names instr[26] n134 n135
+01 1
+.names instr[28] instr[29] n136
+11 1
+.names instr[27] n136 n137
+01 1
+.names instr[26] n137 n138
+01 1
+.names n135 n138 n139
+00 1
+.names instr[27] n77 n140
+11 1
+.names instr[26] n140 n141
+01 1
+.names n139 n141 n142
+10 1
+.names instr[27] n136 n143
+11 1
+.names instr[26] n143 n144
+01 1
+.names n142 n144 n145
+10 1
+.names instr[26] n134 n146
+11 1
+.names n145 n146 n147
+10 1
+.names instr[26] n137 n148
+11 1
+.names n147 n148 n149
+10 1
+.names instr[27] n62 n150
+11 1
+.names instr[26] n150 n151
+11 1
+.names n149 n151 n152
+10 1
+.names instr[26] n140 n153
+11 1
+.names n152 n153 n154
+10 1
+.names instr[26] n143 n155
+11 1
+.names n154 n155 n156
+10 1
+.names instr[30] instr[31] n157
+01 1
+.names n156 n157 n158
+11 1
+.names n62 n77 n159
+00 1
+.names instr[0] instr[1] n160
+01 1
+.names instr[2] n160 n161
+01 1
+.names instr[3] n161 n162
+01 1
+.names instr[4] n162 n163
+01 1
+.names instr[5] n163 n164
+01 1
+.names instr[29] n164 n165
+11 1
+.names instr[30] n71 n166
+11 1
+.names instr[31] n166 n167
+01 1
+.names instr[23] n167 controls[14]
+01 1
+.names instr[29] controls[14] n169
+01 1
+.names n165 n169 n170
+00 1
+.names instr[30] n90 n171
+11 1
+.names instr[31] n171 n172
+01 1
+.names n159 n172 n173
+11 1
+.names n170 n173 n174
+01 1
+.names n133 n158 n175
+00 1
+.names n174 n175 n176
+01 1
+.names instr[23] n167 controls[15]
+11 1
+.names instr[3] instr[4] n178
+00 1
+.names instr[5] n178 n179
+01 1
+.names n94 n179 n180
+01 1
+.names instr[0] n180 n181
+01 1
+.names instr[1] instr[2] n182
+10 1
+.names instr[3] n182 n183
+11 1
+.names instr[4] n183 n184
+01 1
+.names instr[5] n184 n185
+11 1
+.names instr[0] n185 n186
+11 1
+.names n180 n186 n187
+01 1
+.names n181 n187 n188
+00 1
+.names instr[3] n188 n189
+10 1
+.names instr[5] n188 n190
+00 1
+.names instr[0] instr[5] n191
+11 1
+.names n190 n191 n192
+00 1
+.names instr[3] n192 n193
+00 1
+.names n189 n193 n194
+00 1
+.names instr[4] n194 n195
+00 1
+.names instr[0] instr[2] n196
+10 1
+.names instr[5] n196 n197
+01 1
+.names instr[4] n197 n198
+11 1
+.names n195 n198 n199
+00 1
+.names n73 n199 n200
+10 1
+.names instr[26] n53 n201
+10 1
+.names n75 n201 n202
+11 1
+.names n73 n202 n203
+01 1
+.names n200 n203 n204
+00 1
+.names instr[2] instr[3] n205
+00 1
+.names instr[4] n205 n206
+01 1
+.names instr[5] n206 n207
+11 1
+.names instr[1] n207 n208
+01 1
+.names instr[2] instr[3] n209
+01 1
+.names instr[4] n209 n210
+11 1
+.names instr[5] n210 n211
+01 1
+.names instr[1] n211 n212
+01 1
+.names instr[2] instr[3] n213
+10 1
+.names instr[4] n213 n214
+01 1
+.names instr[5] n214 n215
+11 1
+.names instr[1] n215 n216
+01 1
+.names instr[4] n205 n217
+11 1
+.names instr[5] n217 n218
+01 1
+.names instr[1] n218 n219
+01 1
+.names instr[1] n180 n220
+11 1
+.names n180 n185 n221
+01 1
+.names n207 n221 n222
+01 1
+.names n211 n222 n223
+01 1
+.names n215 n223 n224
+01 1
+.names n218 n224 n225
+01 1
+.names n208 n212 n226
+00 1
+.names n216 n226 n227
+01 1
+.names n219 n227 n228
+01 1
+.names n220 n228 n229
+01 1
+.names n225 n229 n230
+01 1
+.names n73 n230 n231
+10 1
+.names n53 n75 n232
+01 1
+.names instr[26] n109 n233
+01 1
+.names instr[29] n233 n234
+11 1
+.names instr[30] n234 n235
+11 1
+.names instr[31] n235 n236
+01 1
+.names n164 n236 n237
+11 1
+.names n85 n237 n238
+11 1
+.names n125 n231 n239
+10 1
+.names n232 n239 n240
+01 1
+.names n238 n240 n241
+01 1
+.names n211 n215 n242
+00 1
+.names instr[1] n218 n243
+11 1
+.names instr[2] n180 n244
+11 1
+.names n218 n244 n245
+01 1
+.names n243 n245 n246
+00 1
+.names n242 n246 n247
+10 1
+.names instr[1] n242 n248
+00 1
+.names n247 n248 n249
+00 1
+.names n207 n249 n250
+00 1
+.names instr[1] n207 n251
+11 1
+.names n250 n251 n252
+00 1
+.names n73 n252 n253
+10 1
+.names instr[28] n76 n254
+10 1
+.names n75 n254 n255
+11 1
+.names n75 n237 n256
+01 1
+.names n255 n256 n257
+00 1
+.names n73 n257 n258
+00 1
+.names n253 n258 n259
+00 1
+.names instr[27] n75 n260
+01 1
+.names n75 n125 n261
+00 1
+.names n260 n261 n262
+00 1
+.names n73 n262 n263
+00 1
+.names n180 n215 n264
+10 1
+.names n216 n264 n265
+00 1
+.names n211 n265 n266
+00 1
+.names instr[1] n211 n267
+11 1
+.names n266 n267 n268
+00 1
+.names n207 n268 n269
+01 1
+.names n73 n269 n270
+10 1
+.names n263 n270 n271
+00 1
+.names instr[27] n75 n272
+11 1
+.names n256 n272 n273
+00 1
+.names n73 n273 n274
+00 1
+.names instr[1] instr[2] n275
+11 1
+.names instr[3] instr[5] n276
+01 1
+.names n275 n276 n277
+11 1
+.names n180 n185 n278
+00 1
+.names n276 n278 n279
+00 1
+.names n277 n279 n280
+00 1
+.names instr[4] n280 n281
+00 1
+.names n73 n281 n282
+11 1
+.names n274 n282 n283
+00 1
+.names instr[26] n64 n284
+11 1
+.names instr[16] n69 n285
+01 1
+.names n64 n285 n286
+00 1
+.names n284 n286 branchtype[0]
+00 1
+.names n64 n100 n288
+11 1
+.names instr[16] n69 n289
+11 1
+.names n64 n289 n290
+01 1
+.names n288 n290 n291
+00 1
+.names n64 n90 branchtype[2]
+10 1
+.names n128 controls[14] n293
+10 1
+.names instr[16] n293 n294
+10 1
+.names instr[11] n293 n295
+11 1
+.names n294 n295 n296
+00 1
+.names controls[5] n296 n297
+01 1
+.names instr[17] n293 n298
+10 1
+.names instr[12] n293 n299
+11 1
+.names n298 n299 n300
+00 1
+.names controls[5] n300 n301
+01 1
+.names instr[18] n293 n302
+10 1
+.names instr[13] n293 n303
+11 1
+.names n302 n303 n304
+00 1
+.names controls[5] n304 n305
+01 1
+.names instr[19] n293 n306
+10 1
+.names instr[14] n293 n307
+11 1
+.names n306 n307 n308
+00 1
+.names controls[5] n308 n309
+01 1
+.names instr[20] n293 n310
+10 1
+.names instr[15] n293 n311
+11 1
+.names n310 n311 n312
+00 1
+.names controls[5] n312 n313
+01 1
+.names n52 controls[0]
+0 1
+.names n112 controls[6]
+0 1
+.names n86 controls[11]
+0 1
+.names n128 controls[12]
+0 1
+.names n176 controls[13]
+0 1
+.names n204 alucontrol[0]
+0 1
+.names n241 alucontrol[1]
+0 1
+.names n259 alucontrol[2]
+0 1
+.names n271 alucontrol[3]
+0 1
+.names n283 alucontrol[4]
+0 1
+.names n291 branchtype[1]
+0 1
+.names n297 destreg[0]
+0 1
+.names n301 destreg[1]
+0 1
+.names n305 destreg[2]
+0 1
+.names n309 destreg[3]
+0 1
+.names n313 destreg[4]
+0 1
+
+.end

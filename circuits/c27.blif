@@ -1,0 +1,26 @@
+.model c27
+.inputs G0 G1 G2 G3 G5 G6 G7
+.outputs G17 G10 G11 G13
+.default_input_arrival 0.00 0.00 
+.default_output_required 0.00 0.00 
+.default_input_drive 0.00 0.00 
+.default_output_load 1.00 
+.default_max_input_load 999.00 
+.names G11 G17
+0 1
+.names G11 [134] G10
+00 1
+.names G5 [115] G11
+00 1
+.names G2 [5] G13
+00 1
+.names G1 G7 [5]
+00 1
+.names G0 [134]
+0 1
+.names G3 [5] [134] G6 [115]
+0-0- 1
+-00- 1
+0--0 1
+-0-0 1
+.end

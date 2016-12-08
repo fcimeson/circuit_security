@@ -1,0 +1,19 @@
+.model c17.blif
+.inputs C1 C2 C3 C6 C7
+.outputs C22 C23
+.names [0] C22
+0 1
+.names [146] C23
+0 1
+.names C3 C6 [148]
+0- 1
+-0 1
+.names [148] C2 C3 C1 [0]
+0-0- 1
+-00- 1
+0--0 1
+-0-0 1
+.names C2 C7 [148] [146]
+--0 1
+00- 1
+.end

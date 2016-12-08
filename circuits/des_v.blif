@@ -1,0 +1,8829 @@
+.model des
+.inputs clk reset load_i data_i[0] data_i[35] key_i[52] key_i[44] key_i[36] key_i[60] key_i[1] decrypt_i data_i[27] key_i[19] key_i[11] key_i[3] key_i[27] key_i[35] data_i[19] key_i[2] key_i[57] key_i[49] key_i[10] key_i[18] data_i[11] key_i[17] key_i[9] key_i[25] key_i[33] data_i[3] key_i[59] key_i[51] key_i[43] data_i[61] key_i[34] key_i[26] key_i[42] key_i[50] data_i[1] data_i[2] data_i[39] key_i[39] key_i[31] key_i[23] key_i[47] key_i[55] data_i[31] key_i[7] key_i[28] key_i[20] key_i[15] data_i[23] key_i[61] key_i[53] key_i[45] key_i[4] key_i[12] data_i[15] key_i[22] key_i[14] key_i[6] key_i[30] key_i[38] data_i[7] key_i[5] key_i[62] key_i[54] key_i[13] key_i[21] data_i[57] key_i[46] data_i[4] data_i[5] data_i[6] data_i[53] key_i[29] key_i[37] data_i[45] data_i[37] key_i[63] data_i[29] data_i[8] data_i[9] data_i[10] data_i[63] data_i[55] data_i[47] data_i[12] data_i[13] data_i[14] data_i[16] key_i[41] data_i[49] data_i[41] data_i[33] key_i[58] data_i[25] data_i[17] data_i[18] data_i[59] data_i[51] data_i[43] data_i[20] data_i[21] data_i[22] data_i[24] data_i[26] data_i[28] data_i[30] data_i[32] data_i[34] data_i[36] data_i[38] data_i[40] data_i[42] data_i[44] data_i[46] data_i[48] data_i[50] data_i[52] data_i[54] data_i[56] data_i[58] data_i[60] data_i[62]
+.outputs data_o[0] data_o[1] data_o[2] data_o[3] data_o[4] data_o[5] data_o[6] data_o[7] data_o[8] data_o[9] data_o[10] data_o[11] data_o[12] data_o[13] data_o[14] data_o[15] data_o[16] data_o[17] data_o[18] data_o[19] data_o[20] data_o[21] data_o[22] data_o[23] data_o[24] data_o[25] data_o[26] data_o[27] data_o[28] data_o[29] data_o[30] data_o[31] data_o[32] data_o[33] data_o[34] data_o[35] data_o[36] data_o[37] data_o[38] data_o[39] data_o[40] data_o[41] data_o[42] data_o[43] data_o[44] data_o[45] data_o[46] data_o[47] data_o[48] data_o[49] data_o[50] data_o[51] data_o[52] data_o[53] data_o[54] data_o[55] data_o[56] data_o[57] data_o[58] data_o[59] data_o[60] data_o[61] data_o[62] data_o[63] ready_o
+
+#data_o[0] = data_o[0]~reg0
+.latch g66 data_o[0] re clk 2
+
+#data_o[1] = data_o[1]~reg0
+.latch g67 data_o[1] re clk 2
+
+#data_o[2] = data_o[2]~reg0
+.latch g68 data_o[2] re clk 2
+
+#data_o[3] = data_o[3]~reg0
+.latch g69 data_o[3] re clk 2
+
+#data_o[4] = data_o[4]~reg0
+.latch g70 data_o[4] re clk 2
+
+#data_o[5] = data_o[5]~reg0
+.latch g71 data_o[5] re clk 2
+
+#data_o[6] = data_o[6]~reg0
+.latch g72 data_o[6] re clk 2
+
+#data_o[7] = data_o[7]~reg0
+.latch g73 data_o[7] re clk 2
+
+#data_o[8] = data_o[8]~reg0
+.latch g74 data_o[8] re clk 2
+
+#data_o[9] = data_o[9]~reg0
+.latch g75 data_o[9] re clk 2
+
+#data_o[10] = data_o[10]~reg0
+.latch g76 data_o[10] re clk 2
+
+#data_o[11] = data_o[11]~reg0
+.latch g77 data_o[11] re clk 2
+
+#data_o[12] = data_o[12]~reg0
+.latch g78 data_o[12] re clk 2
+
+#data_o[13] = data_o[13]~reg0
+.latch g79 data_o[13] re clk 2
+
+#data_o[14] = data_o[14]~reg0
+.latch g80 data_o[14] re clk 2
+
+#data_o[15] = data_o[15]~reg0
+.latch g81 data_o[15] re clk 2
+
+#data_o[16] = data_o[16]~reg0
+.latch g82 data_o[16] re clk 2
+
+#data_o[17] = data_o[17]~reg0
+.latch g83 data_o[17] re clk 2
+
+#data_o[18] = data_o[18]~reg0
+.latch g84 data_o[18] re clk 2
+
+#data_o[19] = data_o[19]~reg0
+.latch g85 data_o[19] re clk 2
+
+#data_o[20] = data_o[20]~reg0
+.latch g86 data_o[20] re clk 2
+
+#data_o[21] = data_o[21]~reg0
+.latch g87 data_o[21] re clk 2
+
+#data_o[22] = data_o[22]~reg0
+.latch g88 data_o[22] re clk 2
+
+#data_o[23] = data_o[23]~reg0
+.latch g89 data_o[23] re clk 2
+
+#data_o[24] = data_o[24]~reg0
+.latch g90 data_o[24] re clk 2
+
+#data_o[25] = data_o[25]~reg0
+.latch g91 data_o[25] re clk 2
+
+#data_o[26] = data_o[26]~reg0
+.latch g92 data_o[26] re clk 2
+
+#data_o[27] = data_o[27]~reg0
+.latch g93 data_o[27] re clk 2
+
+#data_o[28] = data_o[28]~reg0
+.latch g94 data_o[28] re clk 2
+
+#data_o[29] = data_o[29]~reg0
+.latch g95 data_o[29] re clk 2
+
+#data_o[30] = data_o[30]~reg0
+.latch g96 data_o[30] re clk 2
+
+#data_o[31] = data_o[31]~reg0
+.latch g97 data_o[31] re clk 2
+
+#data_o[32] = data_o[32]~reg0
+.latch g98 data_o[32] re clk 2
+
+#data_o[33] = data_o[33]~reg0
+.latch g99 data_o[33] re clk 2
+
+#data_o[34] = data_o[34]~reg0
+.latch g100 data_o[34] re clk 2
+
+#data_o[35] = data_o[35]~reg0
+.latch g101 data_o[35] re clk 2
+
+#data_o[36] = data_o[36]~reg0
+.latch g102 data_o[36] re clk 2
+
+#data_o[37] = data_o[37]~reg0
+.latch g103 data_o[37] re clk 2
+
+#data_o[38] = data_o[38]~reg0
+.latch g104 data_o[38] re clk 2
+
+#data_o[39] = data_o[39]~reg0
+.latch g105 data_o[39] re clk 2
+
+#data_o[40] = data_o[40]~reg0
+.latch g106 data_o[40] re clk 2
+
+#data_o[41] = data_o[41]~reg0
+.latch g107 data_o[41] re clk 2
+
+#data_o[42] = data_o[42]~reg0
+.latch g108 data_o[42] re clk 2
+
+#data_o[43] = data_o[43]~reg0
+.latch g109 data_o[43] re clk 2
+
+#data_o[44] = data_o[44]~reg0
+.latch g110 data_o[44] re clk 2
+
+#data_o[45] = data_o[45]~reg0
+.latch g111 data_o[45] re clk 2
+
+#data_o[46] = data_o[46]~reg0
+.latch g112 data_o[46] re clk 2
+
+#data_o[47] = data_o[47]~reg0
+.latch g113 data_o[47] re clk 2
+
+#data_o[48] = data_o[48]~reg0
+.latch g114 data_o[48] re clk 2
+
+#data_o[49] = data_o[49]~reg0
+.latch g115 data_o[49] re clk 2
+
+#data_o[50] = data_o[50]~reg0
+.latch g116 data_o[50] re clk 2
+
+#data_o[51] = data_o[51]~reg0
+.latch g117 data_o[51] re clk 2
+
+#data_o[52] = data_o[52]~reg0
+.latch g118 data_o[52] re clk 2
+
+#data_o[53] = data_o[53]~reg0
+.latch g119 data_o[53] re clk 2
+
+#data_o[54] = data_o[54]~reg0
+.latch g120 data_o[54] re clk 2
+
+#data_o[55] = data_o[55]~reg0
+.latch g121 data_o[55] re clk 2
+
+#data_o[56] = data_o[56]~reg0
+.latch g122 data_o[56] re clk 2
+
+#data_o[57] = data_o[57]~reg0
+.latch g123 data_o[57] re clk 2
+
+#data_o[58] = data_o[58]~reg0
+.latch g124 data_o[58] re clk 2
+
+#data_o[59] = data_o[59]~reg0
+.latch g125 data_o[59] re clk 2
+
+#data_o[60] = data_o[60]~reg0
+.latch g126 data_o[60] re clk 2
+
+#data_o[61] = data_o[61]~reg0
+.latch g127 data_o[61] re clk 2
+
+#data_o[62] = data_o[62]~reg0
+.latch g128 data_o[62] re clk 2
+
+#data_o[63] = data_o[63]~reg0
+.latch g129 data_o[63] re clk 2
+
+.names g135 g1075
+0 1
+
+#ready_o = ready_o~reg0
+.latch g1075 ready_o re clk 2
+
+#g66 = desround:rd1|R_o[7]
+.latch g180 g66 re clk 2
+
+#g67 = desround:rd1|L_o[7]
+.latch g511 g67 re clk 2
+
+#g68 = desround:rd1|R_o[15]
+.latch g219 g68 re clk 2
+
+#g69 = desround:rd1|L_o[15]
+.latch g472 g69 re clk 2
+
+#g70 = desround:rd1|R_o[23]
+.latch g221 g70 re clk 2
+
+#g71 = desround:rd1|L_o[23]
+.latch g649 g71 re clk 2
+
+#g72 = desround:rd1|R_o[31]
+.latch g238 g72 re clk 2
+
+#g73 = desround:rd1|L_o[31]
+.latch g610 g73 re clk 2
+
+#g74 = desround:rd1|R_o[6]
+.latch g240 g74 re clk 2
+
+#g75 = desround:rd1|L_o[6]
+.latch g715 g75 re clk 2
+
+#g76 = desround:rd1|R_o[14]
+.latch g254 g76 re clk 2
+
+#g77 = desround:rd1|L_o[14]
+.latch g451 g77 re clk 2
+
+#g78 = desround:rd1|R_o[22]
+.latch g256 g78 re clk 2
+
+#g79 = desround:rd1|L_o[22]
+.latch g769 g79 re clk 2
+
+#g80 = desround:rd1|R_o[30]
+.latch g258 g80 re clk 2
+
+#g81 = desround:rd1|L_o[30]
+.latch g586 g81 re clk 2
+
+#g82 = desround:rd1|R_o[5]
+.latch g274 g82 re clk 2
+
+#g83 = desround:rd1|L_o[5]
+.latch g832 g83 re clk 2
+
+#g84 = desround:rd1|R_o[13]
+.latch g288 g84 re clk 2
+
+#g85 = desround:rd1|L_o[13]
+.latch g427 g85 re clk 2
+
+#g86 = desround:rd1|R_o[21]
+.latch g290 g86 re clk 2
+
+#g87 = desround:rd1|L_o[21]
+.latch g886 g87 re clk 2
+
+#g88 = desround:rd1|R_o[29]
+.latch g292 g88 re clk 2
+
+#g89 = desround:rd1|L_o[29]
+.latch g562 g89 re clk 2
+
+#g90 = desround:rd1|R_o[4]
+.latch g294 g90 re clk 2
+
+#g91 = desround:rd1|L_o[4]
+.latch g823 g91 re clk 2
+
+#g92 = desround:rd1|R_o[12]
+.latch g296 g92 re clk 2
+
+#g93 = desround:rd1|L_o[12]
+.latch g403 g93 re clk 2
+
+#g94 = desround:rd1|R_o[20]
+.latch g310 g94 re clk 2
+
+#g95 = desround:rd1|L_o[20]
+.latch g703 g95 re clk 2
+
+#g96 = desround:rd1|R_o[28]
+.latch g312 g96 re clk 2
+
+#g97 = desround:rd1|L_o[28]
+.latch g541 g97 re clk 2
+
+#g98 = desround:rd1|R_o[3]
+.latch g314 g98 re clk 2
+
+#g99 = desround:rd1|L_o[3]
+.latch g811 g99 re clk 2
+
+#g100 = desround:rd1|R_o[11]
+.latch g316 g100 re clk 2
+
+#g101 = desround:rd1|L_o[11]
+.latch g376 g101 re clk 2
+
+#g102 = desround:rd1|R_o[19]
+.latch g318 g102 re clk 2
+
+#g103 = desround:rd1|L_o[19]
+.latch g691 g103 re clk 2
+
+#g104 = desround:rd1|R_o[27]
+.latch g320 g104 re clk 2
+
+#g105 = desround:rd1|L_o[27]
+.latch g517 g105 re clk 2
+
+#g106 = desround:rd1|R_o[2]
+.latch g334 g106 re clk 2
+
+#g107 = desround:rd1|L_o[2]
+.latch g802 g107 re clk 2
+
+#g108 = desround:rd1|R_o[10]
+.latch g336 g108 re clk 2
+
+#g109 = desround:rd1|L_o[10]
+.latch g862 g109 re clk 2
+
+#g110 = desround:rd1|R_o[18]
+.latch g338 g110 re clk 2
+
+#g111 = desround:rd1|L_o[18]
+.latch g682 g111 re clk 2
+
+#g112 = desround:rd1|R_o[26]
+.latch g340 g112 re clk 2
+
+#g113 = desround:rd1|L_o[26]
+.latch g745 g113 re clk 2
+
+#g114 = desround:rd1|R_o[1]
+.latch g342 g114 re clk 2
+
+#g115 = desround:rd1|L_o[1]
+.latch g793 g115 re clk 2
+
+#g116 = desround:rd1|R_o[9]
+.latch g344 g116 re clk 2
+
+#g117 = desround:rd1|L_o[9]
+.latch g853 g117 re clk 2
+
+#g118 = desround:rd1|R_o[17]
+.latch g346 g118 re clk 2
+
+#g119 = desround:rd1|L_o[17]
+.latch g667 g119 re clk 2
+
+#g120 = desround:rd1|R_o[25]
+.latch g348 g120 re clk 2
+
+#g121 = desround:rd1|L_o[25]
+.latch g736 g121 re clk 2
+
+#g122 = desround:rd1|R_o[0]
+.latch g350 g122 re clk 2
+
+#g123 = desround:rd1|L_o[0]
+.latch g634 g123 re clk 2
+
+#g124 = desround:rd1|R_o[8]
+.latch g352 g124 re clk 2
+
+#g125 = desround:rd1|L_o[8]
+.latch g844 g125 re clk 2
+
+#g126 = desround:rd1|R_o[16]
+.latch g354 g126 re clk 2
+
+#g127 = desround:rd1|L_o[16]
+.latch g490 g127 re clk 2
+
+#g128 = desround:rd1|R_o[24]
+.latch g356 g128 re clk 2
+
+#g129 = desround:rd1|L_o[24]
+.latch g727 g129 re clk 2
+
+#g130 = data_ready
+.latch g1024 g130 re clk 2
+
+#g131 = stage1_iter[3]
+.latch g358 g131 re clk 2
+
+#g132 = stage1_iter[2]
+.latch g360 g132 re clk 2
+
+#g133 = stage1_iter[1]
+.latch g361 g133 re clk 2
+
+#g131 = stage1_iter[3]
+#g132 = stage1_iter[2]
+#g133 = stage1_iter[1]
+#g1073 = stage1_iter[0]
+#g134 = Equal0~synth
+.names g131 g132 g133 g1073 g134
+0000 1
+
+#g130 = data_ready
+#g134 = Equal0~synth
+#g135 = next_ready_o~synth
+.names g130 load_i g134 g135
+101 0
+
+#g134 = Equal0~synth
+#g136 = stage1_L_i[14]~synth
+.names load_i g134 g136
+11 0
+
+#g137 = desround:rd1|Key_o[1]
+.latch g400 g137 re clk 2
+
+#g132 = stage1_iter[2]
+#g133 = stage1_iter[1]
+#g138 = desround:rd1|key_gen:kg1|new_key[5]~synth
+.names g132 g133 g138
+00 0
+
+#g132 = stage1_iter[2]
+#g1073 = stage1_iter[0]
+#g139 = desround:rd1|key_gen:kg1|new_key[5]~synth
+.names g132 g1073 g139
+11 1
+
+#g131 = stage1_iter[3]
+#g382 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g140 = desround:rd1|key_gen:kg1|new_key[5]~synth
+.names g131 g382 g140
+11 1
+
+#g141 = desround:rd1|Key_o[2]
+.latch g1030 g141 re clk 2
+
+#g142 = desround:rd1|Key_o[3]
+.latch g904 g142 re clk 2
+
+#g1073 = stage1_iter[0]
+#g379 = stage1_round_key_i[1]~synth
+#g138 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g140 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g385 = stage1_round_key_i[2]~synth
+#g388 = stage1_round_key_i[3]~synth
+#g143 = desround:rd1|key_gen:kg1|new_key[18]~synth
+.names g1073 g379 g138 g140 g385 g388 g143
+010000 1
+100010 1
+010010 1
+110010 1
+000110 1
+010110 1
+001110 1
+101110 1
+011110 1
+111110 1
+010001 1
+001001 1
+101001 1
+011001 1
+111001 1
+100101 1
+110101 1
+100011 1
+010011 1
+110011 1
+001011 1
+101011 1
+011011 1
+111011 1
+000111 1
+100111 1
+010111 1
+110111 1
+001111 1
+101111 1
+011111 1
+111111 1
+
+#g144 = desround:rd1|Key_o[0]
+.latch g916 g144 re clk 2
+
+#g145 = desround:rd1|Key_o[27]
+.latch g790 g145 re clk 2
+
+#g1073 = stage1_iter[0]
+#g133 = stage1_iter[1]
+#g132 = stage1_iter[2]
+#g131 = stage1_iter[3]
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+.names g1073 g133 g132 g131 g146
+0100 1
+1100 1
+0010 1
+1010 1
+0110 1
+1110 1
+1001 1
+0101 1
+1101 1
+0011 1
+1011 1
+0111 1
+
+#g376 = stage1_R_i[11]~synth
+#g400 = desround:rd1|key_gen:kg1|new_key[18]~synth
+#g147 = desround:rd1|s5_o[0]
+.names g376 g400 g147
+10 1
+01 1
+
+#g148 = desround:rd1|Key_o[9]
+.latch g424 g148 re clk 2
+
+#g149 = desround:rd1|Key_o[10]
+.latch g829 g149 re clk 2
+
+#g150 = desround:rd1|Key_o[11]
+.latch g859 g150 re clk 2
+
+#g1073 = stage1_iter[0]
+#g406 = stage1_round_key_i[9]~synth
+#g138 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g140 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g409 = stage1_round_key_i[10]~synth
+#g412 = stage1_round_key_i[11]~synth
+#g151 = desround:rd1|key_gen:kg1|new_key[19]~synth
+.names g1073 g406 g138 g140 g409 g412 g151
+010000 1
+100010 1
+010010 1
+110010 1
+000110 1
+010110 1
+001110 1
+101110 1
+011110 1
+111110 1
+010001 1
+001001 1
+101001 1
+011001 1
+111001 1
+100101 1
+110101 1
+100011 1
+010011 1
+110011 1
+001011 1
+101011 1
+011011 1
+111011 1
+000111 1
+100111 1
+010111 1
+110111 1
+001111 1
+101111 1
+011111 1
+111111 1
+
+#g152 = desround:rd1|Key_o[8]
+.latch g841 g152 re clk 2
+
+#g153 = desround:rd1|Key_o[7]
+.latch g928 g153 re clk 2
+
+#g403 = stage1_R_i[12]~synth
+#g424 = desround:rd1|key_gen:kg1|new_key[19]~synth
+#g154 = desround:rd1|s5_o[1]
+.names g403 g424 g154
+10 1
+01 1
+
+#g155 = desround:rd1|Key_o[19]
+.latch g448 g155 re clk 2
+
+#g156 = desround:rd1|Key_o[20]
+.latch g799 g156 re clk 2
+
+#g157 = desround:rd1|Key_o[21]
+.latch g1036 g157 re clk 2
+
+#g1073 = stage1_iter[0]
+#g430 = stage1_round_key_i[19]~synth
+#g138 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g140 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g433 = stage1_round_key_i[20]~synth
+#g436 = stage1_round_key_i[21]~synth
+#g158 = desround:rd1|key_gen:kg1|new_key[20]~synth
+.names g1073 g430 g138 g140 g433 g436 g158
+010000 1
+100010 1
+010010 1
+110010 1
+000110 1
+010110 1
+001110 1
+101110 1
+011110 1
+111110 1
+010001 1
+001001 1
+101001 1
+011001 1
+111001 1
+100101 1
+110101 1
+100011 1
+010011 1
+110011 1
+001011 1
+101011 1
+011011 1
+111011 1
+000111 1
+100111 1
+010111 1
+110111 1
+001111 1
+101111 1
+011111 1
+111111 1
+
+#g159 = desround:rd1|Key_o[18]
+.latch g1042 g159 re clk 2
+
+#g160 = desround:rd1|Key_o[17]
+.latch g922 g160 re clk 2
+
+#g427 = stage1_R_i[13]~synth
+#g448 = desround:rd1|key_gen:kg1|new_key[20]~synth
+#g161 = desround:rd1|s5_o[2]
+.names g427 g448 g161
+10 1
+01 1
+
+#g162 = desround:rd1|Key_o[25]
+.latch g469 g162 re clk 2
+
+#g163 = desround:rd1|Key_o[26]
+.latch g880 g163 re clk 2
+
+#g1073 = stage1_iter[0]
+#g454 = stage1_round_key_i[25]~synth
+#g138 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g140 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g457 = stage1_round_key_i[26]~synth
+#g394 = stage1_round_key_i[27]~synth
+#g164 = desround:rd1|key_gen:kg1|new_key[21]~synth
+.names g1073 g454 g138 g140 g457 g394 g164
+010000 1
+100010 1
+010010 1
+110010 1
+000110 1
+010110 1
+001110 1
+101110 1
+011110 1
+111110 1
+010001 1
+001001 1
+101001 1
+011001 1
+111001 1
+100101 1
+110101 1
+100011 1
+010011 1
+110011 1
+001011 1
+101011 1
+011011 1
+111011 1
+000111 1
+100111 1
+010111 1
+110111 1
+001111 1
+101111 1
+011111 1
+111111 1
+
+#g165 = desround:rd1|Key_o[24]
+.latch g784 g165 re clk 2
+
+#g166 = desround:rd1|Key_o[23]
+.latch g850 g166 re clk 2
+
+#g451 = stage1_R_i[14]~synth
+#g469 = desround:rd1|key_gen:kg1|new_key[21]~synth
+#g167 = desround:rd1|s5_o[3]
+.names g451 g469 g167
+10 1
+01 1
+
+#g168 = desround:rd1|Key_o[4]
+.latch g487 g168 re clk 2
+
+#g169 = desround:rd1|Key_o[5]
+.latch g868 g169 re clk 2
+
+#g170 = desround:rd1|Key_o[6]
+.latch g808 g170 re clk 2
+
+#g1073 = stage1_iter[0]
+#g475 = stage1_round_key_i[4]~synth
+#g138 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g140 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g478 = stage1_round_key_i[5]~synth
+#g481 = stage1_round_key_i[6]~synth
+#g171 = desround:rd1|key_gen:kg1|new_key[22]~synth
+.names g1073 g475 g138 g140 g478 g481 g171
+010000 1
+100010 1
+010010 1
+110010 1
+000110 1
+010110 1
+001110 1
+101110 1
+011110 1
+111110 1
+010001 1
+001001 1
+101001 1
+011001 1
+111001 1
+100101 1
+110101 1
+100011 1
+010011 1
+110011 1
+001011 1
+101011 1
+011011 1
+111011 1
+000111 1
+100111 1
+010111 1
+110111 1
+001111 1
+101111 1
+011111 1
+111111 1
+
+#g472 = stage1_R_i[15]~synth
+#g487 = desround:rd1|key_gen:kg1|new_key[22]~synth
+#g172 = desround:rd1|s5_o[4]
+.names g472 g487 g172
+10 1
+01 1
+
+#g173 = desround:rd1|Key_o[15]
+.latch g508 g173 re clk 2
+
+#g174 = desround:rd1|Key_o[16]
+.latch g874 g174 re clk 2
+
+#g1073 = stage1_iter[0]
+#g493 = stage1_round_key_i[15]~synth
+#g138 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g140 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g496 = stage1_round_key_i[16]~synth
+#g442 = stage1_round_key_i[17]~synth
+#g175 = desround:rd1|key_gen:kg1|new_key[23]~synth
+.names g1073 g493 g138 g140 g496 g442 g175
+010000 1
+100010 1
+010010 1
+110010 1
+000110 1
+010110 1
+001110 1
+101110 1
+011110 1
+111110 1
+010001 1
+001001 1
+101001 1
+011001 1
+111001 1
+100101 1
+110101 1
+100011 1
+010011 1
+110011 1
+001011 1
+101011 1
+011011 1
+111011 1
+000111 1
+100111 1
+010111 1
+110111 1
+001111 1
+101111 1
+011111 1
+111111 1
+
+#g176 = desround:rd1|Key_o[14]
+.latch g820 g176 re clk 2
+
+#g177 = desround:rd1|Key_o[13]
+.latch g1048 g177 re clk 2
+
+#g490 = stage1_R_i[16]~synth
+#g508 = desround:rd1|key_gen:kg1|new_key[23]~synth
+#g178 = desround:rd1|s5_o[5]
+.names g490 g508 g178
+10 1
+01 1
+
+#g147 = desround:rd1|s5_o[0]
+#g154 = desround:rd1|s5_o[1]
+#g161 = desround:rd1|s5_o[2]
+#g167 = desround:rd1|s5_o[3]
+#g172 = desround:rd1|s5_o[4]
+#g178 = desround:rd1|s5_o[5]
+#g179 = s5:sbox5|Ram0~synth
+.names g147 g154 g161 g167 g172 g178 g179
+000000 1
+100000 1
+110000 1
+101000 1
+000100 1
+010100 1
+110100 1
+001100 1
+011100 1
+001010 1
+101010 1
+011010 1
+111010 1
+100110 1
+001110 1
+111110 1
+100001 1
+010001 1
+011001 1
+111001 1
+000101 1
+110101 1
+001101 1
+101101 1
+000011 1
+100011 1
+110011 1
+000111 1
+100111 1
+010111 1
+011111 1
+111111 1
+
+#g179 = s5:sbox5|Ram0~synth
+#g373 = stage1_L_i[7]~synth
+#g180 = desround:rd1|next_R[7]
+.names g179 g373 g180
+10 1
+01 1
+
+#g181 = desround:rd1|Key_o[51]
+.latch g538 g181 re clk 2
+
+#g182 = desround:rd1|Key_o[52]
+.latch g970 g182 re clk 2
+
+#g183 = desround:rd1|Key_o[53]
+.latch g763 g183 re clk 2
+
+#g1073 = stage1_iter[0]
+#g520 = stage1_round_key_i[51]~synth
+#g138 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g140 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g523 = stage1_round_key_i[52]~synth
+#g526 = stage1_round_key_i[53]~synth
+#g184 = desround:rd1|key_gen:kg1|new_key[42]~synth
+.names g1073 g520 g138 g140 g523 g526 g184
+010000 1
+100010 1
+010010 1
+110010 1
+000110 1
+010110 1
+001110 1
+101110 1
+011110 1
+111110 1
+010001 1
+001001 1
+101001 1
+011001 1
+111001 1
+100101 1
+110101 1
+100011 1
+010011 1
+110011 1
+001011 1
+101011 1
+011011 1
+111011 1
+000111 1
+100111 1
+010111 1
+110111 1
+001111 1
+101111 1
+011111 1
+111111 1
+
+#g185 = desround:rd1|Key_o[50]
+.latch g742 g185 re clk 2
+
+#g186 = desround:rd1|Key_o[49]
+.latch g700 g186 re clk 2
+
+#g517 = stage1_R_i[27]~synth
+#g538 = desround:rd1|key_gen:kg1|new_key[42]~synth
+#g187 = desround:rd1|s1_o[0]
+.names g517 g538 g187
+10 1
+01 1
+
+#g188 = desround:rd1|Key_o[55]
+.latch g559 g188 re clk 2
+
+#g189 = desround:rd1|Key_o[28]
+.latch g757 g189 re clk 2
+
+#g190 = desround:rd1|Key_o[29]
+.latch g688 g190 re clk 2
+
+#g1073 = stage1_iter[0]
+#g544 = stage1_round_key_i[55]~synth
+#g138 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g140 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g547 = stage1_round_key_i[28]~synth
+#g550 = stage1_round_key_i[29]~synth
+#g191 = desround:rd1|key_gen:kg1|new_key[43]~synth
+.names g1073 g544 g138 g140 g547 g550 g191
+010000 1
+100010 1
+010010 1
+110010 1
+000110 1
+010110 1
+001110 1
+101110 1
+011110 1
+111110 1
+010001 1
+001001 1
+101001 1
+011001 1
+111001 1
+100101 1
+110101 1
+100011 1
+010011 1
+110011 1
+001011 1
+101011 1
+011011 1
+111011 1
+000111 1
+100111 1
+010111 1
+110111 1
+001111 1
+101111 1
+011111 1
+111111 1
+
+#g192 = desround:rd1|Key_o[54]
+.latch g658 g192 re clk 2
+
+#g541 = stage1_R_i[28]~synth
+#g559 = desround:rd1|key_gen:kg1|new_key[43]~synth
+#g193 = desround:rd1|s1_o[1]
+.names g541 g559 g193
+10 1
+01 1
+
+#g194 = desround:rd1|Key_o[32]
+.latch g583 g194 re clk 2
+
+#g195 = desround:rd1|Key_o[33]
+.latch g988 g195 re clk 2
+
+#g196 = desround:rd1|Key_o[34]
+.latch g1054 g196 re clk 2
+
+#g1073 = stage1_iter[0]
+#g565 = stage1_round_key_i[32]~synth
+#g138 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g140 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g568 = stage1_round_key_i[33]~synth
+#g571 = stage1_round_key_i[34]~synth
+#g197 = desround:rd1|key_gen:kg1|new_key[44]~synth
+.names g1073 g565 g138 g140 g568 g571 g197
+010000 1
+100010 1
+010010 1
+110010 1
+000110 1
+010110 1
+001110 1
+101110 1
+011110 1
+111110 1
+010001 1
+001001 1
+101001 1
+011001 1
+111001 1
+100101 1
+110101 1
+100011 1
+010011 1
+110011 1
+001011 1
+101011 1
+011011 1
+111011 1
+000111 1
+100111 1
+010111 1
+110111 1
+001111 1
+101111 1
+011111 1
+111111 1
+
+#g198 = desround:rd1|Key_o[31]
+.latch g1060 g198 re clk 2
+
+#g199 = desround:rd1|Key_o[30]
+.latch g964 g199 re clk 2
+
+#g562 = stage1_R_i[29]~synth
+#g583 = desround:rd1|key_gen:kg1|new_key[44]~synth
+#g200 = desround:rd1|s1_o[2]
+.names g562 g583 g200
+10 1
+01 1
+
+#g201 = desround:rd1|Key_o[45]
+.latch g607 g201 re clk 2
+
+#g202 = desround:rd1|Key_o[46]
+.latch g724 g202 re clk 2
+
+#g203 = desround:rd1|Key_o[47]
+.latch g1066 g203 re clk 2
+
+#g1073 = stage1_iter[0]
+#g589 = stage1_round_key_i[45]~synth
+#g138 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g140 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g592 = stage1_round_key_i[46]~synth
+#g595 = stage1_round_key_i[47]~synth
+#g204 = desround:rd1|key_gen:kg1|new_key[45]~synth
+.names g1073 g589 g138 g140 g592 g595 g204
+010000 1
+100010 1
+010010 1
+110010 1
+000110 1
+010110 1
+001110 1
+101110 1
+011110 1
+111110 1
+010001 1
+001001 1
+101001 1
+011001 1
+111001 1
+100101 1
+110101 1
+100011 1
+010011 1
+110011 1
+001011 1
+101011 1
+011011 1
+111011 1
+000111 1
+100111 1
+010111 1
+110111 1
+001111 1
+101111 1
+011111 1
+111111 1
+
+#g205 = desround:rd1|Key_o[44]
+.latch g976 g205 re clk 2
+
+#g206 = desround:rd1|Key_o[43]
+.latch g664 g206 re clk 2
+
+#g586 = stage1_R_i[30]~synth
+#g607 = desround:rd1|key_gen:kg1|new_key[45]~synth
+#g207 = desround:rd1|s1_o[3]
+.names g586 g607 g207
+10 1
+01 1
+
+#g208 = desround:rd1|Key_o[39]
+.latch g631 g208 re clk 2
+
+#g209 = desround:rd1|Key_o[40]
+.latch g709 g209 re clk 2
+
+#g210 = desround:rd1|Key_o[41]
+.latch g751 g210 re clk 2
+
+#g1073 = stage1_iter[0]
+#g613 = stage1_round_key_i[39]~synth
+#g138 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g140 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g616 = stage1_round_key_i[40]~synth
+#g619 = stage1_round_key_i[41]~synth
+#g211 = desround:rd1|key_gen:kg1|new_key[46]~synth
+.names g1073 g613 g138 g140 g616 g619 g211
+010000 1
+100010 1
+010010 1
+110010 1
+000110 1
+010110 1
+001110 1
+101110 1
+011110 1
+111110 1
+010001 1
+001001 1
+101001 1
+011001 1
+111001 1
+100101 1
+110101 1
+100011 1
+010011 1
+110011 1
+001011 1
+101011 1
+011011 1
+111011 1
+000111 1
+100111 1
+010111 1
+110111 1
+001111 1
+101111 1
+011111 1
+111111 1
+
+#g212 = desround:rd1|Key_o[38]
+.latch g1072 g212 re clk 2
+
+#g213 = desround:rd1|Key_o[37]
+.latch g982 g213 re clk 2
+
+#g610 = stage1_R_i[31]~synth
+#g631 = desround:rd1|key_gen:kg1|new_key[46]~synth
+#g214 = desround:rd1|s1_o[4]
+.names g610 g631 g214
+10 1
+01 1
+
+#g215 = desround:rd1|Key_o[42]
+.latch g643 g215 re clk 2
+
+#g1073 = stage1_iter[0]
+#g637 = stage1_round_key_i[42]~synth
+#g138 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g140 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g601 = stage1_round_key_i[43]~synth
+#g598 = stage1_round_key_i[44]~synth
+#g216 = desround:rd1|key_gen:kg1|new_key[47]~synth
+.names g1073 g637 g138 g140 g601 g598 g216
+010000 1
+100010 1
+010010 1
+110010 1
+000110 1
+010110 1
+001110 1
+101110 1
+011110 1
+111110 1
+010001 1
+001001 1
+101001 1
+011001 1
+111001 1
+100101 1
+110101 1
+100011 1
+010011 1
+110011 1
+001011 1
+101011 1
+011011 1
+111011 1
+000111 1
+100111 1
+010111 1
+110111 1
+001111 1
+101111 1
+011111 1
+111111 1
+
+#g634 = stage1_R_i[0]~synth
+#g643 = desround:rd1|key_gen:kg1|new_key[47]~synth
+#g217 = desround:rd1|s1_o[5]
+.names g634 g643 g217
+10 1
+01 1
+
+#g187 = desround:rd1|s1_o[0]
+#g193 = desround:rd1|s1_o[1]
+#g200 = desround:rd1|s1_o[2]
+#g207 = desround:rd1|s1_o[3]
+#g214 = desround:rd1|s1_o[4]
+#g217 = desround:rd1|s1_o[5]
+#g218 = s1:sbox1|Ram0~synth
+.names g187 g193 g200 g207 g214 g217 g218
+000000 1
+010000 1
+110000 1
+001000 1
+101000 1
+111000 1
+100100 1
+010100 1
+101100 1
+110010 1
+001010 1
+101010 1
+011010 1
+000110 1
+110110 1
+011110 1
+000001 1
+100001 1
+110001 1
+001001 1
+000101 1
+100101 1
+010101 1
+111101 1
+000011 1
+100011 1
+010011 1
+011011 1
+111011 1
+001111 1
+101111 1
+111111 1
+
+#g218 = s1:sbox1|Ram0~synth
+#g514 = stage1_L_i[15]~synth
+#g219 = desround:rd1|next_R[15]
+.names g218 g514 g219
+10 1
+01 1
+
+#g187 = desround:rd1|s1_o[0]
+#g193 = desround:rd1|s1_o[1]
+#g200 = desround:rd1|s1_o[2]
+#g207 = desround:rd1|s1_o[3]
+#g214 = desround:rd1|s1_o[4]
+#g217 = desround:rd1|s1_o[5]
+#g220 = s1:sbox1|Ram0~synth
+.names g187 g193 g200 g207 g214 g217 g220
+000000 1
+110000 1
+001000 1
+100100 1
+010100 1
+001100 1
+101100 1
+011100 1
+100010 1
+010010 1
+101010 1
+011010 1
+111010 1
+100110 1
+010110 1
+111110 1
+100001 1
+110001 1
+001001 1
+101001 1
+011001 1
+000101 1
+110101 1
+011101 1
+000011 1
+010011 1
+110011 1
+001011 1
+111011 1
+100111 1
+010111 1
+111111 1
+
+#g220 = s1:sbox1|Ram0~synth
+#g646 = stage1_L_i[23]~synth
+#g221 = desround:rd1|next_R[23]
+.names g220 g646 g221
+10 1
+01 1
+
+#g1073 = stage1_iter[0]
+#g553 = stage1_round_key_i[54]~synth
+#g138 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g140 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g544 = stage1_round_key_i[55]~synth
+#g547 = stage1_round_key_i[28]~synth
+#g222 = desround:rd1|key_gen:kg1|new_key[24]~synth
+.names g1073 g553 g138 g140 g544 g547 g222
+010000 1
+100010 1
+010010 1
+110010 1
+000110 1
+010110 1
+001110 1
+101110 1
+011110 1
+111110 1
+010001 1
+001001 1
+101001 1
+011001 1
+111001 1
+100101 1
+110101 1
+100011 1
+010011 1
+110011 1
+001011 1
+101011 1
+011011 1
+111011 1
+000111 1
+100111 1
+010111 1
+110111 1
+001111 1
+101111 1
+011111 1
+111111 1
+
+#g472 = stage1_R_i[15]~synth
+#g658 = desround:rd1|key_gen:kg1|new_key[24]~synth
+#g223 = desround:rd1|s4_o[0]
+.names g472 g658 g223
+10 1
+01 1
+
+#g1073 = stage1_iter[0]
+#g601 = stage1_round_key_i[43]~synth
+#g138 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g140 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g598 = stage1_round_key_i[44]~synth
+#g589 = stage1_round_key_i[45]~synth
+#g224 = desround:rd1|key_gen:kg1|new_key[25]~synth
+.names g1073 g601 g138 g140 g598 g589 g224
+010000 1
+100010 1
+010010 1
+110010 1
+000110 1
+010110 1
+001110 1
+101110 1
+011110 1
+111110 1
+010001 1
+001001 1
+101001 1
+011001 1
+111001 1
+100101 1
+110101 1
+100011 1
+010011 1
+110011 1
+001011 1
+101011 1
+011011 1
+111011 1
+000111 1
+100111 1
+010111 1
+110111 1
+001111 1
+101111 1
+011111 1
+111111 1
+
+#g490 = stage1_R_i[16]~synth
+#g664 = desround:rd1|key_gen:kg1|new_key[25]~synth
+#g225 = desround:rd1|s4_o[1]
+.names g490 g664 g225
+10 1
+01 1
+
+#g226 = desround:rd1|Key_o[36]
+.latch g679 g226 re clk 2
+
+#g1073 = stage1_iter[0]
+#g670 = stage1_round_key_i[36]~synth
+#g138 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g140 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g625 = stage1_round_key_i[37]~synth
+#g622 = stage1_round_key_i[38]~synth
+#g227 = desround:rd1|key_gen:kg1|new_key[26]~synth
+.names g1073 g670 g138 g140 g625 g622 g227
+010000 1
+100010 1
+010010 1
+110010 1
+000110 1
+010110 1
+001110 1
+101110 1
+011110 1
+111110 1
+010001 1
+001001 1
+101001 1
+011001 1
+111001 1
+100101 1
+110101 1
+100011 1
+010011 1
+110011 1
+001011 1
+101011 1
+011011 1
+111011 1
+000111 1
+100111 1
+010111 1
+110111 1
+001111 1
+101111 1
+011111 1
+111111 1
+
+#g228 = desround:rd1|Key_o[35]
+.latch g733 g228 re clk 2
+
+#g667 = stage1_R_i[17]~synth
+#g679 = desround:rd1|key_gen:kg1|new_key[26]~synth
+#g229 = desround:rd1|s4_o[2]
+.names g667 g679 g229
+10 1
+01 1
+
+#g1073 = stage1_iter[0]
+#g550 = stage1_round_key_i[29]~synth
+#g138 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g140 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g577 = stage1_round_key_i[30]~synth
+#g574 = stage1_round_key_i[31]~synth
+#g230 = desround:rd1|key_gen:kg1|new_key[27]~synth
+.names g1073 g550 g138 g140 g577 g574 g230
+010000 1
+100010 1
+010010 1
+110010 1
+000110 1
+010110 1
+001110 1
+101110 1
+011110 1
+111110 1
+010001 1
+001001 1
+101001 1
+011001 1
+111001 1
+100101 1
+110101 1
+100011 1
+010011 1
+110011 1
+001011 1
+101011 1
+011011 1
+111011 1
+000111 1
+100111 1
+010111 1
+110111 1
+001111 1
+101111 1
+011111 1
+111111 1
+
+#g682 = stage1_R_i[18]~synth
+#g688 = desround:rd1|key_gen:kg1|new_key[27]~synth
+#g231 = desround:rd1|s4_o[3]
+.names g682 g688 g231
+10 1
+01 1
+
+#g1073 = stage1_iter[0]
+#g532 = stage1_round_key_i[49]~synth
+#g138 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g140 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g529 = stage1_round_key_i[50]~synth
+#g520 = stage1_round_key_i[51]~synth
+#g232 = desround:rd1|key_gen:kg1|new_key[28]~synth
+.names g1073 g532 g138 g140 g529 g520 g232
+010000 1
+100010 1
+010010 1
+110010 1
+000110 1
+010110 1
+001110 1
+101110 1
+011110 1
+111110 1
+010001 1
+001001 1
+101001 1
+011001 1
+111001 1
+100101 1
+110101 1
+100011 1
+010011 1
+110011 1
+001011 1
+101011 1
+011011 1
+111011 1
+000111 1
+100111 1
+010111 1
+110111 1
+001111 1
+101111 1
+011111 1
+111111 1
+
+#g233 = desround:rd1|Key_o[48]
+.latch g958 g233 re clk 2
+
+#g691 = stage1_R_i[19]~synth
+#g700 = desround:rd1|key_gen:kg1|new_key[28]~synth
+#g234 = desround:rd1|s4_o[4]
+.names g691 g700 g234
+10 1
+01 1
+
+#g1073 = stage1_iter[0]
+#g616 = stage1_round_key_i[40]~synth
+#g138 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g140 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g619 = stage1_round_key_i[41]~synth
+#g637 = stage1_round_key_i[42]~synth
+#g235 = desround:rd1|key_gen:kg1|new_key[29]~synth
+.names g1073 g616 g138 g140 g619 g637 g235
+010000 1
+100010 1
+010010 1
+110010 1
+000110 1
+010110 1
+001110 1
+101110 1
+011110 1
+111110 1
+010001 1
+001001 1
+101001 1
+011001 1
+111001 1
+100101 1
+110101 1
+100011 1
+010011 1
+110011 1
+001011 1
+101011 1
+011011 1
+111011 1
+000111 1
+100111 1
+010111 1
+110111 1
+001111 1
+101111 1
+011111 1
+111111 1
+
+#g703 = stage1_R_i[20]~synth
+#g709 = desround:rd1|key_gen:kg1|new_key[29]~synth
+#g236 = desround:rd1|s4_o[5]
+.names g703 g709 g236
+10 1
+01 1
+
+#g223 = desround:rd1|s4_o[0]
+#g225 = desround:rd1|s4_o[1]
+#g229 = desround:rd1|s4_o[2]
+#g231 = desround:rd1|s4_o[3]
+#g234 = desround:rd1|s4_o[4]
+#g236 = desround:rd1|s4_o[5]
+#g237 = s4:sbox4|Ram0~synth
+.names g223 g225 g229 g231 g234 g236 g237
+000000 1
+100000 1
+010000 1
+101000 1
+011000 1
+111000 1
+110100 1
+001100 1
+111100 1
+000010 1
+110010 1
+011010 1
+000110 1
+100110 1
+011110 1
+111110 1
+100001 1
+110001 1
+001001 1
+010101 1
+110101 1
+001101 1
+101101 1
+011101 1
+000011 1
+100011 1
+010011 1
+001011 1
+101011 1
+111011 1
+000111 1
+110111 1
+
+#g237 = s4:sbox4|Ram0~synth
+#g652 = stage1_L_i[31]~synth
+#g238 = desround:rd1|next_R[31]
+.names g237 g652 g238
+10 1
+01 1
+
+#g223 = desround:rd1|s4_o[0]
+#g225 = desround:rd1|s4_o[1]
+#g229 = desround:rd1|s4_o[2]
+#g231 = desround:rd1|s4_o[3]
+#g234 = desround:rd1|s4_o[4]
+#g236 = desround:rd1|s4_o[5]
+#g239 = s4:sbox4|Ram0~synth
+.names g223 g225 g229 g231 g234 g236 g239
+100000 1
+010000 1
+110000 1
+001000 1
+101000 1
+110100 1
+001100 1
+011100 1
+001010 1
+111010 1
+000110 1
+010110 1
+110110 1
+101110 1
+011110 1
+111110 1
+000001 1
+110001 1
+001001 1
+000101 1
+100101 1
+010101 1
+101101 1
+011101 1
+111101 1
+000011 1
+100011 1
+011011 1
+111011 1
+100111 1
+001111 1
+111111 1
+
+#g239 = s4:sbox4|Ram0~synth
+#g712 = stage1_L_i[6]~synth
+#g240 = desround:rd1|next_R[6]
+.names g239 g712 g240
+10 1
+01 1
+
+#g1073 = stage1_iter[0]
+#g592 = stage1_round_key_i[46]~synth
+#g138 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g140 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g595 = stage1_round_key_i[47]~synth
+#g694 = stage1_round_key_i[48]~synth
+#g241 = desround:rd1|key_gen:kg1|new_key[36]~synth
+.names g1073 g592 g138 g140 g595 g694 g241
+010000 1
+100010 1
+010010 1
+110010 1
+000110 1
+010110 1
+001110 1
+101110 1
+011110 1
+111110 1
+010001 1
+001001 1
+101001 1
+011001 1
+111001 1
+100101 1
+110101 1
+100011 1
+010011 1
+110011 1
+001011 1
+101011 1
+011011 1
+111011 1
+000111 1
+100111 1
+010111 1
+110111 1
+001111 1
+101111 1
+011111 1
+111111 1
+
+#g649 = stage1_R_i[23]~synth
+#g724 = desround:rd1|key_gen:kg1|new_key[36]~synth
+#g242 = desround:rd1|s2_o[0]
+.names g649 g724 g242
+10 1
+01 1
+
+#g1073 = stage1_iter[0]
+#g673 = stage1_round_key_i[35]~synth
+#g138 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g140 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g670 = stage1_round_key_i[36]~synth
+#g625 = stage1_round_key_i[37]~synth
+#g243 = desround:rd1|key_gen:kg1|new_key[37]~synth
+.names g1073 g673 g138 g140 g670 g625 g243
+010000 1
+100010 1
+010010 1
+110010 1
+000110 1
+010110 1
+001110 1
+101110 1
+011110 1
+111110 1
+010001 1
+001001 1
+101001 1
+011001 1
+111001 1
+100101 1
+110101 1
+100011 1
+010011 1
+110011 1
+001011 1
+101011 1
+011011 1
+111011 1
+000111 1
+100111 1
+010111 1
+110111 1
+001111 1
+101111 1
+011111 1
+111111 1
+
+#g727 = stage1_R_i[24]~synth
+#g733 = desround:rd1|key_gen:kg1|new_key[37]~synth
+#g244 = desround:rd1|s2_o[1]
+.names g727 g733 g244
+10 1
+01 1
+
+#g1073 = stage1_iter[0]
+#g529 = stage1_round_key_i[50]~synth
+#g138 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g140 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g520 = stage1_round_key_i[51]~synth
+#g523 = stage1_round_key_i[52]~synth
+#g245 = desround:rd1|key_gen:kg1|new_key[38]~synth
+.names g1073 g529 g138 g140 g520 g523 g245
+010000 1
+100010 1
+010010 1
+110010 1
+000110 1
+010110 1
+001110 1
+101110 1
+011110 1
+111110 1
+010001 1
+001001 1
+101001 1
+011001 1
+111001 1
+100101 1
+110101 1
+100011 1
+010011 1
+110011 1
+001011 1
+101011 1
+011011 1
+111011 1
+000111 1
+100111 1
+010111 1
+110111 1
+001111 1
+101111 1
+011111 1
+111111 1
+
+#g736 = stage1_R_i[25]~synth
+#g742 = desround:rd1|key_gen:kg1|new_key[38]~synth
+#g246 = desround:rd1|s2_o[2]
+.names g736 g742 g246
+10 1
+01 1
+
+#g1073 = stage1_iter[0]
+#g619 = stage1_round_key_i[41]~synth
+#g138 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g140 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g637 = stage1_round_key_i[42]~synth
+#g601 = stage1_round_key_i[43]~synth
+#g247 = desround:rd1|key_gen:kg1|new_key[39]~synth
+.names g1073 g619 g138 g140 g637 g601 g247
+010000 1
+100010 1
+010010 1
+110010 1
+000110 1
+010110 1
+001110 1
+101110 1
+011110 1
+111110 1
+010001 1
+001001 1
+101001 1
+011001 1
+111001 1
+100101 1
+110101 1
+100011 1
+010011 1
+110011 1
+001011 1
+101011 1
+011011 1
+111011 1
+000111 1
+100111 1
+010111 1
+110111 1
+001111 1
+101111 1
+011111 1
+111111 1
+
+#g745 = stage1_R_i[26]~synth
+#g751 = desround:rd1|key_gen:kg1|new_key[39]~synth
+#g248 = desround:rd1|s2_o[3]
+.names g745 g751 g248
+10 1
+01 1
+
+#g1073 = stage1_iter[0]
+#g547 = stage1_round_key_i[28]~synth
+#g138 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g140 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g550 = stage1_round_key_i[29]~synth
+#g577 = stage1_round_key_i[30]~synth
+#g249 = desround:rd1|key_gen:kg1|new_key[40]~synth
+.names g1073 g547 g138 g140 g550 g577 g249
+010000 1
+100010 1
+010010 1
+110010 1
+000110 1
+010110 1
+001110 1
+101110 1
+011110 1
+111110 1
+010001 1
+001001 1
+101001 1
+011001 1
+111001 1
+100101 1
+110101 1
+100011 1
+010011 1
+110011 1
+001011 1
+101011 1
+011011 1
+111011 1
+000111 1
+100111 1
+010111 1
+110111 1
+001111 1
+101111 1
+011111 1
+111111 1
+
+#g517 = stage1_R_i[27]~synth
+#g757 = desround:rd1|key_gen:kg1|new_key[40]~synth
+#g250 = desround:rd1|s2_o[4]
+.names g517 g757 g250
+10 1
+01 1
+
+#g1073 = stage1_iter[0]
+#g526 = stage1_round_key_i[53]~synth
+#g138 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g140 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g553 = stage1_round_key_i[54]~synth
+#g544 = stage1_round_key_i[55]~synth
+#g251 = desround:rd1|key_gen:kg1|new_key[41]~synth
+.names g1073 g526 g138 g140 g553 g544 g251
+010000 1
+100010 1
+010010 1
+110010 1
+000110 1
+010110 1
+001110 1
+101110 1
+011110 1
+111110 1
+010001 1
+001001 1
+101001 1
+011001 1
+111001 1
+100101 1
+110101 1
+100011 1
+010011 1
+110011 1
+001011 1
+101011 1
+011011 1
+111011 1
+000111 1
+100111 1
+010111 1
+110111 1
+001111 1
+101111 1
+011111 1
+111111 1
+
+#g541 = stage1_R_i[28]~synth
+#g763 = desround:rd1|key_gen:kg1|new_key[41]~synth
+#g252 = desround:rd1|s2_o[5]
+.names g541 g763 g252
+10 1
+01 1
+
+#g242 = desround:rd1|s2_o[0]
+#g244 = desround:rd1|s2_o[1]
+#g246 = desround:rd1|s2_o[2]
+#g248 = desround:rd1|s2_o[3]
+#g250 = desround:rd1|s2_o[4]
+#g252 = desround:rd1|s2_o[5]
+#g253 = s2:sbox2|Ram0~synth
+.names g242 g244 g246 g248 g250 g252 g253
+000000 1
+100000 1
+010000 1
+110000 1
+111000 1
+100100 1
+010100 1
+001100 1
+000010 1
+010010 1
+101010 1
+011010 1
+110110 1
+001110 1
+101110 1
+111110 1
+100001 1
+001001 1
+011001 1
+111001 1
+100101 1
+110101 1
+001101 1
+011101 1
+000011 1
+100011 1
+101011 1
+000111 1
+010111 1
+110111 1
+011111 1
+111111 1
+
+#g253 = s2:sbox2|Ram0~synth
+#g718 = stage1_L_i[14]~synth
+#g254 = desround:rd1|next_R[14]
+.names g253 g718 g254
+10 1
+01 1
+
+#g223 = desround:rd1|s4_o[0]
+#g225 = desround:rd1|s4_o[1]
+#g229 = desround:rd1|s4_o[2]
+#g231 = desround:rd1|s4_o[3]
+#g234 = desround:rd1|s4_o[4]
+#g236 = desround:rd1|s4_o[5]
+#g255 = s4:sbox4|Ram0~synth
+.names g223 g225 g229 g231 g234 g236 g255
+000000 1
+001000 1
+101000 1
+011000 1
+100100 1
+010100 1
+110100 1
+011100 1
+111100 1
+010010 1
+110010 1
+101010 1
+000110 1
+110110 1
+101110 1
+011110 1
+000001 1
+100001 1
+010001 1
+110001 1
+111001 1
+100101 1
+010101 1
+001101 1
+000011 1
+001011 1
+011011 1
+111011 1
+010111 1
+110111 1
+101111 1
+111111 1
+
+#g255 = s4:sbox4|Ram0~synth
+#g766 = stage1_L_i[22]~synth
+#g256 = desround:rd1|next_R[22]
+.names g255 g766 g256
+10 1
+01 1
+
+#g242 = desround:rd1|s2_o[0]
+#g244 = desround:rd1|s2_o[1]
+#g246 = desround:rd1|s2_o[2]
+#g248 = desround:rd1|s2_o[3]
+#g250 = desround:rd1|s2_o[4]
+#g252 = desround:rd1|s2_o[5]
+#g257 = s2:sbox2|Ram0~synth
+.names g242 g244 g246 g248 g250 g252 g257
+000000 1
+100000 1
+011000 1
+111000 1
+000100 1
+100100 1
+010100 1
+110100 1
+001100 1
+111100 1
+010010 1
+001010 1
+111010 1
+100110 1
+101110 1
+011110 1
+010001 1
+001001 1
+101001 1
+011001 1
+000101 1
+100101 1
+110101 1
+111101 1
+100011 1
+110011 1
+101011 1
+011011 1
+010111 1
+001111 1
+101111 1
+011111 1
+
+#g257 = s2:sbox2|Ram0~synth
+#g772 = stage1_L_i[30]~synth
+#g258 = desround:rd1|next_R[30]
+.names g257 g772 g258
+10 1
+01 1
+
+#g1073 = stage1_iter[0]
+#g460 = stage1_round_key_i[24]~synth
+#g138 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g140 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g454 = stage1_round_key_i[25]~synth
+#g457 = stage1_round_key_i[26]~synth
+#g259 = desround:rd1|key_gen:kg1|new_key[0]~synth
+.names g1073 g460 g138 g140 g454 g457 g259
+010000 1
+100010 1
+010010 1
+110010 1
+000110 1
+010110 1
+001110 1
+101110 1
+011110 1
+111110 1
+010001 1
+001001 1
+101001 1
+011001 1
+111001 1
+100101 1
+110101 1
+100011 1
+010011 1
+110011 1
+001011 1
+101011 1
+011011 1
+111011 1
+000111 1
+100111 1
+010111 1
+110111 1
+001111 1
+101111 1
+011111 1
+111111 1
+
+#g260 = desround:rd1|Key_o[22]
+.latch g910 g260 re clk 2
+
+#g610 = stage1_R_i[31]~synth
+#g784 = desround:rd1|key_gen:kg1|new_key[0]~synth
+#g261 = desround:rd1|s8_o[0]
+.names g610 g784 g261
+10 1
+01 1
+
+#g1073 = stage1_iter[0]
+#g394 = stage1_round_key_i[27]~synth
+#g138 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g140 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g391 = stage1_round_key_i[0]~synth
+#g379 = stage1_round_key_i[1]~synth
+#g262 = desround:rd1|key_gen:kg1|new_key[1]~synth
+.names g1073 g394 g138 g140 g391 g379 g262
+010000 1
+100010 1
+010010 1
+110010 1
+000110 1
+010110 1
+001110 1
+101110 1
+011110 1
+111110 1
+010001 1
+001001 1
+101001 1
+011001 1
+111001 1
+100101 1
+110101 1
+100011 1
+010011 1
+110011 1
+001011 1
+101011 1
+011011 1
+111011 1
+000111 1
+100111 1
+010111 1
+110111 1
+001111 1
+101111 1
+011111 1
+111111 1
+
+#g634 = stage1_R_i[0]~synth
+#g790 = desround:rd1|key_gen:kg1|new_key[1]~synth
+#g263 = desround:rd1|s8_o[1]
+.names g634 g790 g263
+10 1
+01 1
+
+#g1073 = stage1_iter[0]
+#g433 = stage1_round_key_i[20]~synth
+#g138 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g140 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g436 = stage1_round_key_i[21]~synth
+#g778 = stage1_round_key_i[22]~synth
+#g264 = desround:rd1|key_gen:kg1|new_key[2]~synth
+.names g1073 g433 g138 g140 g436 g778 g264
+010000 1
+100010 1
+010010 1
+110010 1
+000110 1
+010110 1
+001110 1
+101110 1
+011110 1
+111110 1
+010001 1
+001001 1
+101001 1
+011001 1
+111001 1
+100101 1
+110101 1
+100011 1
+010011 1
+110011 1
+001011 1
+101011 1
+011011 1
+111011 1
+000111 1
+100111 1
+010111 1
+110111 1
+001111 1
+101111 1
+011111 1
+111111 1
+
+#g793 = stage1_R_i[1]~synth
+#g799 = desround:rd1|key_gen:kg1|new_key[2]~synth
+#g265 = desround:rd1|s8_o[2]
+.names g793 g799 g265
+10 1
+01 1
+
+#g1073 = stage1_iter[0]
+#g481 = stage1_round_key_i[6]~synth
+#g138 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g140 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g418 = stage1_round_key_i[7]~synth
+#g415 = stage1_round_key_i[8]~synth
+#g266 = desround:rd1|key_gen:kg1|new_key[3]~synth
+.names g1073 g481 g138 g140 g418 g415 g266
+010000 1
+100010 1
+010010 1
+110010 1
+000110 1
+010110 1
+001110 1
+101110 1
+011110 1
+111110 1
+010001 1
+001001 1
+101001 1
+011001 1
+111001 1
+100101 1
+110101 1
+100011 1
+010011 1
+110011 1
+001011 1
+101011 1
+011011 1
+111011 1
+000111 1
+100111 1
+010111 1
+110111 1
+001111 1
+101111 1
+011111 1
+111111 1
+
+#g802 = stage1_R_i[2]~synth
+#g808 = desround:rd1|key_gen:kg1|new_key[3]~synth
+#g267 = desround:rd1|s8_o[3]
+.names g802 g808 g267
+10 1
+01 1
+
+#g1073 = stage1_iter[0]
+#g499 = stage1_round_key_i[14]~synth
+#g138 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g140 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g493 = stage1_round_key_i[15]~synth
+#g496 = stage1_round_key_i[16]~synth
+#g268 = desround:rd1|key_gen:kg1|new_key[4]~synth
+.names g1073 g499 g138 g140 g493 g496 g268
+010000 1
+100010 1
+010010 1
+110010 1
+000110 1
+010110 1
+001110 1
+101110 1
+011110 1
+111110 1
+010001 1
+001001 1
+101001 1
+011001 1
+111001 1
+100101 1
+110101 1
+100011 1
+010011 1
+110011 1
+001011 1
+101011 1
+011011 1
+111011 1
+000111 1
+100111 1
+010111 1
+110111 1
+001111 1
+101111 1
+011111 1
+111111 1
+
+#g269 = desround:rd1|Key_o[12]
+.latch g934 g269 re clk 2
+
+#g811 = stage1_R_i[3]~synth
+#g820 = desround:rd1|key_gen:kg1|new_key[4]~synth
+#g270 = desround:rd1|s8_o[4]
+.names g811 g820 g270
+10 1
+01 1
+
+#g1073 = stage1_iter[0]
+#g409 = stage1_round_key_i[10]~synth
+#g138 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g140 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g412 = stage1_round_key_i[11]~synth
+#g814 = stage1_round_key_i[12]~synth
+#g271 = desround:rd1|key_gen:kg1|new_key[5]~synth
+.names g1073 g409 g138 g140 g412 g814 g271
+010000 1
+100010 1
+010010 1
+110010 1
+000110 1
+010110 1
+001110 1
+101110 1
+011110 1
+111110 1
+010001 1
+001001 1
+101001 1
+011001 1
+111001 1
+100101 1
+110101 1
+100011 1
+010011 1
+110011 1
+001011 1
+101011 1
+011011 1
+111011 1
+000111 1
+100111 1
+010111 1
+110111 1
+001111 1
+101111 1
+011111 1
+111111 1
+
+#g823 = stage1_R_i[4]~synth
+#g829 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g272 = desround:rd1|s8_o[5]
+.names g823 g829 g272
+10 1
+01 1
+
+#g261 = desround:rd1|s8_o[0]
+#g263 = desround:rd1|s8_o[1]
+#g265 = desround:rd1|s8_o[2]
+#g267 = desround:rd1|s8_o[3]
+#g270 = desround:rd1|s8_o[4]
+#g272 = desround:rd1|s8_o[5]
+#g273 = s8:sbox8|Ram0~synth
+.names g261 g263 g265 g267 g270 g272 g273
+000000 1
+110000 1
+101000 1
+011000 1
+000100 1
+010100 1
+101100 1
+111100 1
+100010 1
+110010 1
+101010 1
+011010 1
+000110 1
+110110 1
+001110 1
+011110 1
+000001 1
+001001 1
+101001 1
+111001 1
+100101 1
+010101 1
+001101 1
+111101 1
+100011 1
+010011 1
+110011 1
+011011 1
+000111 1
+110111 1
+001111 1
+101111 1
+
+#g273 = s8:sbox8|Ram0~synth
+#g775 = stage1_L_i[5]~synth
+#g274 = desround:rd1|next_R[5]
+.names g273 g775 g274
+10 1
+01 1
+
+#g1073 = stage1_iter[0]
+#g415 = stage1_round_key_i[8]~synth
+#g138 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g140 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g406 = stage1_round_key_i[9]~synth
+#g409 = stage1_round_key_i[10]~synth
+#g275 = desround:rd1|key_gen:kg1|new_key[12]~synth
+.names g1073 g415 g138 g140 g406 g409 g275
+010000 1
+100010 1
+010010 1
+110010 1
+000110 1
+010110 1
+001110 1
+101110 1
+011110 1
+111110 1
+010001 1
+001001 1
+101001 1
+011001 1
+111001 1
+100101 1
+110101 1
+100011 1
+010011 1
+110011 1
+001011 1
+101011 1
+011011 1
+111011 1
+000111 1
+100111 1
+010111 1
+110111 1
+001111 1
+101111 1
+011111 1
+111111 1
+
+#g511 = stage1_R_i[7]~synth
+#g841 = desround:rd1|key_gen:kg1|new_key[12]~synth
+#g276 = desround:rd1|s6_o[0]
+.names g511 g841 g276
+10 1
+01 1
+
+#g1073 = stage1_iter[0]
+#g463 = stage1_round_key_i[23]~synth
+#g138 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g140 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g460 = stage1_round_key_i[24]~synth
+#g454 = stage1_round_key_i[25]~synth
+#g277 = desround:rd1|key_gen:kg1|new_key[13]~synth
+.names g1073 g463 g138 g140 g460 g454 g277
+010000 1
+100010 1
+010010 1
+110010 1
+000110 1
+010110 1
+001110 1
+101110 1
+011110 1
+111110 1
+010001 1
+001001 1
+101001 1
+011001 1
+111001 1
+100101 1
+110101 1
+100011 1
+010011 1
+110011 1
+001011 1
+101011 1
+011011 1
+111011 1
+000111 1
+100111 1
+010111 1
+110111 1
+001111 1
+101111 1
+011111 1
+111111 1
+
+#g844 = stage1_R_i[8]~synth
+#g850 = desround:rd1|key_gen:kg1|new_key[13]~synth
+#g278 = desround:rd1|s6_o[1]
+.names g844 g850 g278
+10 1
+01 1
+
+#g1073 = stage1_iter[0]
+#g412 = stage1_round_key_i[11]~synth
+#g138 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g140 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g814 = stage1_round_key_i[12]~synth
+#g502 = stage1_round_key_i[13]~synth
+#g279 = desround:rd1|key_gen:kg1|new_key[14]~synth
+.names g1073 g412 g138 g140 g814 g502 g279
+010000 1
+100010 1
+010010 1
+110010 1
+000110 1
+010110 1
+001110 1
+101110 1
+011110 1
+111110 1
+010001 1
+001001 1
+101001 1
+011001 1
+111001 1
+100101 1
+110101 1
+100011 1
+010011 1
+110011 1
+001011 1
+101011 1
+011011 1
+111011 1
+000111 1
+100111 1
+010111 1
+110111 1
+001111 1
+101111 1
+011111 1
+111111 1
+
+#g853 = stage1_R_i[9]~synth
+#g859 = desround:rd1|key_gen:kg1|new_key[14]~synth
+#g280 = desround:rd1|s6_o[2]
+.names g853 g859 g280
+10 1
+01 1
+
+#g1073 = stage1_iter[0]
+#g478 = stage1_round_key_i[5]~synth
+#g138 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g140 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g481 = stage1_round_key_i[6]~synth
+#g418 = stage1_round_key_i[7]~synth
+#g281 = desround:rd1|key_gen:kg1|new_key[15]~synth
+.names g1073 g478 g138 g140 g481 g418 g281
+010000 1
+100010 1
+010010 1
+110010 1
+000110 1
+010110 1
+001110 1
+101110 1
+011110 1
+111110 1
+010001 1
+001001 1
+101001 1
+011001 1
+111001 1
+100101 1
+110101 1
+100011 1
+010011 1
+110011 1
+001011 1
+101011 1
+011011 1
+111011 1
+000111 1
+100111 1
+010111 1
+110111 1
+001111 1
+101111 1
+011111 1
+111111 1
+
+#g862 = stage1_R_i[10]~synth
+#g868 = desround:rd1|key_gen:kg1|new_key[15]~synth
+#g282 = desround:rd1|s6_o[3]
+.names g862 g868 g282
+10 1
+01 1
+
+#g1073 = stage1_iter[0]
+#g496 = stage1_round_key_i[16]~synth
+#g138 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g140 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g442 = stage1_round_key_i[17]~synth
+#g439 = stage1_round_key_i[18]~synth
+#g283 = desround:rd1|key_gen:kg1|new_key[16]~synth
+.names g1073 g496 g138 g140 g442 g439 g283
+010000 1
+100010 1
+010010 1
+110010 1
+000110 1
+010110 1
+001110 1
+101110 1
+011110 1
+111110 1
+010001 1
+001001 1
+101001 1
+011001 1
+111001 1
+100101 1
+110101 1
+100011 1
+010011 1
+110011 1
+001011 1
+101011 1
+011011 1
+111011 1
+000111 1
+100111 1
+010111 1
+110111 1
+001111 1
+101111 1
+011111 1
+111111 1
+
+#g376 = stage1_R_i[11]~synth
+#g874 = desround:rd1|key_gen:kg1|new_key[16]~synth
+#g284 = desround:rd1|s6_o[4]
+.names g376 g874 g284
+10 1
+01 1
+
+#g1073 = stage1_iter[0]
+#g457 = stage1_round_key_i[26]~synth
+#g138 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g140 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g394 = stage1_round_key_i[27]~synth
+#g391 = stage1_round_key_i[0]~synth
+#g285 = desround:rd1|key_gen:kg1|new_key[17]~synth
+.names g1073 g457 g138 g140 g394 g391 g285
+010000 1
+100010 1
+010010 1
+110010 1
+000110 1
+010110 1
+001110 1
+101110 1
+011110 1
+111110 1
+010001 1
+001001 1
+101001 1
+011001 1
+111001 1
+100101 1
+110101 1
+100011 1
+010011 1
+110011 1
+001011 1
+101011 1
+011011 1
+111011 1
+000111 1
+100111 1
+010111 1
+110111 1
+001111 1
+101111 1
+011111 1
+111111 1
+
+#g403 = stage1_R_i[12]~synth
+#g880 = desround:rd1|key_gen:kg1|new_key[17]~synth
+#g286 = desround:rd1|s6_o[5]
+.names g403 g880 g286
+10 1
+01 1
+
+#g276 = desround:rd1|s6_o[0]
+#g278 = desround:rd1|s6_o[1]
+#g280 = desround:rd1|s6_o[2]
+#g282 = desround:rd1|s6_o[3]
+#g284 = desround:rd1|s6_o[4]
+#g286 = desround:rd1|s6_o[5]
+#g287 = s6:sbox6|Ram0~synth
+.names g276 g278 g280 g282 g284 g286 g287
+010000 1
+110000 1
+011000 1
+000100 1
+100100 1
+101100 1
+111100 1
+010010 1
+110010 1
+001010 1
+101010 1
+010110 1
+110110 1
+001110 1
+101110 1
+011110 1
+000001 1
+110001 1
+001001 1
+011001 1
+100101 1
+110101 1
+101101 1
+011101 1
+000011 1
+100011 1
+101011 1
+111011 1
+000111 1
+010111 1
+001111 1
+111111 1
+
+#g287 = s6:sbox6|Ram0~synth
+#g835 = stage1_L_i[13]~synth
+#g288 = desround:rd1|next_R[13]
+.names g287 g835 g288
+10 1
+01 1
+
+#g276 = desround:rd1|s6_o[0]
+#g278 = desround:rd1|s6_o[1]
+#g280 = desround:rd1|s6_o[2]
+#g282 = desround:rd1|s6_o[3]
+#g284 = desround:rd1|s6_o[4]
+#g286 = desround:rd1|s6_o[5]
+#g289 = s6:sbox6|Ram0~synth
+.names g276 g278 g280 g282 g284 g286 g289
+100000 1
+110000 1
+001000 1
+011000 1
+111000 1
+100100 1
+010100 1
+001100 1
+100010 1
+001010 1
+111010 1
+000110 1
+010110 1
+110110 1
+101110 1
+011110 1
+010001 1
+110001 1
+001001 1
+101001 1
+000101 1
+101101 1
+011101 1
+111101 1
+000011 1
+100011 1
+110011 1
+011011 1
+111011 1
+100111 1
+001111 1
+011111 1
+
+#g289 = s6:sbox6|Ram0~synth
+#g883 = stage1_L_i[21]~synth
+#g290 = desround:rd1|next_R[21]
+.names g289 g883 g290
+10 1
+01 1
+
+#g147 = desround:rd1|s5_o[0]
+#g154 = desround:rd1|s5_o[1]
+#g161 = desround:rd1|s5_o[2]
+#g167 = desround:rd1|s5_o[3]
+#g172 = desround:rd1|s5_o[4]
+#g178 = desround:rd1|s5_o[5]
+#g291 = s5:sbox5|Ram0~synth
+.names g147 g154 g161 g167 g172 g178 g291
+110000 1
+011000 1
+000100 1
+110100 1
+001100 1
+101100 1
+111100 1
+100010 1
+010010 1
+001010 1
+101010 1
+011010 1
+000110 1
+100110 1
+110110 1
+011110 1
+100001 1
+001001 1
+011001 1
+111001 1
+100101 1
+010101 1
+001101 1
+111101 1
+000011 1
+010011 1
+110011 1
+011011 1
+111011 1
+010111 1
+101111 1
+111111 1
+
+#g291 = s5:sbox5|Ram0~synth
+#g889 = stage1_L_i[29]~synth
+#g292 = desround:rd1|next_R[29]
+.names g291 g889 g292
+10 1
+01 1
+
+#g242 = desround:rd1|s2_o[0]
+#g244 = desround:rd1|s2_o[1]
+#g246 = desround:rd1|s2_o[2]
+#g248 = desround:rd1|s2_o[3]
+#g250 = desround:rd1|s2_o[4]
+#g252 = desround:rd1|s2_o[5]
+#g293 = s2:sbox2|Ram0~synth
+.names g242 g244 g246 g248 g250 g252 g293
+000000 1
+110000 1
+101000 1
+011000 1
+111000 1
+000100 1
+100100 1
+011100 1
+111100 1
+100010 1
+010010 1
+011010 1
+000110 1
+100110 1
+001110 1
+111110 1
+100001 1
+010001 1
+001001 1
+010101 1
+110101 1
+001101 1
+101101 1
+000011 1
+110011 1
+001011 1
+101011 1
+011011 1
+111011 1
+110111 1
+101111 1
+011111 1
+
+#g293 = s2:sbox2|Ram0~synth
+#g892 = stage1_L_i[4]~synth
+#g294 = desround:rd1|next_R[4]
+.names g293 g892 g294
+10 1
+01 1
+
+#g223 = desround:rd1|s4_o[0]
+#g225 = desround:rd1|s4_o[1]
+#g229 = desround:rd1|s4_o[2]
+#g231 = desround:rd1|s4_o[3]
+#g234 = desround:rd1|s4_o[4]
+#g236 = desround:rd1|s4_o[5]
+#g295 = s4:sbox4|Ram0~synth
+.names g223 g225 g229 g231 g234 g236 g295
+000000 1
+100000 1
+010000 1
+001000 1
+111000 1
+100100 1
+010100 1
+110100 1
+100010 1
+110010 1
+011010 1
+111010 1
+010110 1
+001110 1
+101110 1
+011110 1
+010001 1
+110001 1
+111001 1
+000101 1
+001101 1
+101101 1
+011101 1
+000011 1
+110011 1
+101011 1
+011011 1
+000111 1
+100111 1
+110111 1
+011111 1
+111111 1
+
+#g295 = s4:sbox4|Ram0~synth
+#g895 = stage1_L_i[12]~synth
+#g296 = desround:rd1|next_R[12]
+.names g295 g895 g296
+10 1
+01 1
+
+#g1073 = stage1_iter[0]
+#g388 = stage1_round_key_i[3]~synth
+#g138 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g140 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g475 = stage1_round_key_i[4]~synth
+#g478 = stage1_round_key_i[5]~synth
+#g297 = desround:rd1|key_gen:kg1|new_key[6]~synth
+.names g1073 g388 g138 g140 g475 g478 g297
+010000 1
+100010 1
+010010 1
+110010 1
+000110 1
+010110 1
+001110 1
+101110 1
+011110 1
+111110 1
+010001 1
+001001 1
+101001 1
+011001 1
+111001 1
+100101 1
+110101 1
+100011 1
+010011 1
+110011 1
+001011 1
+101011 1
+011011 1
+111011 1
+000111 1
+100111 1
+010111 1
+110111 1
+001111 1
+101111 1
+011111 1
+111111 1
+
+#g811 = stage1_R_i[3]~synth
+#g904 = desround:rd1|key_gen:kg1|new_key[6]~synth
+#g298 = desround:rd1|s7_o[0]
+.names g811 g904 g298
+10 1
+01 1
+
+#g1073 = stage1_iter[0]
+#g778 = stage1_round_key_i[22]~synth
+#g138 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g140 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g463 = stage1_round_key_i[23]~synth
+#g460 = stage1_round_key_i[24]~synth
+#g299 = desround:rd1|key_gen:kg1|new_key[7]~synth
+.names g1073 g778 g138 g140 g463 g460 g299
+010000 1
+100010 1
+010010 1
+110010 1
+000110 1
+010110 1
+001110 1
+101110 1
+011110 1
+111110 1
+010001 1
+001001 1
+101001 1
+011001 1
+111001 1
+100101 1
+110101 1
+100011 1
+010011 1
+110011 1
+001011 1
+101011 1
+011011 1
+111011 1
+000111 1
+100111 1
+010111 1
+110111 1
+001111 1
+101111 1
+011111 1
+111111 1
+
+#g823 = stage1_R_i[4]~synth
+#g910 = desround:rd1|key_gen:kg1|new_key[7]~synth
+#g300 = desround:rd1|s7_o[1]
+.names g823 g910 g300
+10 1
+01 1
+
+#g1073 = stage1_iter[0]
+#g391 = stage1_round_key_i[0]~synth
+#g138 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g140 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g379 = stage1_round_key_i[1]~synth
+#g385 = stage1_round_key_i[2]~synth
+#g301 = desround:rd1|key_gen:kg1|new_key[8]~synth
+.names g1073 g391 g138 g140 g379 g385 g301
+010000 1
+100010 1
+010010 1
+110010 1
+000110 1
+010110 1
+001110 1
+101110 1
+011110 1
+111110 1
+010001 1
+001001 1
+101001 1
+011001 1
+111001 1
+100101 1
+110101 1
+100011 1
+010011 1
+110011 1
+001011 1
+101011 1
+011011 1
+111011 1
+000111 1
+100111 1
+010111 1
+110111 1
+001111 1
+101111 1
+011111 1
+111111 1
+
+#g832 = stage1_R_i[5]~synth
+#g916 = desround:rd1|key_gen:kg1|new_key[8]~synth
+#g302 = desround:rd1|s7_o[2]
+.names g832 g916 g302
+10 1
+01 1
+
+#g1073 = stage1_iter[0]
+#g442 = stage1_round_key_i[17]~synth
+#g138 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g140 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g439 = stage1_round_key_i[18]~synth
+#g430 = stage1_round_key_i[19]~synth
+#g303 = desround:rd1|key_gen:kg1|new_key[9]~synth
+.names g1073 g442 g138 g140 g439 g430 g303
+010000 1
+100010 1
+010010 1
+110010 1
+000110 1
+010110 1
+001110 1
+101110 1
+011110 1
+111110 1
+010001 1
+001001 1
+101001 1
+011001 1
+111001 1
+100101 1
+110101 1
+100011 1
+010011 1
+110011 1
+001011 1
+101011 1
+011011 1
+111011 1
+000111 1
+100111 1
+010111 1
+110111 1
+001111 1
+101111 1
+011111 1
+111111 1
+
+#g715 = stage1_R_i[6]~synth
+#g922 = desround:rd1|key_gen:kg1|new_key[9]~synth
+#g304 = desround:rd1|s7_o[3]
+.names g715 g922 g304
+10 1
+01 1
+
+#g1073 = stage1_iter[0]
+#g418 = stage1_round_key_i[7]~synth
+#g138 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g140 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g415 = stage1_round_key_i[8]~synth
+#g406 = stage1_round_key_i[9]~synth
+#g305 = desround:rd1|key_gen:kg1|new_key[10]~synth
+.names g1073 g418 g138 g140 g415 g406 g305
+010000 1
+100010 1
+010010 1
+110010 1
+000110 1
+010110 1
+001110 1
+101110 1
+011110 1
+111110 1
+010001 1
+001001 1
+101001 1
+011001 1
+111001 1
+100101 1
+110101 1
+100011 1
+010011 1
+110011 1
+001011 1
+101011 1
+011011 1
+111011 1
+000111 1
+100111 1
+010111 1
+110111 1
+001111 1
+101111 1
+011111 1
+111111 1
+
+#g511 = stage1_R_i[7]~synth
+#g928 = desround:rd1|key_gen:kg1|new_key[10]~synth
+#g306 = desround:rd1|s7_o[4]
+.names g511 g928 g306
+10 1
+01 1
+
+#g1073 = stage1_iter[0]
+#g814 = stage1_round_key_i[12]~synth
+#g138 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g140 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g502 = stage1_round_key_i[13]~synth
+#g499 = stage1_round_key_i[14]~synth
+#g307 = desround:rd1|key_gen:kg1|new_key[11]~synth
+.names g1073 g814 g138 g140 g502 g499 g307
+010000 1
+100010 1
+010010 1
+110010 1
+000110 1
+010110 1
+001110 1
+101110 1
+011110 1
+111110 1
+010001 1
+001001 1
+101001 1
+011001 1
+111001 1
+100101 1
+110101 1
+100011 1
+010011 1
+110011 1
+001011 1
+101011 1
+011011 1
+111011 1
+000111 1
+100111 1
+010111 1
+110111 1
+001111 1
+101111 1
+011111 1
+111111 1
+
+#g844 = stage1_R_i[8]~synth
+#g934 = desround:rd1|key_gen:kg1|new_key[11]~synth
+#g308 = desround:rd1|s7_o[5]
+.names g844 g934 g308
+10 1
+01 1
+
+#g298 = desround:rd1|s7_o[0]
+#g300 = desround:rd1|s7_o[1]
+#g302 = desround:rd1|s7_o[2]
+#g304 = desround:rd1|s7_o[3]
+#g306 = desround:rd1|s7_o[4]
+#g308 = desround:rd1|s7_o[5]
+#g309 = s7:sbox7|Ram0~synth
+.names g298 g300 g302 g304 g306 g308 g309
+000000 1
+100000 1
+011000 1
+111000 1
+000100 1
+100100 1
+011100 1
+100010 1
+010010 1
+101010 1
+011010 1
+111010 1
+000110 1
+110110 1
+001110 1
+111110 1
+100001 1
+010001 1
+101001 1
+011001 1
+000101 1
+110101 1
+001101 1
+011101 1
+111101 1
+010011 1
+110011 1
+001011 1
+111011 1
+100111 1
+010111 1
+111111 1
+
+#g309 = s7:sbox7|Ram0~synth
+#g898 = stage1_L_i[20]~synth
+#g310 = desround:rd1|next_R[20]
+.names g309 g898 g310
+10 1
+01 1
+
+#g276 = desround:rd1|s6_o[0]
+#g278 = desround:rd1|s6_o[1]
+#g280 = desround:rd1|s6_o[2]
+#g282 = desround:rd1|s6_o[3]
+#g284 = desround:rd1|s6_o[4]
+#g286 = desround:rd1|s6_o[5]
+#g311 = s6:sbox6|Ram0~synth
+.names g276 g278 g280 g282 g284 g286 g311
+000000 1
+100000 1
+110000 1
+001000 1
+011000 1
+000100 1
+110100 1
+101100 1
+011100 1
+010010 1
+101010 1
+111010 1
+000110 1
+110110 1
+011110 1
+111110 1
+000001 1
+010001 1
+001001 1
+111001 1
+100101 1
+010101 1
+001101 1
+101101 1
+111101 1
+100011 1
+110011 1
+011011 1
+010111 1
+001111 1
+101111 1
+111111 1
+
+#g311 = s6:sbox6|Ram0~synth
+#g937 = stage1_L_i[28]~synth
+#g312 = desround:rd1|next_R[28]
+.names g311 g937 g312
+10 1
+01 1
+
+#g276 = desround:rd1|s6_o[0]
+#g278 = desround:rd1|s6_o[1]
+#g280 = desround:rd1|s6_o[2]
+#g282 = desround:rd1|s6_o[3]
+#g284 = desround:rd1|s6_o[4]
+#g286 = desround:rd1|s6_o[5]
+#g313 = s6:sbox6|Ram0~synth
+.names g276 g278 g280 g282 g284 g286 g313
+000000 1
+110000 1
+101000 1
+011000 1
+100100 1
+110100 1
+001100 1
+111100 1
+100010 1
+010010 1
+101010 1
+011010 1
+111010 1
+000110 1
+010110 1
+001110 1
+100001 1
+010001 1
+001001 1
+011001 1
+111001 1
+110101 1
+001101 1
+101101 1
+000011 1
+110011 1
+001011 1
+111011 1
+100111 1
+010111 1
+011111 1
+111111 1
+
+#g313 = s6:sbox6|Ram0~synth
+#g940 = stage1_L_i[3]~synth
+#g314 = desround:rd1|next_R[3]
+.names g313 g940 g314
+10 1
+01 1
+
+#g261 = desround:rd1|s8_o[0]
+#g263 = desround:rd1|s8_o[1]
+#g265 = desround:rd1|s8_o[2]
+#g267 = desround:rd1|s8_o[3]
+#g270 = desround:rd1|s8_o[4]
+#g272 = desround:rd1|s8_o[5]
+#g315 = s8:sbox8|Ram0~synth
+.names g261 g263 g265 g267 g270 g272 g315
+000000 1
+100000 1
+110000 1
+101000 1
+010100 1
+110100 1
+001100 1
+101100 1
+011100 1
+010010 1
+110010 1
+001010 1
+111010 1
+000110 1
+101110 1
+011110 1
+000001 1
+010001 1
+110001 1
+011001 1
+111001 1
+000101 1
+111101 1
+100011 1
+101011 1
+011011 1
+000111 1
+100111 1
+010111 1
+110111 1
+001111 1
+111111 1
+
+#g315 = s8:sbox8|Ram0~synth
+#g943 = stage1_L_i[11]~synth
+#g316 = desround:rd1|next_R[11]
+.names g315 g943 g316
+10 1
+01 1
+
+#g242 = desround:rd1|s2_o[0]
+#g244 = desround:rd1|s2_o[1]
+#g246 = desround:rd1|s2_o[2]
+#g248 = desround:rd1|s2_o[3]
+#g250 = desround:rd1|s2_o[4]
+#g252 = desround:rd1|s2_o[5]
+#g317 = s2:sbox2|Ram0~synth
+.names g242 g244 g246 g248 g250 g252 g317
+000000 1
+110000 1
+001000 1
+011000 1
+100100 1
+010100 1
+101100 1
+111100 1
+000010 1
+100010 1
+011010 1
+111010 1
+000110 1
+110110 1
+101110 1
+011110 1
+100001 1
+010001 1
+110001 1
+101001 1
+011001 1
+000101 1
+110101 1
+001101 1
+100011 1
+010011 1
+001011 1
+111011 1
+000111 1
+101111 1
+011111 1
+111111 1
+
+#g317 = s2:sbox2|Ram0~synth
+#g946 = stage1_L_i[19]~synth
+#g318 = desround:rd1|next_R[19]
+.names g317 g946 g318
+10 1
+01 1
+
+#g261 = desround:rd1|s8_o[0]
+#g263 = desround:rd1|s8_o[1]
+#g265 = desround:rd1|s8_o[2]
+#g267 = desround:rd1|s8_o[3]
+#g270 = desround:rd1|s8_o[4]
+#g272 = desround:rd1|s8_o[5]
+#g319 = s8:sbox8|Ram0~synth
+.names g261 g263 g265 g267 g270 g272 g319
+000000 1
+110000 1
+001000 1
+101000 1
+111000 1
+100100 1
+010100 1
+001100 1
+000010 1
+100010 1
+010010 1
+011010 1
+111010 1
+110110 1
+001110 1
+101110 1
+010001 1
+101001 1
+000101 1
+010101 1
+110101 1
+001101 1
+101101 1
+111101 1
+100011 1
+110011 1
+001011 1
+101011 1
+011011 1
+000111 1
+011111 1
+111111 1
+
+#g319 = s8:sbox8|Ram0~synth
+#g949 = stage1_L_i[27]~synth
+#g320 = desround:rd1|next_R[27]
+.names g319 g949 g320
+10 1
+01 1
+
+#g1073 = stage1_iter[0]
+#g694 = stage1_round_key_i[48]~synth
+#g138 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g140 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g532 = stage1_round_key_i[49]~synth
+#g529 = stage1_round_key_i[50]~synth
+#g321 = desround:rd1|key_gen:kg1|new_key[30]~synth
+.names g1073 g694 g138 g140 g532 g529 g321
+010000 1
+100010 1
+010010 1
+110010 1
+000110 1
+010110 1
+001110 1
+101110 1
+011110 1
+111110 1
+010001 1
+001001 1
+101001 1
+011001 1
+111001 1
+100101 1
+110101 1
+100011 1
+010011 1
+110011 1
+001011 1
+101011 1
+011011 1
+111011 1
+000111 1
+100111 1
+010111 1
+110111 1
+001111 1
+101111 1
+011111 1
+111111 1
+
+#g691 = stage1_R_i[19]~synth
+#g958 = desround:rd1|key_gen:kg1|new_key[30]~synth
+#g322 = desround:rd1|s3_o[0]
+.names g691 g958 g322
+10 1
+01 1
+
+#g1073 = stage1_iter[0]
+#g577 = stage1_round_key_i[30]~synth
+#g138 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g140 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g574 = stage1_round_key_i[31]~synth
+#g565 = stage1_round_key_i[32]~synth
+#g323 = desround:rd1|key_gen:kg1|new_key[31]~synth
+.names g1073 g577 g138 g140 g574 g565 g323
+010000 1
+100010 1
+010010 1
+110010 1
+000110 1
+010110 1
+001110 1
+101110 1
+011110 1
+111110 1
+010001 1
+001001 1
+101001 1
+011001 1
+111001 1
+100101 1
+110101 1
+100011 1
+010011 1
+110011 1
+001011 1
+101011 1
+011011 1
+111011 1
+000111 1
+100111 1
+010111 1
+110111 1
+001111 1
+101111 1
+011111 1
+111111 1
+
+#g703 = stage1_R_i[20]~synth
+#g964 = desround:rd1|key_gen:kg1|new_key[31]~synth
+#g324 = desround:rd1|s3_o[1]
+.names g703 g964 g324
+10 1
+01 1
+
+#g1073 = stage1_iter[0]
+#g523 = stage1_round_key_i[52]~synth
+#g138 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g140 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g526 = stage1_round_key_i[53]~synth
+#g553 = stage1_round_key_i[54]~synth
+#g325 = desround:rd1|key_gen:kg1|new_key[32]~synth
+.names g1073 g523 g138 g140 g526 g553 g325
+010000 1
+100010 1
+010010 1
+110010 1
+000110 1
+010110 1
+001110 1
+101110 1
+011110 1
+111110 1
+010001 1
+001001 1
+101001 1
+011001 1
+111001 1
+100101 1
+110101 1
+100011 1
+010011 1
+110011 1
+001011 1
+101011 1
+011011 1
+111011 1
+000111 1
+100111 1
+010111 1
+110111 1
+001111 1
+101111 1
+011111 1
+111111 1
+
+#g886 = stage1_R_i[21]~synth
+#g970 = desround:rd1|key_gen:kg1|new_key[32]~synth
+#g326 = desround:rd1|s3_o[2]
+.names g886 g970 g326
+10 1
+01 1
+
+#g1073 = stage1_iter[0]
+#g598 = stage1_round_key_i[44]~synth
+#g138 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g140 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g589 = stage1_round_key_i[45]~synth
+#g592 = stage1_round_key_i[46]~synth
+#g327 = desround:rd1|key_gen:kg1|new_key[33]~synth
+.names g1073 g598 g138 g140 g589 g592 g327
+010000 1
+100010 1
+010010 1
+110010 1
+000110 1
+010110 1
+001110 1
+101110 1
+011110 1
+111110 1
+010001 1
+001001 1
+101001 1
+011001 1
+111001 1
+100101 1
+110101 1
+100011 1
+010011 1
+110011 1
+001011 1
+101011 1
+011011 1
+111011 1
+000111 1
+100111 1
+010111 1
+110111 1
+001111 1
+101111 1
+011111 1
+111111 1
+
+#g769 = stage1_R_i[22]~synth
+#g976 = desround:rd1|key_gen:kg1|new_key[33]~synth
+#g328 = desround:rd1|s3_o[3]
+.names g769 g976 g328
+10 1
+01 1
+
+#g1073 = stage1_iter[0]
+#g625 = stage1_round_key_i[37]~synth
+#g138 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g140 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g622 = stage1_round_key_i[38]~synth
+#g613 = stage1_round_key_i[39]~synth
+#g329 = desround:rd1|key_gen:kg1|new_key[34]~synth
+.names g1073 g625 g138 g140 g622 g613 g329
+010000 1
+100010 1
+010010 1
+110010 1
+000110 1
+010110 1
+001110 1
+101110 1
+011110 1
+111110 1
+010001 1
+001001 1
+101001 1
+011001 1
+111001 1
+100101 1
+110101 1
+100011 1
+010011 1
+110011 1
+001011 1
+101011 1
+011011 1
+111011 1
+000111 1
+100111 1
+010111 1
+110111 1
+001111 1
+101111 1
+011111 1
+111111 1
+
+#g649 = stage1_R_i[23]~synth
+#g982 = desround:rd1|key_gen:kg1|new_key[34]~synth
+#g330 = desround:rd1|s3_o[4]
+.names g649 g982 g330
+10 1
+01 1
+
+#g1073 = stage1_iter[0]
+#g568 = stage1_round_key_i[33]~synth
+#g138 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g140 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g571 = stage1_round_key_i[34]~synth
+#g673 = stage1_round_key_i[35]~synth
+#g331 = desround:rd1|key_gen:kg1|new_key[35]~synth
+.names g1073 g568 g138 g140 g571 g673 g331
+010000 1
+100010 1
+010010 1
+110010 1
+000110 1
+010110 1
+001110 1
+101110 1
+011110 1
+111110 1
+010001 1
+001001 1
+101001 1
+011001 1
+111001 1
+100101 1
+110101 1
+100011 1
+010011 1
+110011 1
+001011 1
+101011 1
+011011 1
+111011 1
+000111 1
+100111 1
+010111 1
+110111 1
+001111 1
+101111 1
+011111 1
+111111 1
+
+#g727 = stage1_R_i[24]~synth
+#g988 = desround:rd1|key_gen:kg1|new_key[35]~synth
+#g332 = desround:rd1|s3_o[5]
+.names g727 g988 g332
+10 1
+01 1
+
+#g322 = desround:rd1|s3_o[0]
+#g324 = desround:rd1|s3_o[1]
+#g326 = desround:rd1|s3_o[2]
+#g328 = desround:rd1|s3_o[3]
+#g330 = desround:rd1|s3_o[4]
+#g332 = desround:rd1|s3_o[5]
+#g333 = s3:sbox3|Ram0~synth
+.names g322 g324 g326 g328 g330 g332 g333
+000000 1
+110000 1
+011000 1
+000100 1
+100100 1
+010100 1
+001100 1
+101100 1
+111100 1
+100010 1
+011010 1
+111010 1
+000110 1
+110110 1
+001110 1
+101110 1
+010001 1
+110001 1
+100101 1
+010101 1
+001101 1
+111101 1
+000011 1
+110011 1
+001011 1
+101011 1
+111011 1
+100111 1
+010111 1
+001111 1
+101111 1
+011111 1
+
+#g333 = s3:sbox3|Ram0~synth
+#g952 = stage1_L_i[2]~synth
+#g334 = desround:rd1|next_R[2]
+.names g333 g952 g334
+10 1
+01 1
+
+#g298 = desround:rd1|s7_o[0]
+#g300 = desround:rd1|s7_o[1]
+#g302 = desround:rd1|s7_o[2]
+#g304 = desround:rd1|s7_o[3]
+#g306 = desround:rd1|s7_o[4]
+#g308 = desround:rd1|s7_o[5]
+#g335 = s7:sbox7|Ram0~synth
+.names g298 g300 g302 g304 g306 g308 g335
+010000 1
+001000 1
+101000 1
+011000 1
+111000 1
+000100 1
+111100 1
+000010 1
+100010 1
+110010 1
+011010 1
+100110 1
+010110 1
+110110 1
+001110 1
+111110 1
+100001 1
+110001 1
+001001 1
+010101 1
+001101 1
+101101 1
+011101 1
+111101 1
+000011 1
+010011 1
+001011 1
+111011 1
+100111 1
+110111 1
+101111 1
+011111 1
+
+#g335 = s7:sbox7|Ram0~synth
+#g991 = stage1_L_i[10]~synth
+#g336 = desround:rd1|next_R[10]
+.names g335 g991 g336
+10 1
+01 1
+
+#g147 = desround:rd1|s5_o[0]
+#g154 = desround:rd1|s5_o[1]
+#g161 = desround:rd1|s5_o[2]
+#g167 = desround:rd1|s5_o[3]
+#g172 = desround:rd1|s5_o[4]
+#g178 = desround:rd1|s5_o[5]
+#g337 = s5:sbox5|Ram0~synth
+.names g147 g154 g161 g167 g172 g178 g337
+100000 1
+010000 1
+001000 1
+111000 1
+000100 1
+100100 1
+110100 1
+101100 1
+011100 1
+100010 1
+010010 1
+101010 1
+011010 1
+000110 1
+001110 1
+111110 1
+000001 1
+101001 1
+111001 1
+010101 1
+110101 1
+001101 1
+111101 1
+000011 1
+100011 1
+110011 1
+001011 1
+011011 1
+000111 1
+110111 1
+101111 1
+011111 1
+
+#g337 = s5:sbox5|Ram0~synth
+#g994 = stage1_L_i[18]~synth
+#g338 = desround:rd1|next_R[18]
+.names g337 g994 g338
+10 1
+01 1
+
+#g322 = desround:rd1|s3_o[0]
+#g324 = desround:rd1|s3_o[1]
+#g326 = desround:rd1|s3_o[2]
+#g328 = desround:rd1|s3_o[3]
+#g330 = desround:rd1|s3_o[4]
+#g332 = desround:rd1|s3_o[5]
+#g339 = s3:sbox3|Ram0~synth
+.names g322 g324 g326 g328 g330 g332 g339
+100000 1
+110000 1
+001000 1
+111000 1
+100100 1
+010100 1
+001100 1
+011100 1
+000010 1
+010010 1
+101010 1
+011010 1
+000110 1
+110110 1
+101110 1
+111110 1
+000001 1
+100001 1
+101001 1
+011001 1
+010101 1
+110101 1
+001101 1
+111101 1
+000011 1
+010011 1
+110011 1
+111011 1
+000111 1
+100111 1
+110111 1
+011111 1
+
+#g339 = s3:sbox3|Ram0~synth
+#g997 = stage1_L_i[26]~synth
+#g340 = desround:rd1|next_R[26]
+.names g339 g997 g340
+10 1
+01 1
+
+#g187 = desround:rd1|s1_o[0]
+#g193 = desround:rd1|s1_o[1]
+#g200 = desround:rd1|s1_o[2]
+#g207 = desround:rd1|s1_o[3]
+#g214 = desround:rd1|s1_o[4]
+#g217 = desround:rd1|s1_o[5]
+#g341 = s1:sbox1|Ram0~synth
+.names g187 g193 g200 g207 g214 g217 g341
+110000 1
+001000 1
+101000 1
+011000 1
+010100 1
+001100 1
+101100 1
+111100 1
+000010 1
+111010 1
+000110 1
+100110 1
+010110 1
+110110 1
+101110 1
+011110 1
+100001 1
+010001 1
+000101 1
+110101 1
+101101 1
+011101 1
+111101 1
+000011 1
+100011 1
+110011 1
+001011 1
+101011 1
+011011 1
+000111 1
+001111 1
+111111 1
+
+#g341 = s1:sbox1|Ram0~synth
+#g1000 = stage1_L_i[1]~synth
+#g342 = desround:rd1|next_R[1]
+.names g341 g1000 g342
+10 1
+01 1
+
+#g187 = desround:rd1|s1_o[0]
+#g193 = desround:rd1|s1_o[1]
+#g200 = desround:rd1|s1_o[2]
+#g207 = desround:rd1|s1_o[3]
+#g214 = desround:rd1|s1_o[4]
+#g217 = desround:rd1|s1_o[5]
+#g343 = s1:sbox1|Ram0~synth
+.names g187 g193 g200 g207 g214 g217 g343
+000000 1
+110000 1
+101000 1
+000100 1
+100100 1
+010100 1
+110100 1
+001100 1
+000010 1
+100010 1
+010010 1
+110010 1
+001010 1
+111010 1
+101110 1
+011110 1
+100001 1
+001001 1
+111001 1
+010101 1
+001101 1
+011101 1
+111101 1
+000011 1
+110011 1
+101011 1
+011011 1
+111011 1
+000111 1
+100111 1
+010111 1
+101111 1
+
+#g343 = s1:sbox1|Ram0~synth
+#g1003 = stage1_L_i[9]~synth
+#g344 = desround:rd1|next_R[9]
+.names g343 g1003 g344
+10 1
+01 1
+
+#g261 = desround:rd1|s8_o[0]
+#g263 = desround:rd1|s8_o[1]
+#g265 = desround:rd1|s8_o[2]
+#g267 = desround:rd1|s8_o[3]
+#g270 = desround:rd1|s8_o[4]
+#g272 = desround:rd1|s8_o[5]
+#g345 = s8:sbox8|Ram0~synth
+.names g261 g263 g265 g267 g270 g272 g345
+010000 1
+110000 1
+000100 1
+100100 1
+010100 1
+110100 1
+001100 1
+101100 1
+000010 1
+001010 1
+101010 1
+011010 1
+111010 1
+110110 1
+011110 1
+111110 1
+000001 1
+100001 1
+010001 1
+101001 1
+111001 1
+110101 1
+001101 1
+011101 1
+100011 1
+010011 1
+001011 1
+000111 1
+100111 1
+010111 1
+101111 1
+111111 1
+
+#g345 = s8:sbox8|Ram0~synth
+#g1006 = stage1_L_i[17]~synth
+#g346 = desround:rd1|next_R[17]
+.names g345 g1006 g346
+10 1
+01 1
+
+#g298 = desround:rd1|s7_o[0]
+#g300 = desround:rd1|s7_o[1]
+#g302 = desround:rd1|s7_o[2]
+#g304 = desround:rd1|s7_o[3]
+#g306 = desround:rd1|s7_o[4]
+#g308 = desround:rd1|s7_o[5]
+#g347 = s7:sbox7|Ram0~synth
+.names g298 g300 g302 g304 g306 g308 g347
+100000 1
+010000 1
+101000 1
+111000 1
+000100 1
+110100 1
+101100 1
+011100 1
+000010 1
+110010 1
+001010 1
+101010 1
+011010 1
+000110 1
+110110 1
+011110 1
+000001 1
+110001 1
+001001 1
+101001 1
+011001 1
+100101 1
+010101 1
+001101 1
+111101 1
+100011 1
+010011 1
+110011 1
+111011 1
+010111 1
+001111 1
+101111 1
+
+#g347 = s7:sbox7|Ram0~synth
+#g1009 = stage1_L_i[25]~synth
+#g348 = desround:rd1|next_R[25]
+.names g347 g1009 g348
+10 1
+01 1
+
+#g298 = desround:rd1|s7_o[0]
+#g300 = desround:rd1|s7_o[1]
+#g302 = desround:rd1|s7_o[2]
+#g304 = desround:rd1|s7_o[3]
+#g306 = desround:rd1|s7_o[4]
+#g308 = desround:rd1|s7_o[5]
+#g349 = s7:sbox7|Ram0~synth
+.names g298 g300 g302 g304 g306 g308 g349
+100000 1
+010000 1
+101000 1
+011000 1
+000100 1
+110100 1
+001100 1
+011100 1
+111100 1
+100010 1
+010010 1
+001010 1
+111010 1
+010110 1
+110110 1
+101110 1
+110001 1
+001001 1
+101001 1
+011001 1
+111001 1
+000101 1
+101101 1
+011101 1
+000011 1
+100011 1
+010011 1
+011011 1
+111011 1
+100111 1
+001111 1
+111111 1
+
+#g349 = s7:sbox7|Ram0~synth
+#g1012 = stage1_L_i[0]~synth
+#g350 = desround:rd1|next_R[0]
+.names g349 g1012 g350
+10 1
+01 1
+
+#g322 = desround:rd1|s3_o[0]
+#g324 = desround:rd1|s3_o[1]
+#g326 = desround:rd1|s3_o[2]
+#g328 = desround:rd1|s3_o[3]
+#g330 = desround:rd1|s3_o[4]
+#g332 = desround:rd1|s3_o[5]
+#g351 = s3:sbox3|Ram0~synth
+.names g322 g324 g326 g328 g330 g332 g351
+000000 1
+100000 1
+001000 1
+011000 1
+111000 1
+001100 1
+111100 1
+010010 1
+110010 1
+001010 1
+111010 1
+000110 1
+100110 1
+110110 1
+101110 1
+011110 1
+000001 1
+110001 1
+101001 1
+011001 1
+000101 1
+010101 1
+110101 1
+101101 1
+000011 1
+110011 1
+101011 1
+011011 1
+100111 1
+010111 1
+001111 1
+111111 1
+
+#g351 = s3:sbox3|Ram0~synth
+#g1015 = stage1_L_i[8]~synth
+#g352 = desround:rd1|next_R[8]
+.names g351 g1015 g352
+10 1
+01 1
+
+#g322 = desround:rd1|s3_o[0]
+#g324 = desround:rd1|s3_o[1]
+#g326 = desround:rd1|s3_o[2]
+#g328 = desround:rd1|s3_o[3]
+#g330 = desround:rd1|s3_o[4]
+#g332 = desround:rd1|s3_o[5]
+#g353 = s3:sbox3|Ram0~synth
+.names g322 g324 g326 g328 g330 g332 g353
+100000 1
+110000 1
+011000 1
+000100 1
+110100 1
+001100 1
+101100 1
+011100 1
+010010 1
+001010 1
+101010 1
+011010 1
+111010 1
+100110 1
+010110 1
+101110 1
+000001 1
+010001 1
+001001 1
+101001 1
+100101 1
+010101 1
+111101 1
+100011 1
+110011 1
+101011 1
+011011 1
+000111 1
+110111 1
+001111 1
+011111 1
+111111 1
+
+#g353 = s3:sbox3|Ram0~synth
+#g1018 = stage1_L_i[16]~synth
+#g354 = desround:rd1|next_R[16]
+.names g353 g1018 g354
+10 1
+01 1
+
+#g147 = desround:rd1|s5_o[0]
+#g154 = desround:rd1|s5_o[1]
+#g161 = desround:rd1|s5_o[2]
+#g167 = desround:rd1|s5_o[3]
+#g172 = desround:rd1|s5_o[4]
+#g178 = desround:rd1|s5_o[5]
+#g355 = s5:sbox5|Ram0~synth
+.names g147 g154 g161 g167 g172 g178 g355
+100000 1
+010000 1
+110000 1
+111000 1
+010100 1
+001100 1
+101100 1
+000010 1
+101010 1
+011010 1
+111010 1
+000110 1
+110110 1
+001110 1
+101110 1
+011110 1
+100001 1
+110001 1
+101001 1
+011001 1
+000101 1
+010101 1
+110101 1
+011101 1
+111101 1
+000011 1
+010011 1
+110011 1
+001011 1
+111011 1
+100111 1
+011111 1
+
+#g355 = s5:sbox5|Ram0~synth
+#g1021 = stage1_L_i[24]~synth
+#g356 = desround:rd1|next_R[24]
+.names g355 g1021 g356
+10 1
+01 1
+
+#g132 = stage1_iter[2]
+#g133 = stage1_iter[1]
+#g1073 = stage1_iter[0]
+#g357 = stage1_iter[3]~synth
+.names g132 g133 g1073 g357
+111 1
+
+#g131 = stage1_iter[3]
+#g357 = stage1_iter[3]~synth
+#g358 = stage1_iter[3]~synth
+.names g131 g357 g358
+10 1
+01 1
+
+#g133 = stage1_iter[1]
+#g1073 = stage1_iter[0]
+#g359 = stage1_iter[2]~synth
+.names g133 g1073 g359
+11 1
+
+#g132 = stage1_iter[2]
+#g359 = stage1_iter[2]~synth
+#g360 = stage1_iter[2]~synth
+.names g132 g359 g360
+10 1
+01 1
+
+#g133 = stage1_iter[1]
+#g1073 = stage1_iter[0]
+#g361 = stage1_iter[1]~synth
+.names g133 g1073 g361
+10 1
+01 1
+
+#g131 = stage1_iter[3]
+#g132 = stage1_iter[2]
+#g133 = stage1_iter[1]
+#g362 = Selector3~synth
+.names load_i g131 g132 g133 g362
+0000 0
+
+#g1073 = stage1_iter[0]
+#g385 = stage1_round_key_i[2]~synth
+#g138 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g140 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g388 = stage1_round_key_i[3]~synth
+#g475 = stage1_round_key_i[4]~synth
+#g363 = desround:rd1|key_gen:kg1|non_perm_key[2]~synth
+.names g1073 g385 g138 g140 g388 g475 g363
+010000 1
+100010 1
+010010 1
+110010 1
+000110 1
+010110 1
+001110 1
+101110 1
+011110 1
+111110 1
+010001 1
+001001 1
+101001 1
+011001 1
+111001 1
+100101 1
+110101 1
+100011 1
+010011 1
+110011 1
+001011 1
+101011 1
+011011 1
+111011 1
+000111 1
+100111 1
+010111 1
+110111 1
+001111 1
+101111 1
+011111 1
+111111 1
+
+#g1073 = stage1_iter[0]
+#g436 = stage1_round_key_i[21]~synth
+#g138 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g140 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g778 = stage1_round_key_i[22]~synth
+#g463 = stage1_round_key_i[23]~synth
+#g364 = desround:rd1|key_gen:kg1|non_perm_key[21]~synth
+.names g1073 g436 g138 g140 g778 g463 g364
+010000 1
+100010 1
+010010 1
+110010 1
+000110 1
+010110 1
+001110 1
+101110 1
+011110 1
+111110 1
+010001 1
+001001 1
+101001 1
+011001 1
+111001 1
+100101 1
+110101 1
+100011 1
+010011 1
+110011 1
+001011 1
+101011 1
+011011 1
+111011 1
+000111 1
+100111 1
+010111 1
+110111 1
+001111 1
+101111 1
+011111 1
+111111 1
+
+#g1073 = stage1_iter[0]
+#g439 = stage1_round_key_i[18]~synth
+#g138 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g140 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g430 = stage1_round_key_i[19]~synth
+#g433 = stage1_round_key_i[20]~synth
+#g365 = desround:rd1|key_gen:kg1|non_perm_key[18]~synth
+.names g1073 g439 g138 g140 g430 g433 g365
+010000 1
+100010 1
+010010 1
+110010 1
+000110 1
+010110 1
+001110 1
+101110 1
+011110 1
+111110 1
+010001 1
+001001 1
+101001 1
+011001 1
+111001 1
+100101 1
+110101 1
+100011 1
+010011 1
+110011 1
+001011 1
+101011 1
+011011 1
+111011 1
+000111 1
+100111 1
+010111 1
+110111 1
+001111 1
+101111 1
+011111 1
+111111 1
+
+#g1073 = stage1_iter[0]
+#g502 = stage1_round_key_i[13]~synth
+#g138 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g140 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g499 = stage1_round_key_i[14]~synth
+#g493 = stage1_round_key_i[15]~synth
+#g366 = desround:rd1|key_gen:kg1|non_perm_key[13]~synth
+.names g1073 g502 g138 g140 g499 g493 g366
+010000 1
+100010 1
+010010 1
+110010 1
+000110 1
+010110 1
+001110 1
+101110 1
+011110 1
+111110 1
+010001 1
+001001 1
+101001 1
+011001 1
+111001 1
+100101 1
+110101 1
+100011 1
+010011 1
+110011 1
+001011 1
+101011 1
+011011 1
+111011 1
+000111 1
+100111 1
+010111 1
+110111 1
+001111 1
+101111 1
+011111 1
+111111 1
+
+#g1073 = stage1_iter[0]
+#g571 = stage1_round_key_i[34]~synth
+#g138 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g140 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g673 = stage1_round_key_i[35]~synth
+#g670 = stage1_round_key_i[36]~synth
+#g367 = desround:rd1|key_gen:kg1|non_perm_key[34]~synth
+.names g1073 g571 g138 g140 g673 g670 g367
+010000 1
+100010 1
+010010 1
+110010 1
+000110 1
+010110 1
+001110 1
+101110 1
+011110 1
+111110 1
+010001 1
+001001 1
+101001 1
+011001 1
+111001 1
+100101 1
+110101 1
+100011 1
+010011 1
+110011 1
+001011 1
+101011 1
+011011 1
+111011 1
+000111 1
+100111 1
+010111 1
+110111 1
+001111 1
+101111 1
+011111 1
+111111 1
+
+#g1073 = stage1_iter[0]
+#g574 = stage1_round_key_i[31]~synth
+#g138 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g140 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g565 = stage1_round_key_i[32]~synth
+#g568 = stage1_round_key_i[33]~synth
+#g368 = desround:rd1|key_gen:kg1|non_perm_key[31]~synth
+.names g1073 g574 g138 g140 g565 g568 g368
+010000 1
+100010 1
+010010 1
+110010 1
+000110 1
+010110 1
+001110 1
+101110 1
+011110 1
+111110 1
+010001 1
+001001 1
+101001 1
+011001 1
+111001 1
+100101 1
+110101 1
+100011 1
+010011 1
+110011 1
+001011 1
+101011 1
+011011 1
+111011 1
+000111 1
+100111 1
+010111 1
+110111 1
+001111 1
+101111 1
+011111 1
+111111 1
+
+#g1073 = stage1_iter[0]
+#g595 = stage1_round_key_i[47]~synth
+#g138 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g140 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g694 = stage1_round_key_i[48]~synth
+#g532 = stage1_round_key_i[49]~synth
+#g369 = desround:rd1|key_gen:kg1|non_perm_key[47]~synth
+.names g1073 g595 g138 g140 g694 g532 g369
+010000 1
+100010 1
+010010 1
+110010 1
+000110 1
+010110 1
+001110 1
+101110 1
+011110 1
+111110 1
+010001 1
+001001 1
+101001 1
+011001 1
+111001 1
+100101 1
+110101 1
+100011 1
+010011 1
+110011 1
+001011 1
+101011 1
+011011 1
+111011 1
+000111 1
+100111 1
+010111 1
+110111 1
+001111 1
+101111 1
+011111 1
+111111 1
+
+#g1073 = stage1_iter[0]
+#g622 = stage1_round_key_i[38]~synth
+#g138 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g140 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g613 = stage1_round_key_i[39]~synth
+#g616 = stage1_round_key_i[40]~synth
+#g370 = desround:rd1|key_gen:kg1|non_perm_key[38]~synth
+.names g1073 g622 g138 g140 g613 g616 g370
+010000 1
+100010 1
+010010 1
+110010 1
+000110 1
+010110 1
+001110 1
+101110 1
+011110 1
+111110 1
+010001 1
+001001 1
+101001 1
+011001 1
+111001 1
+100101 1
+110101 1
+100011 1
+010011 1
+110011 1
+001011 1
+101011 1
+011011 1
+111011 1
+000111 1
+100111 1
+010111 1
+110111 1
+001111 1
+101111 1
+011111 1
+111111 1
+
+#g67 = desround:rd1|L_o[7]
+#g136 = stage1_L_i[14]~synth
+#g371 = stage1_L_i[7]~synth
+.names g67 g136 g371
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g372 = stage1_L_i[7]~synth
+.names data_i[0] g136 g372
+10 1
+
+#g371 = stage1_L_i[7]~synth
+#g372 = stage1_L_i[7]~synth
+#g373 = stage1_L_i[7]~synth
+.names g371 g372 g373
+00 0
+
+#g100 = desround:rd1|R_o[11]
+#g136 = stage1_L_i[14]~synth
+#g374 = stage1_R_i[11]~synth
+.names g100 g136 g374
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g375 = stage1_R_i[11]~synth
+.names g136 data_i[35] g375
+01 1
+
+#g374 = stage1_R_i[11]~synth
+#g375 = stage1_R_i[11]~synth
+#g376 = stage1_R_i[11]~synth
+.names g374 g375 g376
+00 0
+
+#g136 = stage1_L_i[14]~synth
+#g137 = desround:rd1|Key_o[1]
+#g377 = stage1_round_key_i[1]~synth
+.names g136 g137 g377
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g378 = stage1_round_key_i[1]~synth
+.names g136 key_i[52] g378
+01 1
+
+#g377 = stage1_round_key_i[1]~synth
+#g378 = stage1_round_key_i[1]~synth
+#g379 = stage1_round_key_i[1]~synth
+.names g377 g378 g379
+00 0
+
+#g133 = stage1_iter[1]
+#g139 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g380 = desround:rd1|key_gen:kg1|new_key[5]~synth
+.names g133 g139 g380
+11 1
+
+#g132 = stage1_iter[2]
+#g133 = stage1_iter[1]
+#g381 = desround:rd1|key_gen:kg1|new_key[5]~synth
+.names g132 g133 g381
+00 1
+
+#g380 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g381 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g382 = desround:rd1|key_gen:kg1|new_key[5]~synth
+.names g380 g381 g382
+00 0
+
+#g136 = stage1_L_i[14]~synth
+#g141 = desround:rd1|Key_o[2]
+#g383 = stage1_round_key_i[2]~synth
+.names g136 g141 g383
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g384 = stage1_round_key_i[2]~synth
+.names g136 key_i[44] g384
+01 1
+
+#g383 = stage1_round_key_i[2]~synth
+#g384 = stage1_round_key_i[2]~synth
+#g385 = stage1_round_key_i[2]~synth
+.names g383 g384 g385
+00 0
+
+#g136 = stage1_L_i[14]~synth
+#g142 = desround:rd1|Key_o[3]
+#g386 = stage1_round_key_i[3]~synth
+.names g136 g142 g386
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g387 = stage1_round_key_i[3]~synth
+.names g136 key_i[36] g387
+01 1
+
+#g386 = stage1_round_key_i[3]~synth
+#g387 = stage1_round_key_i[3]~synth
+#g388 = stage1_round_key_i[3]~synth
+.names g386 g387 g388
+00 0
+
+#g136 = stage1_L_i[14]~synth
+#g144 = desround:rd1|Key_o[0]
+#g389 = stage1_round_key_i[0]~synth
+.names g136 g144 g389
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g390 = stage1_round_key_i[0]~synth
+.names g136 key_i[60] g390
+01 1
+
+#g389 = stage1_round_key_i[0]~synth
+#g390 = stage1_round_key_i[0]~synth
+#g391 = stage1_round_key_i[0]~synth
+.names g389 g390 g391
+00 0
+
+#g136 = stage1_L_i[14]~synth
+#g145 = desround:rd1|Key_o[27]
+#g392 = stage1_round_key_i[27]~synth
+.names g136 g145 g392
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g393 = stage1_round_key_i[27]~synth
+.names g136 key_i[1] g393
+01 1
+
+#g392 = stage1_round_key_i[27]~synth
+#g393 = stage1_round_key_i[27]~synth
+#g394 = stage1_round_key_i[27]~synth
+.names g392 g393 g394
+00 0
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g394 = stage1_round_key_i[27]~synth
+#g395 = desround:rd1|key_gen:kg1|new_key[18]~synth
+.names g146 g394 g395
+11 1
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g391 = stage1_round_key_i[0]~synth
+#g396 = desround:rd1|key_gen:kg1|new_key[18]~synth
+.names g146 g391 g396
+01 1
+
+#g395 = desround:rd1|key_gen:kg1|new_key[18]~synth
+#g396 = desround:rd1|key_gen:kg1|new_key[18]~synth
+#g397 = desround:rd1|key_gen:kg1|new_key[18]~synth
+.names g395 g396 g397
+00 0
+
+#g397 = desround:rd1|key_gen:kg1|new_key[18]~synth
+#g398 = desround:rd1|key_gen:kg1|new_key[18]~synth
+.names decrypt_i g397 g398
+01 1
+
+#g143 = desround:rd1|key_gen:kg1|new_key[18]~synth
+#g399 = desround:rd1|key_gen:kg1|new_key[18]~synth
+.names g143 decrypt_i g399
+11 1
+
+#g398 = desround:rd1|key_gen:kg1|new_key[18]~synth
+#g399 = desround:rd1|key_gen:kg1|new_key[18]~synth
+#g400 = desround:rd1|key_gen:kg1|new_key[18]~synth
+.names g398 g399 g400
+00 0
+
+#g92 = desround:rd1|R_o[12]
+#g136 = stage1_L_i[14]~synth
+#g401 = stage1_R_i[12]~synth
+.names g92 g136 g401
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g402 = stage1_R_i[12]~synth
+.names g136 data_i[27] g402
+01 1
+
+#g401 = stage1_R_i[12]~synth
+#g402 = stage1_R_i[12]~synth
+#g403 = stage1_R_i[12]~synth
+.names g401 g402 g403
+00 0
+
+#g136 = stage1_L_i[14]~synth
+#g148 = desround:rd1|Key_o[9]
+#g404 = stage1_round_key_i[9]~synth
+.names g136 g148 g404
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g405 = stage1_round_key_i[9]~synth
+.names g136 key_i[19] g405
+01 1
+
+#g404 = stage1_round_key_i[9]~synth
+#g405 = stage1_round_key_i[9]~synth
+#g406 = stage1_round_key_i[9]~synth
+.names g404 g405 g406
+00 0
+
+#g136 = stage1_L_i[14]~synth
+#g149 = desround:rd1|Key_o[10]
+#g407 = stage1_round_key_i[10]~synth
+.names g136 g149 g407
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g408 = stage1_round_key_i[10]~synth
+.names g136 key_i[11] g408
+01 1
+
+#g407 = stage1_round_key_i[10]~synth
+#g408 = stage1_round_key_i[10]~synth
+#g409 = stage1_round_key_i[10]~synth
+.names g407 g408 g409
+00 0
+
+#g136 = stage1_L_i[14]~synth
+#g150 = desround:rd1|Key_o[11]
+#g410 = stage1_round_key_i[11]~synth
+.names g136 g150 g410
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g411 = stage1_round_key_i[11]~synth
+.names g136 key_i[3] g411
+01 1
+
+#g410 = stage1_round_key_i[11]~synth
+#g411 = stage1_round_key_i[11]~synth
+#g412 = stage1_round_key_i[11]~synth
+.names g410 g411 g412
+00 0
+
+#g136 = stage1_L_i[14]~synth
+#g152 = desround:rd1|Key_o[8]
+#g413 = stage1_round_key_i[8]~synth
+.names g136 g152 g413
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g414 = stage1_round_key_i[8]~synth
+.names g136 key_i[27] g414
+01 1
+
+#g413 = stage1_round_key_i[8]~synth
+#g414 = stage1_round_key_i[8]~synth
+#g415 = stage1_round_key_i[8]~synth
+.names g413 g414 g415
+00 0
+
+#g136 = stage1_L_i[14]~synth
+#g153 = desround:rd1|Key_o[7]
+#g416 = stage1_round_key_i[7]~synth
+.names g136 g153 g416
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g417 = stage1_round_key_i[7]~synth
+.names g136 key_i[35] g417
+01 1
+
+#g416 = stage1_round_key_i[7]~synth
+#g417 = stage1_round_key_i[7]~synth
+#g418 = stage1_round_key_i[7]~synth
+.names g416 g417 g418
+00 0
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g418 = stage1_round_key_i[7]~synth
+#g419 = desround:rd1|key_gen:kg1|new_key[19]~synth
+.names g146 g418 g419
+11 1
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g415 = stage1_round_key_i[8]~synth
+#g420 = desround:rd1|key_gen:kg1|new_key[19]~synth
+.names g146 g415 g420
+01 1
+
+#g419 = desround:rd1|key_gen:kg1|new_key[19]~synth
+#g420 = desround:rd1|key_gen:kg1|new_key[19]~synth
+#g421 = desround:rd1|key_gen:kg1|new_key[19]~synth
+.names g419 g420 g421
+00 0
+
+#g421 = desround:rd1|key_gen:kg1|new_key[19]~synth
+#g422 = desround:rd1|key_gen:kg1|new_key[19]~synth
+.names decrypt_i g421 g422
+01 1
+
+#g151 = desround:rd1|key_gen:kg1|new_key[19]~synth
+#g423 = desround:rd1|key_gen:kg1|new_key[19]~synth
+.names decrypt_i g151 g423
+11 1
+
+#g422 = desround:rd1|key_gen:kg1|new_key[19]~synth
+#g423 = desround:rd1|key_gen:kg1|new_key[19]~synth
+#g424 = desround:rd1|key_gen:kg1|new_key[19]~synth
+.names g422 g423 g424
+00 0
+
+#g84 = desround:rd1|R_o[13]
+#g136 = stage1_L_i[14]~synth
+#g425 = stage1_R_i[13]~synth
+.names g84 g136 g425
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g426 = stage1_R_i[13]~synth
+.names g136 data_i[19] g426
+01 1
+
+#g425 = stage1_R_i[13]~synth
+#g426 = stage1_R_i[13]~synth
+#g427 = stage1_R_i[13]~synth
+.names g425 g426 g427
+00 0
+
+#g136 = stage1_L_i[14]~synth
+#g155 = desround:rd1|Key_o[19]
+#g428 = stage1_round_key_i[19]~synth
+.names g136 g155 g428
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g429 = stage1_round_key_i[19]~synth
+.names g136 key_i[2] g429
+01 1
+
+#g428 = stage1_round_key_i[19]~synth
+#g429 = stage1_round_key_i[19]~synth
+#g430 = stage1_round_key_i[19]~synth
+.names g428 g429 g430
+00 0
+
+#g136 = stage1_L_i[14]~synth
+#g156 = desround:rd1|Key_o[20]
+#g431 = stage1_round_key_i[20]~synth
+.names g136 g156 g431
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g432 = stage1_round_key_i[20]~synth
+.names g136 key_i[57] g432
+01 1
+
+#g431 = stage1_round_key_i[20]~synth
+#g432 = stage1_round_key_i[20]~synth
+#g433 = stage1_round_key_i[20]~synth
+.names g431 g432 g433
+00 0
+
+#g136 = stage1_L_i[14]~synth
+#g157 = desround:rd1|Key_o[21]
+#g434 = stage1_round_key_i[21]~synth
+.names g136 g157 g434
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g435 = stage1_round_key_i[21]~synth
+.names g136 key_i[49] g435
+01 1
+
+#g434 = stage1_round_key_i[21]~synth
+#g435 = stage1_round_key_i[21]~synth
+#g436 = stage1_round_key_i[21]~synth
+.names g434 g435 g436
+00 0
+
+#g136 = stage1_L_i[14]~synth
+#g159 = desround:rd1|Key_o[18]
+#g437 = stage1_round_key_i[18]~synth
+.names g136 g159 g437
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g438 = stage1_round_key_i[18]~synth
+.names g136 key_i[10] g438
+01 1
+
+#g437 = stage1_round_key_i[18]~synth
+#g438 = stage1_round_key_i[18]~synth
+#g439 = stage1_round_key_i[18]~synth
+.names g437 g438 g439
+00 0
+
+#g136 = stage1_L_i[14]~synth
+#g160 = desround:rd1|Key_o[17]
+#g440 = stage1_round_key_i[17]~synth
+.names g136 g160 g440
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g441 = stage1_round_key_i[17]~synth
+.names g136 key_i[18] g441
+01 1
+
+#g440 = stage1_round_key_i[17]~synth
+#g441 = stage1_round_key_i[17]~synth
+#g442 = stage1_round_key_i[17]~synth
+.names g440 g441 g442
+00 0
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g442 = stage1_round_key_i[17]~synth
+#g443 = desround:rd1|key_gen:kg1|new_key[20]~synth
+.names g146 g442 g443
+11 1
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g439 = stage1_round_key_i[18]~synth
+#g444 = desround:rd1|key_gen:kg1|new_key[20]~synth
+.names g146 g439 g444
+01 1
+
+#g443 = desround:rd1|key_gen:kg1|new_key[20]~synth
+#g444 = desround:rd1|key_gen:kg1|new_key[20]~synth
+#g445 = desround:rd1|key_gen:kg1|new_key[20]~synth
+.names g443 g444 g445
+00 0
+
+#g445 = desround:rd1|key_gen:kg1|new_key[20]~synth
+#g446 = desround:rd1|key_gen:kg1|new_key[20]~synth
+.names decrypt_i g445 g446
+01 1
+
+#g158 = desround:rd1|key_gen:kg1|new_key[20]~synth
+#g447 = desround:rd1|key_gen:kg1|new_key[20]~synth
+.names decrypt_i g158 g447
+11 1
+
+#g446 = desround:rd1|key_gen:kg1|new_key[20]~synth
+#g447 = desround:rd1|key_gen:kg1|new_key[20]~synth
+#g448 = desround:rd1|key_gen:kg1|new_key[20]~synth
+.names g446 g447 g448
+00 0
+
+#g76 = desround:rd1|R_o[14]
+#g136 = stage1_L_i[14]~synth
+#g449 = stage1_R_i[14]~synth
+.names g76 g136 g449
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g450 = stage1_R_i[14]~synth
+.names g136 data_i[11] g450
+01 1
+
+#g449 = stage1_R_i[14]~synth
+#g450 = stage1_R_i[14]~synth
+#g451 = stage1_R_i[14]~synth
+.names g449 g450 g451
+00 0
+
+#g136 = stage1_L_i[14]~synth
+#g162 = desround:rd1|Key_o[25]
+#g452 = stage1_round_key_i[25]~synth
+.names g136 g162 g452
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g453 = stage1_round_key_i[25]~synth
+.names g136 key_i[17] g453
+01 1
+
+#g452 = stage1_round_key_i[25]~synth
+#g453 = stage1_round_key_i[25]~synth
+#g454 = stage1_round_key_i[25]~synth
+.names g452 g453 g454
+00 0
+
+#g136 = stage1_L_i[14]~synth
+#g163 = desround:rd1|Key_o[26]
+#g455 = stage1_round_key_i[26]~synth
+.names g136 g163 g455
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g456 = stage1_round_key_i[26]~synth
+.names g136 key_i[9] g456
+01 1
+
+#g455 = stage1_round_key_i[26]~synth
+#g456 = stage1_round_key_i[26]~synth
+#g457 = stage1_round_key_i[26]~synth
+.names g455 g456 g457
+00 0
+
+#g136 = stage1_L_i[14]~synth
+#g165 = desround:rd1|Key_o[24]
+#g458 = stage1_round_key_i[24]~synth
+.names g136 g165 g458
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g459 = stage1_round_key_i[24]~synth
+.names g136 key_i[25] g459
+01 1
+
+#g458 = stage1_round_key_i[24]~synth
+#g459 = stage1_round_key_i[24]~synth
+#g460 = stage1_round_key_i[24]~synth
+.names g458 g459 g460
+00 0
+
+#g136 = stage1_L_i[14]~synth
+#g166 = desround:rd1|Key_o[23]
+#g461 = stage1_round_key_i[23]~synth
+.names g136 g166 g461
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g462 = stage1_round_key_i[23]~synth
+.names g136 key_i[33] g462
+01 1
+
+#g461 = stage1_round_key_i[23]~synth
+#g462 = stage1_round_key_i[23]~synth
+#g463 = stage1_round_key_i[23]~synth
+.names g461 g462 g463
+00 0
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g463 = stage1_round_key_i[23]~synth
+#g464 = desround:rd1|key_gen:kg1|new_key[21]~synth
+.names g146 g463 g464
+11 1
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g460 = stage1_round_key_i[24]~synth
+#g465 = desround:rd1|key_gen:kg1|new_key[21]~synth
+.names g146 g460 g465
+01 1
+
+#g464 = desround:rd1|key_gen:kg1|new_key[21]~synth
+#g465 = desround:rd1|key_gen:kg1|new_key[21]~synth
+#g466 = desround:rd1|key_gen:kg1|new_key[21]~synth
+.names g464 g465 g466
+00 0
+
+#g466 = desround:rd1|key_gen:kg1|new_key[21]~synth
+#g467 = desround:rd1|key_gen:kg1|new_key[21]~synth
+.names decrypt_i g466 g467
+01 1
+
+#g164 = desround:rd1|key_gen:kg1|new_key[21]~synth
+#g468 = desround:rd1|key_gen:kg1|new_key[21]~synth
+.names decrypt_i g164 g468
+11 1
+
+#g467 = desround:rd1|key_gen:kg1|new_key[21]~synth
+#g468 = desround:rd1|key_gen:kg1|new_key[21]~synth
+#g469 = desround:rd1|key_gen:kg1|new_key[21]~synth
+.names g467 g468 g469
+00 0
+
+#g68 = desround:rd1|R_o[15]
+#g136 = stage1_L_i[14]~synth
+#g470 = stage1_R_i[15]~synth
+.names g68 g136 g470
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g471 = stage1_R_i[15]~synth
+.names g136 data_i[3] g471
+01 1
+
+#g470 = stage1_R_i[15]~synth
+#g471 = stage1_R_i[15]~synth
+#g472 = stage1_R_i[15]~synth
+.names g470 g471 g472
+00 0
+
+#g136 = stage1_L_i[14]~synth
+#g168 = desround:rd1|Key_o[4]
+#g473 = stage1_round_key_i[4]~synth
+.names g136 g168 g473
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g474 = stage1_round_key_i[4]~synth
+.names g136 key_i[59] g474
+01 1
+
+#g473 = stage1_round_key_i[4]~synth
+#g474 = stage1_round_key_i[4]~synth
+#g475 = stage1_round_key_i[4]~synth
+.names g473 g474 g475
+00 0
+
+#g136 = stage1_L_i[14]~synth
+#g169 = desround:rd1|Key_o[5]
+#g476 = stage1_round_key_i[5]~synth
+.names g136 g169 g476
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g477 = stage1_round_key_i[5]~synth
+.names g136 key_i[51] g477
+01 1
+
+#g476 = stage1_round_key_i[5]~synth
+#g477 = stage1_round_key_i[5]~synth
+#g478 = stage1_round_key_i[5]~synth
+.names g476 g477 g478
+00 0
+
+#g136 = stage1_L_i[14]~synth
+#g170 = desround:rd1|Key_o[6]
+#g479 = stage1_round_key_i[6]~synth
+.names g136 g170 g479
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g480 = stage1_round_key_i[6]~synth
+.names g136 key_i[43] g480
+01 1
+
+#g479 = stage1_round_key_i[6]~synth
+#g480 = stage1_round_key_i[6]~synth
+#g481 = stage1_round_key_i[6]~synth
+.names g479 g480 g481
+00 0
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g385 = stage1_round_key_i[2]~synth
+#g482 = desround:rd1|key_gen:kg1|new_key[22]~synth
+.names g146 g385 g482
+11 1
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g388 = stage1_round_key_i[3]~synth
+#g483 = desround:rd1|key_gen:kg1|new_key[22]~synth
+.names g146 g388 g483
+01 1
+
+#g482 = desround:rd1|key_gen:kg1|new_key[22]~synth
+#g483 = desround:rd1|key_gen:kg1|new_key[22]~synth
+#g484 = desround:rd1|key_gen:kg1|new_key[22]~synth
+.names g482 g483 g484
+00 0
+
+#g484 = desround:rd1|key_gen:kg1|new_key[22]~synth
+#g485 = desround:rd1|key_gen:kg1|new_key[22]~synth
+.names decrypt_i g484 g485
+01 1
+
+#g171 = desround:rd1|key_gen:kg1|new_key[22]~synth
+#g486 = desround:rd1|key_gen:kg1|new_key[22]~synth
+.names decrypt_i g171 g486
+11 1
+
+#g485 = desround:rd1|key_gen:kg1|new_key[22]~synth
+#g486 = desround:rd1|key_gen:kg1|new_key[22]~synth
+#g487 = desround:rd1|key_gen:kg1|new_key[22]~synth
+.names g485 g486 g487
+00 0
+
+#g126 = desround:rd1|R_o[16]
+#g136 = stage1_L_i[14]~synth
+#g488 = stage1_R_i[16]~synth
+.names g126 g136 g488
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g489 = stage1_R_i[16]~synth
+.names g136 data_i[61] g489
+01 1
+
+#g488 = stage1_R_i[16]~synth
+#g489 = stage1_R_i[16]~synth
+#g490 = stage1_R_i[16]~synth
+.names g488 g489 g490
+00 0
+
+#g136 = stage1_L_i[14]~synth
+#g173 = desround:rd1|Key_o[15]
+#g491 = stage1_round_key_i[15]~synth
+.names g136 g173 g491
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g492 = stage1_round_key_i[15]~synth
+.names g136 key_i[34] g492
+01 1
+
+#g491 = stage1_round_key_i[15]~synth
+#g492 = stage1_round_key_i[15]~synth
+#g493 = stage1_round_key_i[15]~synth
+.names g491 g492 g493
+00 0
+
+#g136 = stage1_L_i[14]~synth
+#g174 = desround:rd1|Key_o[16]
+#g494 = stage1_round_key_i[16]~synth
+.names g136 g174 g494
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g495 = stage1_round_key_i[16]~synth
+.names g136 key_i[26] g495
+01 1
+
+#g494 = stage1_round_key_i[16]~synth
+#g495 = stage1_round_key_i[16]~synth
+#g496 = stage1_round_key_i[16]~synth
+.names g494 g495 g496
+00 0
+
+#g136 = stage1_L_i[14]~synth
+#g176 = desround:rd1|Key_o[14]
+#g497 = stage1_round_key_i[14]~synth
+.names g136 g176 g497
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g498 = stage1_round_key_i[14]~synth
+.names g136 key_i[42] g498
+01 1
+
+#g497 = stage1_round_key_i[14]~synth
+#g498 = stage1_round_key_i[14]~synth
+#g499 = stage1_round_key_i[14]~synth
+.names g497 g498 g499
+00 0
+
+#g136 = stage1_L_i[14]~synth
+#g177 = desround:rd1|Key_o[13]
+#g500 = stage1_round_key_i[13]~synth
+.names g136 g177 g500
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g501 = stage1_round_key_i[13]~synth
+.names g136 key_i[50] g501
+01 1
+
+#g500 = stage1_round_key_i[13]~synth
+#g501 = stage1_round_key_i[13]~synth
+#g502 = stage1_round_key_i[13]~synth
+.names g500 g501 g502
+00 0
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g502 = stage1_round_key_i[13]~synth
+#g503 = desround:rd1|key_gen:kg1|new_key[23]~synth
+.names g146 g502 g503
+11 1
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g499 = stage1_round_key_i[14]~synth
+#g504 = desround:rd1|key_gen:kg1|new_key[23]~synth
+.names g146 g499 g504
+01 1
+
+#g503 = desround:rd1|key_gen:kg1|new_key[23]~synth
+#g504 = desround:rd1|key_gen:kg1|new_key[23]~synth
+#g505 = desround:rd1|key_gen:kg1|new_key[23]~synth
+.names g503 g504 g505
+00 0
+
+#g505 = desround:rd1|key_gen:kg1|new_key[23]~synth
+#g506 = desround:rd1|key_gen:kg1|new_key[23]~synth
+.names decrypt_i g505 g506
+01 1
+
+#g175 = desround:rd1|key_gen:kg1|new_key[23]~synth
+#g507 = desround:rd1|key_gen:kg1|new_key[23]~synth
+.names decrypt_i g175 g507
+11 1
+
+#g506 = desround:rd1|key_gen:kg1|new_key[23]~synth
+#g507 = desround:rd1|key_gen:kg1|new_key[23]~synth
+#g508 = desround:rd1|key_gen:kg1|new_key[23]~synth
+.names g506 g507 g508
+00 0
+
+#g66 = desround:rd1|R_o[7]
+#g136 = stage1_L_i[14]~synth
+#g509 = stage1_R_i[7]~synth
+.names g66 g136 g509
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g510 = stage1_R_i[7]~synth
+.names g136 data_i[1] g510
+01 1
+
+#g509 = stage1_R_i[7]~synth
+#g510 = stage1_R_i[7]~synth
+#g511 = stage1_R_i[7]~synth
+.names g509 g510 g511
+00 0
+
+#g69 = desround:rd1|L_o[15]
+#g136 = stage1_L_i[14]~synth
+#g512 = stage1_L_i[15]~synth
+.names g69 g136 g512
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g513 = stage1_L_i[15]~synth
+.names g136 data_i[2] g513
+01 1
+
+#g512 = stage1_L_i[15]~synth
+#g513 = stage1_L_i[15]~synth
+#g514 = stage1_L_i[15]~synth
+.names g512 g513 g514
+00 0
+
+#g104 = desround:rd1|R_o[27]
+#g136 = stage1_L_i[14]~synth
+#g515 = stage1_R_i[27]~synth
+.names g104 g136 g515
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g516 = stage1_R_i[27]~synth
+.names g136 data_i[39] g516
+01 1
+
+#g515 = stage1_R_i[27]~synth
+#g516 = stage1_R_i[27]~synth
+#g517 = stage1_R_i[27]~synth
+.names g515 g516 g517
+00 0
+
+#g136 = stage1_L_i[14]~synth
+#g181 = desround:rd1|Key_o[51]
+#g518 = stage1_round_key_i[51]~synth
+.names g136 g181 g518
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g519 = stage1_round_key_i[51]~synth
+.names g136 key_i[39] g519
+01 1
+
+#g518 = stage1_round_key_i[51]~synth
+#g519 = stage1_round_key_i[51]~synth
+#g520 = stage1_round_key_i[51]~synth
+.names g518 g519 g520
+00 0
+
+#g136 = stage1_L_i[14]~synth
+#g182 = desround:rd1|Key_o[52]
+#g521 = stage1_round_key_i[52]~synth
+.names g136 g182 g521
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g522 = stage1_round_key_i[52]~synth
+.names g136 key_i[31] g522
+01 1
+
+#g521 = stage1_round_key_i[52]~synth
+#g522 = stage1_round_key_i[52]~synth
+#g523 = stage1_round_key_i[52]~synth
+.names g521 g522 g523
+00 0
+
+#g136 = stage1_L_i[14]~synth
+#g183 = desround:rd1|Key_o[53]
+#g524 = stage1_round_key_i[53]~synth
+.names g136 g183 g524
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g525 = stage1_round_key_i[53]~synth
+.names g136 key_i[23] g525
+01 1
+
+#g524 = stage1_round_key_i[53]~synth
+#g525 = stage1_round_key_i[53]~synth
+#g526 = stage1_round_key_i[53]~synth
+.names g524 g525 g526
+00 0
+
+#g136 = stage1_L_i[14]~synth
+#g185 = desround:rd1|Key_o[50]
+#g527 = stage1_round_key_i[50]~synth
+.names g136 g185 g527
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g528 = stage1_round_key_i[50]~synth
+.names g136 key_i[47] g528
+01 1
+
+#g527 = stage1_round_key_i[50]~synth
+#g528 = stage1_round_key_i[50]~synth
+#g529 = stage1_round_key_i[50]~synth
+.names g527 g528 g529
+00 0
+
+#g136 = stage1_L_i[14]~synth
+#g186 = desround:rd1|Key_o[49]
+#g530 = stage1_round_key_i[49]~synth
+.names g136 g186 g530
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g531 = stage1_round_key_i[49]~synth
+.names g136 key_i[55] g531
+01 1
+
+#g530 = stage1_round_key_i[49]~synth
+#g531 = stage1_round_key_i[49]~synth
+#g532 = stage1_round_key_i[49]~synth
+.names g530 g531 g532
+00 0
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g532 = stage1_round_key_i[49]~synth
+#g533 = desround:rd1|key_gen:kg1|new_key[42]~synth
+.names g146 g532 g533
+11 1
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g529 = stage1_round_key_i[50]~synth
+#g534 = desround:rd1|key_gen:kg1|new_key[42]~synth
+.names g146 g529 g534
+01 1
+
+#g533 = desround:rd1|key_gen:kg1|new_key[42]~synth
+#g534 = desround:rd1|key_gen:kg1|new_key[42]~synth
+#g535 = desround:rd1|key_gen:kg1|new_key[42]~synth
+.names g533 g534 g535
+00 0
+
+#g535 = desround:rd1|key_gen:kg1|new_key[42]~synth
+#g536 = desround:rd1|key_gen:kg1|new_key[42]~synth
+.names decrypt_i g535 g536
+01 1
+
+#g184 = desround:rd1|key_gen:kg1|new_key[42]~synth
+#g537 = desround:rd1|key_gen:kg1|new_key[42]~synth
+.names decrypt_i g184 g537
+11 1
+
+#g536 = desround:rd1|key_gen:kg1|new_key[42]~synth
+#g537 = desround:rd1|key_gen:kg1|new_key[42]~synth
+#g538 = desround:rd1|key_gen:kg1|new_key[42]~synth
+.names g536 g537 g538
+00 0
+
+#g96 = desround:rd1|R_o[28]
+#g136 = stage1_L_i[14]~synth
+#g539 = stage1_R_i[28]~synth
+.names g96 g136 g539
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g540 = stage1_R_i[28]~synth
+.names g136 data_i[31] g540
+01 1
+
+#g539 = stage1_R_i[28]~synth
+#g540 = stage1_R_i[28]~synth
+#g541 = stage1_R_i[28]~synth
+.names g539 g540 g541
+00 0
+
+#g136 = stage1_L_i[14]~synth
+#g188 = desround:rd1|Key_o[55]
+#g542 = stage1_round_key_i[55]~synth
+.names g136 g188 g542
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g543 = stage1_round_key_i[55]~synth
+.names g136 key_i[7] g543
+01 1
+
+#g542 = stage1_round_key_i[55]~synth
+#g543 = stage1_round_key_i[55]~synth
+#g544 = stage1_round_key_i[55]~synth
+.names g542 g543 g544
+00 0
+
+#g136 = stage1_L_i[14]~synth
+#g189 = desround:rd1|Key_o[28]
+#g545 = stage1_round_key_i[28]~synth
+.names g136 g189 g545
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g546 = stage1_round_key_i[28]~synth
+.names g136 key_i[28] g546
+01 1
+
+#g545 = stage1_round_key_i[28]~synth
+#g546 = stage1_round_key_i[28]~synth
+#g547 = stage1_round_key_i[28]~synth
+.names g545 g546 g547
+00 0
+
+#g136 = stage1_L_i[14]~synth
+#g190 = desround:rd1|Key_o[29]
+#g548 = stage1_round_key_i[29]~synth
+.names g136 g190 g548
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g549 = stage1_round_key_i[29]~synth
+.names g136 key_i[20] g549
+01 1
+
+#g548 = stage1_round_key_i[29]~synth
+#g549 = stage1_round_key_i[29]~synth
+#g550 = stage1_round_key_i[29]~synth
+.names g548 g549 g550
+00 0
+
+#g136 = stage1_L_i[14]~synth
+#g192 = desround:rd1|Key_o[54]
+#g551 = stage1_round_key_i[54]~synth
+.names g136 g192 g551
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g552 = stage1_round_key_i[54]~synth
+.names g136 key_i[15] g552
+01 1
+
+#g551 = stage1_round_key_i[54]~synth
+#g552 = stage1_round_key_i[54]~synth
+#g553 = stage1_round_key_i[54]~synth
+.names g551 g552 g553
+00 0
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g526 = stage1_round_key_i[53]~synth
+#g554 = desround:rd1|key_gen:kg1|new_key[43]~synth
+.names g146 g526 g554
+11 1
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g553 = stage1_round_key_i[54]~synth
+#g555 = desround:rd1|key_gen:kg1|new_key[43]~synth
+.names g146 g553 g555
+01 1
+
+#g554 = desround:rd1|key_gen:kg1|new_key[43]~synth
+#g555 = desround:rd1|key_gen:kg1|new_key[43]~synth
+#g556 = desround:rd1|key_gen:kg1|new_key[43]~synth
+.names g554 g555 g556
+00 0
+
+#g556 = desround:rd1|key_gen:kg1|new_key[43]~synth
+#g557 = desround:rd1|key_gen:kg1|new_key[43]~synth
+.names decrypt_i g556 g557
+01 1
+
+#g191 = desround:rd1|key_gen:kg1|new_key[43]~synth
+#g558 = desround:rd1|key_gen:kg1|new_key[43]~synth
+.names decrypt_i g191 g558
+11 1
+
+#g557 = desround:rd1|key_gen:kg1|new_key[43]~synth
+#g558 = desround:rd1|key_gen:kg1|new_key[43]~synth
+#g559 = desround:rd1|key_gen:kg1|new_key[43]~synth
+.names g557 g558 g559
+00 0
+
+#g88 = desround:rd1|R_o[29]
+#g136 = stage1_L_i[14]~synth
+#g560 = stage1_R_i[29]~synth
+.names g88 g136 g560
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g561 = stage1_R_i[29]~synth
+.names g136 data_i[23] g561
+01 1
+
+#g560 = stage1_R_i[29]~synth
+#g561 = stage1_R_i[29]~synth
+#g562 = stage1_R_i[29]~synth
+.names g560 g561 g562
+00 0
+
+#g136 = stage1_L_i[14]~synth
+#g194 = desround:rd1|Key_o[32]
+#g563 = stage1_round_key_i[32]~synth
+.names g136 g194 g563
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g564 = stage1_round_key_i[32]~synth
+.names g136 key_i[61] g564
+01 1
+
+#g563 = stage1_round_key_i[32]~synth
+#g564 = stage1_round_key_i[32]~synth
+#g565 = stage1_round_key_i[32]~synth
+.names g563 g564 g565
+00 0
+
+#g136 = stage1_L_i[14]~synth
+#g195 = desround:rd1|Key_o[33]
+#g566 = stage1_round_key_i[33]~synth
+.names g136 g195 g566
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g567 = stage1_round_key_i[33]~synth
+.names g136 key_i[53] g567
+01 1
+
+#g566 = stage1_round_key_i[33]~synth
+#g567 = stage1_round_key_i[33]~synth
+#g568 = stage1_round_key_i[33]~synth
+.names g566 g567 g568
+00 0
+
+#g136 = stage1_L_i[14]~synth
+#g196 = desround:rd1|Key_o[34]
+#g569 = stage1_round_key_i[34]~synth
+.names g136 g196 g569
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g570 = stage1_round_key_i[34]~synth
+.names g136 key_i[45] g570
+01 1
+
+#g569 = stage1_round_key_i[34]~synth
+#g570 = stage1_round_key_i[34]~synth
+#g571 = stage1_round_key_i[34]~synth
+.names g569 g570 g571
+00 0
+
+#g136 = stage1_L_i[14]~synth
+#g198 = desround:rd1|Key_o[31]
+#g572 = stage1_round_key_i[31]~synth
+.names g136 g198 g572
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g573 = stage1_round_key_i[31]~synth
+.names g136 key_i[4] g573
+01 1
+
+#g572 = stage1_round_key_i[31]~synth
+#g573 = stage1_round_key_i[31]~synth
+#g574 = stage1_round_key_i[31]~synth
+.names g572 g573 g574
+00 0
+
+#g136 = stage1_L_i[14]~synth
+#g199 = desround:rd1|Key_o[30]
+#g575 = stage1_round_key_i[30]~synth
+.names g136 g199 g575
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g576 = stage1_round_key_i[30]~synth
+.names g136 key_i[12] g576
+01 1
+
+#g575 = stage1_round_key_i[30]~synth
+#g576 = stage1_round_key_i[30]~synth
+#g577 = stage1_round_key_i[30]~synth
+.names g575 g576 g577
+00 0
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g577 = stage1_round_key_i[30]~synth
+#g578 = desround:rd1|key_gen:kg1|new_key[44]~synth
+.names g146 g577 g578
+11 1
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g574 = stage1_round_key_i[31]~synth
+#g579 = desround:rd1|key_gen:kg1|new_key[44]~synth
+.names g146 g574 g579
+01 1
+
+#g578 = desround:rd1|key_gen:kg1|new_key[44]~synth
+#g579 = desround:rd1|key_gen:kg1|new_key[44]~synth
+#g580 = desround:rd1|key_gen:kg1|new_key[44]~synth
+.names g578 g579 g580
+00 0
+
+#g580 = desround:rd1|key_gen:kg1|new_key[44]~synth
+#g581 = desround:rd1|key_gen:kg1|new_key[44]~synth
+.names decrypt_i g580 g581
+01 1
+
+#g197 = desround:rd1|key_gen:kg1|new_key[44]~synth
+#g582 = desround:rd1|key_gen:kg1|new_key[44]~synth
+.names decrypt_i g197 g582
+11 1
+
+#g581 = desround:rd1|key_gen:kg1|new_key[44]~synth
+#g582 = desround:rd1|key_gen:kg1|new_key[44]~synth
+#g583 = desround:rd1|key_gen:kg1|new_key[44]~synth
+.names g581 g582 g583
+00 0
+
+#g80 = desround:rd1|R_o[30]
+#g136 = stage1_L_i[14]~synth
+#g584 = stage1_R_i[30]~synth
+.names g80 g136 g584
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g585 = stage1_R_i[30]~synth
+.names g136 data_i[15] g585
+01 1
+
+#g584 = stage1_R_i[30]~synth
+#g585 = stage1_R_i[30]~synth
+#g586 = stage1_R_i[30]~synth
+.names g584 g585 g586
+00 0
+
+#g136 = stage1_L_i[14]~synth
+#g201 = desround:rd1|Key_o[45]
+#g587 = stage1_round_key_i[45]~synth
+.names g136 g201 g587
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g588 = stage1_round_key_i[45]~synth
+.names g136 key_i[22] g588
+01 1
+
+#g587 = stage1_round_key_i[45]~synth
+#g588 = stage1_round_key_i[45]~synth
+#g589 = stage1_round_key_i[45]~synth
+.names g587 g588 g589
+00 0
+
+#g136 = stage1_L_i[14]~synth
+#g202 = desround:rd1|Key_o[46]
+#g590 = stage1_round_key_i[46]~synth
+.names g136 g202 g590
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g591 = stage1_round_key_i[46]~synth
+.names g136 key_i[14] g591
+01 1
+
+#g590 = stage1_round_key_i[46]~synth
+#g591 = stage1_round_key_i[46]~synth
+#g592 = stage1_round_key_i[46]~synth
+.names g590 g591 g592
+00 0
+
+#g136 = stage1_L_i[14]~synth
+#g203 = desround:rd1|Key_o[47]
+#g593 = stage1_round_key_i[47]~synth
+.names g136 g203 g593
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g594 = stage1_round_key_i[47]~synth
+.names g136 key_i[6] g594
+01 1
+
+#g593 = stage1_round_key_i[47]~synth
+#g594 = stage1_round_key_i[47]~synth
+#g595 = stage1_round_key_i[47]~synth
+.names g593 g594 g595
+00 0
+
+#g136 = stage1_L_i[14]~synth
+#g205 = desround:rd1|Key_o[44]
+#g596 = stage1_round_key_i[44]~synth
+.names g136 g205 g596
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g597 = stage1_round_key_i[44]~synth
+.names g136 key_i[30] g597
+01 1
+
+#g596 = stage1_round_key_i[44]~synth
+#g597 = stage1_round_key_i[44]~synth
+#g598 = stage1_round_key_i[44]~synth
+.names g596 g597 g598
+00 0
+
+#g136 = stage1_L_i[14]~synth
+#g206 = desround:rd1|Key_o[43]
+#g599 = stage1_round_key_i[43]~synth
+.names g136 g206 g599
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g600 = stage1_round_key_i[43]~synth
+.names g136 key_i[38] g600
+01 1
+
+#g599 = stage1_round_key_i[43]~synth
+#g600 = stage1_round_key_i[43]~synth
+#g601 = stage1_round_key_i[43]~synth
+.names g599 g600 g601
+00 0
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g601 = stage1_round_key_i[43]~synth
+#g602 = desround:rd1|key_gen:kg1|new_key[45]~synth
+.names g146 g601 g602
+11 1
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g598 = stage1_round_key_i[44]~synth
+#g603 = desround:rd1|key_gen:kg1|new_key[45]~synth
+.names g146 g598 g603
+01 1
+
+#g602 = desround:rd1|key_gen:kg1|new_key[45]~synth
+#g603 = desround:rd1|key_gen:kg1|new_key[45]~synth
+#g604 = desround:rd1|key_gen:kg1|new_key[45]~synth
+.names g602 g603 g604
+00 0
+
+#g604 = desround:rd1|key_gen:kg1|new_key[45]~synth
+#g605 = desround:rd1|key_gen:kg1|new_key[45]~synth
+.names decrypt_i g604 g605
+01 1
+
+#g204 = desround:rd1|key_gen:kg1|new_key[45]~synth
+#g606 = desround:rd1|key_gen:kg1|new_key[45]~synth
+.names decrypt_i g204 g606
+11 1
+
+#g605 = desround:rd1|key_gen:kg1|new_key[45]~synth
+#g606 = desround:rd1|key_gen:kg1|new_key[45]~synth
+#g607 = desround:rd1|key_gen:kg1|new_key[45]~synth
+.names g605 g606 g607
+00 0
+
+#g72 = desround:rd1|R_o[31]
+#g136 = stage1_L_i[14]~synth
+#g608 = stage1_R_i[31]~synth
+.names g72 g136 g608
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g609 = stage1_R_i[31]~synth
+.names g136 data_i[7] g609
+01 1
+
+#g608 = stage1_R_i[31]~synth
+#g609 = stage1_R_i[31]~synth
+#g610 = stage1_R_i[31]~synth
+.names g608 g609 g610
+00 0
+
+#g136 = stage1_L_i[14]~synth
+#g208 = desround:rd1|Key_o[39]
+#g611 = stage1_round_key_i[39]~synth
+.names g136 g208 g611
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g612 = stage1_round_key_i[39]~synth
+.names g136 key_i[5] g612
+01 1
+
+#g611 = stage1_round_key_i[39]~synth
+#g612 = stage1_round_key_i[39]~synth
+#g613 = stage1_round_key_i[39]~synth
+.names g611 g612 g613
+00 0
+
+#g136 = stage1_L_i[14]~synth
+#g209 = desround:rd1|Key_o[40]
+#g614 = stage1_round_key_i[40]~synth
+.names g136 g209 g614
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g615 = stage1_round_key_i[40]~synth
+.names g136 key_i[62] g615
+01 1
+
+#g614 = stage1_round_key_i[40]~synth
+#g615 = stage1_round_key_i[40]~synth
+#g616 = stage1_round_key_i[40]~synth
+.names g614 g615 g616
+00 0
+
+#g136 = stage1_L_i[14]~synth
+#g210 = desround:rd1|Key_o[41]
+#g617 = stage1_round_key_i[41]~synth
+.names g136 g210 g617
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g618 = stage1_round_key_i[41]~synth
+.names g136 key_i[54] g618
+01 1
+
+#g617 = stage1_round_key_i[41]~synth
+#g618 = stage1_round_key_i[41]~synth
+#g619 = stage1_round_key_i[41]~synth
+.names g617 g618 g619
+00 0
+
+#g136 = stage1_L_i[14]~synth
+#g212 = desround:rd1|Key_o[38]
+#g620 = stage1_round_key_i[38]~synth
+.names g136 g212 g620
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g621 = stage1_round_key_i[38]~synth
+.names g136 key_i[13] g621
+01 1
+
+#g620 = stage1_round_key_i[38]~synth
+#g621 = stage1_round_key_i[38]~synth
+#g622 = stage1_round_key_i[38]~synth
+.names g620 g621 g622
+00 0
+
+#g136 = stage1_L_i[14]~synth
+#g213 = desround:rd1|Key_o[37]
+#g623 = stage1_round_key_i[37]~synth
+.names g136 g213 g623
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g624 = stage1_round_key_i[37]~synth
+.names g136 key_i[21] g624
+01 1
+
+#g623 = stage1_round_key_i[37]~synth
+#g624 = stage1_round_key_i[37]~synth
+#g625 = stage1_round_key_i[37]~synth
+.names g623 g624 g625
+00 0
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g625 = stage1_round_key_i[37]~synth
+#g626 = desround:rd1|key_gen:kg1|new_key[46]~synth
+.names g146 g625 g626
+11 1
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g622 = stage1_round_key_i[38]~synth
+#g627 = desround:rd1|key_gen:kg1|new_key[46]~synth
+.names g146 g622 g627
+01 1
+
+#g626 = desround:rd1|key_gen:kg1|new_key[46]~synth
+#g627 = desround:rd1|key_gen:kg1|new_key[46]~synth
+#g628 = desround:rd1|key_gen:kg1|new_key[46]~synth
+.names g626 g627 g628
+00 0
+
+#g628 = desround:rd1|key_gen:kg1|new_key[46]~synth
+#g629 = desround:rd1|key_gen:kg1|new_key[46]~synth
+.names decrypt_i g628 g629
+01 1
+
+#g211 = desround:rd1|key_gen:kg1|new_key[46]~synth
+#g630 = desround:rd1|key_gen:kg1|new_key[46]~synth
+.names decrypt_i g211 g630
+11 1
+
+#g629 = desround:rd1|key_gen:kg1|new_key[46]~synth
+#g630 = desround:rd1|key_gen:kg1|new_key[46]~synth
+#g631 = desround:rd1|key_gen:kg1|new_key[46]~synth
+.names g629 g630 g631
+00 0
+
+#g122 = desround:rd1|R_o[0]
+#g136 = stage1_L_i[14]~synth
+#g632 = stage1_R_i[0]~synth
+.names g122 g136 g632
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g633 = stage1_R_i[0]~synth
+.names g136 data_i[57] g633
+01 1
+
+#g632 = stage1_R_i[0]~synth
+#g633 = stage1_R_i[0]~synth
+#g634 = stage1_R_i[0]~synth
+.names g632 g633 g634
+00 0
+
+#g136 = stage1_L_i[14]~synth
+#g215 = desround:rd1|Key_o[42]
+#g635 = stage1_round_key_i[42]~synth
+.names g136 g215 g635
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g636 = stage1_round_key_i[42]~synth
+.names g136 key_i[46] g636
+01 1
+
+#g635 = stage1_round_key_i[42]~synth
+#g636 = stage1_round_key_i[42]~synth
+#g637 = stage1_round_key_i[42]~synth
+.names g635 g636 g637
+00 0
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g616 = stage1_round_key_i[40]~synth
+#g638 = desround:rd1|key_gen:kg1|new_key[47]~synth
+.names g146 g616 g638
+11 1
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g619 = stage1_round_key_i[41]~synth
+#g639 = desround:rd1|key_gen:kg1|new_key[47]~synth
+.names g146 g619 g639
+01 1
+
+#g638 = desround:rd1|key_gen:kg1|new_key[47]~synth
+#g639 = desround:rd1|key_gen:kg1|new_key[47]~synth
+#g640 = desround:rd1|key_gen:kg1|new_key[47]~synth
+.names g638 g639 g640
+00 0
+
+#g640 = desround:rd1|key_gen:kg1|new_key[47]~synth
+#g641 = desround:rd1|key_gen:kg1|new_key[47]~synth
+.names decrypt_i g640 g641
+01 1
+
+#g216 = desround:rd1|key_gen:kg1|new_key[47]~synth
+#g642 = desround:rd1|key_gen:kg1|new_key[47]~synth
+.names decrypt_i g216 g642
+11 1
+
+#g641 = desround:rd1|key_gen:kg1|new_key[47]~synth
+#g642 = desround:rd1|key_gen:kg1|new_key[47]~synth
+#g643 = desround:rd1|key_gen:kg1|new_key[47]~synth
+.names g641 g642 g643
+00 0
+
+#g71 = desround:rd1|L_o[23]
+#g136 = stage1_L_i[14]~synth
+#g644 = stage1_L_i[23]~synth
+.names g71 g136 g644
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g645 = stage1_L_i[23]~synth
+.names g136 data_i[4] g645
+01 1
+
+#g644 = stage1_L_i[23]~synth
+#g645 = stage1_L_i[23]~synth
+#g646 = stage1_L_i[23]~synth
+.names g644 g645 g646
+00 0
+
+#g70 = desround:rd1|R_o[23]
+#g136 = stage1_L_i[14]~synth
+#g647 = stage1_R_i[23]~synth
+.names g70 g136 g647
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g648 = stage1_R_i[23]~synth
+.names g136 data_i[5] g648
+01 1
+
+#g647 = stage1_R_i[23]~synth
+#g648 = stage1_R_i[23]~synth
+#g649 = stage1_R_i[23]~synth
+.names g647 g648 g649
+00 0
+
+#g73 = desround:rd1|L_o[31]
+#g136 = stage1_L_i[14]~synth
+#g650 = stage1_L_i[31]~synth
+.names g73 g136 g650
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g651 = stage1_L_i[31]~synth
+.names g136 data_i[6] g651
+01 1
+
+#g650 = stage1_L_i[31]~synth
+#g651 = stage1_L_i[31]~synth
+#g652 = stage1_L_i[31]~synth
+.names g650 g651 g652
+00 0
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g523 = stage1_round_key_i[52]~synth
+#g653 = desround:rd1|key_gen:kg1|new_key[24]~synth
+.names g146 g523 g653
+11 1
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g526 = stage1_round_key_i[53]~synth
+#g654 = desround:rd1|key_gen:kg1|new_key[24]~synth
+.names g146 g526 g654
+01 1
+
+#g653 = desround:rd1|key_gen:kg1|new_key[24]~synth
+#g654 = desround:rd1|key_gen:kg1|new_key[24]~synth
+#g655 = desround:rd1|key_gen:kg1|new_key[24]~synth
+.names g653 g654 g655
+00 0
+
+#g655 = desround:rd1|key_gen:kg1|new_key[24]~synth
+#g656 = desround:rd1|key_gen:kg1|new_key[24]~synth
+.names decrypt_i g655 g656
+01 1
+
+#g222 = desround:rd1|key_gen:kg1|new_key[24]~synth
+#g657 = desround:rd1|key_gen:kg1|new_key[24]~synth
+.names decrypt_i g222 g657
+11 1
+
+#g656 = desround:rd1|key_gen:kg1|new_key[24]~synth
+#g657 = desround:rd1|key_gen:kg1|new_key[24]~synth
+#g658 = desround:rd1|key_gen:kg1|new_key[24]~synth
+.names g656 g657 g658
+00 0
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g619 = stage1_round_key_i[41]~synth
+#g659 = desround:rd1|key_gen:kg1|new_key[25]~synth
+.names g146 g619 g659
+11 1
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g637 = stage1_round_key_i[42]~synth
+#g660 = desround:rd1|key_gen:kg1|new_key[25]~synth
+.names g146 g637 g660
+01 1
+
+#g659 = desround:rd1|key_gen:kg1|new_key[25]~synth
+#g660 = desround:rd1|key_gen:kg1|new_key[25]~synth
+#g661 = desround:rd1|key_gen:kg1|new_key[25]~synth
+.names g659 g660 g661
+00 0
+
+#g661 = desround:rd1|key_gen:kg1|new_key[25]~synth
+#g662 = desround:rd1|key_gen:kg1|new_key[25]~synth
+.names decrypt_i g661 g662
+01 1
+
+#g224 = desround:rd1|key_gen:kg1|new_key[25]~synth
+#g663 = desround:rd1|key_gen:kg1|new_key[25]~synth
+.names decrypt_i g224 g663
+11 1
+
+#g662 = desround:rd1|key_gen:kg1|new_key[25]~synth
+#g663 = desround:rd1|key_gen:kg1|new_key[25]~synth
+#g664 = desround:rd1|key_gen:kg1|new_key[25]~synth
+.names g662 g663 g664
+00 0
+
+#g118 = desround:rd1|R_o[17]
+#g136 = stage1_L_i[14]~synth
+#g665 = stage1_R_i[17]~synth
+.names g118 g136 g665
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g666 = stage1_R_i[17]~synth
+.names g136 data_i[53] g666
+01 1
+
+#g665 = stage1_R_i[17]~synth
+#g666 = stage1_R_i[17]~synth
+#g667 = stage1_R_i[17]~synth
+.names g665 g666 g667
+00 0
+
+#g136 = stage1_L_i[14]~synth
+#g226 = desround:rd1|Key_o[36]
+#g668 = stage1_round_key_i[36]~synth
+.names g136 g226 g668
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g669 = stage1_round_key_i[36]~synth
+.names g136 key_i[29] g669
+01 1
+
+#g668 = stage1_round_key_i[36]~synth
+#g669 = stage1_round_key_i[36]~synth
+#g670 = stage1_round_key_i[36]~synth
+.names g668 g669 g670
+00 0
+
+#g136 = stage1_L_i[14]~synth
+#g228 = desround:rd1|Key_o[35]
+#g671 = stage1_round_key_i[35]~synth
+.names g136 g228 g671
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g672 = stage1_round_key_i[35]~synth
+.names g136 key_i[37] g672
+01 1
+
+#g671 = stage1_round_key_i[35]~synth
+#g672 = stage1_round_key_i[35]~synth
+#g673 = stage1_round_key_i[35]~synth
+.names g671 g672 g673
+00 0
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g571 = stage1_round_key_i[34]~synth
+#g674 = desround:rd1|key_gen:kg1|new_key[26]~synth
+.names g146 g571 g674
+11 1
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g673 = stage1_round_key_i[35]~synth
+#g675 = desround:rd1|key_gen:kg1|new_key[26]~synth
+.names g146 g673 g675
+01 1
+
+#g674 = desround:rd1|key_gen:kg1|new_key[26]~synth
+#g675 = desround:rd1|key_gen:kg1|new_key[26]~synth
+#g676 = desround:rd1|key_gen:kg1|new_key[26]~synth
+.names g674 g675 g676
+00 0
+
+#g676 = desround:rd1|key_gen:kg1|new_key[26]~synth
+#g677 = desround:rd1|key_gen:kg1|new_key[26]~synth
+.names decrypt_i g676 g677
+01 1
+
+#g227 = desround:rd1|key_gen:kg1|new_key[26]~synth
+#g678 = desround:rd1|key_gen:kg1|new_key[26]~synth
+.names decrypt_i g227 g678
+11 1
+
+#g677 = desround:rd1|key_gen:kg1|new_key[26]~synth
+#g678 = desround:rd1|key_gen:kg1|new_key[26]~synth
+#g679 = desround:rd1|key_gen:kg1|new_key[26]~synth
+.names g677 g678 g679
+00 0
+
+#g110 = desround:rd1|R_o[18]
+#g136 = stage1_L_i[14]~synth
+#g680 = stage1_R_i[18]~synth
+.names g110 g136 g680
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g681 = stage1_R_i[18]~synth
+.names g136 data_i[45] g681
+01 1
+
+#g680 = stage1_R_i[18]~synth
+#g681 = stage1_R_i[18]~synth
+#g682 = stage1_R_i[18]~synth
+.names g680 g681 g682
+00 0
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g544 = stage1_round_key_i[55]~synth
+#g683 = desround:rd1|key_gen:kg1|new_key[27]~synth
+.names g146 g544 g683
+11 1
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g547 = stage1_round_key_i[28]~synth
+#g684 = desround:rd1|key_gen:kg1|new_key[27]~synth
+.names g146 g547 g684
+01 1
+
+#g683 = desround:rd1|key_gen:kg1|new_key[27]~synth
+#g684 = desround:rd1|key_gen:kg1|new_key[27]~synth
+#g685 = desround:rd1|key_gen:kg1|new_key[27]~synth
+.names g683 g684 g685
+00 0
+
+#g685 = desround:rd1|key_gen:kg1|new_key[27]~synth
+#g686 = desround:rd1|key_gen:kg1|new_key[27]~synth
+.names decrypt_i g685 g686
+01 1
+
+#g230 = desround:rd1|key_gen:kg1|new_key[27]~synth
+#g687 = desround:rd1|key_gen:kg1|new_key[27]~synth
+.names decrypt_i g230 g687
+11 1
+
+#g686 = desround:rd1|key_gen:kg1|new_key[27]~synth
+#g687 = desround:rd1|key_gen:kg1|new_key[27]~synth
+#g688 = desround:rd1|key_gen:kg1|new_key[27]~synth
+.names g686 g687 g688
+00 0
+
+#g102 = desround:rd1|R_o[19]
+#g136 = stage1_L_i[14]~synth
+#g689 = stage1_R_i[19]~synth
+.names g102 g136 g689
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g690 = stage1_R_i[19]~synth
+.names g136 data_i[37] g690
+01 1
+
+#g689 = stage1_R_i[19]~synth
+#g690 = stage1_R_i[19]~synth
+#g691 = stage1_R_i[19]~synth
+.names g689 g690 g691
+00 0
+
+#g136 = stage1_L_i[14]~synth
+#g233 = desround:rd1|Key_o[48]
+#g692 = stage1_round_key_i[48]~synth
+.names g136 g233 g692
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g693 = stage1_round_key_i[48]~synth
+.names g136 key_i[63] g693
+01 1
+
+#g692 = stage1_round_key_i[48]~synth
+#g693 = stage1_round_key_i[48]~synth
+#g694 = stage1_round_key_i[48]~synth
+.names g692 g693 g694
+00 0
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g595 = stage1_round_key_i[47]~synth
+#g695 = desround:rd1|key_gen:kg1|new_key[28]~synth
+.names g146 g595 g695
+11 1
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g694 = stage1_round_key_i[48]~synth
+#g696 = desround:rd1|key_gen:kg1|new_key[28]~synth
+.names g146 g694 g696
+01 1
+
+#g695 = desround:rd1|key_gen:kg1|new_key[28]~synth
+#g696 = desround:rd1|key_gen:kg1|new_key[28]~synth
+#g697 = desround:rd1|key_gen:kg1|new_key[28]~synth
+.names g695 g696 g697
+00 0
+
+#g697 = desround:rd1|key_gen:kg1|new_key[28]~synth
+#g698 = desround:rd1|key_gen:kg1|new_key[28]~synth
+.names decrypt_i g697 g698
+01 1
+
+#g232 = desround:rd1|key_gen:kg1|new_key[28]~synth
+#g699 = desround:rd1|key_gen:kg1|new_key[28]~synth
+.names decrypt_i g232 g699
+11 1
+
+#g698 = desround:rd1|key_gen:kg1|new_key[28]~synth
+#g699 = desround:rd1|key_gen:kg1|new_key[28]~synth
+#g700 = desround:rd1|key_gen:kg1|new_key[28]~synth
+.names g698 g699 g700
+00 0
+
+#g94 = desround:rd1|R_o[20]
+#g136 = stage1_L_i[14]~synth
+#g701 = stage1_R_i[20]~synth
+.names g94 g136 g701
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g702 = stage1_R_i[20]~synth
+.names g136 data_i[29] g702
+01 1
+
+#g701 = stage1_R_i[20]~synth
+#g702 = stage1_R_i[20]~synth
+#g703 = stage1_R_i[20]~synth
+.names g701 g702 g703
+00 0
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g622 = stage1_round_key_i[38]~synth
+#g704 = desround:rd1|key_gen:kg1|new_key[29]~synth
+.names g146 g622 g704
+11 1
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g613 = stage1_round_key_i[39]~synth
+#g705 = desround:rd1|key_gen:kg1|new_key[29]~synth
+.names g146 g613 g705
+01 1
+
+#g704 = desround:rd1|key_gen:kg1|new_key[29]~synth
+#g705 = desround:rd1|key_gen:kg1|new_key[29]~synth
+#g706 = desround:rd1|key_gen:kg1|new_key[29]~synth
+.names g704 g705 g706
+00 0
+
+#g706 = desround:rd1|key_gen:kg1|new_key[29]~synth
+#g707 = desround:rd1|key_gen:kg1|new_key[29]~synth
+.names decrypt_i g706 g707
+01 1
+
+#g235 = desround:rd1|key_gen:kg1|new_key[29]~synth
+#g708 = desround:rd1|key_gen:kg1|new_key[29]~synth
+.names decrypt_i g235 g708
+11 1
+
+#g707 = desround:rd1|key_gen:kg1|new_key[29]~synth
+#g708 = desround:rd1|key_gen:kg1|new_key[29]~synth
+#g709 = desround:rd1|key_gen:kg1|new_key[29]~synth
+.names g707 g708 g709
+00 0
+
+#g75 = desround:rd1|L_o[6]
+#g136 = stage1_L_i[14]~synth
+#g710 = stage1_L_i[6]~synth
+.names g75 g136 g710
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g711 = stage1_L_i[6]~synth
+.names g136 data_i[8] g711
+01 1
+
+#g710 = stage1_L_i[6]~synth
+#g711 = stage1_L_i[6]~synth
+#g712 = stage1_L_i[6]~synth
+.names g710 g711 g712
+00 0
+
+#g74 = desround:rd1|R_o[6]
+#g136 = stage1_L_i[14]~synth
+#g713 = stage1_R_i[6]~synth
+.names g74 g136 g713
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g714 = stage1_R_i[6]~synth
+.names g136 data_i[9] g714
+01 1
+
+#g713 = stage1_R_i[6]~synth
+#g714 = stage1_R_i[6]~synth
+#g715 = stage1_R_i[6]~synth
+.names g713 g714 g715
+00 0
+
+#g77 = desround:rd1|L_o[14]
+#g136 = stage1_L_i[14]~synth
+#g716 = stage1_L_i[14]~synth
+.names g77 g136 g716
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g717 = stage1_L_i[14]~synth
+.names g136 data_i[10] g717
+01 1
+
+#g716 = stage1_L_i[14]~synth
+#g717 = stage1_L_i[14]~synth
+#g718 = stage1_L_i[14]~synth
+.names g716 g717 g718
+00 0
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g598 = stage1_round_key_i[44]~synth
+#g719 = desround:rd1|key_gen:kg1|new_key[36]~synth
+.names g146 g598 g719
+11 1
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g589 = stage1_round_key_i[45]~synth
+#g720 = desround:rd1|key_gen:kg1|new_key[36]~synth
+.names g146 g589 g720
+01 1
+
+#g719 = desround:rd1|key_gen:kg1|new_key[36]~synth
+#g720 = desround:rd1|key_gen:kg1|new_key[36]~synth
+#g721 = desround:rd1|key_gen:kg1|new_key[36]~synth
+.names g719 g720 g721
+00 0
+
+#g721 = desround:rd1|key_gen:kg1|new_key[36]~synth
+#g722 = desround:rd1|key_gen:kg1|new_key[36]~synth
+.names decrypt_i g721 g722
+01 1
+
+#g241 = desround:rd1|key_gen:kg1|new_key[36]~synth
+#g723 = desround:rd1|key_gen:kg1|new_key[36]~synth
+.names decrypt_i g241 g723
+11 1
+
+#g722 = desround:rd1|key_gen:kg1|new_key[36]~synth
+#g723 = desround:rd1|key_gen:kg1|new_key[36]~synth
+#g724 = desround:rd1|key_gen:kg1|new_key[36]~synth
+.names g722 g723 g724
+00 0
+
+#g128 = desround:rd1|R_o[24]
+#g136 = stage1_L_i[14]~synth
+#g725 = stage1_R_i[24]~synth
+.names g128 g136 g725
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g726 = stage1_R_i[24]~synth
+.names g136 data_i[63] g726
+01 1
+
+#g725 = stage1_R_i[24]~synth
+#g726 = stage1_R_i[24]~synth
+#g727 = stage1_R_i[24]~synth
+.names g725 g726 g727
+00 0
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g568 = stage1_round_key_i[33]~synth
+#g728 = desround:rd1|key_gen:kg1|new_key[37]~synth
+.names g146 g568 g728
+11 1
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g571 = stage1_round_key_i[34]~synth
+#g729 = desround:rd1|key_gen:kg1|new_key[37]~synth
+.names g146 g571 g729
+01 1
+
+#g728 = desround:rd1|key_gen:kg1|new_key[37]~synth
+#g729 = desround:rd1|key_gen:kg1|new_key[37]~synth
+#g730 = desround:rd1|key_gen:kg1|new_key[37]~synth
+.names g728 g729 g730
+00 0
+
+#g730 = desround:rd1|key_gen:kg1|new_key[37]~synth
+#g731 = desround:rd1|key_gen:kg1|new_key[37]~synth
+.names decrypt_i g730 g731
+01 1
+
+#g243 = desround:rd1|key_gen:kg1|new_key[37]~synth
+#g732 = desround:rd1|key_gen:kg1|new_key[37]~synth
+.names decrypt_i g243 g732
+11 1
+
+#g731 = desround:rd1|key_gen:kg1|new_key[37]~synth
+#g732 = desround:rd1|key_gen:kg1|new_key[37]~synth
+#g733 = desround:rd1|key_gen:kg1|new_key[37]~synth
+.names g731 g732 g733
+00 0
+
+#g120 = desround:rd1|R_o[25]
+#g136 = stage1_L_i[14]~synth
+#g734 = stage1_R_i[25]~synth
+.names g120 g136 g734
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g735 = stage1_R_i[25]~synth
+.names g136 data_i[55] g735
+01 1
+
+#g734 = stage1_R_i[25]~synth
+#g735 = stage1_R_i[25]~synth
+#g736 = stage1_R_i[25]~synth
+.names g734 g735 g736
+00 0
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g694 = stage1_round_key_i[48]~synth
+#g737 = desround:rd1|key_gen:kg1|new_key[38]~synth
+.names g146 g694 g737
+11 1
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g532 = stage1_round_key_i[49]~synth
+#g738 = desround:rd1|key_gen:kg1|new_key[38]~synth
+.names g146 g532 g738
+01 1
+
+#g737 = desround:rd1|key_gen:kg1|new_key[38]~synth
+#g738 = desround:rd1|key_gen:kg1|new_key[38]~synth
+#g739 = desround:rd1|key_gen:kg1|new_key[38]~synth
+.names g737 g738 g739
+00 0
+
+#g739 = desround:rd1|key_gen:kg1|new_key[38]~synth
+#g740 = desround:rd1|key_gen:kg1|new_key[38]~synth
+.names decrypt_i g739 g740
+01 1
+
+#g245 = desround:rd1|key_gen:kg1|new_key[38]~synth
+#g741 = desround:rd1|key_gen:kg1|new_key[38]~synth
+.names decrypt_i g245 g741
+11 1
+
+#g740 = desround:rd1|key_gen:kg1|new_key[38]~synth
+#g741 = desround:rd1|key_gen:kg1|new_key[38]~synth
+#g742 = desround:rd1|key_gen:kg1|new_key[38]~synth
+.names g740 g741 g742
+00 0
+
+#g112 = desround:rd1|R_o[26]
+#g136 = stage1_L_i[14]~synth
+#g743 = stage1_R_i[26]~synth
+.names g112 g136 g743
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g744 = stage1_R_i[26]~synth
+.names g136 data_i[47] g744
+01 1
+
+#g743 = stage1_R_i[26]~synth
+#g744 = stage1_R_i[26]~synth
+#g745 = stage1_R_i[26]~synth
+.names g743 g744 g745
+00 0
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g613 = stage1_round_key_i[39]~synth
+#g746 = desround:rd1|key_gen:kg1|new_key[39]~synth
+.names g146 g613 g746
+11 1
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g616 = stage1_round_key_i[40]~synth
+#g747 = desround:rd1|key_gen:kg1|new_key[39]~synth
+.names g146 g616 g747
+01 1
+
+#g746 = desround:rd1|key_gen:kg1|new_key[39]~synth
+#g747 = desround:rd1|key_gen:kg1|new_key[39]~synth
+#g748 = desround:rd1|key_gen:kg1|new_key[39]~synth
+.names g746 g747 g748
+00 0
+
+#g748 = desround:rd1|key_gen:kg1|new_key[39]~synth
+#g749 = desround:rd1|key_gen:kg1|new_key[39]~synth
+.names decrypt_i g748 g749
+01 1
+
+#g247 = desround:rd1|key_gen:kg1|new_key[39]~synth
+#g750 = desround:rd1|key_gen:kg1|new_key[39]~synth
+.names decrypt_i g247 g750
+11 1
+
+#g749 = desround:rd1|key_gen:kg1|new_key[39]~synth
+#g750 = desround:rd1|key_gen:kg1|new_key[39]~synth
+#g751 = desround:rd1|key_gen:kg1|new_key[39]~synth
+.names g749 g750 g751
+00 0
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g553 = stage1_round_key_i[54]~synth
+#g752 = desround:rd1|key_gen:kg1|new_key[40]~synth
+.names g146 g553 g752
+11 1
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g544 = stage1_round_key_i[55]~synth
+#g753 = desround:rd1|key_gen:kg1|new_key[40]~synth
+.names g146 g544 g753
+01 1
+
+#g752 = desround:rd1|key_gen:kg1|new_key[40]~synth
+#g753 = desround:rd1|key_gen:kg1|new_key[40]~synth
+#g754 = desround:rd1|key_gen:kg1|new_key[40]~synth
+.names g752 g753 g754
+00 0
+
+#g754 = desround:rd1|key_gen:kg1|new_key[40]~synth
+#g755 = desround:rd1|key_gen:kg1|new_key[40]~synth
+.names decrypt_i g754 g755
+01 1
+
+#g249 = desround:rd1|key_gen:kg1|new_key[40]~synth
+#g756 = desround:rd1|key_gen:kg1|new_key[40]~synth
+.names decrypt_i g249 g756
+11 1
+
+#g755 = desround:rd1|key_gen:kg1|new_key[40]~synth
+#g756 = desround:rd1|key_gen:kg1|new_key[40]~synth
+#g757 = desround:rd1|key_gen:kg1|new_key[40]~synth
+.names g755 g756 g757
+00 0
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g520 = stage1_round_key_i[51]~synth
+#g758 = desround:rd1|key_gen:kg1|new_key[41]~synth
+.names g146 g520 g758
+11 1
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g523 = stage1_round_key_i[52]~synth
+#g759 = desround:rd1|key_gen:kg1|new_key[41]~synth
+.names g146 g523 g759
+01 1
+
+#g758 = desround:rd1|key_gen:kg1|new_key[41]~synth
+#g759 = desround:rd1|key_gen:kg1|new_key[41]~synth
+#g760 = desround:rd1|key_gen:kg1|new_key[41]~synth
+.names g758 g759 g760
+00 0
+
+#g760 = desround:rd1|key_gen:kg1|new_key[41]~synth
+#g761 = desround:rd1|key_gen:kg1|new_key[41]~synth
+.names decrypt_i g760 g761
+01 1
+
+#g251 = desround:rd1|key_gen:kg1|new_key[41]~synth
+#g762 = desround:rd1|key_gen:kg1|new_key[41]~synth
+.names decrypt_i g251 g762
+11 1
+
+#g761 = desround:rd1|key_gen:kg1|new_key[41]~synth
+#g762 = desround:rd1|key_gen:kg1|new_key[41]~synth
+#g763 = desround:rd1|key_gen:kg1|new_key[41]~synth
+.names g761 g762 g763
+00 0
+
+#g79 = desround:rd1|L_o[22]
+#g136 = stage1_L_i[14]~synth
+#g764 = stage1_L_i[22]~synth
+.names g79 g136 g764
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g765 = stage1_L_i[22]~synth
+.names g136 data_i[12] g765
+01 1
+
+#g764 = stage1_L_i[22]~synth
+#g765 = stage1_L_i[22]~synth
+#g766 = stage1_L_i[22]~synth
+.names g764 g765 g766
+00 0
+
+#g78 = desround:rd1|R_o[22]
+#g136 = stage1_L_i[14]~synth
+#g767 = stage1_R_i[22]~synth
+.names g78 g136 g767
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g768 = stage1_R_i[22]~synth
+.names g136 data_i[13] g768
+01 1
+
+#g767 = stage1_R_i[22]~synth
+#g768 = stage1_R_i[22]~synth
+#g769 = stage1_R_i[22]~synth
+.names g767 g768 g769
+00 0
+
+#g81 = desround:rd1|L_o[30]
+#g136 = stage1_L_i[14]~synth
+#g770 = stage1_L_i[30]~synth
+.names g81 g136 g770
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g771 = stage1_L_i[30]~synth
+.names g136 data_i[14] g771
+01 1
+
+#g770 = stage1_L_i[30]~synth
+#g771 = stage1_L_i[30]~synth
+#g772 = stage1_L_i[30]~synth
+.names g770 g771 g772
+00 0
+
+#g83 = desround:rd1|L_o[5]
+#g136 = stage1_L_i[14]~synth
+#g773 = stage1_L_i[5]~synth
+.names g83 g136 g773
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g774 = stage1_L_i[5]~synth
+.names g136 data_i[16] g774
+01 1
+
+#g773 = stage1_L_i[5]~synth
+#g774 = stage1_L_i[5]~synth
+#g775 = stage1_L_i[5]~synth
+.names g773 g774 g775
+00 0
+
+#g136 = stage1_L_i[14]~synth
+#g260 = desround:rd1|Key_o[22]
+#g776 = stage1_round_key_i[22]~synth
+.names g136 g260 g776
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g777 = stage1_round_key_i[22]~synth
+.names g136 key_i[41] g777
+01 1
+
+#g776 = stage1_round_key_i[22]~synth
+#g777 = stage1_round_key_i[22]~synth
+#g778 = stage1_round_key_i[22]~synth
+.names g776 g777 g778
+00 0
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g778 = stage1_round_key_i[22]~synth
+#g779 = desround:rd1|key_gen:kg1|new_key[0]~synth
+.names g146 g778 g779
+11 1
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g463 = stage1_round_key_i[23]~synth
+#g780 = desround:rd1|key_gen:kg1|new_key[0]~synth
+.names g146 g463 g780
+01 1
+
+#g779 = desround:rd1|key_gen:kg1|new_key[0]~synth
+#g780 = desround:rd1|key_gen:kg1|new_key[0]~synth
+#g781 = desround:rd1|key_gen:kg1|new_key[0]~synth
+.names g779 g780 g781
+00 0
+
+#g781 = desround:rd1|key_gen:kg1|new_key[0]~synth
+#g782 = desround:rd1|key_gen:kg1|new_key[0]~synth
+.names decrypt_i g781 g782
+01 1
+
+#g259 = desround:rd1|key_gen:kg1|new_key[0]~synth
+#g783 = desround:rd1|key_gen:kg1|new_key[0]~synth
+.names decrypt_i g259 g783
+11 1
+
+#g782 = desround:rd1|key_gen:kg1|new_key[0]~synth
+#g783 = desround:rd1|key_gen:kg1|new_key[0]~synth
+#g784 = desround:rd1|key_gen:kg1|new_key[0]~synth
+.names g782 g783 g784
+00 0
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g454 = stage1_round_key_i[25]~synth
+#g785 = desround:rd1|key_gen:kg1|new_key[1]~synth
+.names g146 g454 g785
+11 1
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g457 = stage1_round_key_i[26]~synth
+#g786 = desround:rd1|key_gen:kg1|new_key[1]~synth
+.names g146 g457 g786
+01 1
+
+#g785 = desround:rd1|key_gen:kg1|new_key[1]~synth
+#g786 = desround:rd1|key_gen:kg1|new_key[1]~synth
+#g787 = desround:rd1|key_gen:kg1|new_key[1]~synth
+.names g785 g786 g787
+00 0
+
+#g787 = desround:rd1|key_gen:kg1|new_key[1]~synth
+#g788 = desround:rd1|key_gen:kg1|new_key[1]~synth
+.names decrypt_i g787 g788
+01 1
+
+#g262 = desround:rd1|key_gen:kg1|new_key[1]~synth
+#g789 = desround:rd1|key_gen:kg1|new_key[1]~synth
+.names decrypt_i g262 g789
+11 1
+
+#g788 = desround:rd1|key_gen:kg1|new_key[1]~synth
+#g789 = desround:rd1|key_gen:kg1|new_key[1]~synth
+#g790 = desround:rd1|key_gen:kg1|new_key[1]~synth
+.names g788 g789 g790
+00 0
+
+#g114 = desround:rd1|R_o[1]
+#g136 = stage1_L_i[14]~synth
+#g791 = stage1_R_i[1]~synth
+.names g114 g136 g791
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g792 = stage1_R_i[1]~synth
+.names g136 data_i[49] g792
+01 1
+
+#g791 = stage1_R_i[1]~synth
+#g792 = stage1_R_i[1]~synth
+#g793 = stage1_R_i[1]~synth
+.names g791 g792 g793
+00 0
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g439 = stage1_round_key_i[18]~synth
+#g794 = desround:rd1|key_gen:kg1|new_key[2]~synth
+.names g146 g439 g794
+11 1
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g430 = stage1_round_key_i[19]~synth
+#g795 = desround:rd1|key_gen:kg1|new_key[2]~synth
+.names g146 g430 g795
+01 1
+
+#g794 = desround:rd1|key_gen:kg1|new_key[2]~synth
+#g795 = desround:rd1|key_gen:kg1|new_key[2]~synth
+#g796 = desround:rd1|key_gen:kg1|new_key[2]~synth
+.names g794 g795 g796
+00 0
+
+#g796 = desround:rd1|key_gen:kg1|new_key[2]~synth
+#g797 = desround:rd1|key_gen:kg1|new_key[2]~synth
+.names decrypt_i g796 g797
+01 1
+
+#g264 = desround:rd1|key_gen:kg1|new_key[2]~synth
+#g798 = desround:rd1|key_gen:kg1|new_key[2]~synth
+.names decrypt_i g264 g798
+11 1
+
+#g797 = desround:rd1|key_gen:kg1|new_key[2]~synth
+#g798 = desround:rd1|key_gen:kg1|new_key[2]~synth
+#g799 = desround:rd1|key_gen:kg1|new_key[2]~synth
+.names g797 g798 g799
+00 0
+
+#g106 = desround:rd1|R_o[2]
+#g136 = stage1_L_i[14]~synth
+#g800 = stage1_R_i[2]~synth
+.names g106 g136 g800
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g801 = stage1_R_i[2]~synth
+.names g136 data_i[41] g801
+01 1
+
+#g800 = stage1_R_i[2]~synth
+#g801 = stage1_R_i[2]~synth
+#g802 = stage1_R_i[2]~synth
+.names g800 g801 g802
+00 0
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g475 = stage1_round_key_i[4]~synth
+#g803 = desround:rd1|key_gen:kg1|new_key[3]~synth
+.names g146 g475 g803
+11 1
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g478 = stage1_round_key_i[5]~synth
+#g804 = desround:rd1|key_gen:kg1|new_key[3]~synth
+.names g146 g478 g804
+01 1
+
+#g803 = desround:rd1|key_gen:kg1|new_key[3]~synth
+#g804 = desround:rd1|key_gen:kg1|new_key[3]~synth
+#g805 = desround:rd1|key_gen:kg1|new_key[3]~synth
+.names g803 g804 g805
+00 0
+
+#g805 = desround:rd1|key_gen:kg1|new_key[3]~synth
+#g806 = desround:rd1|key_gen:kg1|new_key[3]~synth
+.names decrypt_i g805 g806
+01 1
+
+#g266 = desround:rd1|key_gen:kg1|new_key[3]~synth
+#g807 = desround:rd1|key_gen:kg1|new_key[3]~synth
+.names decrypt_i g266 g807
+11 1
+
+#g806 = desround:rd1|key_gen:kg1|new_key[3]~synth
+#g807 = desround:rd1|key_gen:kg1|new_key[3]~synth
+#g808 = desround:rd1|key_gen:kg1|new_key[3]~synth
+.names g806 g807 g808
+00 0
+
+#g98 = desround:rd1|R_o[3]
+#g136 = stage1_L_i[14]~synth
+#g809 = stage1_R_i[3]~synth
+.names g98 g136 g809
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g810 = stage1_R_i[3]~synth
+.names g136 data_i[33] g810
+01 1
+
+#g809 = stage1_R_i[3]~synth
+#g810 = stage1_R_i[3]~synth
+#g811 = stage1_R_i[3]~synth
+.names g809 g810 g811
+00 0
+
+#g136 = stage1_L_i[14]~synth
+#g269 = desround:rd1|Key_o[12]
+#g812 = stage1_round_key_i[12]~synth
+.names g136 g269 g812
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g813 = stage1_round_key_i[12]~synth
+.names g136 key_i[58] g813
+01 1
+
+#g812 = stage1_round_key_i[12]~synth
+#g813 = stage1_round_key_i[12]~synth
+#g814 = stage1_round_key_i[12]~synth
+.names g812 g813 g814
+00 0
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g814 = stage1_round_key_i[12]~synth
+#g815 = desround:rd1|key_gen:kg1|new_key[4]~synth
+.names g146 g814 g815
+11 1
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g502 = stage1_round_key_i[13]~synth
+#g816 = desround:rd1|key_gen:kg1|new_key[4]~synth
+.names g146 g502 g816
+01 1
+
+#g815 = desround:rd1|key_gen:kg1|new_key[4]~synth
+#g816 = desround:rd1|key_gen:kg1|new_key[4]~synth
+#g817 = desround:rd1|key_gen:kg1|new_key[4]~synth
+.names g815 g816 g817
+00 0
+
+#g817 = desround:rd1|key_gen:kg1|new_key[4]~synth
+#g818 = desround:rd1|key_gen:kg1|new_key[4]~synth
+.names decrypt_i g817 g818
+01 1
+
+#g268 = desround:rd1|key_gen:kg1|new_key[4]~synth
+#g819 = desround:rd1|key_gen:kg1|new_key[4]~synth
+.names decrypt_i g268 g819
+11 1
+
+#g818 = desround:rd1|key_gen:kg1|new_key[4]~synth
+#g819 = desround:rd1|key_gen:kg1|new_key[4]~synth
+#g820 = desround:rd1|key_gen:kg1|new_key[4]~synth
+.names g818 g819 g820
+00 0
+
+#g90 = desround:rd1|R_o[4]
+#g136 = stage1_L_i[14]~synth
+#g821 = stage1_R_i[4]~synth
+.names g90 g136 g821
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g822 = stage1_R_i[4]~synth
+.names g136 data_i[25] g822
+01 1
+
+#g821 = stage1_R_i[4]~synth
+#g822 = stage1_R_i[4]~synth
+#g823 = stage1_R_i[4]~synth
+.names g821 g822 g823
+00 0
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g415 = stage1_round_key_i[8]~synth
+#g824 = desround:rd1|key_gen:kg1|new_key[5]~synth
+.names g146 g415 g824
+11 1
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g406 = stage1_round_key_i[9]~synth
+#g825 = desround:rd1|key_gen:kg1|new_key[5]~synth
+.names g146 g406 g825
+01 1
+
+#g824 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g825 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g826 = desround:rd1|key_gen:kg1|new_key[5]~synth
+.names g824 g825 g826
+00 0
+
+#g826 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g827 = desround:rd1|key_gen:kg1|new_key[5]~synth
+.names decrypt_i g826 g827
+01 1
+
+#g271 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g828 = desround:rd1|key_gen:kg1|new_key[5]~synth
+.names decrypt_i g271 g828
+11 1
+
+#g827 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g828 = desround:rd1|key_gen:kg1|new_key[5]~synth
+#g829 = desround:rd1|key_gen:kg1|new_key[5]~synth
+.names g827 g828 g829
+00 0
+
+#g82 = desround:rd1|R_o[5]
+#g136 = stage1_L_i[14]~synth
+#g830 = stage1_R_i[5]~synth
+.names g82 g136 g830
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g831 = stage1_R_i[5]~synth
+.names g136 data_i[17] g831
+01 1
+
+#g830 = stage1_R_i[5]~synth
+#g831 = stage1_R_i[5]~synth
+#g832 = stage1_R_i[5]~synth
+.names g830 g831 g832
+00 0
+
+#g85 = desround:rd1|L_o[13]
+#g136 = stage1_L_i[14]~synth
+#g833 = stage1_L_i[13]~synth
+.names g85 g136 g833
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g834 = stage1_L_i[13]~synth
+.names g136 data_i[18] g834
+01 1
+
+#g833 = stage1_L_i[13]~synth
+#g834 = stage1_L_i[13]~synth
+#g835 = stage1_L_i[13]~synth
+.names g833 g834 g835
+00 0
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g481 = stage1_round_key_i[6]~synth
+#g836 = desround:rd1|key_gen:kg1|new_key[12]~synth
+.names g146 g481 g836
+11 1
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g418 = stage1_round_key_i[7]~synth
+#g837 = desround:rd1|key_gen:kg1|new_key[12]~synth
+.names g146 g418 g837
+01 1
+
+#g836 = desround:rd1|key_gen:kg1|new_key[12]~synth
+#g837 = desround:rd1|key_gen:kg1|new_key[12]~synth
+#g838 = desround:rd1|key_gen:kg1|new_key[12]~synth
+.names g836 g837 g838
+00 0
+
+#g838 = desround:rd1|key_gen:kg1|new_key[12]~synth
+#g839 = desround:rd1|key_gen:kg1|new_key[12]~synth
+.names decrypt_i g838 g839
+01 1
+
+#g275 = desround:rd1|key_gen:kg1|new_key[12]~synth
+#g840 = desround:rd1|key_gen:kg1|new_key[12]~synth
+.names decrypt_i g275 g840
+11 1
+
+#g839 = desround:rd1|key_gen:kg1|new_key[12]~synth
+#g840 = desround:rd1|key_gen:kg1|new_key[12]~synth
+#g841 = desround:rd1|key_gen:kg1|new_key[12]~synth
+.names g839 g840 g841
+00 0
+
+#g124 = desround:rd1|R_o[8]
+#g136 = stage1_L_i[14]~synth
+#g842 = stage1_R_i[8]~synth
+.names g124 g136 g842
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g843 = stage1_R_i[8]~synth
+.names g136 data_i[59] g843
+01 1
+
+#g842 = stage1_R_i[8]~synth
+#g843 = stage1_R_i[8]~synth
+#g844 = stage1_R_i[8]~synth
+.names g842 g843 g844
+00 0
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g436 = stage1_round_key_i[21]~synth
+#g845 = desround:rd1|key_gen:kg1|new_key[13]~synth
+.names g146 g436 g845
+11 1
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g778 = stage1_round_key_i[22]~synth
+#g846 = desround:rd1|key_gen:kg1|new_key[13]~synth
+.names g146 g778 g846
+01 1
+
+#g845 = desround:rd1|key_gen:kg1|new_key[13]~synth
+#g846 = desround:rd1|key_gen:kg1|new_key[13]~synth
+#g847 = desround:rd1|key_gen:kg1|new_key[13]~synth
+.names g845 g846 g847
+00 0
+
+#g847 = desround:rd1|key_gen:kg1|new_key[13]~synth
+#g848 = desround:rd1|key_gen:kg1|new_key[13]~synth
+.names decrypt_i g847 g848
+01 1
+
+#g277 = desround:rd1|key_gen:kg1|new_key[13]~synth
+#g849 = desround:rd1|key_gen:kg1|new_key[13]~synth
+.names decrypt_i g277 g849
+11 1
+
+#g848 = desround:rd1|key_gen:kg1|new_key[13]~synth
+#g849 = desround:rd1|key_gen:kg1|new_key[13]~synth
+#g850 = desround:rd1|key_gen:kg1|new_key[13]~synth
+.names g848 g849 g850
+00 0
+
+#g116 = desround:rd1|R_o[9]
+#g136 = stage1_L_i[14]~synth
+#g851 = stage1_R_i[9]~synth
+.names g116 g136 g851
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g852 = stage1_R_i[9]~synth
+.names g136 data_i[51] g852
+01 1
+
+#g851 = stage1_R_i[9]~synth
+#g852 = stage1_R_i[9]~synth
+#g853 = stage1_R_i[9]~synth
+.names g851 g852 g853
+00 0
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g406 = stage1_round_key_i[9]~synth
+#g854 = desround:rd1|key_gen:kg1|new_key[14]~synth
+.names g146 g406 g854
+11 1
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g409 = stage1_round_key_i[10]~synth
+#g855 = desround:rd1|key_gen:kg1|new_key[14]~synth
+.names g146 g409 g855
+01 1
+
+#g854 = desround:rd1|key_gen:kg1|new_key[14]~synth
+#g855 = desround:rd1|key_gen:kg1|new_key[14]~synth
+#g856 = desround:rd1|key_gen:kg1|new_key[14]~synth
+.names g854 g855 g856
+00 0
+
+#g856 = desround:rd1|key_gen:kg1|new_key[14]~synth
+#g857 = desround:rd1|key_gen:kg1|new_key[14]~synth
+.names decrypt_i g856 g857
+01 1
+
+#g279 = desround:rd1|key_gen:kg1|new_key[14]~synth
+#g858 = desround:rd1|key_gen:kg1|new_key[14]~synth
+.names decrypt_i g279 g858
+11 1
+
+#g857 = desround:rd1|key_gen:kg1|new_key[14]~synth
+#g858 = desround:rd1|key_gen:kg1|new_key[14]~synth
+#g859 = desround:rd1|key_gen:kg1|new_key[14]~synth
+.names g857 g858 g859
+00 0
+
+#g108 = desround:rd1|R_o[10]
+#g136 = stage1_L_i[14]~synth
+#g860 = stage1_R_i[10]~synth
+.names g108 g136 g860
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g861 = stage1_R_i[10]~synth
+.names g136 data_i[43] g861
+01 1
+
+#g860 = stage1_R_i[10]~synth
+#g861 = stage1_R_i[10]~synth
+#g862 = stage1_R_i[10]~synth
+.names g860 g861 g862
+00 0
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g388 = stage1_round_key_i[3]~synth
+#g863 = desround:rd1|key_gen:kg1|new_key[15]~synth
+.names g146 g388 g863
+11 1
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g475 = stage1_round_key_i[4]~synth
+#g864 = desround:rd1|key_gen:kg1|new_key[15]~synth
+.names g146 g475 g864
+01 1
+
+#g863 = desround:rd1|key_gen:kg1|new_key[15]~synth
+#g864 = desround:rd1|key_gen:kg1|new_key[15]~synth
+#g865 = desround:rd1|key_gen:kg1|new_key[15]~synth
+.names g863 g864 g865
+00 0
+
+#g865 = desround:rd1|key_gen:kg1|new_key[15]~synth
+#g866 = desround:rd1|key_gen:kg1|new_key[15]~synth
+.names decrypt_i g865 g866
+01 1
+
+#g281 = desround:rd1|key_gen:kg1|new_key[15]~synth
+#g867 = desround:rd1|key_gen:kg1|new_key[15]~synth
+.names decrypt_i g281 g867
+11 1
+
+#g866 = desround:rd1|key_gen:kg1|new_key[15]~synth
+#g867 = desround:rd1|key_gen:kg1|new_key[15]~synth
+#g868 = desround:rd1|key_gen:kg1|new_key[15]~synth
+.names g866 g867 g868
+00 0
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g499 = stage1_round_key_i[14]~synth
+#g869 = desround:rd1|key_gen:kg1|new_key[16]~synth
+.names g146 g499 g869
+11 1
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g493 = stage1_round_key_i[15]~synth
+#g870 = desround:rd1|key_gen:kg1|new_key[16]~synth
+.names g146 g493 g870
+01 1
+
+#g869 = desround:rd1|key_gen:kg1|new_key[16]~synth
+#g870 = desround:rd1|key_gen:kg1|new_key[16]~synth
+#g871 = desround:rd1|key_gen:kg1|new_key[16]~synth
+.names g869 g870 g871
+00 0
+
+#g871 = desround:rd1|key_gen:kg1|new_key[16]~synth
+#g872 = desround:rd1|key_gen:kg1|new_key[16]~synth
+.names decrypt_i g871 g872
+01 1
+
+#g283 = desround:rd1|key_gen:kg1|new_key[16]~synth
+#g873 = desround:rd1|key_gen:kg1|new_key[16]~synth
+.names decrypt_i g283 g873
+11 1
+
+#g872 = desround:rd1|key_gen:kg1|new_key[16]~synth
+#g873 = desround:rd1|key_gen:kg1|new_key[16]~synth
+#g874 = desround:rd1|key_gen:kg1|new_key[16]~synth
+.names g872 g873 g874
+00 0
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g460 = stage1_round_key_i[24]~synth
+#g875 = desround:rd1|key_gen:kg1|new_key[17]~synth
+.names g146 g460 g875
+11 1
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g454 = stage1_round_key_i[25]~synth
+#g876 = desround:rd1|key_gen:kg1|new_key[17]~synth
+.names g146 g454 g876
+01 1
+
+#g875 = desround:rd1|key_gen:kg1|new_key[17]~synth
+#g876 = desround:rd1|key_gen:kg1|new_key[17]~synth
+#g877 = desround:rd1|key_gen:kg1|new_key[17]~synth
+.names g875 g876 g877
+00 0
+
+#g877 = desround:rd1|key_gen:kg1|new_key[17]~synth
+#g878 = desround:rd1|key_gen:kg1|new_key[17]~synth
+.names decrypt_i g877 g878
+01 1
+
+#g285 = desround:rd1|key_gen:kg1|new_key[17]~synth
+#g879 = desround:rd1|key_gen:kg1|new_key[17]~synth
+.names decrypt_i g285 g879
+11 1
+
+#g878 = desround:rd1|key_gen:kg1|new_key[17]~synth
+#g879 = desround:rd1|key_gen:kg1|new_key[17]~synth
+#g880 = desround:rd1|key_gen:kg1|new_key[17]~synth
+.names g878 g879 g880
+00 0
+
+#g87 = desround:rd1|L_o[21]
+#g136 = stage1_L_i[14]~synth
+#g881 = stage1_L_i[21]~synth
+.names g87 g136 g881
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g882 = stage1_L_i[21]~synth
+.names g136 data_i[20] g882
+01 1
+
+#g881 = stage1_L_i[21]~synth
+#g882 = stage1_L_i[21]~synth
+#g883 = stage1_L_i[21]~synth
+.names g881 g882 g883
+00 0
+
+#g86 = desround:rd1|R_o[21]
+#g136 = stage1_L_i[14]~synth
+#g884 = stage1_R_i[21]~synth
+.names g86 g136 g884
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g885 = stage1_R_i[21]~synth
+.names g136 data_i[21] g885
+01 1
+
+#g884 = stage1_R_i[21]~synth
+#g885 = stage1_R_i[21]~synth
+#g886 = stage1_R_i[21]~synth
+.names g884 g885 g886
+00 0
+
+#g89 = desround:rd1|L_o[29]
+#g136 = stage1_L_i[14]~synth
+#g887 = stage1_L_i[29]~synth
+.names g89 g136 g887
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g888 = stage1_L_i[29]~synth
+.names g136 data_i[22] g888
+01 1
+
+#g887 = stage1_L_i[29]~synth
+#g888 = stage1_L_i[29]~synth
+#g889 = stage1_L_i[29]~synth
+.names g887 g888 g889
+00 0
+
+#g91 = desround:rd1|L_o[4]
+#g136 = stage1_L_i[14]~synth
+#g890 = stage1_L_i[4]~synth
+.names g91 g136 g890
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g891 = stage1_L_i[4]~synth
+.names g136 data_i[24] g891
+01 1
+
+#g890 = stage1_L_i[4]~synth
+#g891 = stage1_L_i[4]~synth
+#g892 = stage1_L_i[4]~synth
+.names g890 g891 g892
+00 0
+
+#g93 = desround:rd1|L_o[12]
+#g136 = stage1_L_i[14]~synth
+#g893 = stage1_L_i[12]~synth
+.names g93 g136 g893
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g894 = stage1_L_i[12]~synth
+.names g136 data_i[26] g894
+01 1
+
+#g893 = stage1_L_i[12]~synth
+#g894 = stage1_L_i[12]~synth
+#g895 = stage1_L_i[12]~synth
+.names g893 g894 g895
+00 0
+
+#g95 = desround:rd1|L_o[20]
+#g136 = stage1_L_i[14]~synth
+#g896 = stage1_L_i[20]~synth
+.names g95 g136 g896
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g897 = stage1_L_i[20]~synth
+.names g136 data_i[28] g897
+01 1
+
+#g896 = stage1_L_i[20]~synth
+#g897 = stage1_L_i[20]~synth
+#g898 = stage1_L_i[20]~synth
+.names g896 g897 g898
+00 0
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g379 = stage1_round_key_i[1]~synth
+#g899 = desround:rd1|key_gen:kg1|new_key[6]~synth
+.names g146 g379 g899
+11 1
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g385 = stage1_round_key_i[2]~synth
+#g900 = desround:rd1|key_gen:kg1|new_key[6]~synth
+.names g146 g385 g900
+01 1
+
+#g899 = desround:rd1|key_gen:kg1|new_key[6]~synth
+#g900 = desround:rd1|key_gen:kg1|new_key[6]~synth
+#g901 = desround:rd1|key_gen:kg1|new_key[6]~synth
+.names g899 g900 g901
+00 0
+
+#g901 = desround:rd1|key_gen:kg1|new_key[6]~synth
+#g902 = desround:rd1|key_gen:kg1|new_key[6]~synth
+.names decrypt_i g901 g902
+01 1
+
+#g297 = desround:rd1|key_gen:kg1|new_key[6]~synth
+#g903 = desround:rd1|key_gen:kg1|new_key[6]~synth
+.names decrypt_i g297 g903
+11 1
+
+#g902 = desround:rd1|key_gen:kg1|new_key[6]~synth
+#g903 = desround:rd1|key_gen:kg1|new_key[6]~synth
+#g904 = desround:rd1|key_gen:kg1|new_key[6]~synth
+.names g902 g903 g904
+00 0
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g433 = stage1_round_key_i[20]~synth
+#g905 = desround:rd1|key_gen:kg1|new_key[7]~synth
+.names g146 g433 g905
+11 1
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g436 = stage1_round_key_i[21]~synth
+#g906 = desround:rd1|key_gen:kg1|new_key[7]~synth
+.names g146 g436 g906
+01 1
+
+#g905 = desround:rd1|key_gen:kg1|new_key[7]~synth
+#g906 = desround:rd1|key_gen:kg1|new_key[7]~synth
+#g907 = desround:rd1|key_gen:kg1|new_key[7]~synth
+.names g905 g906 g907
+00 0
+
+#g907 = desround:rd1|key_gen:kg1|new_key[7]~synth
+#g908 = desround:rd1|key_gen:kg1|new_key[7]~synth
+.names decrypt_i g907 g908
+01 1
+
+#g299 = desround:rd1|key_gen:kg1|new_key[7]~synth
+#g909 = desround:rd1|key_gen:kg1|new_key[7]~synth
+.names decrypt_i g299 g909
+11 1
+
+#g908 = desround:rd1|key_gen:kg1|new_key[7]~synth
+#g909 = desround:rd1|key_gen:kg1|new_key[7]~synth
+#g910 = desround:rd1|key_gen:kg1|new_key[7]~synth
+.names g908 g909 g910
+00 0
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g457 = stage1_round_key_i[26]~synth
+#g911 = desround:rd1|key_gen:kg1|new_key[8]~synth
+.names g146 g457 g911
+11 1
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g394 = stage1_round_key_i[27]~synth
+#g912 = desround:rd1|key_gen:kg1|new_key[8]~synth
+.names g146 g394 g912
+01 1
+
+#g911 = desround:rd1|key_gen:kg1|new_key[8]~synth
+#g912 = desround:rd1|key_gen:kg1|new_key[8]~synth
+#g913 = desround:rd1|key_gen:kg1|new_key[8]~synth
+.names g911 g912 g913
+00 0
+
+#g913 = desround:rd1|key_gen:kg1|new_key[8]~synth
+#g914 = desround:rd1|key_gen:kg1|new_key[8]~synth
+.names decrypt_i g913 g914
+01 1
+
+#g301 = desround:rd1|key_gen:kg1|new_key[8]~synth
+#g915 = desround:rd1|key_gen:kg1|new_key[8]~synth
+.names decrypt_i g301 g915
+11 1
+
+#g914 = desround:rd1|key_gen:kg1|new_key[8]~synth
+#g915 = desround:rd1|key_gen:kg1|new_key[8]~synth
+#g916 = desround:rd1|key_gen:kg1|new_key[8]~synth
+.names g914 g915 g916
+00 0
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g493 = stage1_round_key_i[15]~synth
+#g917 = desround:rd1|key_gen:kg1|new_key[9]~synth
+.names g146 g493 g917
+11 1
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g496 = stage1_round_key_i[16]~synth
+#g918 = desround:rd1|key_gen:kg1|new_key[9]~synth
+.names g146 g496 g918
+01 1
+
+#g917 = desround:rd1|key_gen:kg1|new_key[9]~synth
+#g918 = desround:rd1|key_gen:kg1|new_key[9]~synth
+#g919 = desround:rd1|key_gen:kg1|new_key[9]~synth
+.names g917 g918 g919
+00 0
+
+#g919 = desround:rd1|key_gen:kg1|new_key[9]~synth
+#g920 = desround:rd1|key_gen:kg1|new_key[9]~synth
+.names decrypt_i g919 g920
+01 1
+
+#g303 = desround:rd1|key_gen:kg1|new_key[9]~synth
+#g921 = desround:rd1|key_gen:kg1|new_key[9]~synth
+.names decrypt_i g303 g921
+11 1
+
+#g920 = desround:rd1|key_gen:kg1|new_key[9]~synth
+#g921 = desround:rd1|key_gen:kg1|new_key[9]~synth
+#g922 = desround:rd1|key_gen:kg1|new_key[9]~synth
+.names g920 g921 g922
+00 0
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g478 = stage1_round_key_i[5]~synth
+#g923 = desround:rd1|key_gen:kg1|new_key[10]~synth
+.names g146 g478 g923
+11 1
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g481 = stage1_round_key_i[6]~synth
+#g924 = desround:rd1|key_gen:kg1|new_key[10]~synth
+.names g146 g481 g924
+01 1
+
+#g923 = desround:rd1|key_gen:kg1|new_key[10]~synth
+#g924 = desround:rd1|key_gen:kg1|new_key[10]~synth
+#g925 = desround:rd1|key_gen:kg1|new_key[10]~synth
+.names g923 g924 g925
+00 0
+
+#g925 = desround:rd1|key_gen:kg1|new_key[10]~synth
+#g926 = desround:rd1|key_gen:kg1|new_key[10]~synth
+.names decrypt_i g925 g926
+01 1
+
+#g305 = desround:rd1|key_gen:kg1|new_key[10]~synth
+#g927 = desround:rd1|key_gen:kg1|new_key[10]~synth
+.names decrypt_i g305 g927
+11 1
+
+#g926 = desround:rd1|key_gen:kg1|new_key[10]~synth
+#g927 = desround:rd1|key_gen:kg1|new_key[10]~synth
+#g928 = desround:rd1|key_gen:kg1|new_key[10]~synth
+.names g926 g927 g928
+00 0
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g409 = stage1_round_key_i[10]~synth
+#g929 = desround:rd1|key_gen:kg1|new_key[11]~synth
+.names g146 g409 g929
+11 1
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g412 = stage1_round_key_i[11]~synth
+#g930 = desround:rd1|key_gen:kg1|new_key[11]~synth
+.names g146 g412 g930
+01 1
+
+#g929 = desround:rd1|key_gen:kg1|new_key[11]~synth
+#g930 = desround:rd1|key_gen:kg1|new_key[11]~synth
+#g931 = desround:rd1|key_gen:kg1|new_key[11]~synth
+.names g929 g930 g931
+00 0
+
+#g931 = desround:rd1|key_gen:kg1|new_key[11]~synth
+#g932 = desround:rd1|key_gen:kg1|new_key[11]~synth
+.names decrypt_i g931 g932
+01 1
+
+#g307 = desround:rd1|key_gen:kg1|new_key[11]~synth
+#g933 = desround:rd1|key_gen:kg1|new_key[11]~synth
+.names decrypt_i g307 g933
+11 1
+
+#g932 = desround:rd1|key_gen:kg1|new_key[11]~synth
+#g933 = desround:rd1|key_gen:kg1|new_key[11]~synth
+#g934 = desround:rd1|key_gen:kg1|new_key[11]~synth
+.names g932 g933 g934
+00 0
+
+#g97 = desround:rd1|L_o[28]
+#g136 = stage1_L_i[14]~synth
+#g935 = stage1_L_i[28]~synth
+.names g97 g136 g935
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g936 = stage1_L_i[28]~synth
+.names g136 data_i[30] g936
+01 1
+
+#g935 = stage1_L_i[28]~synth
+#g936 = stage1_L_i[28]~synth
+#g937 = stage1_L_i[28]~synth
+.names g935 g936 g937
+00 0
+
+#g99 = desround:rd1|L_o[3]
+#g136 = stage1_L_i[14]~synth
+#g938 = stage1_L_i[3]~synth
+.names g99 g136 g938
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g939 = stage1_L_i[3]~synth
+.names g136 data_i[32] g939
+01 1
+
+#g938 = stage1_L_i[3]~synth
+#g939 = stage1_L_i[3]~synth
+#g940 = stage1_L_i[3]~synth
+.names g938 g939 g940
+00 0
+
+#g101 = desround:rd1|L_o[11]
+#g136 = stage1_L_i[14]~synth
+#g941 = stage1_L_i[11]~synth
+.names g101 g136 g941
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g942 = stage1_L_i[11]~synth
+.names g136 data_i[34] g942
+01 1
+
+#g941 = stage1_L_i[11]~synth
+#g942 = stage1_L_i[11]~synth
+#g943 = stage1_L_i[11]~synth
+.names g941 g942 g943
+00 0
+
+#g103 = desround:rd1|L_o[19]
+#g136 = stage1_L_i[14]~synth
+#g944 = stage1_L_i[19]~synth
+.names g103 g136 g944
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g945 = stage1_L_i[19]~synth
+.names g136 data_i[36] g945
+01 1
+
+#g944 = stage1_L_i[19]~synth
+#g945 = stage1_L_i[19]~synth
+#g946 = stage1_L_i[19]~synth
+.names g944 g945 g946
+00 0
+
+#g105 = desround:rd1|L_o[27]
+#g136 = stage1_L_i[14]~synth
+#g947 = stage1_L_i[27]~synth
+.names g105 g136 g947
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g948 = stage1_L_i[27]~synth
+.names g136 data_i[38] g948
+01 1
+
+#g947 = stage1_L_i[27]~synth
+#g948 = stage1_L_i[27]~synth
+#g949 = stage1_L_i[27]~synth
+.names g947 g948 g949
+00 0
+
+#g107 = desround:rd1|L_o[2]
+#g136 = stage1_L_i[14]~synth
+#g950 = stage1_L_i[2]~synth
+.names g107 g136 g950
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g951 = stage1_L_i[2]~synth
+.names g136 data_i[40] g951
+01 1
+
+#g950 = stage1_L_i[2]~synth
+#g951 = stage1_L_i[2]~synth
+#g952 = stage1_L_i[2]~synth
+.names g950 g951 g952
+00 0
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g592 = stage1_round_key_i[46]~synth
+#g953 = desround:rd1|key_gen:kg1|new_key[30]~synth
+.names g146 g592 g953
+11 1
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g595 = stage1_round_key_i[47]~synth
+#g954 = desround:rd1|key_gen:kg1|new_key[30]~synth
+.names g146 g595 g954
+01 1
+
+#g953 = desround:rd1|key_gen:kg1|new_key[30]~synth
+#g954 = desround:rd1|key_gen:kg1|new_key[30]~synth
+#g955 = desround:rd1|key_gen:kg1|new_key[30]~synth
+.names g953 g954 g955
+00 0
+
+#g955 = desround:rd1|key_gen:kg1|new_key[30]~synth
+#g956 = desround:rd1|key_gen:kg1|new_key[30]~synth
+.names decrypt_i g955 g956
+01 1
+
+#g321 = desround:rd1|key_gen:kg1|new_key[30]~synth
+#g957 = desround:rd1|key_gen:kg1|new_key[30]~synth
+.names decrypt_i g321 g957
+11 1
+
+#g956 = desround:rd1|key_gen:kg1|new_key[30]~synth
+#g957 = desround:rd1|key_gen:kg1|new_key[30]~synth
+#g958 = desround:rd1|key_gen:kg1|new_key[30]~synth
+.names g956 g957 g958
+00 0
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g547 = stage1_round_key_i[28]~synth
+#g959 = desround:rd1|key_gen:kg1|new_key[31]~synth
+.names g146 g547 g959
+11 1
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g550 = stage1_round_key_i[29]~synth
+#g960 = desround:rd1|key_gen:kg1|new_key[31]~synth
+.names g146 g550 g960
+01 1
+
+#g959 = desround:rd1|key_gen:kg1|new_key[31]~synth
+#g960 = desround:rd1|key_gen:kg1|new_key[31]~synth
+#g961 = desround:rd1|key_gen:kg1|new_key[31]~synth
+.names g959 g960 g961
+00 0
+
+#g961 = desround:rd1|key_gen:kg1|new_key[31]~synth
+#g962 = desround:rd1|key_gen:kg1|new_key[31]~synth
+.names decrypt_i g961 g962
+01 1
+
+#g323 = desround:rd1|key_gen:kg1|new_key[31]~synth
+#g963 = desround:rd1|key_gen:kg1|new_key[31]~synth
+.names decrypt_i g323 g963
+11 1
+
+#g962 = desround:rd1|key_gen:kg1|new_key[31]~synth
+#g963 = desround:rd1|key_gen:kg1|new_key[31]~synth
+#g964 = desround:rd1|key_gen:kg1|new_key[31]~synth
+.names g962 g963 g964
+00 0
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g529 = stage1_round_key_i[50]~synth
+#g965 = desround:rd1|key_gen:kg1|new_key[32]~synth
+.names g146 g529 g965
+11 1
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g520 = stage1_round_key_i[51]~synth
+#g966 = desround:rd1|key_gen:kg1|new_key[32]~synth
+.names g146 g520 g966
+01 1
+
+#g965 = desround:rd1|key_gen:kg1|new_key[32]~synth
+#g966 = desround:rd1|key_gen:kg1|new_key[32]~synth
+#g967 = desround:rd1|key_gen:kg1|new_key[32]~synth
+.names g965 g966 g967
+00 0
+
+#g967 = desround:rd1|key_gen:kg1|new_key[32]~synth
+#g968 = desround:rd1|key_gen:kg1|new_key[32]~synth
+.names decrypt_i g967 g968
+01 1
+
+#g325 = desround:rd1|key_gen:kg1|new_key[32]~synth
+#g969 = desround:rd1|key_gen:kg1|new_key[32]~synth
+.names decrypt_i g325 g969
+11 1
+
+#g968 = desround:rd1|key_gen:kg1|new_key[32]~synth
+#g969 = desround:rd1|key_gen:kg1|new_key[32]~synth
+#g970 = desround:rd1|key_gen:kg1|new_key[32]~synth
+.names g968 g969 g970
+00 0
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g637 = stage1_round_key_i[42]~synth
+#g971 = desround:rd1|key_gen:kg1|new_key[33]~synth
+.names g146 g637 g971
+11 1
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g601 = stage1_round_key_i[43]~synth
+#g972 = desround:rd1|key_gen:kg1|new_key[33]~synth
+.names g146 g601 g972
+01 1
+
+#g971 = desround:rd1|key_gen:kg1|new_key[33]~synth
+#g972 = desround:rd1|key_gen:kg1|new_key[33]~synth
+#g973 = desround:rd1|key_gen:kg1|new_key[33]~synth
+.names g971 g972 g973
+00 0
+
+#g973 = desround:rd1|key_gen:kg1|new_key[33]~synth
+#g974 = desround:rd1|key_gen:kg1|new_key[33]~synth
+.names decrypt_i g973 g974
+01 1
+
+#g327 = desround:rd1|key_gen:kg1|new_key[33]~synth
+#g975 = desround:rd1|key_gen:kg1|new_key[33]~synth
+.names decrypt_i g327 g975
+11 1
+
+#g974 = desround:rd1|key_gen:kg1|new_key[33]~synth
+#g975 = desround:rd1|key_gen:kg1|new_key[33]~synth
+#g976 = desround:rd1|key_gen:kg1|new_key[33]~synth
+.names g974 g975 g976
+00 0
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g673 = stage1_round_key_i[35]~synth
+#g977 = desround:rd1|key_gen:kg1|new_key[34]~synth
+.names g146 g673 g977
+11 1
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g670 = stage1_round_key_i[36]~synth
+#g978 = desround:rd1|key_gen:kg1|new_key[34]~synth
+.names g146 g670 g978
+01 1
+
+#g977 = desround:rd1|key_gen:kg1|new_key[34]~synth
+#g978 = desround:rd1|key_gen:kg1|new_key[34]~synth
+#g979 = desround:rd1|key_gen:kg1|new_key[34]~synth
+.names g977 g978 g979
+00 0
+
+#g979 = desround:rd1|key_gen:kg1|new_key[34]~synth
+#g980 = desround:rd1|key_gen:kg1|new_key[34]~synth
+.names decrypt_i g979 g980
+01 1
+
+#g329 = desround:rd1|key_gen:kg1|new_key[34]~synth
+#g981 = desround:rd1|key_gen:kg1|new_key[34]~synth
+.names decrypt_i g329 g981
+11 1
+
+#g980 = desround:rd1|key_gen:kg1|new_key[34]~synth
+#g981 = desround:rd1|key_gen:kg1|new_key[34]~synth
+#g982 = desround:rd1|key_gen:kg1|new_key[34]~synth
+.names g980 g981 g982
+00 0
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g574 = stage1_round_key_i[31]~synth
+#g983 = desround:rd1|key_gen:kg1|new_key[35]~synth
+.names g146 g574 g983
+11 1
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g565 = stage1_round_key_i[32]~synth
+#g984 = desround:rd1|key_gen:kg1|new_key[35]~synth
+.names g146 g565 g984
+01 1
+
+#g983 = desround:rd1|key_gen:kg1|new_key[35]~synth
+#g984 = desround:rd1|key_gen:kg1|new_key[35]~synth
+#g985 = desround:rd1|key_gen:kg1|new_key[35]~synth
+.names g983 g984 g985
+00 0
+
+#g985 = desround:rd1|key_gen:kg1|new_key[35]~synth
+#g986 = desround:rd1|key_gen:kg1|new_key[35]~synth
+.names decrypt_i g985 g986
+01 1
+
+#g331 = desround:rd1|key_gen:kg1|new_key[35]~synth
+#g987 = desround:rd1|key_gen:kg1|new_key[35]~synth
+.names decrypt_i g331 g987
+11 1
+
+#g986 = desround:rd1|key_gen:kg1|new_key[35]~synth
+#g987 = desround:rd1|key_gen:kg1|new_key[35]~synth
+#g988 = desround:rd1|key_gen:kg1|new_key[35]~synth
+.names g986 g987 g988
+00 0
+
+#g109 = desround:rd1|L_o[10]
+#g136 = stage1_L_i[14]~synth
+#g989 = stage1_L_i[10]~synth
+.names g109 g136 g989
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g990 = stage1_L_i[10]~synth
+.names g136 data_i[42] g990
+01 1
+
+#g989 = stage1_L_i[10]~synth
+#g990 = stage1_L_i[10]~synth
+#g991 = stage1_L_i[10]~synth
+.names g989 g990 g991
+00 0
+
+#g111 = desround:rd1|L_o[18]
+#g136 = stage1_L_i[14]~synth
+#g992 = stage1_L_i[18]~synth
+.names g111 g136 g992
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g993 = stage1_L_i[18]~synth
+.names g136 data_i[44] g993
+01 1
+
+#g992 = stage1_L_i[18]~synth
+#g993 = stage1_L_i[18]~synth
+#g994 = stage1_L_i[18]~synth
+.names g992 g993 g994
+00 0
+
+#g113 = desround:rd1|L_o[26]
+#g136 = stage1_L_i[14]~synth
+#g995 = stage1_L_i[26]~synth
+.names g113 g136 g995
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g996 = stage1_L_i[26]~synth
+.names g136 data_i[46] g996
+01 1
+
+#g995 = stage1_L_i[26]~synth
+#g996 = stage1_L_i[26]~synth
+#g997 = stage1_L_i[26]~synth
+.names g995 g996 g997
+00 0
+
+#g115 = desround:rd1|L_o[1]
+#g136 = stage1_L_i[14]~synth
+#g998 = stage1_L_i[1]~synth
+.names g115 g136 g998
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g999 = stage1_L_i[1]~synth
+.names g136 data_i[48] g999
+01 1
+
+#g998 = stage1_L_i[1]~synth
+#g999 = stage1_L_i[1]~synth
+#g1000 = stage1_L_i[1]~synth
+.names g998 g999 g1000
+00 0
+
+#g117 = desround:rd1|L_o[9]
+#g136 = stage1_L_i[14]~synth
+#g1001 = stage1_L_i[9]~synth
+.names g117 g136 g1001
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g1002 = stage1_L_i[9]~synth
+.names g136 data_i[50] g1002
+01 1
+
+#g1001 = stage1_L_i[9]~synth
+#g1002 = stage1_L_i[9]~synth
+#g1003 = stage1_L_i[9]~synth
+.names g1001 g1002 g1003
+00 0
+
+#g119 = desround:rd1|L_o[17]
+#g136 = stage1_L_i[14]~synth
+#g1004 = stage1_L_i[17]~synth
+.names g119 g136 g1004
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g1005 = stage1_L_i[17]~synth
+.names g136 data_i[52] g1005
+01 1
+
+#g1004 = stage1_L_i[17]~synth
+#g1005 = stage1_L_i[17]~synth
+#g1006 = stage1_L_i[17]~synth
+.names g1004 g1005 g1006
+00 0
+
+#g121 = desround:rd1|L_o[25]
+#g136 = stage1_L_i[14]~synth
+#g1007 = stage1_L_i[25]~synth
+.names g121 g136 g1007
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g1008 = stage1_L_i[25]~synth
+.names g136 data_i[54] g1008
+01 1
+
+#g1007 = stage1_L_i[25]~synth
+#g1008 = stage1_L_i[25]~synth
+#g1009 = stage1_L_i[25]~synth
+.names g1007 g1008 g1009
+00 0
+
+#g123 = desround:rd1|L_o[0]
+#g136 = stage1_L_i[14]~synth
+#g1010 = stage1_L_i[0]~synth
+.names g123 g136 g1010
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g1011 = stage1_L_i[0]~synth
+.names g136 data_i[56] g1011
+01 1
+
+#g1010 = stage1_L_i[0]~synth
+#g1011 = stage1_L_i[0]~synth
+#g1012 = stage1_L_i[0]~synth
+.names g1010 g1011 g1012
+00 0
+
+#g125 = desround:rd1|L_o[8]
+#g136 = stage1_L_i[14]~synth
+#g1013 = stage1_L_i[8]~synth
+.names g125 g136 g1013
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g1014 = stage1_L_i[8]~synth
+.names g136 data_i[58] g1014
+01 1
+
+#g1013 = stage1_L_i[8]~synth
+#g1014 = stage1_L_i[8]~synth
+#g1015 = stage1_L_i[8]~synth
+.names g1013 g1014 g1015
+00 0
+
+#g127 = desround:rd1|L_o[16]
+#g136 = stage1_L_i[14]~synth
+#g1016 = stage1_L_i[16]~synth
+.names g127 g136 g1016
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g1017 = stage1_L_i[16]~synth
+.names g136 data_i[60] g1017
+01 1
+
+#g1016 = stage1_L_i[16]~synth
+#g1017 = stage1_L_i[16]~synth
+#g1018 = stage1_L_i[16]~synth
+.names g1016 g1017 g1018
+00 0
+
+#g129 = desround:rd1|L_o[24]
+#g136 = stage1_L_i[14]~synth
+#g1019 = stage1_L_i[24]~synth
+.names g129 g136 g1019
+11 1
+
+#g136 = stage1_L_i[14]~synth
+#g1020 = stage1_L_i[24]~synth
+.names g136 data_i[62] g1020
+01 1
+
+#g1019 = stage1_L_i[24]~synth
+#g1020 = stage1_L_i[24]~synth
+#g1021 = stage1_L_i[24]~synth
+.names g1019 g1020 g1021
+00 0
+
+#g134 = Equal0~synth
+#g1022 = data_ready~synth
+.names load_i g134 g1022
+11 1
+
+#g130 = data_ready
+#g134 = Equal0~synth
+#g1023 = data_ready~synth
+.names g130 g134 g1023
+10 1
+
+#g1022 = data_ready~synth
+#g1023 = data_ready~synth
+#g1024 = data_ready~synth
+.names g1022 g1023 g1024
+00 0
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g391 = stage1_round_key_i[0]~synth
+#g1025 = desround:rd1|key_gen:kg1|non_perm_key[2]~synth
+.names g146 g391 g1025
+11 1
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g379 = stage1_round_key_i[1]~synth
+#g1026 = desround:rd1|key_gen:kg1|non_perm_key[2]~synth
+.names g146 g379 g1026
+01 1
+
+#g1025 = desround:rd1|key_gen:kg1|non_perm_key[2]~synth
+#g1026 = desround:rd1|key_gen:kg1|non_perm_key[2]~synth
+#g1027 = desround:rd1|key_gen:kg1|non_perm_key[2]~synth
+.names g1025 g1026 g1027
+00 0
+
+#g1027 = desround:rd1|key_gen:kg1|non_perm_key[2]~synth
+#g1028 = desround:rd1|key_gen:kg1|non_perm_key[2]~synth
+.names decrypt_i g1027 g1028
+01 1
+
+#g363 = desround:rd1|key_gen:kg1|non_perm_key[2]~synth
+#g1029 = desround:rd1|key_gen:kg1|non_perm_key[2]~synth
+.names decrypt_i g363 g1029
+11 1
+
+#g1028 = desround:rd1|key_gen:kg1|non_perm_key[2]~synth
+#g1029 = desround:rd1|key_gen:kg1|non_perm_key[2]~synth
+#g1030 = desround:rd1|key_gen:kg1|non_perm_key[2]~synth
+.names g1028 g1029 g1030
+00 0
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g430 = stage1_round_key_i[19]~synth
+#g1031 = desround:rd1|key_gen:kg1|non_perm_key[21]~synth
+.names g146 g430 g1031
+11 1
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g433 = stage1_round_key_i[20]~synth
+#g1032 = desround:rd1|key_gen:kg1|non_perm_key[21]~synth
+.names g146 g433 g1032
+01 1
+
+#g1031 = desround:rd1|key_gen:kg1|non_perm_key[21]~synth
+#g1032 = desround:rd1|key_gen:kg1|non_perm_key[21]~synth
+#g1033 = desround:rd1|key_gen:kg1|non_perm_key[21]~synth
+.names g1031 g1032 g1033
+00 0
+
+#g1033 = desround:rd1|key_gen:kg1|non_perm_key[21]~synth
+#g1034 = desround:rd1|key_gen:kg1|non_perm_key[21]~synth
+.names decrypt_i g1033 g1034
+01 1
+
+#g364 = desround:rd1|key_gen:kg1|non_perm_key[21]~synth
+#g1035 = desround:rd1|key_gen:kg1|non_perm_key[21]~synth
+.names decrypt_i g364 g1035
+11 1
+
+#g1034 = desround:rd1|key_gen:kg1|non_perm_key[21]~synth
+#g1035 = desround:rd1|key_gen:kg1|non_perm_key[21]~synth
+#g1036 = desround:rd1|key_gen:kg1|non_perm_key[21]~synth
+.names g1034 g1035 g1036
+00 0
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g496 = stage1_round_key_i[16]~synth
+#g1037 = desround:rd1|key_gen:kg1|non_perm_key[18]~synth
+.names g146 g496 g1037
+11 1
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g442 = stage1_round_key_i[17]~synth
+#g1038 = desround:rd1|key_gen:kg1|non_perm_key[18]~synth
+.names g146 g442 g1038
+01 1
+
+#g1037 = desround:rd1|key_gen:kg1|non_perm_key[18]~synth
+#g1038 = desround:rd1|key_gen:kg1|non_perm_key[18]~synth
+#g1039 = desround:rd1|key_gen:kg1|non_perm_key[18]~synth
+.names g1037 g1038 g1039
+00 0
+
+#g1039 = desround:rd1|key_gen:kg1|non_perm_key[18]~synth
+#g1040 = desround:rd1|key_gen:kg1|non_perm_key[18]~synth
+.names decrypt_i g1039 g1040
+01 1
+
+#g365 = desround:rd1|key_gen:kg1|non_perm_key[18]~synth
+#g1041 = desround:rd1|key_gen:kg1|non_perm_key[18]~synth
+.names decrypt_i g365 g1041
+11 1
+
+#g1040 = desround:rd1|key_gen:kg1|non_perm_key[18]~synth
+#g1041 = desround:rd1|key_gen:kg1|non_perm_key[18]~synth
+#g1042 = desround:rd1|key_gen:kg1|non_perm_key[18]~synth
+.names g1040 g1041 g1042
+00 0
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g412 = stage1_round_key_i[11]~synth
+#g1043 = desround:rd1|key_gen:kg1|non_perm_key[13]~synth
+.names g146 g412 g1043
+11 1
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g814 = stage1_round_key_i[12]~synth
+#g1044 = desround:rd1|key_gen:kg1|non_perm_key[13]~synth
+.names g146 g814 g1044
+01 1
+
+#g1043 = desround:rd1|key_gen:kg1|non_perm_key[13]~synth
+#g1044 = desround:rd1|key_gen:kg1|non_perm_key[13]~synth
+#g1045 = desround:rd1|key_gen:kg1|non_perm_key[13]~synth
+.names g1043 g1044 g1045
+00 0
+
+#g1045 = desround:rd1|key_gen:kg1|non_perm_key[13]~synth
+#g1046 = desround:rd1|key_gen:kg1|non_perm_key[13]~synth
+.names decrypt_i g1045 g1046
+01 1
+
+#g366 = desround:rd1|key_gen:kg1|non_perm_key[13]~synth
+#g1047 = desround:rd1|key_gen:kg1|non_perm_key[13]~synth
+.names decrypt_i g366 g1047
+11 1
+
+#g1046 = desround:rd1|key_gen:kg1|non_perm_key[13]~synth
+#g1047 = desround:rd1|key_gen:kg1|non_perm_key[13]~synth
+#g1048 = desround:rd1|key_gen:kg1|non_perm_key[13]~synth
+.names g1046 g1047 g1048
+00 0
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g565 = stage1_round_key_i[32]~synth
+#g1049 = desround:rd1|key_gen:kg1|non_perm_key[34]~synth
+.names g146 g565 g1049
+11 1
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g568 = stage1_round_key_i[33]~synth
+#g1050 = desround:rd1|key_gen:kg1|non_perm_key[34]~synth
+.names g146 g568 g1050
+01 1
+
+#g1049 = desround:rd1|key_gen:kg1|non_perm_key[34]~synth
+#g1050 = desround:rd1|key_gen:kg1|non_perm_key[34]~synth
+#g1051 = desround:rd1|key_gen:kg1|non_perm_key[34]~synth
+.names g1049 g1050 g1051
+00 0
+
+#g1051 = desround:rd1|key_gen:kg1|non_perm_key[34]~synth
+#g1052 = desround:rd1|key_gen:kg1|non_perm_key[34]~synth
+.names decrypt_i g1051 g1052
+01 1
+
+#g367 = desround:rd1|key_gen:kg1|non_perm_key[34]~synth
+#g1053 = desround:rd1|key_gen:kg1|non_perm_key[34]~synth
+.names decrypt_i g367 g1053
+11 1
+
+#g1052 = desround:rd1|key_gen:kg1|non_perm_key[34]~synth
+#g1053 = desround:rd1|key_gen:kg1|non_perm_key[34]~synth
+#g1054 = desround:rd1|key_gen:kg1|non_perm_key[34]~synth
+.names g1052 g1053 g1054
+00 0
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g550 = stage1_round_key_i[29]~synth
+#g1055 = desround:rd1|key_gen:kg1|non_perm_key[31]~synth
+.names g146 g550 g1055
+11 1
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g577 = stage1_round_key_i[30]~synth
+#g1056 = desround:rd1|key_gen:kg1|non_perm_key[31]~synth
+.names g146 g577 g1056
+01 1
+
+#g1055 = desround:rd1|key_gen:kg1|non_perm_key[31]~synth
+#g1056 = desround:rd1|key_gen:kg1|non_perm_key[31]~synth
+#g1057 = desround:rd1|key_gen:kg1|non_perm_key[31]~synth
+.names g1055 g1056 g1057
+00 0
+
+#g1057 = desround:rd1|key_gen:kg1|non_perm_key[31]~synth
+#g1058 = desround:rd1|key_gen:kg1|non_perm_key[31]~synth
+.names decrypt_i g1057 g1058
+01 1
+
+#g368 = desround:rd1|key_gen:kg1|non_perm_key[31]~synth
+#g1059 = desround:rd1|key_gen:kg1|non_perm_key[31]~synth
+.names decrypt_i g368 g1059
+11 1
+
+#g1058 = desround:rd1|key_gen:kg1|non_perm_key[31]~synth
+#g1059 = desround:rd1|key_gen:kg1|non_perm_key[31]~synth
+#g1060 = desround:rd1|key_gen:kg1|non_perm_key[31]~synth
+.names g1058 g1059 g1060
+00 0
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g589 = stage1_round_key_i[45]~synth
+#g1061 = desround:rd1|key_gen:kg1|non_perm_key[47]~synth
+.names g146 g589 g1061
+11 1
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g592 = stage1_round_key_i[46]~synth
+#g1062 = desround:rd1|key_gen:kg1|non_perm_key[47]~synth
+.names g146 g592 g1062
+01 1
+
+#g1061 = desround:rd1|key_gen:kg1|non_perm_key[47]~synth
+#g1062 = desround:rd1|key_gen:kg1|non_perm_key[47]~synth
+#g1063 = desround:rd1|key_gen:kg1|non_perm_key[47]~synth
+.names g1061 g1062 g1063
+00 0
+
+#g1063 = desround:rd1|key_gen:kg1|non_perm_key[47]~synth
+#g1064 = desround:rd1|key_gen:kg1|non_perm_key[47]~synth
+.names decrypt_i g1063 g1064
+01 1
+
+#g369 = desround:rd1|key_gen:kg1|non_perm_key[47]~synth
+#g1065 = desround:rd1|key_gen:kg1|non_perm_key[47]~synth
+.names decrypt_i g369 g1065
+11 1
+
+#g1064 = desround:rd1|key_gen:kg1|non_perm_key[47]~synth
+#g1065 = desround:rd1|key_gen:kg1|non_perm_key[47]~synth
+#g1066 = desround:rd1|key_gen:kg1|non_perm_key[47]~synth
+.names g1064 g1065 g1066
+00 0
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g670 = stage1_round_key_i[36]~synth
+#g1067 = desround:rd1|key_gen:kg1|non_perm_key[38]~synth
+.names g146 g670 g1067
+11 1
+
+#g146 = desround:rd1|key_gen:kg1|WideOr0~synth
+#g625 = stage1_round_key_i[37]~synth
+#g1068 = desround:rd1|key_gen:kg1|non_perm_key[38]~synth
+.names g146 g625 g1068
+01 1
+
+#g1067 = desround:rd1|key_gen:kg1|non_perm_key[38]~synth
+#g1068 = desround:rd1|key_gen:kg1|non_perm_key[38]~synth
+#g1069 = desround:rd1|key_gen:kg1|non_perm_key[38]~synth
+.names g1067 g1068 g1069
+00 0
+
+#g1069 = desround:rd1|key_gen:kg1|non_perm_key[38]~synth
+#g1070 = desround:rd1|key_gen:kg1|non_perm_key[38]~synth
+.names decrypt_i g1069 g1070
+01 1
+
+#g370 = desround:rd1|key_gen:kg1|non_perm_key[38]~synth
+#g1071 = desround:rd1|key_gen:kg1|non_perm_key[38]~synth
+.names decrypt_i g370 g1071
+11 1
+
+#g1070 = desround:rd1|key_gen:kg1|non_perm_key[38]~synth
+#g1071 = desround:rd1|key_gen:kg1|non_perm_key[38]~synth
+#g1072 = desround:rd1|key_gen:kg1|non_perm_key[38]~synth
+.names g1070 g1071 g1072
+00 0
+
+#g1073 = stage1_iter[0]
+.latch g1074 g1073 re clk 2
+
+#g362 = Selector3~synth
+#g1073 = stage1_iter[0]
+#g1074 = stage1_iter[0]~1
+.names g362 g1073 g1074
+10 1
+
+.end
+
