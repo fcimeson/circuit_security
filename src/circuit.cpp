@@ -59,7 +59,7 @@ void sis_convert(string infile, string tech_lib, string outfile) {
         dup2 (cp[1],1);   // write to pipe
         string sis = get_home("/bin/sis");
         execlp(sis.c_str(),"sis",NULL);
-        perror("error exec");
+        perror("Error: sis execuable fault");
         _exit(1);        // no flush                             
 
     // Parent (PID > 0)
