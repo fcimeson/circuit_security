@@ -13,7 +13,7 @@ This is the code repository for the paper, “Securing Computer Hardware Using 3
 
 
 # Installation
-This software depends on the sis circuit tool. It must be installed into the directory ~/bin. To compile the software type make.
+This software depends on the sis circuit tool (it must be installed into the directory ~/bin). To compile the software type make.
 
 
 # Usage
