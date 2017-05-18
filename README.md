@@ -43,7 +43,7 @@ This software depends on the sis circuit tool. It must be installed into the dir
      -w [ --wdir ] arg (=./wdir)           Output directory
      -h [ --help ]                         produce help message
 ```
-Example:
+##### Example:
 ```
 $ circuit_security circuits/c27.blif tech_lib/lib2.genlib -t4 -m
   Circuit : circuits/c27.blif
@@ -64,12 +64,12 @@ $ circuit_security circuits/c27.blif tech_lib/lib2.genlib -t4 -m
   S1_greedy (c27): |V(G)| = 7, |E(G)| = 7, |V(H)| = 7, |E(H)| = 5, #L0 = 4, L1 = 2, +<1,2>
     E(2) ss
 ```    
-interpretation:
- L1 = level of security  
- H is the modified graph/circuit  
- G is the un-modified graph/circuit  
- +<X,Y> is the edge that is added to H  
- E(#) sss... is feedback on how many edges can be added and the s's represent how many have been tested  
+##### Interpretation:  
+ - L1 = level of security  
+ - H is the modified graph/circuit  
+ - G is the un-modified graph/circuit  
+ - +<X,Y> is the edge that is added to H  
+ - E(#) sss... is feedback on how many edges can be added and the s's represent how many have been tested  
 
 
 # Licence
