@@ -72,7 +72,7 @@ $ circuit_security circuits/c27.blif tech_lib/lib2.genlib -t4 -m
  - E(#) sss... is feedback on how many edges can be added and the s's represent how many have been tested  
 
 
-# Licence
+# License
 Copyright 2017 Frank Imeson, Siddharth Garg, and Mahesh V. Tripunitara
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
