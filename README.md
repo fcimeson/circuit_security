@@ -1,4 +1,4 @@
-# circuit_security
+# K-Security for 3D Circuits
 This is the code repository for the paper, “Securing Computer Hardware Using 3D Integrated Circuit (IC) Technology and Split Manufacturing for Obfuscation”. The code provides a solver that takes as input a bliff curcuit and finds sub-curciuts that meet the k-security requirements defined in the paper.
 
 
